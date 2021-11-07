@@ -75,7 +75,6 @@ conf () {
   RESTIC_PASSWORD=$(pass show restic) \
   restic -r gs:robbie-backups:/restic \
     backup \
-    ~/.zshrc \
     ~/.config/alacritty/alacritty.yml \
     ~/.config/starship.toml \
     ~/.config/gh/config.yml \
