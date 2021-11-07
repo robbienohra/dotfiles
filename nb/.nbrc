@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+
+export NB_DIR="${NB_DIR:-/Users/robbienohra/robbie}" # Set by `nb` • Sun 31 Oct 2021 21:23:59 EDT
+
+export EDITOR="nvim" # Set by `nb` • Sun 31 Oct 2021 21:28:08 EDT

@@ -69,19 +69,6 @@ re () {
   restic -r gs:robbie-backups:/restic "$@";
 }
 
-conf () {
-  GOOGLE_PROJECT_ID=robbie-329220 \
-  GOOGLE_APPLICATION_CREDENTIALS=$HOME/.config/robbie-329220-7d1a680d1c9a.json \
-  RESTIC_PASSWORD=$(pass show restic) \
-  restic -r gs:robbie-backups:/restic \
-    backup \
-    ~/.config/starship.toml \
-    ~/.config/gh/config.yml \
-    ~/.gitconfig \
-    ~/.nbrc \
-    ~/.config/bat/config \
-    ~/RectangleConfig.json
-}
 
 srr () {
   sudo rm -r "$@"
@@ -89,28 +76,6 @@ srr () {
 
 v () {
   nvim .
-}
-
-# configs
-
-via () { 
-  nvim ~/.config/alacritty/alacritty.yml 
-}
-
-viv () {
-  nvim ~/.config/nvim/init.vim
-}
-
-vib () {
-  nvim ~/.bash_profile
-}
-
-vit () {
-  nvim ~/.tmux.conf
-}
-
-vig () {
-  nvim ~/.gitconfig
 }
 
 # b6i
@@ -143,3 +108,11 @@ note () {
   nb add;
 }
 
+# conf () {
+#   GOOGLE_PROJECT_ID=robbie-329220 \
+#   GOOGLE_APPLICATION_CREDENTIALS=$HOME/.config/robbie-329220-7d1a680d1c9a.json \
+#   RESTIC_PASSWORD=$(pass show restic) \
+#   restic -r gs:robbie-backups:/restic \
+#     backup \
+#     ~/.nbrc
+# }
