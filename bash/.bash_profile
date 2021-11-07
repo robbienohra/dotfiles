@@ -75,10 +75,6 @@ conf () {
   RESTIC_PASSWORD=$(pass show restic) \
   restic -r gs:robbie-backups:/restic \
     backup \
-    ~/.config/alacritty/alacritty.yml \
-    ~/.config/starship.toml \
-    ~/.config/gh/config.yml \
-    ~/.gitconfig \
     ~/.nbrc \
     ~/.config/bat/config \
     ~/RectangleConfig.json
