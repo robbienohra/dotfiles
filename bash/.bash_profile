@@ -75,10 +75,6 @@ conf () {
   RESTIC_PASSWORD=$(pass show restic) \
   restic -r gs:robbie-backups:/restic \
     backup \
-    ~/.bash_profile \
-    ~/.config/nvim/init.vim \
-    ~/.config/nvim/coc-settings.json \
-    ~/.tmux.conf \
     ~/.zshrc \
     ~/.config/alacritty/alacritty.yml \
     ~/.config/starship.toml \
