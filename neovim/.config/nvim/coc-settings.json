@@ -1,0 +1,26 @@
+{
+  "diagnostic.checkCurrentLine": true,
+  "list.previewSplitRight": true,
+  "yaml.format.enable": true,
+  "coc.preferences.formatOnSaveFiletypes": [
+    "python",
+    "typescript",
+    "javascript",
+    "typescript",
+    "cpp",
+    "json"
+  ],
+  "coc.preferences.semanticTokensHighlights": false,
+  "coc.preferences.jumpCommand": "edit",
+  "python.formatting.autopep8Args": ["--in-place"],
+  "python.formatting.provider": "black",
+  "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/13.0.0/clangd_13.0.0/bin/clangd",
+  "clangd.semanticHighlighting": true,
+  "clangd.fallbackFlags": ["-std=c++17"],
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+  "typescript.autoClosingTags": true,
+  "typescript.format.placeOpenBraceOnNewLineForFunctions": true,
+  "typescript.format.placeOpenBraceOnNewLineForControlBlocks": true,
+  "pairs.enableCharacters": ["(", "[", "{", "'", "\"", "`"],
+  "markdownlint.config": { "no-missing-space-atx": false }
+}
