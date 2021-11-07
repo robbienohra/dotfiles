@@ -138,18 +138,6 @@ nmap <S-d> "_dd
 nmap <S-b> dvb
 nmap <S-w> ciw
 
-" abbreviations
-
-func Eatchar(pat)
-   let c = nr2char(getchar(0))
-   return (c =~ a:pat) ? '' : c
-endfunc
-
-autocmd FileType cpp iabbrev <buffer> ns using namespace std;<CR>Eatchar('\s')<CR>
-autocmd FileType cpp iabbrev <buffer> main <buffer> int main<CR>Eatchar('\s')<CR>
-autocmd FileType typescriptreact,typescript iabbrev <buffer> cl console.log(<C-R>=Eatchar('\s')<CR>
-iab <expr> dts strftime("%Y-%m-%d")
-
 " nvim
 
 let g:loaded_perl_provider = 0
@@ -180,3 +168,15 @@ require('lualine').setup {
 
 require'colorizer'.setup()
 EOF
+
+" abbreviations
+
+func Eatchar(pat)
+   let c = nr2char(getchar(0))
+   return (c =~ a:pat) ? '' : c
+endfunc
+
+autocmd FileType cpp iabbrev <buffer> ns using namespace std;<CR>Eatchar('\s')<CR>
+autocmd FileType cpp iabbrev <buffer> main <buffer> int main<CR>Eatchar('\s')<CR>
+autocmd FileType typescriptreact,typescript iabbrev <buffer> cl console.log(<C-R>=Eatchar('\s')<CR>
+iab <expr> dts strftime("%Y-%m-%d")
