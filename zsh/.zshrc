@@ -1,7 +1,6 @@
 ZSH_DISABLE_COMPFIX=true
 
 export ZSH="/Users/robbienohra/.oh-my-zsh"
-export BAT_THEME="Nord"
 
 plugins=(zsh-syntax-highlighting)
 
