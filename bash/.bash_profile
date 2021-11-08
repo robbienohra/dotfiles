@@ -116,3 +116,4 @@ note () {
 #     backup \
 #     ~/.nbrc
 # }
+. "$HOME/.cargo/env"
