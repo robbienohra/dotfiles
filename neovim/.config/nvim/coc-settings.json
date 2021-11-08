@@ -21,6 +21,5 @@
   "typescript.autoClosingTags": true,
   "typescript.format.placeOpenBraceOnNewLineForFunctions": true,
   "typescript.format.placeOpenBraceOnNewLineForControlBlocks": true,
-  "pairs.enableCharacters": ["(", "[", "{", "'", "\"", "`"],
   "markdownlint.config": { "no-missing-space-atx": false }
 }
