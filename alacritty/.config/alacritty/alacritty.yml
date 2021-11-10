@@ -1,7 +1,7 @@
 window:
   decorations: none
   padding:
-    x: 100
+    x: 80
   dynamic_padding: true
 env:
   TERM: alacritty

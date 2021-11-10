@@ -25,6 +25,9 @@ set re=0
 set timeoutlen=1000 ttimeoutlen=0
 set completeopt=menuone,noinsert,noselect
 set pastetoggle=<F3>
+" for cursor focus
+set splitright
+set splitbelow
 
 filetype plugin indent on
 filetype on
