@@ -50,7 +50,8 @@ Plug 'mhinz/vim-signify'
 Plug 'ruanyl/vim-gh-line'
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'plasticboy/vim-markdown'
-Plug 'jiangmiao/auto-pairs'
+Plug 'windwp/nvim-autopairs'
+" Plug 'jiangmiao/auto-pairs'
 call plug#end()
 
 " themes
@@ -155,6 +156,8 @@ let g:diary = "~/robbie/notes/"
 " lua configs
 
 lua <<EOF
+require('nvim-autopairs').setup{}
+
 require'nvim-treesitter.configs'.setup {
   ensure_installed = "maintained", 
   highlight = {
@@ -183,4 +186,4 @@ endfunc
 autocmd FileType cpp iabbrev <buffer> ns using namespace std;<CR>Eatchar('\s')<CR>
 autocmd FileType cpp iabbrev <buffer> main <buffer> int main<CR>Eatchar('\s')<CR>
 autocmd FileType typescriptreact,typescript iabbrev <buffer> cl console.log(<C-R>=Eatchar('\s')<CR>
-iab <expr> dts strftime("%Y-%m-%d")
+iabbrev <expr> dts strftime("%Y-%m-%d")
