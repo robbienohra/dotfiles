@@ -50,8 +50,7 @@ Plug 'mhinz/vim-signify'
 Plug 'ruanyl/vim-gh-line'
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'plasticboy/vim-markdown'
-Plug 'windwp/nvim-autopairs'
-" Plug 'jiangmiao/auto-pairs'
+Plug 'jiangmiao/auto-pairs'
 call plug#end()
 
 " themes
@@ -85,8 +84,7 @@ let g:coc_global_extensions = [
 		\"coc-tsserver",
 		\"coc-eslint",
 		\"coc-yaml",
-		\"coc-toml",
-		\"coc-pairs"]
+		\"coc-toml"]
 
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gv :call CocAction('jumpDefinition', 'vsplit')<CR>
@@ -97,7 +95,7 @@ nmap <silent> <leader>a  <Plug>(coc-codeaction-selected)
 nmap <silent> <leader>rn <Plug>(coc-rename)
 command! -nargs=0 Format :call CocAction('format')
 command! -nargs=0 OR :call CocAction('runCommand', 'editor.action.organizeImport')
-silent command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
+command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
 nnoremap <silent> <leader>p :Prettier<CR>
 
 hi! CocErrorSign guifg=#d1666a
@@ -148,16 +146,9 @@ nmap <S-w> ciw
 let g:loaded_perl_provider = 0
 let g:loaded_ruby_provider = 0
 
-" writing
-
-let g:notes = "~/robbie/diary/"
-let g:diary = "~/robbie/notes/"
-
 " lua configs
 
 lua <<EOF
-require('nvim-autopairs').setup{}
-
 require'nvim-treesitter.configs'.setup {
   ensure_installed = "maintained", 
   highlight = {

@@ -4,9 +4,7 @@
   "yaml.format.enable": true,
   "coc.preferences.formatOnSaveFiletypes": [
     "python",
-    "typescript",
     "javascript",
-    "typescript",
     "cpp",
     "json"
   ],
