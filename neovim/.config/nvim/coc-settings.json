@@ -2,12 +2,7 @@
   "diagnostic.checkCurrentLine": true,
   "list.previewSplitRight": true,
   "yaml.format.enable": true,
-  "coc.preferences.formatOnSaveFiletypes": [
-    "python",
-    "javascript",
-    "cpp",
-    "json"
-  ],
+  "coc.preferences.formatOnSaveFiletypes": ["python", "cpp", "json"],
   "coc.preferences.semanticTokensHighlights": false,
   "coc.preferences.jumpCommand": "edit",
   "python.formatting.autopep8Args": ["--in-place"],
