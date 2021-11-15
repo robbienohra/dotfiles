@@ -51,7 +51,6 @@ Plug 'mhinz/vim-signify'
 Plug 'ruanyl/vim-gh-line'
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'plasticboy/vim-markdown'
-Plug 'jiangmiao/auto-pairs'
 call plug#end()
 
 " themes

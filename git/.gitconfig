@@ -34,8 +34,6 @@
         fe = fetch
         br = branch
 [core]
-	excludesfile = /Users/robbienohra/.gitignore
-	excludefile = /Users/robbienohra/.gitignore
 	editor = nvim
 	excludesFile = ~/.gitignore
 [filter "lfs"]
