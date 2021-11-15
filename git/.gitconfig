@@ -35,7 +35,7 @@
         br = branch
 [core]
 	editor = nvim
-	excludesFile = ~/.gitignore
+	excludesFile = /Users/robbienohra/.gitignore
 [filter "lfs"]
 	required = true
 	clean = git-lfs clean -- %f
