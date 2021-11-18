@@ -113,6 +113,10 @@ nnoremap <silent> <C-f> :Rg<CR>
 
 " mappings
 
+" fugitive
+
+map <leader>dv :Gvdiffsplit! master<CR>
+
 " compile and run c++ program
 
 autocmd FileType cpp nnoremap <C-c> :!g++ -o  %:r.out % -std=c++11<Enter>
