@@ -14,20 +14,25 @@ alias tn="t new -t"
 
 # fzf
 
-export FZF_DEFAULT_OPTS='--bind "ctrl-y:execute-silent(echo {} | pbcopy)+abort"'
+export FZF_DEFAULT_OPTS="
+--color='bg+:#3c3836,\
+bg:#32302f,\
+spinner:#fb4934,\
+hl:#928374,\
+fg:#ebdbb2,\
+header:#928374,\
+info:#8ec07c,\
+pointer:#fb4934,\
+marker:#fb4934,\
+fg+:#ebdbb2,\
+prompt:#fb4934,\
+hl+:#fb4934'"
+
 export FZF_DEFAULT_COMMAND='rg --files --hidden --follow'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="fd --type d"
 
 # git
-
-fbr() {
-  git fetch
-  local branches branch
-  branches=$(git branch -a) &&
-  branch=$(echo "$branches" | fzf +s +m -e) &&
-  git checkout $(echo "$branch" | sed "s:.* remotes/origin/::" | sed "s:.* ::")
-}
 
 function sq() {
   git add .;
@@ -69,6 +74,7 @@ re () {
   restic -r gs:robbie-backups:/restic "$@";
 }
 
+# bash
 
 srr () {
   sudo rm -r "$@"

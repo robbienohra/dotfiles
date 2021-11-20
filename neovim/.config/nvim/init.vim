@@ -204,4 +204,4 @@ iabbrev <expr> dts strftime("%Y-%m-%d")
 " commenter
 
 autocmd FileType vim setlocal commentstring=\"\ %s
-autocmd FileType yaml setlocal commentstring=#\ %s
+autocmd FileType yaml,sh setlocal commentstring=#\ %s
