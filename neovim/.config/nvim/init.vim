@@ -181,3 +181,7 @@ autocmd FileType cpp iabbrev <buffer> ns using namespace std;<CR>Eatchar('\s')<C
 autocmd FileType cpp iabbrev <buffer> main <buffer> int main<CR>Eatchar('\s')<CR>
 autocmd FileType typescriptreact,typescript iabbrev <buffer> cl console.log(<C-R>=Eatchar('\s')<CR>
 iabbrev <expr> dts strftime("%Y-%m-%d")
+
+" commenter
+
+autocmd FileType vim setlocal commentstring=\"\ %s
