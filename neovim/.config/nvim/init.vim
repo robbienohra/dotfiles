@@ -14,7 +14,7 @@ set formatoptions+=l
 set shm=at
 set shortmess+=W
 set shiftwidth=2
-set updatetime=300
+set updatetime=100
 set norelativenumber
 set lazyredraw
 set nocursorcolumn
@@ -55,7 +55,9 @@ Plug 'ellisonleao/gruvbox.nvim'
 call plug#end()
 
 " themes
-
+set background=dark
+let g:gruvbox_contrast_dark = 'hard'
+let g:gruvbox_sign_column = 'bg0'
 colorscheme gruvbox
 
 " markdown
@@ -154,14 +156,14 @@ require'nvim-treesitter.configs'.setup {
   ensure_installed = "maintained", 
   highlight = {
     enable = true,            
-    disable = { "c", "rust" }, 
     additional_vim_regex_highlighting = false,
   },
 }
 
 require('lualine').setup {
   options = {
-    theme = 'gruvbox_dark'
+    theme = 'gruvbox_dark',
+    icons_enabled = false
   }
 }
 
