@@ -127,8 +127,6 @@ map <leader>f :%s/
 
 " create file if it does not exist
 
-noremap <leader>gf :e <cfile><cr>
-
 nnoremap tl  :tabprev<CR>
 nnoremap tu  :tabnext<CR>
 
@@ -163,7 +161,7 @@ require'nvim-treesitter.configs'.setup {
 
 require('lualine').setup {
   options = {
-    theme = 'gruvbox-material'
+    theme = 'gruvbox_dark'
   }
 }
 
