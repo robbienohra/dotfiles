@@ -9,44 +9,49 @@ scrolling:
   history: 10000
 colors:
   selection:
-    text: '#FFFFFF'
-    background: '#4c566a'
+    text: "#FFFFFF"
+    background: "#4c566a"
+    # Default colors
   primary:
-    background: '0x282828'
-    foreground: '0xdfbf8e'
+    # hard contrast: background = '0x1d2021'
+    background: "0x282828"
+    # soft contrast: background = '0x32302f'
+    foreground: "0xebdbb2"
 
+  # Normal colors
   normal:
-    black:   '0x665c54'
-    red:     '0xea6962'
-    green:   '0xa9b665'
-    yellow:  '0xe78a4e'
-    blue:    '0x7daea3'
-    magenta: '0xd3869b'
-    cyan:    '0x89b482'
-    white:   '0xdfbf8e'
+    black: "0x282828"
+    red: "0xcc241d"
+    green: "0x98971a"
+    yellow: "0xd79921"
+    blue: "0x458588"
+    magenta: "0xb16286"
+    cyan: "0x689d6a"
+    white: "0xa89984"
 
+  # Bright colors
   bright:
-    black:   '0x928374'
-    red:     '0xea6962'
-    green:   '0xa9b665'
-    yellow:  '0xe3a84e'
-    blue:    '0x7daea3'
-    magenta: '0xd3869b'
-    cyan:    '0x89b482'
-    white:   '0xdfbf8e'
+    black: "0x928374"
+    red: "0xfb4934"
+    green: "0xb8bb26"
+    yellow: "0xfabd2f"
+    blue: "0x83a598"
+    magenta: "0xd3869b"
+    cyan: "0x8ec07c"
+    white: "0xebdbb2"
 selection:
   semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
   save_to_clipboard: true
 font:
   size: 13
   normal:
-    family: 'FiraCode Nerd Font Mono'
+    family: "FiraCode Nerd Font Mono"
     style: Medium
   italic:
-    family: 'JetBrains Mono'
+    family: "JetBrains Mono"
     style: Italic
   bold:
-    family: 'JetBrains Mono'
+    family: "JetBrains Mono"
     style: Bold
   use_thin_strokes: true
   offset:
@@ -54,5 +59,5 @@ font:
 key_bindings:
   - { key: Left, mods: Alt, chars: "\x1bb" }
   - { key: Right, mods: Alt, chars: "\x1bf" }
-  - { key: Left,     mods: Command, chars: "\x1bOH",   mode: AppCursor   } 
-  - { key: Right,    mods: Command, chars: "\x1bOF",   mode: AppCursor   } 
+  - { key: Left, mods: Command, chars: "\x1bOH", mode: AppCursor }
+  - { key: Right, mods: Command, chars: "\x1bOF", mode: AppCursor }

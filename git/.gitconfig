@@ -4,6 +4,8 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 [alias]
+	d = diff
+	b = branch
 	l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 	co = checkout
         ca = commit --amend
@@ -13,7 +15,6 @@
 	pom = pull origin master
         rom = rebase origin/master
 	cob = checkout -b
-	b = branch
 	last = log -1 HEAD
 	cm = commit -m
 	com = checkout master

@@ -45,21 +45,18 @@ Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-peekaboo'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} 
-Plug 'robbienohra/nord-vim/'
 Plug 'hoob3rt/lualine.nvim'
 Plug 'mhinz/vim-signify'
 Plug 'ruanyl/vim-gh-line'
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'plasticboy/vim-markdown'
-Plug 'sainnhe/gruvbox-material'
+Plug 'rktjmp/lush.nvim'
+Plug 'ellisonleao/gruvbox.nvim'
 call plug#end()
 
 " themes
 
-let g:nord_uniform_diff_background = 1
-let g:nord_italic = 1
-" colorscheme nord
-colorscheme gruvbox-material
+colorscheme gruvbox
 
 " markdown
 
@@ -166,7 +163,7 @@ require'nvim-treesitter.configs'.setup {
 
 require('lualine').setup {
   options = {
-    theme = 'nord'
+    theme = 'gruvbox-material'
   }
 }
 
