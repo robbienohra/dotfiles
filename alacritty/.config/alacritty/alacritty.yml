@@ -60,3 +60,5 @@ key_bindings:
   - { key: Right, mods: Alt, chars: "\x1bf" }
   - { key: Left, mods: Command, chars: "\x1bOH", mode: AppCursor }
   - { key: Right, mods: Command, chars: "\x1bOF", mode: AppCursor }
+  - { key: Home, chars: "\x1b[H", mode: ~AppCursor }
+  - { key: End, chars: "\x1b[F", mode: ~AppCursor }
