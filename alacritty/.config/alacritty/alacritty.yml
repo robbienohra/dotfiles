@@ -43,9 +43,9 @@ selection:
   semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
   save_to_clipboard: true
 font:
-  size: 13
+  size: 13.5
   normal:
-    family: "FiraCode Nerd Font Mono"
+    family: "JetBrains Mono" 
     style: Medium
   italic:
     family: "JetBrains Mono"
