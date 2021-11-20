@@ -141,6 +141,8 @@ nnoremap <silent> <C-S> :update<CR>
 inoremap <silent> <C-S> <Esc>:update<CR>
 vnoremap <C-c> :w !pbcopy<CR><CR>
 
+
+" black hole register
 nmap <S-d> "_dd
 nmap <S-b> dvb
 " nmap <S-w> ciw
