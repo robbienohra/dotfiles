@@ -51,13 +51,15 @@ Plug 'mhinz/vim-signify'
 Plug 'ruanyl/vim-gh-line'
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'plasticboy/vim-markdown'
+Plug 'sainnhe/gruvbox-material'
 call plug#end()
 
 " themes
 
 let g:nord_uniform_diff_background = 1
 let g:nord_italic = 1
-colorscheme nord
+" colorscheme nord
+colorscheme gruvbox-material
 
 " markdown
 
