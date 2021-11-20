@@ -143,7 +143,8 @@ vnoremap <C-c> :w !pbcopy<CR><CR>
 
 nmap <S-d> "_dd
 nmap <S-b> dvb
-nmap <S-w> ciw
+" nmap <S-w> ciw
+nmap <S-w> diw
 
 " nvim
 
@@ -186,3 +187,4 @@ iabbrev <expr> dts strftime("%Y-%m-%d")
 " commenter
 
 autocmd FileType vim setlocal commentstring=\"\ %s
+autocmd FileType yaml setlocal commentstring=#\ %s

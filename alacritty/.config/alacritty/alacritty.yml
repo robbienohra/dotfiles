@@ -8,14 +8,13 @@ env:
 scrolling:
   history: 10000
 colors:
+  # https://github.com/eendroroy/alacritty-theme/blob/master/themes/gruvbox_dark.yaml
   selection:
     text: "#FFFFFF"
     background: "#4c566a"
     # Default colors
   primary:
-    # hard contrast: background = '0x1d2021'
     background: "0x1d2021"
-    # soft contrast: background = '0x32302f'
     foreground: "0xebdbb2"
 
   # Normal colors
@@ -45,8 +44,8 @@ selection:
 font:
   size: 13.5
   normal:
-    family: "JetBrains Mono" 
-    style: Medium
+    family: "JetBrains Mono"
+    style: Regular
   italic:
     family: "JetBrains Mono"
     style: Italic
