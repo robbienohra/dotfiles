@@ -151,7 +151,7 @@ autocmd FileType cpp nnoremap <C-x> :!./%:r.out
 
 map <leader>f :%s/
 
-" create file if it does not exist
+" misc
 
 nnoremap tl  :tabprev<CR>
 nnoremap tu  :tabnext<CR>
@@ -163,7 +163,6 @@ nnoremap Q ZQ
 nnoremap <silent> <C-S> :update<CR>
 inoremap <silent> <C-S> <Esc>:update<CR>
 vnoremap <C-c> :w !pbcopy<CR><CR>
-
 
 " black hole register
 nmap <S-d> "_dd
