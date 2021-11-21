@@ -52,6 +52,8 @@ Plug 'norcalli/nvim-colorizer.lua'
 Plug 'plasticboy/vim-markdown'
 Plug 'rktjmp/lush.nvim'
 Plug 'ellisonleao/gruvbox.nvim'
+" Plug 'morhetz/gruvbox'
+Plug 'reedes/vim-pencil'
 call plug#end()
 
 " themes
@@ -59,6 +61,7 @@ set background=dark
 let g:gruvbox_invert_selection=0
 let g:gruvbox_contrast_dark = 'hard'
 let g:gruvbox_sign_column = 'bg0'
+let g:gruvbox_italic = 1
 colorscheme gruvbox
 
 let g:fzf_colors =
@@ -85,6 +88,8 @@ let g:vim_markdown_json_frontmatter = 1
 let g:vim_markdown_no_extensions_in_markdown = 1
 let g:vim_markdown_new_list_item_indent = 0
 let g:vim_markdown_auto_insert_bullets = 1
+let g:tex_conceal = "$"
+let g:vim_markdown_math = 1
 set conceallevel=2
 
 " coc-nvim 
@@ -101,7 +106,8 @@ let g:coc_global_extensions = [
 		\"coc-tsserver",
 		\"coc-eslint",
 		\"coc-yaml",
-		\"coc-toml"]
+		\"coc-toml",
+		\"coc-snippets"]
 
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gv :call CocAction('jumpDefinition', 'vsplit')<CR>
@@ -119,6 +125,8 @@ hi! CocErrorSign guifg=#d1666a
 hi! CocInfoSign guibg=#353b45
 hi! CocWarningSign guifg=#d1cd66
 
+imap <C-l> <Plug>(coc-snippets-expand)
+
 " python indentation
 
 au BufNewFile,BufRead *.py set tabstop=4 softtabstop=4 shiftwidth=4 expandtab smarttab autoindent
@@ -132,7 +140,7 @@ nnoremap <silent> <C-f> :Rg<CR>
 
 " fugitive
 
-map <leader>dv :Gvdiffsplit! master<CR>
+map <leader>dv :Gvdiffsplit!
 
 " compile and run c++ program
 
@@ -191,17 +199,18 @@ EOF
 
 " abbreviations
 
-func Eatchar(pat)
-   let c = nr2char(getchar(0))
-   return (c =~ a:pat) ? '' : c
-endfunc
-
-autocmd FileType cpp iabbrev <buffer> ns using namespace std;<CR>Eatchar('\s')<CR>
-autocmd FileType cpp iabbrev <buffer> main <buffer> int main<CR>Eatchar('\s')<CR>
-autocmd FileType typescriptreact,typescript iabbrev <buffer> cl console.log(<C-R>=Eatchar('\s')<CR>
 iabbrev <expr> dts strftime("%Y-%m-%d")
 
 " commenter
 
 autocmd FileType vim setlocal commentstring=\"\ %s
 autocmd FileType yaml,sh setlocal commentstring=#\ %s
+autocmd FileType markdown setlocal commentstring=<!--\ %s\ -->
+
+" pencil
+
+augroup pencil
+  autocmd!
+  autocmd FileType markdown,mkd call pencil#init()
+  autocmd FileType text         call pencil#init()
+augroup END
