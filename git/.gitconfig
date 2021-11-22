@@ -1,73 +1,75 @@
 [filter "lfs"]
-        required = true
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
+  required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
 [alias]
-	d = diff
-	b = branch
-	l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-	co = checkout
-        ca = commit --amend
-	done = !git push --force-with-lease origin HEAD
-	lg = !git log --pretty=format:\"%C(magenta)%h%Creset -%C(red)%d%Creset %s %C(dim green)(%cr) [%an]\" --abbrev-commit -30
-	rh = reset --hard
-	pom = pull origin master
-        rom = rebase origin/master
-	cob = checkout -b
-	last = log -1 HEAD
-	cm = commit -m
-	com = checkout master
-	st = status -sb
-	dn = diff --name-only master...
-	stu = stash -u
-	bd = branch -D
-	aa = add .
-        ri = rebase -i
-	ra = rebase --abort
-	rc = rebase --continue
-	sq = reset $(git merge-base master $(git branch --show-current))
-	rhom = reset --hard origin/master
-	poh = push origin head
-	clear = checkout -- .
-        cf = clean -f
-        re = reset --hard @{u}
-        fe = fetch
-        br = branch
+  d = diff
+  b = branch
+  l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  co = checkout
+  ca = commit --amend
+  done = !git push --force-with-lease origin HEAD
+  lg = !git log --pretty=format:\"%C(magenta)%h%Creset -%C(red)%d%Creset %s %C(dim green)(%cr) [%an]\" --abbrev-commit -30
+  rh = reset --hard
+  pom = pull origin master
+  rom = rebase origin/master
+  cob = checkout -b
+  last = log -1 HEAD
+  cm = commit -m
+  com = checkout master
+  st = status -sb
+  dn = diff --name-only master...
+  stu = stash -u
+  bd = branch -D
+  aa = add .
+  ri = rebase -i
+  ra = rebase --abort
+  rc = rebase --continue
+  sq = reset $(git merge-base master $(git branch --show-current))
+  rhom = reset --hard origin/master
+  poh = push origin head
+  clear = checkout -- .
+  cf = clean -f
+  re = reset --hard @{u}
+  fe = fetch
+  br = branch
 [core]
-	editor = nvim
-	excludesFile = /Users/robbienohra/.gitignore
+  editor = nvim
+  excludesFile = /Users/robbienohra/.gitignore
 [filter "lfs"]
-	required = true
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
+  required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
 [user]
-	name = Robbie Nohra
-	signingkey = 8638E098E5DF74602C7E41AABCD1907FCD9969A4
-	email = rnohra@benchsci.com
+  name = Robbie Nohra
+  signingkey = 8638E098E5DF74602C7E41AABCD1907FCD9969A4
+  email = rnohra@benchsci.com
 [init]
-	defaultBranch = main
+  defaultBranch = main
 [credential "https://github.com"]
-	helper = 
-	helper = !/usr/local/bin/gh auth git-credential
+  helper = 
+  helper = !/usr/local/bin/gh auth git-credential
+[delta]
+  syntax-theme = gruvbox
 [pager]
-    diff = delta
-    log = delta
-    reflog = delta
-    show = delta
+  diff = delta
+  log = delta
+  reflog = delta
+  show = delta
 [interactive]
-    diffFilter = delta --color-only --features=interactive
+  diffFilter = delta --color-only --features=interactive
 [init]
-	defaultBranch = main
+  defaultBranch = main
 [credential "https://github.com"]
-	helper = 
-	helper = !/usr/local/bin/gh auth git-credential
+  helper = 
+  helper = !/usr/local/bin/gh auth git-credential
 [pager]
-	branch = true
+  branch = true
 [mergetool "fugitive"]
-	cmd = vim -f -c "Gvdiffsplit!"
+  cmd = vim -f -c "Gvdiffsplit!"
 [merge]
-	tool = fugitive
+  tool = fugitive
 [mergetool]
   prompt = false
