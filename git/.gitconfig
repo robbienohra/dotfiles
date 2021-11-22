@@ -51,8 +51,6 @@
 [credential "https://github.com"]
   helper = 
   helper = !/usr/local/bin/gh auth git-credential
-[delta]
-  syntax-theme = gruvbox
 [pager]
   diff = delta
   log = delta
