@@ -3,3 +3,4 @@ package.json
 db.json
 memos.json
 hosts.yml
+extensions/*
