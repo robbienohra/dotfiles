@@ -2,3 +2,4 @@ node_modules
 package.json
 db.json
 memos.json
+hosts.yml
