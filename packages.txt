@@ -16,4 +16,4 @@ pass
 nb
 gh
 bazelisk
-git-credential-manager-core
+fd
