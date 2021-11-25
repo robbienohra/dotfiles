@@ -3,6 +3,7 @@ alias b="bash"
 alias vim="nvim"
 alias vi="nvim"
 alias l="exa -l"
+alias la="exa -la"
 export PYENV_ROOT="$HOME/.pyenv"
 export EDITOR=nvim
 

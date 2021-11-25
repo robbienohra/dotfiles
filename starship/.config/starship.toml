@@ -1,10 +1,7 @@
 format = """
 $directory\
 $git_branch\
-$git_state\
-$git_metrics\
-$git_status\
-$cmd_duration
+$git_status
 $character"""
 
 [git_commit]
@@ -14,4 +11,4 @@ only_detached = false
 disabled = false
 
 [time]
-disabled = false
+disabled = true
