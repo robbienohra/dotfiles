@@ -4,6 +4,7 @@ alias vim="nvim"
 alias vi="nvim"
 alias l="exa -l"
 export PYENV_ROOT="$HOME/.pyenv"
+export EDITOR=nvim
 
 # tmux
 
@@ -16,7 +17,7 @@ alias tn="t new -t"
 
 export FZF_DEFAULT_OPTS="
 --color='bg+:#3c3836,\
-bg:#32302f,\
+bg:#1D2021,\
 spinner:#fb4934,\
 hl:#928374,\
 fg:#ebdbb2,\
