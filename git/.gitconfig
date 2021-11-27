@@ -67,3 +67,5 @@
 	prompt = false
 [credential]
 	helper = store
+[pull]
+	rebase = true
