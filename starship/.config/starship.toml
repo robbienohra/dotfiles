@@ -4,6 +4,9 @@ $git_branch\
 $git_status
 $character"""
 
+[directory]
+truncation_length=5
+
 [git_commit]
 only_detached = false
 

@@ -107,6 +107,7 @@ let g:coc_global_extensions = [
 		\"coc-eslint",
 		\"coc-yaml",
 		\"coc-toml",
+		\"coc-markdownlint",
 		\"coc-snippets"]
 
 nmap <silent> gd <Plug>(coc-definition)

@@ -22,5 +22,6 @@
   "markdownlint.config": {
     "no-missing-space-atx": false,
     "no-inline-html": false
-  }
+  },
+  "snippets.userSnippetsDirectory": "~/dotfiles/ultisnips"
 }
