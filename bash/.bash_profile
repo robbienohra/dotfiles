@@ -6,6 +6,13 @@ alias l="exa -l"
 alias la="exa -la"
 export PYENV_ROOT="$HOME/.pyenv"
 export EDITOR=nvim
+export SOLN="4da1f2ae4ef03a88efef3ebbc745ac0d"
+
+
+# gpg
+
+GPG_TTY=$(tty)
+export GPG_TTY
 
 # tmux
 
