@@ -5,6 +5,7 @@ fd
 fzf
 gh
 git-delta
+hugo
 jq
 nb
 neovim
