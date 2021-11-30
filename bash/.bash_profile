@@ -8,7 +8,6 @@ export PYENV_ROOT="$HOME/.pyenv"
 export EDITOR=nvim
 export SOLN="4da1f2ae4ef03a88efef3ebbc745ac0d"
 
-
 # gpg
 
 GPG_TTY=$(tty)
@@ -21,6 +20,7 @@ alias ta="t a -t"
 alias tls="t ls"
 alias tn="t new -t"
 alias tk="t kill-server"
+alias t0="t a -t 0"
 
 # fzf
 
