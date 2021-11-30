@@ -23,5 +23,5 @@
     "no-missing-space-atx": false,
     "no-inline-html": false
   },
-  "snippets.userSnippetsDirectory": "~/dotfiles/ultisnips"
+  "snippets.userSnippetsDirectory": "~/snips/ultisnips"
 }
