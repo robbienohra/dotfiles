@@ -164,6 +164,8 @@ nnoremap Q ZQ
 nnoremap <silent> <C-S> :update<CR>
 inoremap <silent> <C-S> <Esc>:update<CR>
 vnoremap <C-c> :w !pbcopy<CR><CR>
+" clear search
+noremap <silent> <C-k> :let @/ = ""<CR>
 
 " black hole register
 nmap <S-d> "_dd
