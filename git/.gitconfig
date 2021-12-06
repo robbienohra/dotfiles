@@ -34,6 +34,8 @@
   	re = reset --hard @{u}
   	fe = fetch
   	br = branch
+        ru = remote update
+	c- = checkout -
 [core]
 	editor = nvim
   	excludesFile = /Users/robbienohra/.gitignore
