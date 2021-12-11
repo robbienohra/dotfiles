@@ -62,6 +62,7 @@ let g:gruvbox_invert_selection=0
 let g:gruvbox_contrast_dark = 'hard'
 let g:gruvbox_sign_column = 'bg0'
 let g:gruvbox_italic = 1
+let g:vim_italicize_strings = 1
 colorscheme gruvbox
 
 let g:fzf_colors =
@@ -80,7 +81,6 @@ let g:fzf_colors =
   \ 'header':  ['fg', 'Comment'] }
 
 " markdown
-
 let g:vim_markdown_strikethrough = 1
 let g:vim_markdown_conceal_code_blocks = 1
 let g:vim_markdown_folding_disabled = 1
