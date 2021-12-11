@@ -13,6 +13,7 @@
   	done = !git push --force-with-lease origin HEAD
   	rh = reset --hard
   	pom = pull origin master
+  	pon = pull origin master
   	rom = rebase origin/master
   	cob = checkout -b
   	last = log -1 HEAD
