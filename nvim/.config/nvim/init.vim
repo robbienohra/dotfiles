@@ -28,7 +28,7 @@ set bg=dark
 set cole=2
 highlight VertSplit cterm=NONE
 
-ft plugin indent on
+filetype plugin indent on
 autocmd BufReadPre,BufNewFile * let b:did_ftplugin = 1
 
 " plugins
