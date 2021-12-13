@@ -28,10 +28,11 @@ set pastetoggle=<F3>
 " for cursor focus
 set splitright
 set splitbelow
+highlight VertSplit cterm=NONE
 
 filetype plugin indent on
 filetype on
-highlight VertSplit cterm=NONE
+autocmd BufReadPre,BufNewFile * let b:did_ftplugin = 1
 
 " plugins
 
@@ -52,17 +53,37 @@ Plug 'norcalli/nvim-colorizer.lua'
 Plug 'plasticboy/vim-markdown'
 Plug 'rktjmp/lush.nvim'
 Plug 'ellisonleao/gruvbox.nvim'
-" Plug 'morhetz/gruvbox'
 Plug 'reedes/vim-pencil'
 call plug#end()
 
-" themes
+" theme
 set background=dark
 let g:gruvbox_invert_selection=0
 let g:gruvbox_contrast_dark = 'hard'
 let g:gruvbox_sign_column = 'bg0'
 let g:gruvbox_italic = 1
 colorscheme gruvbox
+
+
+" nvim
+let g:loaded_perl_provider = 0
+let g:loaded_ruby_provider = 0
+
+" plugin configs
+
+" markdown
+let g:vim_markdown_strikethrough = 1
+let g:vim_markdown_conceal_code_blocks = 1
+let g:vim_markdown_folding_disabled = 1
+let g:vim_markdown_json_frontmatter = 1
+let g:vim_markdown_no_extensions_in_markdown = 1
+let g:vim_markdown_new_list_item_indent = 0
+let g:vim_markdown_auto_insert_bullets = 1
+let g:tex_conceal = "$"
+let g:vim_markdown_math = 1
+set conceallevel=2
+
+" fzf
 
 let g:fzf_colors =
   \ { 'fg':      ['fg', 'Normal'],
@@ -79,20 +100,7 @@ let g:fzf_colors =
   \ 'spinner': ['fg', 'Label'],
   \ 'header':  ['fg', 'Comment'] }
 
-" markdown
-let g:vim_markdown_strikethrough = 1
-let g:vim_markdown_conceal_code_blocks = 1
-let g:vim_markdown_folding_disabled = 1
-let g:vim_markdown_json_frontmatter = 1
-let g:vim_markdown_no_extensions_in_markdown = 1
-let g:vim_markdown_new_list_item_indent = 0
-let g:vim_markdown_auto_insert_bullets = 1
-let g:tex_conceal = "$"
-let g:vim_markdown_math = 1
-set conceallevel=2
-
 " coc-nvim 
-
 let g:coc_global_extensions = [
 		\"coc-clangd", 
 		\"coc-css", 
@@ -109,6 +117,54 @@ let g:coc_global_extensions = [
 		\"coc-markdownlint",
 		\"coc-snippets"]
 
+hi! CocErrorSign guifg=#d1666a
+hi! CocInfoSign guibg=#353b45
+hi! CocWarningSign guifg=#d1cd66
+
+" commenter
+autocmd FileType vim setlocal commentstring=\"\ %s
+autocmd FileType yaml,sh setlocal commentstring=#\ %s
+autocmd FileType markdown setlocal commentstring=<!--\ %s\ -->
+
+" treesitter
+lua <<EOF
+require'nvim-treesitter.configs'.setup {
+  ensure_installed = "maintained", 
+  highlight = {
+    enable = true,            
+    additional_vim_regex_highlighting = false,
+  },
+}
+EOF
+
+" lualine
+lua <<EOF
+require('lualine').setup {
+  options = {
+    theme = 'gruvbox_dark',
+    icons_enabled = false
+  }
+}
+EOF
+
+" colorizer
+lua <<EOF
+require'colorizer'.setup()
+EOF
+
+" mappings
+
+" fzf
+
+nnoremap <silent> <C-t> :Files <CR>
+nnoremap <silent> <C-f> :Rg<CR>
+
+" fugitive
+
+map <leader>dv :Gvdiffsplit!
+
+" coc-nvim
+
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gv :call CocAction('jumpDefinition', 'vsplit')<CR>
 nmap <silent> gy <Plug>(coc-type-definition)
@@ -120,27 +176,7 @@ command! -nargs=0 Format :call CocAction('format')
 command! -nargs=0 OR :call CocAction('runCommand', 'editor.action.organizeImport')
 command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
 nnoremap <silent> <leader>p :Prettier<CR>
-
-hi! CocErrorSign guifg=#d1666a
-hi! CocInfoSign guibg=#353b45
-hi! CocWarningSign guifg=#d1cd66
-
 imap <C-l> <Plug>(coc-snippets-expand)
-
-" python indentation
-
-au BufNewFile,BufRead *.py set tabstop=4 softtabstop=4 shiftwidth=4 expandtab smarttab autoindent
-
-" fzf
-
-nnoremap <silent> <C-t> :Files <CR>
-nnoremap <silent> <C-f> :Rg<CR>
-
-" mappings
-
-" fugitive
-
-map <leader>dv :Gvdiffsplit!
 
 " compile and run c++ program
 
@@ -151,18 +187,14 @@ autocmd FileType cpp nnoremap <C-x> :!./%:r.out
 
 map <leader>f :%s/
 
-" misc
-
-nnoremap tl  :tabprev<CR>
-nnoremap tu  :tabnext<CR>
-
-autocmd BufReadPre,BufNewFile * let b:did_ftplugin = 1
+" editing
 
 nnoremap ZZ ZZ
 nnoremap Q ZQ
 nnoremap <silent> <C-S> :update<CR>
 inoremap <silent> <C-S> <Esc>:update<CR>
 vnoremap <C-c> :w !pbcopy<CR><CR>
+
 " clear search
 noremap <silent> <C-k> :let @/ = ""<CR>
 
@@ -172,46 +204,6 @@ nmap <S-b> dvb
 " nmap <S-w> ciw
 nmap <S-w> diw
 
-" nvim
+" python indentation
 
-let g:loaded_perl_provider = 0
-let g:loaded_ruby_provider = 0
-
-" lua configs
-
-lua <<EOF
-require'nvim-treesitter.configs'.setup {
-  ensure_installed = "maintained", 
-  highlight = {
-    enable = true,            
-    additional_vim_regex_highlighting = false,
-  },
-}
-
-require('lualine').setup {
-  options = {
-    theme = 'gruvbox_dark',
-    icons_enabled = false
-  }
-}
-
-require'colorizer'.setup()
-EOF
-
-" abbreviations
-
-iabbrev <expr> dts strftime("%Y-%m-%d")
-
-" commenter
-
-autocmd FileType vim setlocal commentstring=\"\ %s
-autocmd FileType yaml,sh setlocal commentstring=#\ %s
-autocmd FileType markdown setlocal commentstring=<!--\ %s\ -->
-
-" " pencil
-
-" augroup pencil
-"   autocmd!
-"   autocmd FileType markdown,mkd call pencil#init()
-"   autocmd FileType text         call pencil#init()
-" augroup END
+au BufNewFile,BufRead *.py set tabstop=4 softtabstop=4 shiftwidth=4 expandtab smarttab autoindent
