@@ -24,12 +24,10 @@ set fdm=marker
 set re=0
 set tm=1000 ttm=0
 set cot=menuone,noinsert,noselect
-set bg=dark
 set cole=2
 highlight VertSplit cterm=NONE
 
 filetype plugin indent on
-autocmd BufReadPre,BufNewFile * let b:did_ftplugin = 1
 
 " plugins
 
@@ -58,6 +56,7 @@ let g:gruvbox_invert_selection=0
 let g:gruvbox_contrast_dark = 'hard'
 let g:gruvbox_sign_column = 'bg0'
 let g:gruvbox_italic = 1
+set bg=dark " must be set after plugins
 colo gruvbox
 
 
@@ -77,6 +76,10 @@ let g:vim_markdown_new_list_item_indent = 0
 let g:vim_markdown_auto_insert_bullets = 1
 let g:tex_conceal = "$"
 let g:vim_markdown_math = 1
+
+" vim-pencil
+let g:pencil#textwidth = 79
+nnoremap <silent><leader>q gqap
 
 " fzf
 
@@ -199,8 +202,6 @@ noremap <silent> <C-k> :let @/ = ""<CR>
 nmap <S-d> "_dd
 nmap <S-b> dvb
 nmap <S-w> diw
-
-let g:pencil#autoformat = 1      " 0=disable, 1=enable (def)
 
 " override default python indentation
 

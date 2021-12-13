@@ -9,6 +9,7 @@ hugo
 jq
 nb
 neovim
+pandoc
 pass
 pure
 python
