@@ -191,7 +191,6 @@ map <leader>f :%s/
 
 nnoremap ZZ ZZ
 nnoremap Q ZQ
-nnoremap <silent> <C-S> :update<CR>
 inoremap <silent> <C-S> <Esc>:update<CR>
 vnoremap <C-c> :w !pbcopy<CR><CR>
 
@@ -201,7 +200,6 @@ noremap <silent> <C-k> :let @/ = ""<CR>
 " black hole register
 nmap <S-d> "_dd
 nmap <S-b> dvb
-" nmap <S-w> ciw
 nmap <S-w> diw
 
 " python indentation
