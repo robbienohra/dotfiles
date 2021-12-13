@@ -106,22 +106,8 @@ cr () {
 
 # nb
 
-day () {
-  cd ~/robbie;
-  nb use diary;
-  TODAY=$(date +"%Y-%m-%d");
-  FILE="/Users/robbienohra/robbie/diary/$TODAY.md"
-  if [[ -f "$FILE" ]]; then
-    nb edit "$TODAY.md";
-  else
-    nb add "$TODAY.md";
-  fi
-}
-
-note () {
-  cd ~/robbie;
-  nb use notes;
-  nb add;
+function bk() {
+  nb bk --no-request "$@";
 }
 
 # conf () {
