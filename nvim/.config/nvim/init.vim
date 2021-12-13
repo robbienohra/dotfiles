@@ -1,37 +1,34 @@
-set nocompatible
-set ignorecase
-set nobackup
-set nowritebackup
-set encoding=UTF-8
-set number
-set undodir=~/.configs/nvim/undodir
-set undofile
+" files
+set ic 
+  \ nobk
+  \ nowb
+  \ udf
+  \ nu
+  \ lz
+  \ nornu 
+  \ nocuc
+  \ nocul
+  \ spr
+  \ sb
+  \ tgc " needed for colorizer
+set udir=~/.configs/nvim/undodir
 set ls=2
-set termguicolors
-set textwidth=79
-set cmdheight=1
-set formatoptions+=l
-set shm=at
-set shortmess+=W
-set shiftwidth=2
-set updatetime=100
-set norelativenumber
-set lazyredraw
-set nocursorcolumn
-set nocursorline
-set synmaxcol=200
-set foldmethod=marker
+set tw=79
+set ch=1
+set fo+=l
+set shm=atW
+set sw=2
+set ut=100
+set smc=200
+set fdm=marker
 set re=0
-set timeoutlen=1000 ttimeoutlen=0
-set completeopt=menuone,noinsert,noselect
-set pastetoggle=<F3>
-" for cursor focus
-set splitright
-set splitbelow
+set tm=1000 ttm=0
+set cot=menuone,noinsert,noselect
+set bg=dark
+set cole=2
 highlight VertSplit cterm=NONE
 
-filetype plugin indent on
-filetype on
+ft plugin indent on
 autocmd BufReadPre,BufNewFile * let b:did_ftplugin = 1
 
 " plugins
@@ -57,12 +54,11 @@ Plug 'reedes/vim-pencil'
 call plug#end()
 
 " theme
-set background=dark
 let g:gruvbox_invert_selection=0
 let g:gruvbox_contrast_dark = 'hard'
 let g:gruvbox_sign_column = 'bg0'
 let g:gruvbox_italic = 1
-colorscheme gruvbox
+colo gruvbox
 
 
 " nvim
@@ -81,7 +77,6 @@ let g:vim_markdown_new_list_item_indent = 0
 let g:vim_markdown_auto_insert_bullets = 1
 let g:tex_conceal = "$"
 let g:vim_markdown_math = 1
-set conceallevel=2
 
 " fzf
 
@@ -191,6 +186,9 @@ map <leader>f :%s/
 
 nnoremap ZZ ZZ
 nnoremap Q ZQ
+" save when not in insert mode
+nnoremap <silent> <C-S> :update<CR>
+" save when in insert mode
 inoremap <silent> <C-S> <Esc>:update<CR>
 vnoremap <C-c> :w !pbcopy<CR><CR>
 
@@ -202,6 +200,8 @@ nmap <S-d> "_dd
 nmap <S-b> dvb
 nmap <S-w> diw
 
-" python indentation
+let g:pencil#autoformat = 1      " 0=disable, 1=enable (def)
+
+" override default python indentation
 
 au BufNewFile,BufRead *.py set tabstop=4 softtabstop=4 shiftwidth=4 expandtab smarttab autoindent
