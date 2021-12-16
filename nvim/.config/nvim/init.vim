@@ -113,7 +113,8 @@ let g:coc_global_extensions = [
 		\"coc-yaml",
 		\"coc-toml",
 		\"coc-markdownlint",
-		\"coc-snippets"]
+		\"coc-snippets",
+		\"coc-pairs"]
 
 hi! CocErrorSign guifg=#d1666a
 hi! CocInfoSign guibg=#353b45
@@ -194,6 +195,8 @@ nnoremap <silent> <C-S> :update<CR>
 " save when in insert mode
 inoremap <silent> <C-S> <Esc>:update<CR>
 vnoremap <C-c> :w !pbcopy<CR><CR>
+" break a line in normal mode
+nnoremap <NL> i<CR><CR><up><ESC>
 
 " clear search
 noremap <silent> <C-k> :let @/ = ""<CR>
@@ -202,6 +205,7 @@ noremap <silent> <C-k> :let @/ = ""<CR>
 nmap <S-d> "_dd
 nmap <S-b> dvb
 nmap <S-w> diw
+
 
 " override default python indentation
 
