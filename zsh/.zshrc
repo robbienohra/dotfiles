@@ -21,3 +21,7 @@ if [ -f '/Users/robbienohra/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '
 if [ -f '/Users/robbienohra/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/robbienohra/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
 
 setopt globdots
+
+# fnm
+export PATH=/Users/robbienohra/.fnm:$PATH
+eval "$(fnm env)"
