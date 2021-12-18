@@ -46,7 +46,7 @@ export FZF_ALT_C_COMMAND="fd --type d"
 
 function sq() {
   git add .;
-  git commit --fixup $(git rev-parse head);
+  git commit --fixup $(git rev-parse head) -n;
   git rebase -i head~2 --autosquash;
 }
 
@@ -98,6 +98,10 @@ v () {
 
 cf () {
   cd ~/bsci/benchsci/frontend/ern
+}
+
+cg () {
+  cd ~/bsci/benchsci/frontend/reagent
 }
 
 cr () {
