@@ -32,30 +32,30 @@ filetype plugin indent on
 " plugins
 
 call plug#begin('~/.vim/plugged')
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-vinegar'
-Plug 'tpope/vim-unimpaired'
-Plug 'tpope/vim-commentary'
+Plug 'ellisonleao/gruvbox.nvim'
+Plug 'hoob3rt/lualine.nvim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-peekaboo'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} 
-Plug 'hoob3rt/lualine.nvim'
 Plug 'mhinz/vim-signify'
-Plug 'ruanyl/vim-gh-line'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'norcalli/nvim-colorizer.lua'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} 
 Plug 'plasticboy/vim-markdown'
-Plug 'rktjmp/lush.nvim'
-Plug 'ellisonleao/gruvbox.nvim'
 Plug 'reedes/vim-pencil'
+Plug 'rktjmp/lush.nvim'
+Plug 'ruanyl/vim-gh-line'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-unimpaired'
+Plug 'tpope/vim-vinegar'
 call plug#end()
 
 " theme
-let g:gruvbox_invert_selection=0
 let g:gruvbox_contrast_dark = 'hard'
-let g:gruvbox_sign_column = 'bg0'
+let g:gruvbox_invert_selection=0
 let g:gruvbox_italic = 1
+let g:gruvbox_sign_column = 'bg0'
 set bg=dark " must be set after plugins
 colo gruvbox
 
@@ -67,15 +67,16 @@ let g:loaded_ruby_provider = 0
 " plugin configs
 
 " markdown
-let g:vim_markdown_strikethrough = 1
+let g:tex_conceal = "$"
+let g:vim_markdown_auto_insert_bullets = 1
 let g:vim_markdown_conceal_code_blocks = 1
+let g:vim_markdown_fenced_languages = ['js=javascript', 'c++=cpp']
 let g:vim_markdown_folding_disabled = 1
 let g:vim_markdown_json_frontmatter = 1
-let g:vim_markdown_no_extensions_in_markdown = 1
-let g:vim_markdown_new_list_item_indent = 0
-let g:vim_markdown_auto_insert_bullets = 1
-let g:tex_conceal = "$"
 let g:vim_markdown_math = 1
+let g:vim_markdown_new_list_item_indent = 0
+let g:vim_markdown_no_extensions_in_markdown = 1
+let g:vim_markdown_strikethrough = 1
 
 " vim-pencil
 let g:pencil#textwidth = 79
