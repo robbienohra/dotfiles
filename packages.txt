@@ -11,6 +11,7 @@ nb
 neovim
 pandoc
 pass
+pb
 pure
 python
 rectangle

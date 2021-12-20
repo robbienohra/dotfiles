@@ -1,4 +1,4 @@
-brew tap xwmx/taps # for nb CLI
+brew tap xwmx/taps # for nb, pb CLIs
 brew install $(<packages.txt)
 
 # gh extensions

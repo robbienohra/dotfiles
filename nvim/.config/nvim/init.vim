@@ -49,6 +49,7 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-vinegar'
+Plug 'godlygeek/tabular'
 call plug#end()
 
 " theme
@@ -115,7 +116,8 @@ let g:coc_global_extensions = [
 		\"coc-toml",
 		\"coc-markdownlint",
 		\"coc-snippets",
-		\"coc-pairs"]
+		\"coc-pairs",
+		\"coc-vetur"]
 
 hi! CocErrorSign guifg=#d1666a
 hi! CocInfoSign guibg=#353b45
