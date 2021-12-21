@@ -25,5 +25,5 @@
   },
   "snippets.userSnippetsDirectory": "~/snips/ultisnips",
   "sql.lintOnSave": true,
-  "sql.formatOptions": { "language": "postgresql" }
+  "sql.formatOptions": { "language": "postgresql", "database": "postgresql" }
 }
