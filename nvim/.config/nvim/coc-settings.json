@@ -23,5 +23,7 @@
     "no-missing-space-atx": false,
     "no-inline-html": false
   },
-  "snippets.userSnippetsDirectory": "~/snips/ultisnips"
+  "snippets.userSnippetsDirectory": "~/snips/ultisnips",
+  "sql.lintOnSave": true,
+  "sql.formatOptions": { "language": "postgresql" }
 }

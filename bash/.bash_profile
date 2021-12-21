@@ -69,6 +69,10 @@ p () {
   usql "postgres://sor-reagent:$(pass show pgpassword)@localhost:5499/sor?sslmode=disable" "$@";
 }
 
+u () {
+  usql "postgres://robbienohra@localhost:5432/robbienohra?sslmode=disable" "$@";
+}
+
 # react
 
 dev () {
