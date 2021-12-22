@@ -51,6 +51,7 @@ Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-vinegar'
 Plug 'godlygeek/tabular'
 Plug 'yaegassy/coc-volar', {'do': 'yarn install --frozen-lockfile'}
+Plug 'dhruvasagar/vim-table-mode'
 call plug#end()
 
 " theme
