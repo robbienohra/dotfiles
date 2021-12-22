@@ -23,4 +23,5 @@ stow
 tmux
 tokei
 xo/xo/usql
+watchman
 yq
