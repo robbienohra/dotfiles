@@ -11,6 +11,8 @@ brew install --cask font-jetbrains-mono
 # https://www.titanium-software.fr/en/onyx.html
 # https://github.com/alacritty/alacritty/releases
 # Alacritty.desktop
+# initialize pass gpg
+# https://wiki.archlinux.org/title/Pass
 
 # gh extensions
 
