@@ -202,6 +202,8 @@ inoremap <silent> <C-S> <Esc>:update<CR>
 vnoremap <C-c> :w !pbcopy<CR><CR>
 " break a line in normal mode
 nnoremap <NL> i<CR><CR><up><ESC>
+" insert date header
+nmap <silent> <leader>D "=strftime('# %Y-%m-%d')<C-M>p
 
 " clear search
 noremap <silent> <C-k> :let @/ = ""<CR>
