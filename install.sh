@@ -5,7 +5,6 @@ brew install $(<packages.txt)
 brew tap homebrew/cask-fonts
 brew install --cask font-jetbrains-mono
 
-
 # https://ohmyz.sh/#install
 # https://github.com/ColemakMods/mod-dh
 # https://www.titanium-software.fr/en/onyx.html
