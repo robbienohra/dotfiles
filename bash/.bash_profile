@@ -50,17 +50,16 @@ function sq() {
   git rebase -i head~2 --autosquash;
 }
 
-
 gdiff () {
   git diff --name-only head~1;
 }
 
 rconf () { 
- vim -c 'Gvdiffsplit!' "$@"
+ vim -c 'Gvdiffsplit!' "$@";
 }
 
 prune () {
-  git branch | egrep -v "(^\*|master)" | xargs git branch -D
+  git branch | egrep -v "(^\*|master)" | xargs git branch -D;
 }
 
 # psql
@@ -76,7 +75,7 @@ u () {
 # react
 
 dev () {
-  npm run dev
+  npm run dev;
 }
 
 # restic
@@ -91,25 +90,25 @@ re () {
 # bash
 
 srr () {
-  sudo rm -r "$@"
+  sudo rm -r "$@";
 }
 
 v () {
-  nvim .
+  nvim .;
 }
 
 # b6i
 
-cf () {
-  cd ~/bsci/benchsci/frontend/ern
-}
-
-cg () {
-  cd ~/bsci/benchsci/frontend/reagent
+ce () {
+  cd ~/bsci/benchsci/frontend/ern;
 }
 
 cr () {
-  cd ~/bsci/benchsci/sites/reagent
+  cd ~/bsci/benchsci/frontend/reagent;
+}
+
+rgv () {
+  rg --vimgrep "$@";
 }
 
 # nb
@@ -118,12 +117,4 @@ function bk() {
   nb bk --no-request "$@";
 }
 
-# conf () {
-#   GOOGLE_PROJECT_ID=robbie-329220 \
-#   GOOGLE_APPLICATION_CREDENTIALS=$HOME/.config/robbie-329220-7d1a680d1c9a.json \
-#   RESTIC_PASSWORD=$(pass show restic) \
-#   restic -r gs:robbie-backups:/restic \
-#     backup \
-#     ~/.nbrc
-# }
 . "$HOME/.cargo/env"
