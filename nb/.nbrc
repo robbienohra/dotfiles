@@ -6,3 +6,5 @@ export NB_DIR="${NB_DIR:-/Users/robbienohra/notes}" # Set by `nb` • Sun 31 Oct
 export EDITOR="nvim" # Set by `nb` • Sun 31 Oct 2021 21:28:08 EDT
 
 export NB_AUTO_SYNC="${NB_AUTO_SYNC:-1}" # Set by `nb` • Fri 19 Nov 2021 02:16:03 EST
+
+export NB_ENCRYPTION_TOOL="${NB_ENCRYPTION_TOOL:-gpg}" # Set by `nb` • Fri 24 Dec 2021 22:17:11 EST
