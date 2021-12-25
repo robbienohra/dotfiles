@@ -1,10 +1,11 @@
 #!/usr/bin/env bash
 
 
-export NB_DIR="${NB_DIR:-/Users/robbienohra/notes}" # Set by `nb` • Sun 31 Oct 2021 21:23:59 EDT
 
 export EDITOR="nvim" # Set by `nb` • Sun 31 Oct 2021 21:28:08 EDT
 
 export NB_AUTO_SYNC="${NB_AUTO_SYNC:-1}" # Set by `nb` • Fri 19 Nov 2021 02:16:03 EST
 
 export NB_ENCRYPTION_TOOL="${NB_ENCRYPTION_TOOL:-gpg}" # Set by `nb` • Fri 24 Dec 2021 23:13:06 EST
+
+export NB_DIR="${NB_DIR:-/Users/robbienohra/nb}" # Set by `nb` • Sat 25 Dec 2021 15:56:23 EST

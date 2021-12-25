@@ -25,3 +25,4 @@ tokei
 xo/xo/usql
 watchman
 yq
+zoxide
