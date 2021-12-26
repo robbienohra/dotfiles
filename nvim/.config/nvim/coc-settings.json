@@ -22,7 +22,8 @@
   "markdownlint.config": {
     "no-missing-space-atx": false,
     "no-inline-html": false,
-    "line-length": { "line_length": 80, "code_blocks": false, "tables": false }
+    "line-length": { "line_length": 80, "code_blocks": false, "tables": false },
+    "no-bare-urls": false
   },
   "snippets.userSnippetsDirectory": "~/dotfiles/ultisnips",
   "sql.lintOnSave": true,

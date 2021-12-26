@@ -18,7 +18,8 @@
   	rom = rebase origin/master
   	cob = checkout -b
   	last = log -1 HEAD
-  	cm = commit -m
+	cm = commit -m
+	cme = commit --allow-empty-message
   	com = checkout master
   	st = status -sb
   	dn = diff --name-only master...
