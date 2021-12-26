@@ -73,7 +73,11 @@ let g:loaded_ruby_provider = 0
 let g:tex_conceal = "$"
 let g:vim_markdown_auto_insert_bullets = 1
 let g:vim_markdown_conceal_code_blocks = 1
-let g:vim_markdown_fenced_languages = ['js=javascript', 'c++=cpp', 'bash=sh']
+let g:vim_markdown_fenced_languages = [
+      \'javascript=js',
+      \'c++=cpp',
+      \'bash=sh',
+      \'typescript=ts']
 let g:vim_markdown_folding_disabled = 1
 let g:vim_markdown_json_frontmatter = 1
 let g:vim_markdown_math = 1
