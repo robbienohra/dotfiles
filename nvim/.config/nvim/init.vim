@@ -41,17 +41,13 @@ Plug 'mhinz/vim-signify'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} 
-Plug 'plasticboy/vim-markdown'
-Plug 'reedes/vim-pencil'
 Plug 'rktjmp/lush.nvim'
 Plug 'ruanyl/vim-gh-line'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-vinegar'
-Plug 'godlygeek/tabular'
 Plug 'yaegassy/coc-volar', {'do': 'yarn install --frozen-lockfile'}
-Plug 'dhruvasagar/vim-table-mode'
 call plug#end()
 
 " theme
@@ -68,26 +64,6 @@ let g:loaded_perl_provider = 0
 let g:loaded_ruby_provider = 0
 
 " plugin configs
-
-" markdown
-let g:tex_conceal = "$"
-let g:vim_markdown_auto_insert_bullets = 1
-let g:vim_markdown_conceal_code_blocks = 1
-let g:vim_markdown_fenced_languages = [
-      \'javascript=js',
-      \'c++=cpp',
-      \'bash=sh',
-      \'typescript=ts']
-let g:vim_markdown_folding_disabled = 1
-let g:vim_markdown_json_frontmatter = 1
-let g:vim_markdown_math = 1
-let g:vim_markdown_new_list_item_indent = 0
-let g:vim_markdown_no_extensions_in_markdown = 1
-let g:vim_markdown_strikethrough = 1
-
-" vim-pencil
-let g:pencil#textwidth = 79
-nnoremap <silent><leader>q gqap
 
 " fzf
 
