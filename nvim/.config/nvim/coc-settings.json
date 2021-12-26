@@ -24,7 +24,7 @@
     "no-inline-html": false,
     "line-length": { "line_length": 80, "code_blocks": false, "tables": false }
   },
-  "snippets.userSnippetsDirectory": "~/snips/ultisnips",
+  "snippets.userSnippetsDirectory": "~/dotfiles/ultisnips",
   "sql.lintOnSave": true,
   "sql.formatOptions": { "language": "postgresql", "database": "postgresql" }
 }
