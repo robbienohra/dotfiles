@@ -10,7 +10,6 @@ jq
 neovim
 pandoc
 pass
-pb
 postgres
 procs
 pure

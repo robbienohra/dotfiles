@@ -1,4 +1,3 @@
-brew tap xwmx/taps # for nb, pb CLIs
 brew install $(<packages.txt)
 
 # https://github.com/JetBrains/JetBrainsMono
