@@ -65,6 +65,10 @@ let g:loaded_ruby_provider = 0
 
 " plugin configs
 
+" signify
+
+nnoremap <leader>gd :SignifyDiff<cr>
+
 " fzf
 
 let g:fzf_colors =
@@ -89,7 +93,8 @@ let g:coc_global_extensions = [
 		\"coc-emmet",
 		\"coc-html",
 		\"coc-json", 
-		\"coc-prettier", 
+		\"coc-prettier",
+		\"coc-sh",
 		\"coc-pyright", 
 		\"coc-sql", 
 		\"coc-tsserver",
