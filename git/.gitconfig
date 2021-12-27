@@ -61,13 +61,18 @@
 [interactive]
 	diffFilter = delta --color-only --features=interactive
 [init]
-	defaultBranch = main
+  defaultBranch = main
 [pager]
 	branch = true
 [mergetool "fugitive"]
 	cmd = vim -f -c "Gvdiffsplit!"
 [merge]
-	tool = fugitive
+  tool = fugitive
+; https://github.com/gitkraken/vscode-gitlens/issues/671#issuecomment-545240525
+; [diff]
+;     tool = vscode
+; [difftool "vscode"]
+;     cmd = code --wait --diff $LOCAL $REMOTE
 [mergetool]
 	prompt = false
 [credential]

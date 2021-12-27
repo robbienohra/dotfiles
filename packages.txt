@@ -7,6 +7,7 @@ gh
 git-delta
 hugo
 jq
+llvm
 neovim
 pandoc
 pass
