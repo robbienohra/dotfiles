@@ -48,15 +48,20 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-vinegar'
 Plug 'yaegassy/coc-volar', {'do': 'yarn install --frozen-lockfile'}
+Plug 'sainnhe/gruvbox-material'
 call plug#end()
 
 " theme
-let g:gruvbox_contrast_dark = 'hard'
-let g:gruvbox_invert_selection=0
-let g:gruvbox_italic = 1
-let g:gruvbox_sign_column = 'bg0'
+" let g:gruvbox_contrast_dark = 'hard'
+" let g:gruvbox_invert_selection=0
+" let g:gruvbox_italic = 1
+" let g:gruvbox_sign_column = 'bg0'
+let g:gruvbox_material_background = 'medium'
+let g:gruvbox_material_sign_column_background = 'none'
+let g:gruvbox_material_enable_italic = 1
+let g:gruvbox_material_disable_italic_comment = 1
 set bg=dark " must be set after plugins
-colo gruvbox
+colo gruvbox-material
 
 
 " nvim

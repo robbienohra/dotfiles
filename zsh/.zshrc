@@ -25,3 +25,6 @@ setopt globdots
 # fnm
 export PATH=/Users/robbienohra/.fnm:$PATH
 eval "$(fnm env)"
+
+# zoxide
+eval "$(zoxide init zsh)"
