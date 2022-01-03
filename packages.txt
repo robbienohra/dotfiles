@@ -1,6 +1,7 @@
 alt-tab
 bat
 bazelisk
+drawio
 exa
 fd
 fzf
