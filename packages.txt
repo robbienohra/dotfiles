@@ -1,3 +1,4 @@
+alt-tab
 bat
 bazelisk
 exa
@@ -21,7 +22,7 @@ starship
 stow
 tmux
 tokei
-xo/xo/usql
 watchman
+xo/xo/usql
 yq
 zoxide
