@@ -41,6 +41,7 @@ Plug 'mhinz/vim-signify'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} 
+Plug 'plasticboy/vim-markdown'
 Plug 'rktjmp/lush.nvim'
 Plug 'ruanyl/vim-gh-line'
 Plug 'tpope/vim-commentary'
@@ -64,6 +65,18 @@ let g:loaded_perl_provider = 0
 let g:loaded_ruby_provider = 0
 
 " plugin configs
+
+" markdown
+let g:tex_conceal = "$"
+let g:vim_markdown_auto_insert_bullets = 1
+let g:vim_markdown_conceal_code_blocks = 1
+let g:vim_markdown_fenced_languages = ['js=javascript', 'c++=cpp']
+let g:vim_markdown_folding_disabled = 1
+let g:vim_markdown_json_frontmatter = 1
+let g:vim_markdown_math = 1
+let g:vim_markdown_new_list_item_indent = 0
+let g:vim_markdown_no_extensions_in_markdown = 1
+let g:vim_markdown_strikethrough = 1
 
 " signify
 
@@ -172,6 +185,8 @@ vnoremap <C-c> :w !pbcopy<CR><CR>
 nnoremap <NL> i<CR><CR><up><ESC>
 " insert date header
 nmap <silent> <leader>D "=strftime('# %Y-%m-%d')<C-M>p
+" source current file
+noremap <silent><buffer> <F9> :exec 'source '.bufname('%')<CR>
 
 " clear search
 noremap <silent> <C-k> :let @/ = ""<CR>
