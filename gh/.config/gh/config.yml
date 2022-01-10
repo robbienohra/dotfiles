@@ -12,3 +12,4 @@ aliases:
     pv: pr view --web
     br: branch
     pc: pr create --web
+    rob: pr list -A robbienohra

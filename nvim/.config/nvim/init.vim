@@ -48,7 +48,6 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-vinegar'
-Plug 'yaegassy/coc-volar', {'do': 'yarn install --frozen-lockfile'}
 call plug#end()
 
 " theme
@@ -100,7 +99,7 @@ let g:coc_global_extensions = [
 		\"coc-markdownlint",
 		\"coc-snippets",
 		\"coc-pairs",
-		\"coc-vetur"]
+		\"@yaegassy/coc-volar"]
 
 hi! CocErrorSign guifg=#d1666a
 hi! CocInfoSign guibg=#353b45
@@ -180,6 +179,7 @@ nnoremap Q ZQ
 nnoremap <silent> <C-S> :update<CR>
 " save when in insert mode
 inoremap <silent> <C-S> <Esc>:update<CR>
+" copy to system clipboard
 vnoremap <C-c> :w !pbcopy<CR><CR>
 " break a line in normal mode
 nnoremap <NL> i<CR><CR><up><ESC>
