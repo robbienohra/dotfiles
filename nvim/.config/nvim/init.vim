@@ -37,6 +37,7 @@ Plug 'hoob3rt/lualine.nvim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-peekaboo'
+Plug 'leafOfTree/vim-svelte-plugin'
 Plug 'mhinz/vim-signify'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'norcalli/nvim-colorizer.lua'
@@ -77,6 +78,11 @@ let g:vim_markdown_new_list_item_indent = 0
 let g:vim_markdown_no_extensions_in_markdown = 1
 let g:vim_markdown_strikethrough = 1
 
+" vim-svelte-plugin
+
+let g:vim_svelte_plugin_load_full_syntax = 1
+let g:vim_svelte_plugin_use_typescript = 1
+
 " signify
 
 nnoremap <leader>gd :SignifyDiff<cr>
@@ -99,6 +105,7 @@ let g:coc_global_extensions = [
 		\"coc-markdownlint",
 		\"coc-snippets",
 		\"coc-pairs",
+		\"coc-svelte",
 		\"@yaegassy/coc-volar"]
 
 hi! CocErrorSign guifg=#d1666a

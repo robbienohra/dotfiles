@@ -6,7 +6,8 @@
     "python",
     "cpp",
     "json",
-    "typescript"
+    "typescript",
+    "svelte"
   ],
   "coc.preferences.semanticTokensHighlights": false,
   "coc.preferences.jumpCommand": "edit",
@@ -27,5 +28,9 @@
   },
   "snippets.userSnippetsDirectory": "~/dotfiles/ultisnips",
   "sql.lintOnSave": true,
-  "sql.formatOptions": { "language": "postgresql", "database": "postgresql" }
+  "sql.formatOptions": {
+    "language": "postgresql",
+    "database": "postgresql"
+  },
+  "svelte.enable-ts-plugin": true
 }
