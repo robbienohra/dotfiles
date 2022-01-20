@@ -8,7 +8,7 @@ shell:
   args:
     - -l
     - -c
-    - "tmux attach || tmux"
+    - "tmux new -As0"
 env:
   TERM: alacritty
 scrolling:
