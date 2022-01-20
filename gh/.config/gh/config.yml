@@ -13,3 +13,4 @@ aliases:
     br: branch
     pc: pr create --web
     rob: pr list -A robbienohra
+    bs: browse
