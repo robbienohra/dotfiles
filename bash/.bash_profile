@@ -2,6 +2,7 @@ alias sb='source ~/.bash_profile'
 alias b="bash"
 alias vim="nvim"
 alias vi="nvim"
+alias v="nvim"
 alias l="exa -l"
 alias la="exa -la"
 export PYENV_ROOT="$HOME/.pyenv"
@@ -50,10 +51,6 @@ function sq() {
   git rebase -i head~2 --autosquash;
 }
 
-gdiff () {
-  git diff --name-only head~1;
-}
-
 rconf () { 
  vim -c 'Gvdiffsplit!' "$@";
 }
@@ -93,7 +90,7 @@ srr () {
   sudo rm -r "$@";
 }
 
-v () {
+g () {
   nvim .;
 }
 
@@ -111,10 +108,4 @@ rgv () {
   rg --vimgrep "$@";
 }
 
-# nb
-
-function bk() {
-  nb bk --no-request "$@";
-}
-
-# . "$HOME/.cargo/env"
+. "$HOME/.cargo/env"
