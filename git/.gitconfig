@@ -22,8 +22,8 @@
   	ca = commit --amend
 	cm = commit -m
 	cme = commit --allow-empty-message
-  	pomn = pull origin master
-	pomr = pull origin main
+  	pomn = pull origin main
+	pomr = pull origin master
   	dn = !git push --force-with-lease origin HEAD
   	st = status -sb
   	stu = stash -u
