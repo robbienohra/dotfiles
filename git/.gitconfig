@@ -4,41 +4,34 @@
   	smudge = git-lfs smudge -- %f
   	process = git-lfs filter-process
 [alias]
-	d = diff
-  	b = branch
   	l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-  	lg = !git log --pretty=format:\"%C(magenta)%h%Creset -%C(red)%d%Creset %s %C(dim green)(%cr) [%an]\" --abbrev-commit -30
-  	co = checkout
-  	ca = commit --amend
-  	done = !git push --force-with-lease origin HEAD
-  	rh = reset --hard
-  	pom = pull origin master
-	pon = pull origin main
-	poma= push origin main
-  	rom = rebase origin/master
-  	cob = checkout -b
   	last = log -1 HEAD
-	cm = commit -m
-	cme = commit --allow-empty-message
-  	com = checkout master
-  	st = status -sb
-  	dn = diff --name-only master...
-  	stu = stash -u
+  	b = branch
   	bd = branch -D
-  	aa = add .
+  	lg = !git log --pretty=format:\"%C(magenta)%h%Creset -%C(red)%d%Creset %s %C(dim green)(%cr) [%an]\" --abbrev-commit -30
+  	rom = rebase origin/master
   	ri = rebase -i
   	ra = rebase --abort
   	rc = rebase --continue
-  	sq = reset $(git merge-base master $(git branch --show-current))
-  	rhom = reset --hard origin/master
-  	poh = push origin head
+  	co = checkout
+  	cob = checkout -b
+  	com = checkout master
   	clear = checkout -- .
+	c- = checkout -
+  	ca = commit --amend
+	cm = commit -m
+	cme = commit --allow-empty-message
+  	pomn = pull origin master
+	pomr = pull origin main
+  	dn = !git push --force-with-lease origin HEAD
+  	st = status -sb
+  	stu = stash -u
+  	aa = add .
+  	rhom = reset --hard origin/master
   	cf = clean -f
   	re = reset --hard @{u}
-  	fe = fetch
-  	br = branch
         ru = remote update
-	c- = checkout -
+  	fe = fetch
 [core]
 	editor = nvim
   	excludesFile = /Users/robbienohra/.gitignore
@@ -61,21 +54,21 @@
 [interactive]
 	diffFilter = delta --color-only --features=interactive
 [init]
-  defaultBranch = main
+	defaultBranch = main
 [pager]
 	branch = true
 [mergetool "fugitive"]
 	cmd = vim -f -c "Gvdiffsplit!"
 [merge]
-  tool = fugitive
-; https://github.com/gitkraken/vscode-gitlens/issues/671#issuecomment-545240525
-; [diff]
-;     tool = vscode
-; [difftool "vscode"]
-;     cmd = code --wait --diff $LOCAL $REMOTE
+	tool = fugitive
+        conflictstyle = diff3
+[diff]
+	colorMoved = default
 [mergetool]
 	prompt = false
 [credential]
 	helper = store
 [pull]
-	rebase = true
+        rebase = true
+[delta]
+	navigate = true  # use n and N to move between diff sections

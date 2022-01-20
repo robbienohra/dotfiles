@@ -117,4 +117,4 @@ function bk() {
   nb bk --no-request "$@";
 }
 
-. "$HOME/.cargo/env"
+# . "$HOME/.cargo/env"
