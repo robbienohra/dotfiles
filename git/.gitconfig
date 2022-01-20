@@ -28,7 +28,7 @@
   	stu = stash -u
   	aa = add .
   	rhom = reset --hard origin/master
-  	cf = clean -f
+  	cf = clean -f .
   	re = reset --hard @{u}
         ru = remote update
   	fe = fetch
