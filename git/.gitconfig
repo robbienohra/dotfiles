@@ -5,7 +5,8 @@
   	process = git-lfs filter-process
 [alias]
   	l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-  	last = log -1 HEAD
+	last = log -1 HEAD
+	h = log -p .
   	b = branch
   	bd = branch -D
   	lg = !git log --pretty=format:\"%C(magenta)%h%Creset -%C(red)%d%Creset %s %C(dim green)(%cr) [%an]\" --abbrev-commit -30
