@@ -59,6 +59,8 @@ let g:gruvbox_sign_column = 'bg0'
 set bg=dark " must be set after plugins
 colo gruvbox
 
+let mapleader = ","
+
 " vim-vinegar
 
 let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+'
