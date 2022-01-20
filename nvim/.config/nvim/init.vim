@@ -52,13 +52,16 @@ Plug 'tpope/vim-vinegar'
 call plug#end()
 
 " theme
-let g:gruvbox_contrast_dark = 'soft'
+let g:gruvbox_contrast_dark = 'medium'
 let g:gruvbox_invert_selection=0
 let g:gruvbox_italic = 1
 let g:gruvbox_sign_column = 'bg0'
 set bg=dark " must be set after plugins
 colo gruvbox
 
+" vim-vinegar
+
+let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+'
 
 " nvim
 let g:loaded_perl_provider = 0
@@ -208,4 +211,3 @@ nmap <S-w> diw
 
 au BufNewFile,BufRead *.py set tabstop=4 softtabstop=4 shiftwidth=4 expandtab smarttab autoindent
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
-

@@ -26,7 +26,7 @@ alias t0="t a -t 0"
 
 export FZF_DEFAULT_OPTS="
 --color='bg+:#3c3836,\
-bg+:#32302F,\
+bg+:#282828,\
 spinner:#fb4934,\
 hl:#928374,\
 fg:#ebdbb2,\
