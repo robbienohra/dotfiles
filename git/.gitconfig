@@ -6,6 +6,7 @@
 [alias]
   	l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 	last = log -1 HEAD
+	rl = reflog
 	h = log -p .
   	b = branch
   	bd = branch -D
