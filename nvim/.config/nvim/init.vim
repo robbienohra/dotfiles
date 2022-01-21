@@ -155,6 +155,7 @@ EOF
 
 nnoremap <silent> <C-t> :Files <CR>
 nnoremap <silent> <C-f> :Rg<CR>
+let g:fzf_preview_window = ['down:50%']
 
 " fugitive
 
