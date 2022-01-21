@@ -158,7 +158,7 @@ nnoremap <silent> <C-f> :Rg<CR>
 
 " fugitive
 
-map <leader>dv :Gvdiffsplit!
+map <leader>ds :Gvdiffsplit!
 
 " coc-nvim
 
@@ -171,6 +171,7 @@ nmap <silent> <leader>a  <Plug>(coc-codeaction-selected)
 nmap <silent> <leader>rn <Plug>(coc-rename)
 command! -nargs=0 Format :call CocAction('format')
 command! -nargs=0 OR :call CocAction('runCommand', 'editor.action.organizeImport')
+command! -nargs=? Fold :call CocAction('fold', <f-args>)
 command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
 nnoremap <silent> <leader>p :Prettier<CR>
 imap <C-l> <Plug>(coc-snippets-expand)

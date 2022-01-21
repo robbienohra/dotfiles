@@ -59,11 +59,11 @@
 	defaultBranch = main
 [pager]
 	branch = true
-[mergetool "fugitive"]
-	cmd = vim -f -c "Gvdiffsplit!"
 [merge]
 	tool = fugitive
         conflictstyle = diff3
+[mergetool "fugitive"]
+	cmd = vim -f -c "Gvdiffsplit!"
 [diff]
 	colorMoved = default
 [mergetool]
@@ -73,4 +73,8 @@
 [pull]
         rebase = true
 [delta]
-	navigate = true  # use n and N to move between diff sections
+  navigate = true  # use n and N to move between diff sections
+[diff]
+  tool = vscode
+[difftool "vscode"]
+  cmd = code --wait --diff $LOCAL $REMOTE 
