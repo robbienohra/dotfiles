@@ -26,6 +26,7 @@ alias t0="t a -t 0"
 # fzf
 
 export FZF_DEFAULT_OPTS="
+--bind ctrl-d:page-down,ctrl-u:page-up \
 --color='bg+:#3c3836,\
 bg+:#282828,\
 spinner:#fb4934,\
