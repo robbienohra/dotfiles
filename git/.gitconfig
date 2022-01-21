@@ -18,7 +18,7 @@
   	co = checkout
   	cob = checkout -b
   	com = checkout master
-  	clear = checkout -- .
+  	cl = checkout -- .
 	c- = checkout -
   	ca = commit --amend
 	cm = commit -m
