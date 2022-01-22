@@ -12,8 +12,6 @@ fpath+=${ZDOTDIR:-~}/.zsh_functions
 
 eval "$(starship init zsh)"
  
-source ~/.bash_profile
-  
 setopt globdots
 
 # fnm
@@ -141,5 +139,3 @@ function rgv () {
 }
 
 . "$HOME/.cargo/env"
-
-
