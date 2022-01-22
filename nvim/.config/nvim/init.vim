@@ -214,6 +214,9 @@ nmap <S-d> "_dd
 nmap <S-b> dvb
 nmap <S-w> diw
 
+" go to specific line number
+nnoremap + G
+
 " override default python indentation
 
 au BufNewFile,BufRead *.py set tabstop=4 softtabstop=4 shiftwidth=4 expandtab smarttab autoindent
