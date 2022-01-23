@@ -49,6 +49,7 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-vinegar'
+Plug 'antoinemadec/coc-fzf'
 call plug#end()
 
 " theme
@@ -176,6 +177,7 @@ command! -nargs=? Fold :call CocAction('fold', <f-args>)
 command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
 nnoremap <silent> <leader>p :Prettier<CR>
 imap <C-l> <Plug>(coc-snippets-expand)
+nnoremap <silent><nowait> <space>d :call CocAction('jumpDefinition', v:false)<CR>
 
 " compile and run c++ program
 
