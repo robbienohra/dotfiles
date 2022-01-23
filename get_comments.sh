@@ -1,5 +1,5 @@
-token=$1
-task_id=$2
+token=$(pass show doist)
+task_id=$1
 
 comments=$(curl "https://api.todoist.com/rest/v1/comments?task_id=${task_id}" \
   -H "Authorization: Bearer ${token}")
