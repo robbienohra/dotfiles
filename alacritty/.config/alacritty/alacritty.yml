@@ -50,7 +50,7 @@ selection:
 font:
   size: 13.5
   normal:
-    family: "JetBrains Mono"
+    family: "JetBrainsMonoNL Nerd Font Mono"
     style: Regular
   italic:
     family: "JetBrains Mono"

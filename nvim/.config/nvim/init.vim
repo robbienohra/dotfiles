@@ -50,6 +50,9 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-vinegar'
 Plug 'antoinemadec/coc-fzf'
+Plug 'preservim/nerdcommenter'
+Plug 'kyazdani42/nvim-tree.lua'
+Plug 'kyazdani42/nvim-web-devicons'
 call plug#end()
 
 " theme
@@ -124,7 +127,11 @@ autocmd FileType vim setlocal commentstring=\"\ %s
 autocmd FileType yaml,sh setlocal commentstring=#\ %s
 autocmd FileType markdown setlocal commentstring=<!--\ %s\ -->
 
-" treesitter
+" nerdcommenter
+
+let g:NERDCommentEmptyLines = 1
+
+" lua plugin configs
 lua <<EOF
 require'nvim-treesitter.configs'.setup {
   ensure_installed = "maintained", 
@@ -133,22 +140,22 @@ require'nvim-treesitter.configs'.setup {
     additional_vim_regex_highlighting = false,
   },
 }
-EOF
 
-" lualine
-lua <<EOF
 require('lualine').setup {
   options = {
     theme = 'gruvbox_dark',
-    icons_enabled = false
+    icons_enabled = true
   }
 }
+
+require'colorizer'.setup()
+
+require'nvim-tree'.setup()
+
+require'nvim-web-devicons'.setup()
 EOF
 
-" colorizer
-lua <<EOF
-require'colorizer'.setup()
-EOF
+let g:fzf_preview_window = ['down:50%']
 
 " mappings
 
@@ -156,7 +163,6 @@ EOF
 
 nnoremap <silent> <C-t> :Files <CR>
 nnoremap <silent> <C-f> :Rg<CR>
-let g:fzf_preview_window = ['down:50%']
 
 " fugitive
 
@@ -173,7 +179,6 @@ nmap <silent> <leader>a  <Plug>(coc-codeaction-selected)
 nmap <silent> <leader>rn <Plug>(coc-rename)
 command! -nargs=0 Format :call CocAction('format')
 command! -nargs=0 OR :call CocAction('runCommand', 'editor.action.organizeImport')
-command! -nargs=? Fold :call CocAction('fold', <f-args>)
 command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
 nnoremap <silent> <leader>p :Prettier<CR>
 imap <C-l> <Plug>(coc-snippets-expand)
