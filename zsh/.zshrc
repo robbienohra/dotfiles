@@ -138,4 +138,8 @@ function rgv () {
   rg --vimgrep "$@";
 }
 
+function dt () {
+  vi ~/dotfiles/nvim/.config/nvim/init.vim;
+}
+
 . "$HOME/.cargo/env"
