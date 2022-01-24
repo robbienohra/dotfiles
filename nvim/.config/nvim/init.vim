@@ -150,7 +150,11 @@ require('lualine').setup {
 
 require'colorizer'.setup()
 
-require'nvim-tree'.setup()
+require'nvim-tree'.setup {
+  git = {
+        enable = false,
+  },
+}
 EOF
 
 let g:fzf_preview_window = ['down:50%']
@@ -160,7 +164,6 @@ let g:fzf_preview_window = ['down:50%']
 " nvim-tree
 
 nnoremap <C-n> :NvimTreeToggle<CR>
-let g:nvim_tree_git_hl = 0
 
 " fzf
 
