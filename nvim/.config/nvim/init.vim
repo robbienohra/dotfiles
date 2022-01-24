@@ -131,6 +131,13 @@ autocmd FileType markdown setlocal commentstring=<!--\ %s\ -->
 
 let g:NERDCommentEmptyLines = 1
 
+let g:nvim_tree_show_icons = {
+    \ 'git': 0,
+    \ 'folders': 1,
+    \ 'files': 1,
+    \ 'folder_arrows': 0,
+    \ }
+
 " lua plugin configs
 lua <<EOF
 require'nvim-treesitter.configs'.setup {
@@ -152,7 +159,8 @@ require'colorizer'.setup()
 
 require'nvim-tree'.setup {
   git = {
-        enable = false,
+        enable = true,
+	ignored = true,
   },
 }
 EOF
@@ -163,7 +171,7 @@ let g:fzf_preview_window = ['down:50%']
 
 " nvim-tree
 
-nnoremap <C-n> :NvimTreeToggle<CR>
+nnoremap <silent> <C-n> :NvimTreeToggle<CR>
 
 " fzf
 
