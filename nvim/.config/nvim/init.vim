@@ -151,13 +151,16 @@ require('lualine').setup {
 require'colorizer'.setup()
 
 require'nvim-tree'.setup()
-
-require'nvim-web-devicons'.setup()
 EOF
 
 let g:fzf_preview_window = ['down:50%']
 
 " mappings
+
+" nvim-tree
+
+nnoremap <C-n> :NvimTreeToggle<CR>
+let g:nvim_tree_git_hl = 0
 
 " fzf
 
