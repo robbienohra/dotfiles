@@ -27,7 +27,8 @@ if [ -f '/Users/robbienohra/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/robbienohra/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/robbienohra/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
 
-alias sb='source ~/.bash_profile'
+alias sz='source ~/.zshrc'
+alias g='git'
 alias b="bash"
 alias vim="nvim"
 alias vi="nvim"
