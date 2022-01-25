@@ -116,6 +116,9 @@ let g:coc_global_extensions = [
 		\"coc-pairs",
 		\"coc-svelte",
 		\"coc-vimtex",
+		\"coc-go",
+		\"coc-rust-analyzer",
+		\"coc-cmake",
 		\"@yaegassy/coc-volar"]
 
 hi! CocErrorSign guifg=#d1666a

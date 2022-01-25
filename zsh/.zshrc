@@ -120,10 +120,6 @@ function srr () {
   sudo rm -r "$@";
 }
 
-function g () {
-  nvim .;
-}
-
 # b6i
 
 function ce () {
