@@ -1,7 +1,7 @@
 window:
   decorations: none
   padding:
-    x: 70
+    x: 50
   dynamic_padding: true
 shell:
   program: /bin/zsh
