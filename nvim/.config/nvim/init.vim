@@ -119,6 +119,7 @@ let g:coc_global_extensions = [
 		\"coc-go",
 		\"coc-rust-analyzer",
 		\"coc-cmake",
+		\"coc-tabnine",
 		\"@yaegassy/coc-volar"]
 
 hi! CocErrorSign guifg=#d1666a
@@ -160,12 +161,12 @@ require('lualine').setup {
 
 require'colorizer'.setup()
 
-require'nvim-tree'.setup {
-  git = {
-        enable = true,
-	ignored = true,
-  },
-}
+-- require'nvim-tree'.setup {
+--   git = {
+--         enable = true,
+-- 	ignored = true,
+--   },
+-- }
 EOF
 
 let g:fzf_preview_window = ['down:50%']
