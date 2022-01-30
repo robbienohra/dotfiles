@@ -246,3 +246,7 @@ nnoremap + G
 
 au BufNewFile,BufRead *.py set tabstop=4 softtabstop=4 shiftwidth=4 expandtab smarttab autoindent
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
+" disable auto-comment
+
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
