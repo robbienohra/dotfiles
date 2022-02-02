@@ -22,3 +22,5 @@ curl -fsSL https://fnm.vercel.app/install | bash
 # apply stow
 # todo: do not apply to the ultisnips directory
 for d in */ ; do (stow "$d"); done
+
+# forgit

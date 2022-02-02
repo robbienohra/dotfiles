@@ -33,7 +33,8 @@
   	cf = clean -f .
   	re = reset --hard @{u}
         ru = remote update
-  	fe = fetch
+        fe = fetch
+	pr = diff master...head
 [core]
 	editor = nvim
   	excludesFile = /Users/robbienohra/.gitignore
@@ -74,6 +75,7 @@
         rebase = true
 [delta]
   navigate = true  # use n and N to move between diff sections
+  side-by-side = true
 [diff]
   tool = vscode
 [difftool "vscode"]
