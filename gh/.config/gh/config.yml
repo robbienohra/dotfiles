@@ -8,9 +8,10 @@ prompt: enabled
 pager:
 # Aliases allow you to create nicknames for gh commands
 aliases:
-    co: pr checkout
-    pv: pr view --web
-    br: branch
     pc: pr create --web
+    pv: pr view --web
+    co: pr checkout
+    st: pr status
     rob: pr list -A robbienohra
+    br: branch
     bs: browse
