@@ -12,6 +12,7 @@ aliases:
     pv: pr view --web
     co: pr checkout
     st: pr status
+    ch: pr checks
     rob: pr list -A robbienohra
     br: branch
     bs: browse
