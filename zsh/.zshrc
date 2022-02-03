@@ -38,6 +38,7 @@ alias la="exa -la"
 export PYENV_ROOT="$HOME/.pyenv"
 export EDITOR=nvim
 export SOLN="4da1f2ae4ef03a88efef3ebbc745ac0d"
+export SUDO_ASKPASS=${HOME}/pass.sh
 
 # gpg
 
@@ -118,7 +119,7 @@ function re () {
 # bash
 
 function srr () {
-  sudo rm -r "$@";
+  sudo -A rm -r "$@";
 }
 
 # b6i
