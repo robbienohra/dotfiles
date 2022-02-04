@@ -120,6 +120,7 @@ let g:coc_global_extensions = [
 		\"coc-rust-analyzer",
 		\"coc-cmake",
 		\"coc-tabnine",
+		\"coc-vimtex",
 		\"@yaegassy/coc-volar"]
 
 hi! CocErrorSign guifg=#d1666a

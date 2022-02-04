@@ -140,4 +140,10 @@ function dt () {
   vi ~/dotfiles/nvim/.config/nvim/init.vim;
 }
 
+# notes
+
+function n () {
+  v "$HOME/Dropbox/notebook/$@ $(date +%s).md";
+}
+
 . "$HOME/.cargo/env"
