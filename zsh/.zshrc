@@ -143,7 +143,7 @@ function dt () {
 # notes
 
 function n () {
-  v "$HOME/Dropbox/notebook/$@ $(date +%s).md";
+  v "$HOME/notes/$@ $(date +%s).md";
 }
 
 . "$HOME/.cargo/env"
