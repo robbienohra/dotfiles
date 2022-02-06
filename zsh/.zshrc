@@ -2,7 +2,7 @@ ZSH_DISABLE_COMPFIX=true
 
 export ZSH="/Users/robbienohra/.oh-my-zsh"
 
-plugins=(zsh-syntax-highlighting forgit)
+plugins=(zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
