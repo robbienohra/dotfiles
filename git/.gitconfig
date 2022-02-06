@@ -21,7 +21,7 @@
   	cl = checkout -- .
 	c- = checkout -
   	ca = commit --amend
-	cm = commit -am
+	cm = commit -S -am
 	cme = commit --allow-empty-message
   	pomn = pull origin main
 	pomr = pull origin master
@@ -45,7 +45,7 @@
   	process = git-lfs filter-process
 [user]
 	name = Robbie Nohra
-  	signingkey = rnohra@benchsci.com 
+  	signingkey = rnohra 
   	email = rnohra@benchsci.com
 [init]
 	defaultBranch = main
