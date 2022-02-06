@@ -32,27 +32,26 @@ filetype plugin indent on
 " plugins
 
 call plug#begin('~/.vim/plugged')
+Plug 'antoinemadec/coc-fzf'
 Plug 'ellisonleao/gruvbox.nvim'
 Plug 'hoob3rt/lualine.nvim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-peekaboo'
+Plug 'kyazdani42/nvim-web-devicons'
 Plug 'leafOfTree/vim-svelte-plugin'
 Plug 'mhinz/vim-signify'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} 
 Plug 'plasticboy/vim-markdown'
+Plug 'preservim/nerdcommenter'
 Plug 'rktjmp/lush.nvim'
 Plug 'ruanyl/vim-gh-line'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-vinegar'
-Plug 'antoinemadec/coc-fzf'
-Plug 'preservim/nerdcommenter'
-Plug 'kyazdani42/nvim-tree.lua'
-Plug 'kyazdani42/nvim-web-devicons'
 call plug#end()
 
 " theme
@@ -135,13 +134,6 @@ autocmd FileType markdown setlocal commentstring=<!--\ %s\ -->
 
 let g:NERDCommentEmptyLines = 1
 
-let g:nvim_tree_show_icons = {
-    \ 'git': 0,
-    \ 'folders': 1,
-    \ 'files': 1,
-    \ 'folder_arrows': 0,
-    \ }
-
 " lua plugin configs
 lua <<EOF
 require'nvim-treesitter.configs'.setup {
@@ -160,22 +152,11 @@ require('lualine').setup {
 }
 
 require'colorizer'.setup()
-
--- require'nvim-tree'.setup {
---   git = {
---         enable = true,
--- 	ignored = true,
---   },
--- }
 EOF
 
 let g:fzf_preview_window = ['down:50%']
 
 " mappings
-
-" nvim-tree
-
-nnoremap <silent> <C-n> :NvimTreeToggle<CR>
 
 " fzf
 
