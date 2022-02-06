@@ -68,6 +68,7 @@ let mapleader = ","
 
 let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+'
 let g:netrw_altv = 1
+let g:netrw_winsize = 75
 
 " nvim
 let g:loaded_perl_provider = 0
