@@ -154,4 +154,8 @@ function web () {
   cd "$HOME/notes/code/web";
 }
 
+function no () {
+  cd $HOME/notes
+}
+
 . "$HOME/.cargo/env"
