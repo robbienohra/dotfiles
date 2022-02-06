@@ -150,4 +150,8 @@ function n1 () {
   v "$HOME/notes/code/web/src/routes/$(date +%s).svelte";
 }
 
+function web () {
+  cd "$HOME/notes/code/web";
+}
+
 . "$HOME/.cargo/env"

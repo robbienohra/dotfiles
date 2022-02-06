@@ -242,7 +242,10 @@ nmap <silent> <leader>D "=strftime('# %Y-%m-%d')<C-M>p
 noremap <silent><buffer> <F9> :exec 'source '.bufname('%')<CR>
 " get current path
 
-noremap <silent> <F4> :let @+=expand("%:p")<CR>
+" filename
+noremap <silent> <F4> :let @+=expand("%")<CR>
+" full path
+" noremap <silent> <F4> :let @+=expand("%:p")<CR>
 
 " clear search
 noremap <silent> <C-k> :let @/ = ""<CR>

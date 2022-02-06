@@ -45,7 +45,7 @@
   	process = git-lfs filter-process
 [user]
 	name = Robbie Nohra
-  	signingkey = 8638E098E5DF74602C7E41AABCD1907FCD9969A4
+  	signingkey = rnohra@benchsci.com 
   	email = rnohra@benchsci.com
 [init]
 	defaultBranch = main
