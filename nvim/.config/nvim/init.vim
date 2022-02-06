@@ -26,6 +26,9 @@ set tm=1000 ttm=0
 set cot=menuone,noinsert,noselect
 set cole=2
 highlight VertSplit cterm=NONE
+" let g:netrw_liststyle=1
+" let g:netrw_winsize = 25
+let g:netrw_altv=1
 
 filetype plugin indent on
 
