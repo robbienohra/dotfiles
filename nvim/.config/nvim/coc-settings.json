@@ -9,7 +9,6 @@
     "typescript",
     "svelte"
   ],
-  "coc.preferences.semanticTokensHighlights": false,
   "coc.preferences.jumpCommand": "edit",
   "python.formatting.autopep8Args": ["--in-place"],
   "python.formatting.provider": "black",
@@ -24,7 +23,8 @@
     "no-missing-space-atx": false,
     "no-inline-html": false,
     "line-length": { "line_length": 80, "code_blocks": false, "tables": false },
-    "no-bare-urls": false
+    "no-bare-urls": false,
+    "first-line-heading": false
   },
   "snippets.userSnippetsDirectory": "~/dotfiles/ultisnips",
   "sql.lintOnSave": true,

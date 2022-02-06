@@ -115,7 +115,6 @@ let g:coc_global_extensions = [
 		\"coc-snippets",
 		\"coc-pairs",
 		\"coc-svelte",
-		\"coc-vimtex",
 		\"coc-go",
 		\"coc-rust-analyzer",
 		\"coc-cmake",

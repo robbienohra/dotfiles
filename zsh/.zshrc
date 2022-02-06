@@ -143,7 +143,11 @@ function dt () {
 # notes
 
 function n () {
-  v "$HOME/notes/$@ $(date +%s).md";
+  v "$HOME/notes/src/$@ $(date +%s).md";
+}
+
+function n1 () {
+  v "$HOME/notes/code/web/src/routes/$(date +%s).svelte";
 }
 
 . "$HOME/.cargo/env"
