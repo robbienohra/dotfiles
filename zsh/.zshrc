@@ -158,4 +158,11 @@ function no () {
   cd $HOME/notes
 }
 
+function up() {
+  g com
+  g fe
+  g pomr
+  g c-
+}
+
 . "$HOME/.cargo/env"
