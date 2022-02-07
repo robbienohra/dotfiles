@@ -20,8 +20,9 @@
   	com = checkout master
   	cl = checkout -- .
 	c- = checkout -
-  	ca = commit --amend
-	cm = commit -S -m
+	ca = commit --amend
+	cm = commit -m
+	cms = commit -S -m
 	cme = commit --allow-empty-message
   	pomn = pull origin main
 	pomr = pull origin master
