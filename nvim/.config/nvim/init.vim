@@ -1,36 +1,36 @@
 " files
 set ic 
-  \ nobk
-  \ nowb
-  \ udf
-  \ nu
   \ lz
-  \ nornu 
+  \ nobk
   \ nocuc
   \ nocul
-  \ spr
+  \ nornu 
+  \ noswf
+  \ nowb
+  \ nu
   \ sb
-  \ tgc " needed for colorizer
-set udir=~/.configs/nvim/undodir
-set ls=2
-set tw=79
+  \ spr
+  \ tgc
+  \ udf
 set ch=1
-set fo+=l
-set shm=atW
-set sw=2
-set ut=100
-set smc=200
-set fdm=marker
-set re=0
-set tm=1000 ttm=0
-set cot=menuone,noinsert,noselect
 set cole=2
+set cot=menuone,noinsert,noselect
+set fdm=marker
+set fo+=l
+set ls=2
+set re=0
+set shm=atW
+set smc=200
+set sw=2
+set tm=1000 ttm=0
+set tw=79
+set udir=~/.configs/nvim/undodir
+set ut=100
 highlight VertSplit cterm=NONE
 
 filetype plugin indent on
 
 " plugins
-
 call plug#begin('~/.vim/plugged')
 Plug 'antoinemadec/coc-fzf'
 Plug 'ellisonleao/gruvbox.nvim'
@@ -65,16 +65,13 @@ colo gruvbox
 let mapleader = ","
 
 " vim-vinegar
-
 let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+'
 let g:netrw_altv = 1
-let g:netrw_winsize = 75
+let g:netrw_winsize = 80
 
 " nvim
 let g:loaded_perl_provider = 0
 let g:loaded_ruby_provider = 0
-
-" plugin configs
 
 " markdown
 let g:tex_conceal = "$"
@@ -89,12 +86,10 @@ let g:vim_markdown_no_extensions_in_markdown = 1
 let g:vim_markdown_strikethrough = 1
 
 " vim-svelte-plugin
-
 let g:vim_svelte_plugin_load_full_syntax = 1
 let g:vim_svelte_plugin_use_typescript = 1
 
 " signify
-
 nnoremap <leader>gd :SignifyDiff<cr>
 
 " coc-nvim 
@@ -130,10 +125,9 @@ hi! CocWarningSign guifg=#d1cd66
 " commenter
 autocmd FileType vim setlocal commentstring=\"\ %s
 autocmd FileType yaml,sh setlocal commentstring=#\ %s
-autocmd FileType markdown setlocal commentstring=<!--\ %s\ -->
+autocmd FileType markdown,vue setlocal commentstring=<!--\ %s\ -->
 
 " nerdcommenter
-
 let g:NERDCommentEmptyLines = 1
 
 " lua plugin configs
@@ -161,16 +155,13 @@ let g:fzf_preview_window = ['down:50%']
 " mappings
 
 " fzf
-
 nnoremap <silent> <C-t> :Files <CR>
 nnoremap <silent> <C-f> :Rg<CR>
 
 " fugitive
-
 map <leader>ds :Gvdiffsplit!
 
 " coc-nvim
-
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gv :call CocAction('jumpDefinition', 'vsplit')<CR>
 nmap <silent> gy <Plug>(coc-type-definition)
@@ -242,10 +233,8 @@ nmap <S-w> diw
 nnoremap + G
 
 " override default python indentation
-
 au BufNewFile,BufRead *.py set tabstop=4 softtabstop=4 shiftwidth=4 expandtab smarttab autoindent
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 " disable auto-comment
-
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
