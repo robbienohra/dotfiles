@@ -45,13 +45,12 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} 
 Plug 'plasticboy/vim-markdown'
-Plug 'preservim/nerdcommenter'
 Plug 'rktjmp/lush.nvim'
 Plug 'ruanyl/vim-gh-line'
-Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-vinegar'
+Plug 'numToStr/Comment.nvim'
 call plug#end()
 
 " theme
@@ -127,9 +126,6 @@ autocmd FileType vim setlocal commentstring=\"\ %s
 autocmd FileType yaml,sh setlocal commentstring=#\ %s
 autocmd FileType markdown,vue setlocal commentstring=<!--\ %s\ -->
 
-" nerdcommenter
-let g:NERDCommentEmptyLines = 1
-
 " lua plugin configs
 lua <<EOF
 require'nvim-treesitter.configs'.setup {
@@ -148,6 +144,8 @@ require('lualine').setup {
 }
 
 require'colorizer'.setup()
+
+require('Comment').setup()
 EOF
 
 let g:fzf_preview_window = ['down:50%']
