@@ -197,20 +197,20 @@ autocmd FileType cpp nnoremap <C-x> :!./%:r.out
 "" Abbreviations
 "*****************************************************************************
 
-map <leader>f :%s/
 nnoremap ZZ ZZ
 nnoremap Q ZQ
 nnoremap <silent> <C-S> :update<CR>
-inoremap <silent> <C-S> <Esc>:update<CR>
-vnoremap <C-c> :w !pbcopy<CR><CR>
+noremap <silent> <F4> :let @+=expand("%")<CR>
+noremap <silent> <F9> :exec 'source '.bufname('%')<CR>
+noremap <silent> <C-k> :let @/ = ""<CR>
 nnoremap <NL> i<CR><CR><up><ESC>
 nmap <silent> <leader>D "=strftime('# %Y-%m-%d')<C-M>p
-noremap <silent><buffer> <F9> :exec 'source '.bufname('%')<CR>
-noremap <silent> <F4> :let @+=expand("%")<CR>
-noremap <silent> <C-k> :let @/ = ""<CR>
 nmap <S-d> "_dd
 nmap <S-b> dvb
 nmap <S-w> diw
+map <leader>f :%s/
+inoremap <silent> <C-S> <Esc>:update<CR>
+vnoremap <C-c> :w !pbcopy<CR><CR>
 " noremap <silent> <F4> :let @+=expand("%:p")<CR>
 
 "*****************************************************************************
