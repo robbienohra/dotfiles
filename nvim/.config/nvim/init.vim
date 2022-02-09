@@ -1,10 +1,13 @@
-" files
-set ic 
+"*****************************************************************************
+"" Basic Setup
+"*****************************************************************************"
+
+set ic
   \ lz
   \ nobk
   \ nocuc
   \ nocul
-  \ nornu 
+  \ nornu
   \ noswf
   \ nowb
   \ nu
@@ -30,24 +33,30 @@ highlight VertSplit cterm=NONE
 
 filetype plugin indent on
 
-" plugins
+" Required
 call plug#begin('~/.vim/plugged')
+
+"*****************************************************************************
+"" Plug install packages
+"*****************************************************************************
 Plug 'antoinemadec/coc-fzf'
 Plug 'ellisonleao/gruvbox.nvim'
 Plug 'hoob3rt/lualine.nvim'
+Plug 'Yggdroot/indentLine'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-peekaboo'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'leafOfTree/vim-svelte-plugin'
+Plug 'leafOfTree/vim-vue-plugin'
 Plug 'mhinz/vim-signify'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'norcalli/nvim-colorizer.lua'
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} 
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'plasticboy/vim-markdown'
 Plug 'rktjmp/lush.nvim'
-Plug 'ruanyl/vim-gh-line'
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb' " required by fugitive to :Gbrowse
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-vinegar'
 Plug 'numToStr/Comment.nvim'
@@ -61,6 +70,7 @@ let g:gruvbox_sign_column = 'bg0'
 set bg=dark " must be set after plugins
 colo gruvbox
 
+"" Map leader to ,
 let mapleader = ","
 
 " vim-vinegar
@@ -91,24 +101,24 @@ let g:vim_svelte_plugin_use_typescript = 1
 " signify
 nnoremap <leader>gd :SignifyDiff<cr>
 
-" coc-nvim 
+" coc-nvim
 let g:coc_global_extensions = [
-		\"coc-clangd", 
+		\"coc-clangd",
 		\"coc-cmake",
-		\"coc-css", 
+		\"coc-css",
 		\"coc-emmet",
 		\"coc-eslint",
 		\"coc-go",
 		\"coc-html",
-		\"coc-json", 
+		\"coc-json",
 		\"coc-markdownlint",
 		\"coc-pairs",
 		\"coc-prettier",
-		\"coc-pyright", 
+		\"coc-pyright",
 		\"coc-rust-analyzer",
 		\"coc-sh",
 		\"coc-snippets",
-		\"coc-sql", 
+		\"coc-sql",
 		\"coc-svelte",
 		\"coc-tabnine",
 		\"coc-toml",
@@ -121,45 +131,34 @@ hi! CocErrorSign guifg=#d1666a
 hi! CocInfoSign guibg=#353b45
 hi! CocWarningSign guifg=#d1cd66
 
-" commenter
-autocmd FileType vim setlocal commentstring=\"\ %s
-autocmd FileType yaml,sh setlocal commentstring=#\ %s
-autocmd FileType markdown,vue setlocal commentstring=<!--\ %s\ -->
-
-" lua plugin configs
-lua <<EOF
-require'nvim-treesitter.configs'.setup {
-  ensure_installed = "maintained", 
-  highlight = {
-    enable = true,            
-    additional_vim_regex_highlighting = false,
-  },
-}
-
-require('lualine').setup {
-  options = {
-    theme = 'gruvbox_dark',
-    icons_enabled = true
-  }
-}
-
-require'colorizer'.setup()
-
-require('Comment').setup()
-EOF
+" IndentLine
+let g:indentLine_enabled = 1
+let g:indentLine_concealcursor = 0
+let g:indentLine_char = '┆'
+let g:indentLine_faster = 1
 
 let g:fzf_preview_window = ['down:50%']
 
-" mappings
+"*****************************************************************************
+"" Mappings
+"*****************************************************************************
 
-" fzf
+"" fzf
 nnoremap <silent> <C-t> :Files <CR>
 nnoremap <silent> <C-f> :Rg<CR>
 
-" fugitive
-map <leader>ds :Gvdiffsplit!
+"" Git
+noremap <Leader>ga :Gwrite<CR>
+noremap <Leader>gc :Git commit --verbose<CR>
+noremap <Leader>gsh :Git push<CR>
+noremap <Leader>gll :Git pull<CR>
+noremap <Leader>gs :Git<CR>
+noremap <Leader>gb :Git blame<CR>
+noremap <Leader>gd :Gvdiffsplit<CR>
+noremap <Leader>gr :GRemove<CR>
+nnoremap <Leader>o :.Gbrowse<CR>
 
-" coc-nvim
+"" coc-nvim
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gv :call CocAction('jumpDefinition', 'vsplit')<CR>
 nmap <silent> gy <Plug>(coc-type-definition)
@@ -187,48 +186,39 @@ function! s:show_documentation()
   endif
 endfunction
 
-" compile and run c++ program
+"*****************************************************************************
+"" Commands
+"*****************************************************************************
+" remove trailing whitespaces
+command! FixWhitespace :%s/\s\+$//e
 
+" compile and run c++ program
 autocmd FileType cpp nnoremap <C-c> :!g++ -o  %:r.out % -std=c++11<Enter>
 autocmd FileType cpp nnoremap <C-x> :!./%:r.out
 
-" find and replace
+"*****************************************************************************
+"" Abbreviations
+"*****************************************************************************
 
 map <leader>f :%s/
-
-" editing
-
 nnoremap ZZ ZZ
 nnoremap Q ZQ
-" save when not in insert mode
 nnoremap <silent> <C-S> :update<CR>
-" save when in insert mode
 inoremap <silent> <C-S> <Esc>:update<CR>
-" copy to system clipboard
 vnoremap <C-c> :w !pbcopy<CR><CR>
-" break a line in normal mode
 nnoremap <NL> i<CR><CR><up><ESC>
-" insert date header
 nmap <silent> <leader>D "=strftime('# %Y-%m-%d')<C-M>p
-" source current file
 noremap <silent><buffer> <F9> :exec 'source '.bufname('%')<CR>
-" get current path
-
-" filename
 noremap <silent> <F4> :let @+=expand("%")<CR>
-" full path
-" noremap <silent> <F4> :let @+=expand("%:p")<CR>
-
-" clear search
 noremap <silent> <C-k> :let @/ = ""<CR>
-
-" black hole register
 nmap <S-d> "_dd
 nmap <S-b> dvb
 nmap <S-w> diw
+" noremap <silent> <F4> :let @+=expand("%:p")<CR>
 
-" go to specific line number
-nnoremap + G
+"*****************************************************************************
+"" Autocmd Rules
+"*****************************************************************************
 
 " override default python indentation
 au BufNewFile,BufRead *.py set tabstop=4 softtabstop=4 shiftwidth=4 expandtab smarttab autoindent
@@ -236,3 +226,30 @@ inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR
 
 " disable auto-comment
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
+" commenter
+autocmd FileType vim setlocal commentstring=\"\ %s
+autocmd FileType yaml,sh setlocal commentstring=#\ %s
+autocmd FileType markdown,vue setlocal commentstring=<!--\ %s\ -->
+
+" lua plugin configs
+lua <<EOF
+require'nvim-treesitter.configs'.setup {
+  ensure_installed = "maintained",
+  highlight = {
+    enable = true,
+    additional_vim_regex_highlighting = false,
+  },
+}
+
+require('lualine').setup {
+  options = {
+    theme = 'gruvbox_dark',
+    icons_enabled = true
+  }
+}
+
+require'colorizer'.setup()
+
+require('Comment').setup()
+EOF
