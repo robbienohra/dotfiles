@@ -98,9 +98,6 @@ let g:vim_markdown_strikethrough = 1
 let g:vim_svelte_plugin_load_full_syntax = 1
 let g:vim_svelte_plugin_use_typescript = 1
 
-" signify
-nnoremap <leader>gd :SignifyDiff<cr>
-
 " coc-nvim
 let g:coc_global_extensions = [
 		\"coc-clangd",
