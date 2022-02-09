@@ -39,10 +39,10 @@ call plug#begin('~/.vim/plugged')
 "*****************************************************************************
 "" Plug install packages
 "*****************************************************************************
+Plug 'Yggdroot/indentLine'
 Plug 'antoinemadec/coc-fzf'
 Plug 'ellisonleao/gruvbox.nvim'
 Plug 'hoob3rt/lualine.nvim'
-Plug 'Yggdroot/indentLine'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-peekaboo'
@@ -52,6 +52,7 @@ Plug 'leafOfTree/vim-vue-plugin'
 Plug 'mhinz/vim-signify'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'norcalli/nvim-colorizer.lua'
+Plug 'numToStr/Comment.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'plasticboy/vim-markdown'
 Plug 'rktjmp/lush.nvim'
@@ -59,7 +60,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb' " required by fugitive to :Gbrowse
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-vinegar'
-Plug 'numToStr/Comment.nvim'
 call plug#end()
 
 " theme
@@ -141,8 +141,12 @@ let g:fzf_preview_window = ['down:50%']
 "*****************************************************************************
 
 "" fzf
-nnoremap <silent> <C-t> :Files <CR>
+nnoremap <silent> <C-t> :GFiles <CR>
 nnoremap <silent> <C-f> :Rg<CR>
+nmap <leader>y :History:<CR>
+cnoremap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
+nnoremap <silent> <leader>b :Buffers<CR>
+nnoremap <silent> <leader>e :FZF -m<CR>
 
 "" Git
 noremap <Leader>ga :Gwrite<CR>
@@ -163,15 +167,13 @@ nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 nmap <silent> <leader>a  <Plug>(coc-codeaction-selected)
 nmap <silent> <leader>rn <Plug>(coc-rename)
-command! -nargs=0 Format :call CocAction('format')
 command! -nargs=0 OR :call CocAction('runCommand', 'editor.action.organizeImport')
+command! -nargs=0 Format :call CocAction('format')
 command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
 nnoremap <silent> <leader>p :Prettier<CR>
-imap <C-l> <Plug>(coc-snippets-expand)
 nnoremap <silent><nowait> <space>d :call CocAction('jumpDefinition', v:false)<CR>
-
-" Use K to show documentation in preview window.
 nnoremap <silent> K :call <SID>show_documentation()<CR>
+imap <C-l> <Plug>(coc-snippets-expand)
 
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
@@ -229,7 +231,9 @@ autocmd FileType vim setlocal commentstring=\"\ %s
 autocmd FileType yaml,sh setlocal commentstring=#\ %s
 autocmd FileType markdown,vue setlocal commentstring=<!--\ %s\ -->
 
-" lua plugin configs
+"*****************************************************************************
+"" Lua configs 
+"*****************************************************************************
 lua <<EOF
 require'nvim-treesitter.configs'.setup {
   ensure_installed = "maintained",
