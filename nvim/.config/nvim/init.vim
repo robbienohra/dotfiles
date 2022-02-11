@@ -117,7 +117,6 @@ let g:coc_global_extensions = [
 		\"coc-snippets",
 		\"coc-sql",
 		\"coc-svelte",
-		\"coc-tabnine",
 		\"coc-toml",
 		\"coc-tsserver",
 		\"coc-vimtex",
@@ -204,7 +203,7 @@ nnoremap Q ZQ
 nnoremap <silent> <C-S> :update<CR>
 noremap <silent> <F4> :let @+=expand("%")<CR>
 noremap <silent> <F9> :exec 'source '.bufname('%')<CR>
-noremap <silent> <C-k> :let @/ = ""<CR>
+map <esc> :noh <CR>
 nnoremap <NL> i<CR><CR><up><ESC>
 nmap <silent> <leader>D "=strftime('# %Y-%m-%d')<C-M>p
 nmap <S-d> "_dd
@@ -213,6 +212,7 @@ nmap <S-w> diw
 map <leader>f :%s/
 inoremap <silent> <C-S> <Esc>:update<CR>
 vnoremap <C-c> :w !pbcopy<CR><CR>
+nnoremap <leader>. :lcd %:p:h<CR>
 " noremap <silent> <F4> :let @+=expand("%:p")<CR>
 
 "*****************************************************************************
