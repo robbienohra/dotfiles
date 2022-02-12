@@ -19,6 +19,7 @@
   "typescript.format.placeOpenBraceOnNewLineForFunctions": true,
   "typescript.format.placeOpenBraceOnNewLineForControlBlocks": true,
   "markdownlint.config": {
+    "no-blanks-blockquote": false,
     "no-missing-space-atx": false,
     "no-inline-html": false,
     "line-length": { "line_length": 80, "code_blocks": false, "tables": false },
