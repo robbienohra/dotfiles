@@ -55,12 +55,12 @@ Plug 'norcalli/nvim-colorizer.lua'
 Plug 'numToStr/Comment.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'plasticboy/vim-markdown'
+Plug 'reedes/vim-pencil'
 Plug 'rktjmp/lush.nvim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb' " required by fugitive to :Gbrowse
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-vinegar'
-Plug 'reedes/vim-pencil'
 call plug#end()
 
 " theme
@@ -141,7 +141,7 @@ let g:fzf_preview_window = ['down:50%']
 "*****************************************************************************
 
 "" fzf
-nnoremap <silent> <C-t> :GFiles <CR>
+nnoremap <silent> <C-t> :Files <CR>
 nnoremap <silent> <C-f> :Rg<CR>
 nmap <leader>y :History:<CR>
 cnoremap <C-P> <C-R>=expand("%:p:h") . "/" <CR>

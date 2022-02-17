@@ -71,7 +71,7 @@ fg+:#ebdbb2,\
 prompt:#fb4934,\
 hl+:#fb4934'"
 
-export FZF_DEFAULT_COMMAND='rg --files --hidden --follow'
+export FZF_DEFAULT_COMMAND='rg --files --hidden --follow -g "!.git/"'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="fd --type d"
 
