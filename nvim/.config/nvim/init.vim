@@ -68,6 +68,7 @@ Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/vim-vsnip'
 Plug 'jose-elias-alvarez/null-ls.nvim'
+Plug 'nvim-lua/plenary.nvim'
 call plug#end()
 
 " theme
@@ -117,6 +118,8 @@ let g:fzf_preview_window = ['down:50%']
 "*****************************************************************************
 "" Mappings
 "*****************************************************************************
+
+" nnoremap <leader>q :lua vim.lsp.buf.formatting()<CR>
 
 "" fzf
 nnoremap <silent> <C-t> :Files <CR>
