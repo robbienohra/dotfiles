@@ -27,3 +27,4 @@ for d in */ ; do (stow "$d"); done
 
 npm install -g typescript typescript-language-server eslint prettier
 npm install -g @volar/server
+cargo install stylua
