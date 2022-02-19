@@ -1,3 +1,5 @@
+local udir = os.getenv("HOME").."/undodir"
+
 local o = vim.opt
 o.ic = true
 o.lz = true
@@ -25,5 +27,5 @@ o.sw=2
 o.tm=1000
 o.ttm=0
 o.tw=79
-o.udir='undodir'
+o.udir=udir
 o.ut=100
