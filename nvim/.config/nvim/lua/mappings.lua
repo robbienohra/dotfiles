@@ -40,11 +40,11 @@ map("n", "<esc>", ":noh <CR>")
 map("n", "<S-d>", "_dd")
 map("n", "<S-b>", "dvb")
 map("n", "<S-w>", "diw")
+map("n", "<leader>f", ":%s/")
+map("v", "<C-c>", ":w !pbcopy<CR><CR>")
 map("i", "<C-S>", "<Esc>:update<CR>")
 -- map('n', '<F4>' :let @+=expand("%")<CR>
 -- map <silent> <F9> :exec 'source '.bufname('%')<CR>
 -- map <NL> i<CR><CR><up><ESC>
--- map <leader>f :%s/
--- vnoremap <C-c> :w !pbcopy<CR><CR>
 -- nnoremap <leader>. :lcd %:p:h<CR>
 -- nnoremap <leader>cd :cd %:p:h<CR>
