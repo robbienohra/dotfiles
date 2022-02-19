@@ -40,7 +40,6 @@ call plug#begin('~/.vim/plugged')
 "" Plug install packages
 "*****************************************************************************
 Plug 'Yggdroot/indentLine'
-Plug 'antoinemadec/coc-fzf'
 Plug 'ellisonleao/gruvbox.nvim'
 Plug 'hoob3rt/lualine.nvim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -50,7 +49,6 @@ Plug 'kyazdani42/nvim-web-devicons'
 Plug 'leafOfTree/vim-svelte-plugin'
 Plug 'leafOfTree/vim-vue-plugin'
 Plug 'mhinz/vim-signify'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'numToStr/Comment.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
@@ -61,6 +59,15 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb' " required by fugitive to :Gbrowse
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-vinegar'
+Plug 'neovim/nvim-lspconfig'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-path'
+Plug 'hrsh7th/cmp-cmdline'
+Plug 'hrsh7th/nvim-cmp'
+Plug 'hrsh7th/cmp-vsnip'
+Plug 'hrsh7th/vim-vsnip'
+Plug 'jose-elias-alvarez/null-ls.nvim'
 call plug#end()
 
 " theme
@@ -99,35 +106,6 @@ let g:vim_markdown_strikethrough = 1
 let g:vim_svelte_plugin_load_full_syntax = 1
 let g:vim_svelte_plugin_use_typescript = 1
 
-" coc-nvim
-let g:coc_global_extensions = [
-		\"coc-clangd",
-		\"coc-cmake",
-		\"coc-css",
-		\"coc-emmet",
-		\"coc-eslint",
-		\"coc-go",
-		\"coc-html",
-		\"coc-json",
-		\"coc-markdownlint",
-		\"coc-pairs",
-		\"coc-prettier",
-		\"coc-pyright",
-		\"coc-rust-analyzer",
-		\"coc-sh",
-		\"coc-snippets",
-		\"coc-sql",
-		\"coc-svelte",
-		\"coc-toml",
-		\"coc-tsserver",
-		\"coc-vimtex",
-		\"coc-yaml",
-		\"@yaegassy/coc-volar"]
-
-hi! CocErrorSign guifg=#d1666a
-hi! CocInfoSign guibg=#353b45
-hi! CocWarningSign guifg=#d1cd66
-
 " IndentLine
 let g:indentLine_enabled = 1
 let g:indentLine_concealcursor = 0
@@ -159,31 +137,8 @@ noremap <Leader>gd :Gvdiffsplit<CR>
 noremap <Leader>gr :GRemove<CR>
 nnoremap <Leader>o :.GBrowse<CR>
 
-"" coc-nvim
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gv :call CocAction('jumpDefinition', 'vsplit')<CR>
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
-nmap <silent> <leader>a  <Plug>(coc-codeaction-selected)
-nmap <silent> <leader>rn <Plug>(coc-rename)
-command! -nargs=0 OR :call CocAction('runCommand', 'editor.action.organizeImport')
-command! -nargs=0 Format :call CocAction('format')
-command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
-nnoremap <silent> <leader>p :Prettier<CR>
-nnoremap <silent><nowait> <space>d :call CocAction('jumpDefinition', v:false)<CR>
-nnoremap <silent> K :call <SID>show_documentation()<CR>
-imap <C-l> <Plug>(coc-snippets-expand)
-
-function! s:show_documentation()
-  if (index(['vim','help'], &filetype) >= 0)
-    execute 'h '.expand('<cword>')
-  elseif (coc#rpc#ready())
-    call CocActionAsync('doHover')
-  else
-    execute '!' . &keywordprg . " " . expand('<cword>')
-  endif
-endfunction
+"" misc
+nnoremap <leader>cd :cd %:p:h<CR>
 
 "*****************************************************************************
 "" Commands
@@ -222,7 +177,6 @@ nnoremap <leader>. :lcd %:p:h<CR>
 
 " override default python indentation
 au BufNewFile,BufRead *.py set tabstop=4 softtabstop=4 shiftwidth=4 expandtab smarttab autoindent
-inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 " disable auto-comment
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
@@ -232,32 +186,7 @@ autocmd FileType vim setlocal commentstring=\"\ %s
 autocmd FileType yaml,sh setlocal commentstring=#\ %s
 autocmd FileType markdown,vue setlocal commentstring=<!--\ %s\ -->
 
-" augroup pencil
-"   autocmd!
-"   autocmd FileType markdown,mkd call pencil#init()
-"   autocmd FileType text         call pencil#init()
-" augroup END
-
 "*****************************************************************************
 "" Lua configs 
 "*****************************************************************************
-lua <<EOF
-require'nvim-treesitter.configs'.setup {
-  ensure_installed = "maintained",
-  highlight = {
-    enable = true,
-    additional_vim_regex_highlighting = false,
-  },
-}
-
-require('lualine').setup {
-  options = {
-    theme = 'gruvbox_dark',
-    icons_enabled = true
-  }
-}
-
-require'colorizer'.setup()
-
-require('Comment').setup()
-EOF
+lua require('init')

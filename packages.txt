@@ -12,6 +12,7 @@ hugo
 jq
 llvm
 neovim
+ninja
 pandoc
 pass
 postgres

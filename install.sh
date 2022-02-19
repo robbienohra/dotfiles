@@ -22,3 +22,8 @@ curl -fsSL https://fnm.vercel.app/install | bash
 # apply stow
 # todo: do not apply to the ultisnips directory
 for d in */ ; do (stow "$d"); done
+
+# global npm packages
+
+npm install -g typescript typescript-language-server eslint prettier
+npm install -g @volar/server
