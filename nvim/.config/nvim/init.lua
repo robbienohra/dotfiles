@@ -1,6 +1,6 @@
 require("colorscheme")
 require("commands")
-require("mappings")
+require("keymaps")
 require("options")
 require("plugins")
 require("user.cmp")
