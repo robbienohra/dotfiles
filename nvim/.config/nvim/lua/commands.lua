@@ -2,6 +2,7 @@ local cmd = vim.cmd
 -- remove trailing whitespaces
 -- cmd("FixWhitespace :%s/s+$//e")
 cmd("highlight VertSplit cterm=NONE")
+-- cmd("highlight Comment cterm=italic gui=italic")
 -- compile and run c++ program
 cmd("au FileType cpp nnoremap <C-c> :!g++ -o  %:r.out % -std=c++11<Enter>")
 cmd("au FileType cpp nnoremap <C-x> :!./%:r.out")

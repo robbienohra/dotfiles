@@ -28,7 +28,6 @@ null_ls.setup({
       },
       extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote" },
     }),
-    formatting.black.with({ extra_args = { "--fast" } }),
     formatting.stylua.with({
       extra_args = { "--config-path", vim.fn.expand("~/.config/stylua.toml") },
     }),

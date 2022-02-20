@@ -31,5 +31,4 @@ return require('packer').startup(function()
   use { "junegunn/fzf", run = ":call fzf#install()" }
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
   use { 'luisiacc/gruvbox-baby', branch = 'main' }
-  use "rebelot/kanagawa.nvim"
 end)
