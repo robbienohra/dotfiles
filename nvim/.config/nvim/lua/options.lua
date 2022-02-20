@@ -1,5 +1,5 @@
+vim.g.mapleader = ","
 local udir = os.getenv("HOME").."/undodir"
-
 local o = vim.opt
 o.ic = true
 o.lz = true
