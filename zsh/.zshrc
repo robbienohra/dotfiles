@@ -137,7 +137,7 @@ function rgv () {
 }
 
 function dt () {
-  vi ~/dotfiles/nvim/.config/nvim/init.vim;
+  vi ~/dotfiles/nvim/.config/nvim/init.lua;
 }
 
 # notes

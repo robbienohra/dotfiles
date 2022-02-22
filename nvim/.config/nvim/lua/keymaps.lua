@@ -43,6 +43,7 @@ map("n", "<S-w>", "diw")
 map("n", "<leader>f", ":%s/")
 map("v", "<C-c>", ":w !pbcopy<CR><CR>")
 map("i", "<C-S>", "<Esc>:update<CR>")
+map("n", "<space>e", ":g/^$/d<CR>")
 -- map('n', '<F4>' :let @+=expand("%")<CR>
 -- map <silent> <F9> :exec 'source '.bufname('%')<CR>
 -- map <NL> i<CR><CR><up><ESC>
