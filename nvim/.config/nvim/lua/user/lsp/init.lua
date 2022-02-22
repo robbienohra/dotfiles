@@ -1,4 +1,5 @@
 local servers = {
+  "bashls",
   "clangd",
   "eslint",
   "jsonls",
@@ -6,6 +7,7 @@ local servers = {
   "rust_analyzer",
   "tsserver",
   "volar",
+  "vuels",
   "yamlls",
 }
 

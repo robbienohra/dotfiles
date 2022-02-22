@@ -30,7 +30,7 @@ map("n", "<Leader>gs", ":Git<CR>")
 map("n", "<Leader>gb", ":Git blame<CR>")
 map("n", "<Leader>gd", ":Gvdiffsplit<CR>")
 map("n", "<Leader>gr", ":GRemove<CR>")
-map("n", "<Leader>gg", ":.GBrowse<CR>")
+map("n", "<Leader>ge", ":.GBrowse<CR>")
 
 -- editing
 map("n", "ZZ", "ZZ")
