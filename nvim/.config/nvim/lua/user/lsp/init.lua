@@ -1,4 +1,14 @@
-local servers = { "tsserver", "clangd", "volar", "eslint", "pyright", "rust_analyzer", "jsonls" }
+local servers = {
+  "clangd",
+  "eslint",
+  "jsonls",
+  "pyright",
+  "rust_analyzer",
+  "tsserver",
+  "volar",
+  "yamlls",
+}
+
 local capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
 for _, lsp in pairs(servers) do
