@@ -158,6 +158,10 @@ function no () {
   cd $HOME/notes
 }
 
+function noc () {
+  cd $HOME/notes/code
+}
+
 function up() {
   g com
   g fe
