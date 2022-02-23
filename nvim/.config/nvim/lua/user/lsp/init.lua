@@ -6,7 +6,7 @@ local servers = {
   "pyright",
   "rust_analyzer",
   "tsserver",
-  "volar",
+  -- "volar",
   "vuels",
   "yamlls",
 }
