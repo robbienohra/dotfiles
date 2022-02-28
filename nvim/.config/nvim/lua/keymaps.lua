@@ -7,11 +7,12 @@ local function map(mode, lhs, rhs, opts)
 end
 
 -- fzf
-map("n", "<C-t>", ":Files <CR>", { noremap = true, silent = true })
-map("n", "<C-f>", ":Rg <CR>", { noremap = true, silent = true })
-map("n", "<leader>y", ":History <CR>", { noremap = true, silent = true })
-map("n", "<leader>b", ":Buffers <CR>", { noremap = true, silent = true })
-map("n", "<leader>e", ":FZF <CR>", { noremap = true, silent = true })
+map("n", "<C-t>", ":Files <CR>")
+map("n", "<C-f>", ":Rg <CR>")
+map("n", "<C-p>", ":Ag <CR>")
+map("n", "<leader>y", ":History <CR>")
+map("n", "<leader>b", ":Buffers <CR>")
+map("n", "<leader>e", ":FZF <CR>")
 
 map("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>")
 map("n", "<space>f", "<cmd>lua vim.lsp.buf.formatting()<CR>")
@@ -31,6 +32,10 @@ map("n", "<Leader>gb", ":Git blame<CR>")
 map("n", "<Leader>gd", ":Gvdiffsplit<CR>")
 map("n", "<Leader>gr", ":GRemove<CR>")
 map("n", "<Leader>ge", ":.GBrowse<CR>")
+
+-- harpoon
+map("n", "<Leader>u", '<cmd>lua require("harpoon.ui").toggle_quick_menu()<cr>')
+map("n", "<Leader>h", '<cmd>lua require("harpoon.mark").add_file()<cr>')
 
 -- editing
 map("n", "ZZ", "ZZ")

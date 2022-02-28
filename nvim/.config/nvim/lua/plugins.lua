@@ -23,6 +23,7 @@ return require('packer').startup(function()
   use 'plasticboy/vim-markdown'
   use 'reedes/vim-pencil'
   use 'rktjmp/lush.nvim'
+  use 'ThePrimeagen/harpoon'
   use 'tpope/vim-fugitive'
   use 'tpope/vim-rhubarb' -- required by fugitive to :Gbrowse
   use 'tpope/vim-unimpaired'

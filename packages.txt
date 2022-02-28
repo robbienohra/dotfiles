@@ -24,6 +24,7 @@ rectangle
 restic
 starship
 stow
+the_silver_searcher
 tmux
 tokei
 watchman
