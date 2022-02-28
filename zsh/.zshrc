@@ -91,6 +91,10 @@ function prune () {
   git branch | egrep -v "(^\*|master)" | xargs git branch -D;
 }
 
+function gch() {
+  git checkout $(git for-each-ref refs/heads/ --format='%(refname:short)' | fzf);
+}
+
 # psql
 
 function p () {
