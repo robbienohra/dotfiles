@@ -62,14 +62,14 @@ font:
   offset:
     y: 1
 key_bindings:
-  - { key: Minus, mods: Alt, chars: "\x1b-"}
-  - { key: Plus, mods: Alt, chars: "\x1b+"}
-  - { key: N, mods: Alt, chars: "\x1bn"}
-  - { key: "LBracket", mods: Alt, chars: "\x1b["}
-  - { key: "RBracket", mods: Alt, chars: "\x1b]"}
   - { key: Left, mods: Alt, chars: "\x1bb" }
   - { key: Right, mods: Alt, chars: "\x1bf" }
   - { key: Left, mods: Command, chars: "\x1bOH", mode: AppCursor }
   - { key: Right, mods: Command, chars: "\x1bOF", mode: AppCursor }
   - { key: Home, chars: "\x1b[H", mode: ~AppCursor }
   - { key: End, chars: "\x1b[F", mode: ~AppCursor }
+  - { key: Minus, mods: Alt, chars: "\x1b-"}
+  - { key: Plus, mods: Alt, chars: "\x1b+"}
+  - { key: N, mods: Alt, chars: "\x1bn"}
+  - { key: "LBracket", mods: Alt, chars: "\x1b["}
+  - { key: "RBracket", mods: Alt, chars: "\x1b]"}
