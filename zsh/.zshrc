@@ -95,6 +95,13 @@ function gch() {
   git checkout $(git for-each-ref refs/heads/ --format='%(refname:short)' | fzf);
 }
 
+function gup() {
+  git checkout master
+  git fe
+  git pomr
+  git c 
+}
+
 # psql
 
 function p () {
@@ -141,7 +148,7 @@ function rgv () {
 }
 
 function dt () {
-  vi ~/dotfiles/nvim/.config/nvim/init.lua;
+  cd ~/dotfiles 
 }
 
 # notes
@@ -164,13 +171,6 @@ function no () {
 
 function noc () {
   cd $HOME/notes/code
-}
-
-function up() {
-  g com
-  g fe
-  g pomr
-  g c-
 }
 
 . "$HOME/.cargo/env"
