@@ -7,7 +7,7 @@ local servers = {
   "rust_analyzer",
   "tsserver",
   -- "volar",
-  "vuels",
+  -- "vuels",
   "yamlls",
 }
 
@@ -27,5 +27,49 @@ for _, lsp in pairs(servers) do
     end,
   })
 end
+
+require("lspconfig").vuels.setup({
+  cmd = { "vls" },
+  filetypes = { "vue" },
+  init_options = {
+    config = {
+      css = {},
+      emmet = {},
+      html = {
+        suggest = {},
+      },
+      javascript = {
+        format = {},
+      },
+      stylusSupremacy = {},
+      typescript = {
+        format = {},
+      },
+      vetur = {
+        completion = {
+          autoImport = false,
+          tagCasing = "kebab",
+          useScaffoldSnippets = false,
+        },
+        format = {
+          defaultFormatter = {
+            js = "none",
+            ts = "none",
+          },
+          defaultFormatterOptions = {},
+          scriptInitialIndent = false,
+          styleInitialIndent = false,
+        },
+        useWorkspaceDependencies = false,
+        validation = {
+          script = true,
+          style = true,
+          template = true,
+        },
+      },
+    },
+  },
+  -- root_dir = util.root_pattern("package.json", "vue.config.js")
+})
 
 require("user.lsp.null-ls")
