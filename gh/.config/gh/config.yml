@@ -10,9 +10,9 @@ pager:
 aliases:
     pc: pr create --web
     pv: pr view --web
+    prr: pr review
+    bs: browse
     co: pr checkout
     st: pr status
     ch: pr checks
     rob: pr list -A robbienohra
-    br: branch
-    bs: browse
