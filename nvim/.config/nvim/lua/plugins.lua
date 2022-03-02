@@ -29,6 +29,7 @@ return require('packer').startup(function()
   use 'tpope/vim-unimpaired'
   use 'tpope/vim-vinegar'
   use 'wbthomason/packer.nvim'
+  use 'windwp/nvim-autopairs'
   use { "junegunn/fzf", run = ":call fzf#install()" }
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
   use { 'luisiacc/gruvbox-baby', branch = 'main' }

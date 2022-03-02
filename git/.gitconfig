@@ -36,6 +36,7 @@
         ru = remote update
         fe = fetch
 	pr = diff master...head
+	nm = diff --name-only 
 [core]
 	editor = nvim
   	excludesFile = /Users/robbienohra/.gitignore
