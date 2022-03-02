@@ -23,7 +23,6 @@ return require('packer').startup(function()
   use 'plasticboy/vim-markdown'
   use 'reedes/vim-pencil'
   use 'rktjmp/lush.nvim'
-  use 'ThePrimeagen/harpoon'
   use 'tpope/vim-fugitive'
   use 'tpope/vim-rhubarb' -- required by fugitive to :Gbrowse
   use 'tpope/vim-unimpaired'
@@ -31,6 +30,6 @@ return require('packer').startup(function()
   use 'wbthomason/packer.nvim'
   use 'windwp/nvim-autopairs'
   use { "junegunn/fzf", run = ":call fzf#install()" }
-  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
   use { 'luisiacc/gruvbox-baby', branch = 'main' }
+  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 end)
