@@ -165,6 +165,10 @@ function web () {
   cd "$HOME/notes/code/web";
 }
 
+function sol () {
+  cd $HOME/solns
+}
+
 function no () {
   cd $HOME/notes
 }
