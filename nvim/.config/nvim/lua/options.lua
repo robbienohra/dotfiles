@@ -1,7 +1,6 @@
 vim.g.mapleader = ","
 local udir = os.getenv("HOME").."/undodir"
 local o = vim.opt
-o.ic = true
 o.lz = true
 o.bk =  false
 o.cuc = false
@@ -29,3 +28,7 @@ o.ttm=0
 o.tw=79
 o.udir=udir
 o.ut=100
+o.clipboard= { 'unnamed', 'unnamedplus' }
+-- Searching
+o.ic = true
+o.scs = true
