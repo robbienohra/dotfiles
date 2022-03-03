@@ -32,3 +32,7 @@ o.clipboard= { 'unnamed', 'unnamedplus' }
 -- Searching
 o.ic = true
 o.scs = true
+-- Folding
+o.foldlevel=20
+o.foldmethod='expr'
+o.foldexpr='nvim_treesitter#foldexpr()'
