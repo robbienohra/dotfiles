@@ -10,7 +10,6 @@
 	h = log -p .
   	b = branch
   	bd = branch -D
-  	lg = !git log --pretty=format:\"%C(magenta)%h%Creset -%C(red)%d%Creset %s %C(dim green)(%cr) [%an]\" --abbrev-commit -30
   	rom = rebase origin/master
   	ri = rebase -i
   	ra = rebase --abort
@@ -36,6 +35,7 @@
         ru = remote update
         fe = fetch
 	pr = diff master...head
+        di = diff
 	di-no = diff --name-only 
 	pr-no = pr --name-only
 [core]
