@@ -14,11 +14,10 @@
   	ri = rebase -i
   	ra = rebase --abort
   	rc = rebase --continue
-  	co = checkout
-  	cob = checkout -b
-  	com = checkout master
+        sw = switch
+        swc = switch -c
+  	swm = switch master
   	cl = checkout -- .
-	c = checkout -
 	ca = commit --amend
 	cm = commit -m
 	cms = commit -S -m
