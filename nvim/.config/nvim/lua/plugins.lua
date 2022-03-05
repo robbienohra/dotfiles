@@ -1,4 +1,4 @@
-return require("packer").startup(function()
+return require("packer").startup(function(use)
   use("Yggdroot/indentLine")
   use("ellisonleao/gruvbox.nvim")
   use("hoob3rt/lualine.nvim")
@@ -34,5 +34,4 @@ return require("packer").startup(function()
   use({ "iamcco/markdown-preview.nvim", run = "cd app && yarn install" })
   use({ "luisiacc/gruvbox-baby", branch = "main" })
   use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
-  use '~/Documents/nvim-whid'
 end)
