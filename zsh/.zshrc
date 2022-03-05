@@ -76,6 +76,14 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="fd --type d"
 
 # git
+function rv() { 
+  FILES=$(git pr-no)
+  echo $FILES | xargs nvim -c "tabdo Gvdiffsplit! master...head | tabn" -p
+}
+
+function di() {
+  bash ~/dotfiles/diff.sh "$@";
+}
 
 function sq() {
   git add .;
@@ -103,7 +111,6 @@ function gup() {
 }
 
 # psql
-
 function p () {
   usql "postgres://sor-reagent:$(pass show pgpassword)@localhost:5499/sor?sslmode=disable" "$@";
 }
@@ -113,13 +120,11 @@ function u () {
 }
 
 # react
-
 function dev () {
   npm run dev;
 }
 
 # restic
-
 function re () {
   GOOGLE_PROJECT_ID=robbie-329220 \
   GOOGLE_APPLICATION_CREDENTIALS=$HOME/.config/robbie-329220-7d1a680d1c9a.json \
@@ -128,13 +133,11 @@ function re () {
 }
 
 # bash
-
 function srr () {
   sudo -A rm -r "$@";
 }
 
 # b6i
-
 function ce () {
   cd ~/bsci/benchsci/frontend/ern;
 }

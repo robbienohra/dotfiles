@@ -34,4 +34,5 @@ return require("packer").startup(function(use)
   use({ "iamcco/markdown-preview.nvim", run = "cd app && yarn install" })
   use({ "luisiacc/gruvbox-baby", branch = "main" })
   use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
+  use 'arcticicestudio/nord-vim'
 end)
