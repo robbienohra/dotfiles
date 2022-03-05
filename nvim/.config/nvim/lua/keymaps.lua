@@ -10,9 +10,9 @@ end
 map("n", "<C-t>", ":Files <CR>")
 map("n", "<C-f>", ":Rg <CR>")
 map("n", "<C-p>", ":Ag <CR>")
-map("n", "<leader>y", ":History <CR>")
-map("n", "<leader>b", ":Buffers <CR>")
-map("n", "<leader>e", ":FZF <CR>")
+map("n", "<Leader>y", ":History: <CR>")
+map("n", "<Leader>b", ":Buffers <CR>")
+map("n", "<Leader>e", ":FZF <CR>")
 
 -- lsp
 map("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>")
@@ -33,6 +33,7 @@ map("n", "<Leader>gb", ":Git blame<CR>")
 map("n", "<Leader>gd", ":Gvdiffsplit<CR>")
 map("n", "<Leader>gr", ":GRemove<CR>")
 map("n", "<Leader>ge", ":.GBrowse<CR>")
+map("n", "<Leader>gf", ":!bash ~/dotfiles/diff.sh % <CR>")
 
 -- tabs
 map("n", "<Tab>", "gt")

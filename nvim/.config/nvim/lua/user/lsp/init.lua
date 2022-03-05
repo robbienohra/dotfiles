@@ -5,7 +5,6 @@ local servers = {
   "jsonls",
   "pyright",
   "rust_analyzer",
-  "sumneko_lua",
   "tsserver",
   -- "volar",
   -- "vuels",
@@ -28,6 +27,16 @@ for _, lsp in pairs(servers) do
     end,
   })
 end
+
+require("lspconfig").sumneko_lua.setup({
+  settings = {
+    Lua = {
+      diagnostics = {
+        globals = { "vim" },
+      },
+    },
+  },
+})
 
 require("lspconfig").vuels.setup({
   cmd = { "vls" },
