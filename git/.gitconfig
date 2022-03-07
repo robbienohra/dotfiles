@@ -17,7 +17,7 @@
         sw = switch
         swc = switch -c
   	swm = switch master
-  	cl = checkout -- .
+  	res = restore .
 	ca = commit --amend
 	cm = commit -m
 	cms = commit -S -m
