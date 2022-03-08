@@ -39,11 +39,11 @@
         ru = remote update
         fe = fetch
 	pr = diff master...head
-	pr-no = pr --name-only
+	prn = pr --name-only
         di = diff
-	di-no = diff --name-only 
+	din = diff --name-only 
         up = diff @ @{upstream}
-        up-no = diff @ @{upstream}
+        upn = diff @ @{upstream}
 	adog = log --all --decorate --oneline --graph
 [core]
 	editor = nvim
