@@ -3,8 +3,12 @@
   	clean = git-lfs clean -- %f
   	smudge = git-lfs smudge -- %f
   	process = git-lfs filter-process
+[log]
+        date = relative
+[format]
+	pretty = format:%C(yellow)%h %Cred%ad %Cblue%an%Cgreen%d %Creset%s
+	; pretty = format:%h %Cblue%ad%Creset %ae %Cgreen%s%Creset
 [alias]
-  	l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 	last = log -1 HEAD
 	rl = reflog
 	h = log -p .
@@ -40,6 +44,7 @@
 	di-no = diff --name-only 
         up = diff @ @{upstream}
         up-no = diff @ @{upstream}
+	adog = log --all --decorate --oneline --graph
 [core]
 	editor = nvim
   	excludesFile = /Users/robbienohra/.gitignore
