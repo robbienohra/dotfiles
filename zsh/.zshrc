@@ -138,6 +138,10 @@ function srr () {
 }
 
 # b6i
+function bsci () {
+  cd ~/bsci 
+}
+
 function ce () {
   cd ~/bsci/benchsci/frontend/ern;
 }
