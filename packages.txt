@@ -28,6 +28,7 @@ the_silver_searcher
 tmux
 tokei
 watchman
+wget
 xo/xo/usql
 yq
 zoxide

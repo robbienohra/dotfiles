@@ -34,3 +34,15 @@ pip3 install pynvim
 # cargo packages
 cargo install stylua
 cargo install mdbook
+
+nvim -c ":LspInstall \
+bashls  \
+clangd \
+eslint \
+jsonls \
+pyright \
+rust_analyzer \
+sumneko_lua \
+tsserver \
+vuels \
+yamlls"
