@@ -27,7 +27,7 @@
   	dn = !git push --force-with-lease origin HEAD
   	st = status -sb
   	stu = stash -u
-  	aa = add .
+	ac = !git add . && git commit -am
   	rhom = reset --hard origin/master
   	cf = clean -f .
   	re = reset --hard @{u}
