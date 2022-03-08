@@ -1,22 +1,8 @@
-local servers = {
-  "bashls",
-  "eslint",
-  "jsonls",
-  "pyright",
-  "rust_analyzer",
-  "tsserver",
-  -- "volar",
-  -- "vuels",
-  "yamlls",
-}
-
+local lsp_installer = require("nvim-lsp-installer")
 local capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
-for _, lsp in pairs(servers) do
-  require("lspconfig")[lsp].setup({
-    flags = {
-      debounce_text_changes = 50,
-    },
+lsp_installer.on_server_ready(function(server)
+  local opts = {
     capabilities = capabilities,
     on_attach = function(client)
       if client.name == "tsserver" or client.name == "jsonls" then
@@ -24,61 +10,18 @@ for _, lsp in pairs(servers) do
         client.resolved_capabilities.document_range_formatting = false
       end
     end,
-  })
-end
+  }
+  if server.name == "sumneko_lua" then
+    local sumneko_opts = require("user.lsp.settings.sumneko_lua")
+    opts = vim.tbl_deep_extend("force", sumneko_opts, opts)
+  end
 
-require("lspconfig").sumneko_lua.setup({
-  settings = {
-    Lua = {
-      diagnostics = {
-        globals = { "vim" },
-      },
-    },
-  },
-})
+  if server.name == "vuels" then
+    local vuels_opts = require("user.lsp.settings.vuels")
+    opts = vim.tbl_deep_extend("force", vuels_opts, opts)
+  end
 
-require("lspconfig").vuels.setup({
-  cmd = { "vls" },
-  filetypes = { "vue" },
-  init_options = {
-    config = {
-      css = {},
-      emmet = {},
-      html = {
-        suggest = {},
-      },
-      javascript = {
-        format = {},
-      },
-      stylusSupremacy = {},
-      typescript = {
-        format = {},
-      },
-      vetur = {
-        completion = {
-          autoImport = false,
-          tagCasing = "kebab",
-          useScaffoldSnippets = false,
-        },
-        format = {
-          defaultFormatter = {
-            js = "none",
-            ts = "none",
-          },
-          defaultFormatterOptions = {},
-          scriptInitialIndent = false,
-          styleInitialIndent = false,
-        },
-        useWorkspaceDependencies = false,
-        validation = {
-          script = true,
-          style = true,
-          template = true,
-        },
-      },
-    },
-  },
-  -- root_dir = util.root_pattern("package.json", "vue.config.js")
-})
+  server:setup(opts)
+end)
 
 require("user.lsp.null-ls")
