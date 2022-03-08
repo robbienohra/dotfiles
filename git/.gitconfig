@@ -22,6 +22,7 @@
 	cm = commit -m
 	cms = commit -S -m
 	cme = commit --allow-empty-message
+        cl = clean -f . 
   	pomn = pull origin main
 	pomr = pull origin master
   	dn = !git push --force-with-lease origin HEAD
