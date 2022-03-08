@@ -76,6 +76,13 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="fd --type d"
 
 # git
+
+function is-ancestor () {
+  MAYBE_ANCESTOR_COMMIT=$1;
+  DESCENDENT_COMMIT=$2;
+  git merge-base --is-ancestor $1 $2; echo $?;
+}
+
 function rv() { 
   FILES=$(git pr-no)
   echo $FILES | xargs nvim -c "tabdo Gvdiffsplit! master...head | tabn" -p
