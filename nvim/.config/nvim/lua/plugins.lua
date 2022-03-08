@@ -16,7 +16,10 @@ return require("packer").startup(function(use)
   use("leafOfTree/vim-svelte-plugin")
   use("leafOfTree/vim-vue-plugin")
   use("mhinz/vim-signify")
-  use("neovim/nvim-lspconfig")
+  use({
+    "neovim/nvim-lspconfig",
+    "williamboman/nvim-lsp-installer",
+  })
   use("norcalli/nvim-colorizer.lua")
   use("numToStr/Comment.nvim")
   use("nvim-lua/plenary.nvim")

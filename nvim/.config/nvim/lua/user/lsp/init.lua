@@ -1,6 +1,5 @@
 local servers = {
   "bashls",
-  "clangd",
   "eslint",
   "jsonls",
   "pyright",
