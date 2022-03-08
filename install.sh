@@ -24,9 +24,13 @@ curl -fsSL https://fnm.vercel.app/install | bash
 for d in */ ; do (stow "$d"); done
 
 # global npm packages
-
 npm install -g typescript typescript-language-server eslint prettier
 npm install -g @volar/server
 cargo install stylua
 
 pip3 install pynvim
+
+# cargo install --list
+# cargo packages
+cargo install stylua
+cargo install mdbook
