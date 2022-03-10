@@ -27,6 +27,7 @@ return require("packer").startup(function(use)
   use("reedes/vim-pencil")
   use("rktjmp/lush.nvim")
   use("tpope/vim-fugitive")
+  use("tpope/vim-repeat")
   use("tpope/vim-rhubarb") -- required by fugitive to :Gbrowse
   use("tpope/vim-surround")
   use("tpope/vim-unimpaired")
