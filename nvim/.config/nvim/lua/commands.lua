@@ -10,3 +10,5 @@ cmd("au BufNewFile,BufRead *.py set tabstop=4 softtabstop=4 shiftwidth=4 expandt
 
 -- disable auto-comment
 cmd("au FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o")
+
+cmd(":command! FixWhitespace :%s/s+$//e")
