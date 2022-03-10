@@ -1,4 +1,4 @@
-ID=NBd1zp3BEeyJ-vNz9WAsXQ
+ID=$1
 TOKEN=$(pass show hyp)
 
 curl -H "Authorization: Bearer ${TOKEN}" \
