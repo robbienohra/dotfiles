@@ -168,7 +168,7 @@ function dt () {
 # notes
 
 function n () {
-  v "$HOME/notes/src/$@ $(date +%s).md";
+  v "$HOME/notes/inbox/$@ $(date +%s).md";
 }
 
 function n1 () {

@@ -43,6 +43,7 @@ jsonls \
 pyright \
 rust_analyzer \
 sumneko_lua \
+svelte \
 tsserver \
 vuels \
 yamlls"
