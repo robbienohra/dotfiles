@@ -161,26 +161,10 @@ function rgv () {
   rg --vimgrep "$@";
 }
 
-function dt () {
-  cd ~/dotfiles 
-}
-
 # notes
 
 function n () {
   v "$HOME/notes/inbox/$@ $(date +%s).md";
-}
-
-function n1 () {
-  v "$HOME/notes/code/web/src/routes/$(date +%s).svelte";
-}
-
-function web () {
-  cd "$HOME/notes/code/web";
-}
-
-function sol () {
-  cd $HOME/solns
 }
 
 function no () {
@@ -189,6 +173,22 @@ function no () {
 
 function noc () {
   cd $HOME/notes/code
+}
+
+function ro () {
+  cd "$HOME/robbie/";
+}
+
+function sol () {
+  cd $HOME/solns
+}
+
+function dt () {
+  cd ~/dotfiles 
+}
+
+function n1 () {
+  v "$HOME/notes/code/web/src/routes/$(date +%s).svelte";
 }
 
 . "$HOME/.cargo/env"
