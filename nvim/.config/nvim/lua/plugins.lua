@@ -16,10 +16,6 @@ return require("packer").startup(function(use)
   use("leafOfTree/vim-svelte-plugin")
   use("leafOfTree/vim-vue-plugin")
   use("mhinz/vim-signify")
-  use({
-    "neovim/nvim-lspconfig",
-    "williamboman/nvim-lsp-installer",
-  })
   use("norcalli/nvim-colorizer.lua")
   use("numToStr/Comment.nvim")
   use("nvim-lua/plenary.nvim")
@@ -34,9 +30,13 @@ return require("packer").startup(function(use)
   use("tpope/vim-vinegar")
   use("wbthomason/packer.nvim")
   use("windwp/nvim-autopairs")
-  use({ "michaelb/sniprun", run = "bash ./install.sh" })
-  use({ "junegunn/fzf", run = ":call fzf#install()" })
   use({ "iamcco/markdown-preview.nvim", run = "cd app && yarn install" })
+  use({ "junegunn/fzf", run = ":call fzf#install()" })
   use({ "luisiacc/gruvbox-baby", branch = "main" })
+  use({ "michaelb/sniprun", run = "bash ./install.sh" })
   use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
+  use({
+    "neovim/nvim-lspconfig",
+    "williamboman/nvim-lsp-installer",
+  })
 end)
