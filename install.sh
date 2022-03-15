@@ -38,7 +38,9 @@ cargo install mdbook
 nvim -c ":LspInstall \
 bashls  \
 clangd \
+emmet_ls \
 eslint \
+html \
 jsonls \
 pyright \
 rust_analyzer \
