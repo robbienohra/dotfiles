@@ -161,31 +161,11 @@
             "simple_modifications": [
                 {
                     "from": {
-                        "key_code": "application"
-                    },
-                    "to": [
-                        {
-                            "key_code": "right_command"
-                        }
-                    ]
-                },
-                {
-                    "from": {
                         "key_code": "caps_lock"
                     },
                     "to": [
                         {
                             "key_code": "delete_or_backspace"
-                        }
-                    ]
-                },
-                {
-                    "from": {
-                        "key_code": "right_option"
-                    },
-                    "to": [
-                        {
-                            "key_code": "right_control"
                         }
                     ]
                 }
