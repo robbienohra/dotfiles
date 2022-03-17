@@ -144,6 +144,12 @@ function srr () {
   sudo -A rm -r "$@";
 }
 
+# clearco
+
+function co () {
+  cd ~/code;
+}
+
 # b6i
 function bsci () {
   cd ~/bsci 
