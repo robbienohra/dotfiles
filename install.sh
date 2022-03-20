@@ -3,6 +3,8 @@
 # https://github.com/ColemakMods/mod-dh
 # https://wiki.archlinux.org/title/Pass
 # https://github.com/alacritty/alacritty/releases
+# install from source
+# https://nodejs.org/en/download/
 # https://github.com/wbthomason/packer.nvim
 # https://stackoverflow.com/questions/36657321/after-installing-homebrew-i-get-zsh-command-not-found-brew
 
@@ -17,12 +19,19 @@ brew install --cask font-jetbrains-mono
 
 $(brew --prefix)/opt/fzf/install
 
+# git
+
+git config credential.helper store
+
 # gh extensions
 
 gh extension install mislav/gh-branch
 
-# install fnm
-curl -fsSL https://fnm.vercel.app/install | bash
+# cargo packages
+# cargo install --list
+# cargo packages
+cargo install fnm 
+cargo install stylua
 
 # apply stow
 for d in */ ; do (stow "$d"); done
@@ -30,12 +39,8 @@ for d in */ ; do (stow "$d"); done
 # global npm packages
 npm install -g typescript typescript-language-server eslint prettier
 npm install -g @volar/server
-cargo install stylua
 
 pip3 install pynvim
-
-# cargo install --list
-# cargo packages
 
 nvim -c ":LspInstall \
 bashls  \

@@ -12,6 +12,7 @@ htop
 hugo
 jq
 llvm
+lua
 neovim
 ninja
 pandoc
