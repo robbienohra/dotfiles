@@ -1,16 +1,21 @@
+# https://brew.sh/
+# https://ohmyz.sh/#install
+# https://github.com/ColemakMods/mod-dh
+# https://wiki.archlinux.org/title/Pass
+# https://github.com/alacritty/alacritty/releases
+# https://github.com/wbthomason/packer.nvim
+# https://stackoverflow.com/questions/36657321/after-installing-homebrew-i-get-zsh-command-not-found-brew
+
 brew install $(<packages.txt)
 
 # https://github.com/JetBrains/JetBrainsMono
+# https://github.com/ryanoasis/nerd-fonts
 brew tap homebrew/cask-fonts
 brew install --cask font-jetbrains-mono
 
-# https://ohmyz.sh/#install
-# https://github.com/ColemakMods/mod-dh
-# https://www.titanium-software.fr/en/onyx.html
-# https://github.com/alacritty/alacritty/releases
-# Alacritty.desktop
-# initialize pass gpg
-# https://wiki.archlinux.org/title/Pass
+# fzf
+
+$(brew --prefix)/opt/fzf/install
 
 # gh extensions
 
@@ -20,7 +25,6 @@ gh extension install mislav/gh-branch
 curl -fsSL https://fnm.vercel.app/install | bash
 
 # apply stow
-# todo: do not apply to the ultisnips directory
 for d in */ ; do (stow "$d"); done
 
 # global npm packages
@@ -32,8 +36,6 @@ pip3 install pynvim
 
 # cargo install --list
 # cargo packages
-cargo install stylua
-cargo install mdbook
 
 nvim -c ":LspInstall \
 bashls  \
