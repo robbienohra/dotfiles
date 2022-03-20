@@ -118,10 +118,6 @@ function gup() {
 }
 
 # psql
-function p () {
-  usql "postgres://sor-reagent:$(pass show pgpassword)@localhost:5499/sor?sslmode=disable" "$@";
-}
-
 function u () {
   usql "postgres://robbienohra@localhost:5432/robbienohra?sslmode=disable" "$@";
 }
@@ -148,19 +144,6 @@ function srr () {
 
 function co () {
   cd ~/code;
-}
-
-# b6i
-function bsci () {
-  cd ~/bsci 
-}
-
-function ce () {
-  cd ~/bsci/benchsci/frontend/ern;
-}
-
-function cr () {
-  cd ~/bsci/benchsci/frontend/reagent;
 }
 
 function rgv () {
@@ -200,3 +183,4 @@ function n1 () {
 . "$HOME/.cargo/env"
 
 alias luamake=/Users/robbienohra/Documents/lua-language-server/3rd/luamake/luamake
+source /Users/robbienohra/dotfiles/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
