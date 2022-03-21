@@ -1,6 +1,7 @@
 ZSH_DISABLE_COMPFIX=true
 
 export ZSH="/Users/robbienohra/.oh-my-zsh"
+export RIPGREP_CONFIG_PATH=$HOME/.ripgreprc
 
 plugins=(zsh-syntax-highlighting)
 
