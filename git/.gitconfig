@@ -43,7 +43,7 @@
         di = diff
 	din = diff --name-only 
         up = diff @ @{upstream}
-        upn = diff @ @{upstream}
+        upn = diff @ @{upstream} --name-only
 	adog = log --all --decorate --oneline --graph
 [core]
 	editor = nvim
@@ -56,7 +56,7 @@
 [user]
 	name = Robbie Nohra
   	signingkey = rnohra 
-  	email = rnohra@benchsci.com
+  	email = robbie.nohra@clearbanc.com
 [init]
 	defaultBranch = main
 [pager]
