@@ -1,5 +1,19 @@
 ZSH_DISABLE_COMPFIX=true
 
+# cco
+
+export NPM_TOKEN=$(pass show npm_token)  
+export DOCKER_BUILDKIT=1
+export COMPOSE_DOCKER_CLI_BUILD=1
+export DOCKER_CLIENT_TIMEOUT=120
+export COMPOSE_HTTP_TIMEOUT=120
+
+dc-fn() {
+  docker compose $*
+}
+
+alias dc="dc-fn"
+
 export ZSH="/Users/robbienohra/.oh-my-zsh"
 export RIPGREP_CONFIG_PATH=$HOME/.ripgreprc
 
@@ -21,12 +35,6 @@ eval "$(fnm env)"
 
 # zoxide
 eval "$(zoxide init zsh)"
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/robbienohra/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/robbienohra/Downloads/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/robbienohra/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/robbienohra/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
 
 alias sz='source ~/.zshrc'
 alias g='git'
@@ -184,3 +192,9 @@ function n1 () {
 . "$HOME/.cargo/env"
 
 alias luamake=/Users/robbienohra/Documents/lua-language-server/3rd/luamake/luamake
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/robbienohra/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/robbienohra/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/robbienohra/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/robbienohra/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
