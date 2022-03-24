@@ -7,6 +7,8 @@
 # https://nodejs.org/en/download/
 # https://github.com/wbthomason/packer.nvim
 # https://stackoverflow.com/questions/36657321/after-installing-homebrew-i-get-zsh-command-not-found-brew
+# needed for markdown preview
+# npm install -g typescript
 
 brew install $(<packages.txt)
 

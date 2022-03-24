@@ -8,6 +8,7 @@ fd
 fzf
 gh
 git-delta
+glow
 htop
 hugo
 jq
