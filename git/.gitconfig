@@ -20,7 +20,7 @@
   	rc = rebase --continue
         sw = switch
         swc = switch -c
-  	swm = switch master
+  	sws = switch master
   	res = restore .
 	ca = commit --amend
 	cm = commit -m
@@ -38,7 +38,7 @@
   	re = reset --hard @{u}
         ru = remote update
         fe = fetch
-	pr = diff master...head
+	pr = diff staging...head
 	prn = pr --name-only
         di = diff
 	din = diff --name-only 
