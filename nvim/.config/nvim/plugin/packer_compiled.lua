@@ -134,11 +134,6 @@ _G.packer_plugins = {
     path = "/Users/robbienohra/.local/share/nvim/site/pack/packer/start/lush.nvim",
     url = "https://github.com/rktjmp/lush.nvim"
   },
-  ["markdown-preview.nvim"] = {
-    loaded = true,
-    path = "/Users/robbienohra/.local/share/nvim/site/pack/packer/start/markdown-preview.nvim",
-    url = "https://github.com/iamcco/markdown-preview.nvim"
-  },
   ["null-ls.nvim"] = {
     loaded = true,
     path = "/Users/robbienohra/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
@@ -234,11 +229,6 @@ _G.packer_plugins = {
     path = "/Users/robbienohra/.local/share/nvim/site/pack/packer/start/vim-surround",
     url = "https://github.com/tpope/vim-surround"
   },
-  ["vim-svelte-plugin"] = {
-    loaded = true,
-    path = "/Users/robbienohra/.local/share/nvim/site/pack/packer/start/vim-svelte-plugin",
-    url = "https://github.com/leafOfTree/vim-svelte-plugin"
-  },
   ["vim-unimpaired"] = {
     loaded = true,
     path = "/Users/robbienohra/.local/share/nvim/site/pack/packer/start/vim-unimpaired",
@@ -258,11 +248,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/robbienohra/.local/share/nvim/site/pack/packer/start/vim-vsnip-integ",
     url = "https://github.com/hrsh7th/vim-vsnip-integ"
-  },
-  ["vim-vue-plugin"] = {
-    loaded = true,
-    path = "/Users/robbienohra/.local/share/nvim/site/pack/packer/start/vim-vue-plugin",
-    url = "https://github.com/leafOfTree/vim-vue-plugin"
   }
 }
 

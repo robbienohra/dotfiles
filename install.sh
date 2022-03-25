@@ -2,13 +2,14 @@
 # https://ohmyz.sh/#install
 # https://github.com/ColemakMods/mod-dh
 # https://wiki.archlinux.org/title/Pass
+# need to create a gpg key with same name as store
+# gpg --gen-key
+# http://irtfweb.ifa.hawaii.edu/~lockhart/gpg/
 # https://github.com/alacritty/alacritty/releases
 # install from source
 # https://nodejs.org/en/download/
 # https://github.com/wbthomason/packer.nvim
 # https://stackoverflow.com/questions/36657321/after-installing-homebrew-i-get-zsh-command-not-found-brew
-# needed for markdown preview
-# npm install -g typescript
 
 brew install $(<packages.txt)
 
@@ -47,9 +48,7 @@ pip3 install pynvim
 nvim -c ":LspInstall \
 bashls  \
 clangd \
-emmet_ls \
 eslint \
-html \
 jsonls \
 pyright \
 rust_analyzer \

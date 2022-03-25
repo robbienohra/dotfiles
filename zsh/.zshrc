@@ -2,7 +2,7 @@ ZSH_DISABLE_COMPFIX=true
 
 # cco
 
-export NPM_TOKEN=$(pass show npm_token)  
+export NPM_TOKEN=$(pass show npm_token)
 export DOCKER_BUILDKIT=1
 export COMPOSE_DOCKER_CLI_BUILD=1
 export DOCKER_CLIENT_TIMEOUT=120
