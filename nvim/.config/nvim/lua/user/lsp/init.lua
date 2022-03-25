@@ -15,8 +15,13 @@ lsp_installer.on_server_ready(function(server)
     local sumneko_opts = require("user.lsp.settings.sumneko_lua")
     opts = vim.tbl_deep_extend("force", sumneko_opts, opts)
   end
+  
+  if server.name == "eslint" then
+    local eslint_opts = require("user.lsp.settings.eslint")
+    opts = vim.tbl_deep_extend("force", eslint_opts, opts)
+  end
 
   server:setup(opts)
 end)
 
--- require("user.lsp.null-ls")
+require("user.lsp.null-ls")

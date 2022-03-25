@@ -48,7 +48,6 @@ pip3 install pynvim
 nvim -c ":LspInstall \
 bashls  \
 clangd \
-eslint \
 jsonls \
 pyright \
 rust_analyzer \
