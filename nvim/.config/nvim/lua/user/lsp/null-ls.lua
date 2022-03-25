@@ -15,7 +15,7 @@ null_ls.setup({
         "javascriptreact",
         "typescript",
         "typescriptreact",
-        -- "vue",
+        "vue",
         "css",
         "scss",
         "less",
