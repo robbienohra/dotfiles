@@ -94,7 +94,7 @@ function is-ancestor () {
 
 function rv() { 
   FILES=$(git pr-no)
-  echo $FILES | xargs nvim -c "tabdo Gvdiffsplit! master...head | tabn" -p
+  echo $FILES | xargs nvim -c "tabdo Gvdiffsplit! staging...head | tabn" -p
 }
 
 function di() {
@@ -149,7 +149,7 @@ function srr () {
   sudo -A rm -r "$@";
 }
 
-# clearco
+# work
 
 function co () {
   cd ~/code;
@@ -159,19 +159,25 @@ function rgv () {
   rg --vimgrep "$@";
 }
 
+# nav aliases
+
+# configs
+
+function dt () {
+  cd ~/dotfiles 
+}
+
 # notes
 
 function n () {
-  v "$HOME/notes/inbox/$@ $(date +%s).md";
+  v "$HOME/arc/$@ $(date +%s).md";
 }
 
-function no () {
-  cd $HOME/notes
+function arc () {
+  cd $HOME/arc
 }
 
-function noc () {
-  cd $HOME/notes/code
-}
+# blog
 
 function ro () {
   cd "$HOME/robbie/";
@@ -179,14 +185,6 @@ function ro () {
 
 function sol () {
   cd $HOME/solns
-}
-
-function dt () {
-  cd ~/dotfiles 
-}
-
-function n1 () {
-  v "$HOME/notes/code/web/src/routes/$(date +%s).svelte";
 }
 
 . "$HOME/.cargo/env"

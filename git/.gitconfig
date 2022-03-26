@@ -41,8 +41,8 @@
 	prn = pr --name-only
         di = diff
 	din = diff --name-only 
-        up = diff @ @{upstream}
-        upn = diff @ @{upstream} --name-only
+        diu = diff @ @{upstream}
+        diun = diff @ @{upstream} --name-only
 	adog = log --all --decorate --oneline --graph
 [core]
 	editor = nvim
