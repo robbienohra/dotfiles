@@ -9,6 +9,7 @@ fzf
 gh
 git-delta
 glow
+gnu-sed
 htop
 hugo
 jq

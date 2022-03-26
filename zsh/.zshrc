@@ -33,6 +33,10 @@ setopt globdots
 export PATH=/Users/robbienohra/.fnm:$PATH
 eval "$(fnm env)"
 
+# gnu-sed
+
+export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
+
 # zoxide
 eval "$(zoxide init zsh)"
 
