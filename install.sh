@@ -10,6 +10,7 @@
 # https://nodejs.org/en/download/
 # https://github.com/wbthomason/packer.nvim
 # https://stackoverflow.com/questions/36657321/after-installing-homebrew-i-get-zsh-command-not-found-brew
+# reminder: disable mission control keyboard shortcuts to free control key
 
 brew install $(<packages.txt)
 

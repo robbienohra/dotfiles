@@ -36,9 +36,9 @@ map("n", "<Leader>ge", ":.GBrowse<CR>")
 map("n", "<Leader>gf", ":!bash ~/dotfiles/diff.sh % <CR>")
 
 -- tabs
-map("n", "<Tab>", "gt")
-map("n", "<S-Tab>", "gT")
-map("n", "<S-t>", ":tabnew<CR>")
+-- map("n", "<Tab>", "gt")
+-- map("n", "<S-Tab>", "gT")
+-- map("n", "<S-t>", ":tabnew<CR>")
 
 -- Set working directory
 map("n", "<leader>.", ":lcd %:p:h<CR>")
@@ -70,8 +70,8 @@ map("n", "<space>e", ":g/^$/d<CR>")
 
 -- navigation
 
-map("n", "<C-Down>", "<C-w>j")
-map("n", "<C-Up>", "<C-w>k")
-map("n", "<C-Left>", "<C-w>h")
-map("n", "<C-Right>", "<C-w>l")
+map("n", "<M-Down>", "<C-w>j")
+map("n", "<M-Up>", "<C-w>k")
+map("n", "<M-Left>", "<C-w>h")
+map("n", "<M-Right>", "<C-w>l")
 map("n", "<Leader>\\", ":15Lexplore <CR>")

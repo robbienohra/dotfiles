@@ -61,6 +61,3 @@ font:
   use_thin_strokes: true
   offset:
     y: 1
-key_bindings:
-  - { key: Left,     mods: Alt,     chars: "\x1bb"                       } 
-  - { key: Right,    mods: Alt,     chars: "\x1bf"                       }
