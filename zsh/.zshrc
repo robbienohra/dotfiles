@@ -159,6 +159,10 @@ function co () {
   cd ~/code;
 }
 
+function my () {
+  cd ~/code/my.clearbanc.com;
+}
+
 function rgv () {
   rg --vimgrep "$@";
 }
