@@ -185,6 +185,10 @@ function arc () {
   cd $HOME/arc
 }
 
+function j () {
+  v $HOME/arc/diary/$(date +%F).md
+}
+
 # blog
 
 function ro () {
