@@ -3,3 +3,6 @@
 .idea
 .vscode
 node_modules
+dev.sh
+reset.sh
+init.sh

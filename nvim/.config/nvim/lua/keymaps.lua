@@ -36,11 +36,6 @@ map("n", "<Leader>gr", ":GRemove<CR>")
 map("n", "<Leader>ge", ":.GBrowse<CR>")
 map("n", "<Leader>gf", ":!bash ~/dotfiles/diff.sh % <CR>")
 
--- tabs
--- map("n", "<Tab>", "gt")
--- map("n", "<S-Tab>", "gT")
--- map("n", "<S-t>", ":tabnew<CR>")
-
 -- Set working directory
 map("n", "<leader>.", ":lcd %:p:h<CR>")
 
