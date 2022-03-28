@@ -90,19 +90,14 @@ export FZF_ALT_C_COMMAND="fd --type d"
 
 # git
 
+function rconf () { 
+ vim -c 'Gvdiffsplit!' "$@";
+}
+
 function is-ancestor () {
   MAYBE_ANCESTOR_COMMIT=$1;
   DESCENDENT_COMMIT=$2;
   git merge-base --is-ancestor $1 $2; echo $?;
-}
-
-function rv() { 
-  FILES=$(git pr-no)
-  echo $FILES | xargs nvim -c "tabdo Gvdiffsplit! staging...head | tabn" -p
-}
-
-function di() {
-  bash ~/dotfiles/diff.sh "$@";
 }
 
 function sq() {
@@ -111,8 +106,12 @@ function sq() {
   git rebase -i head~2 --autosquash;
 }
 
-function rconf () { 
- vim -c 'Gvdiffsplit!' "$@";
+function s () {
+  gh pr view -w $(gh pr list --search "$@" --state merged --json number | jq '.[].number')
+}
+
+function di() {
+  bash ~/dotfiles/diff.sh "$@";
 }
 
 function prune () {
@@ -121,13 +120,6 @@ function prune () {
 
 function gch() {
   git checkout $(git for-each-ref refs/heads/ --format='%(refname:short)' | fzf);
-}
-
-function gup() {
-  git checkout master
-  git fe
-  git pomr
-  git c 
 }
 
 # psql
