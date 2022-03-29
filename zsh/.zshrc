@@ -91,7 +91,11 @@ export FZF_ALT_C_COMMAND="fd --type d"
 # git
 
 function rconf () { 
- vim -c 'Gvdiffsplit!' "$@";
+  vim -c 'Gvdiffsplit!' "$@";
+}
+
+function contains () {
+  g branch --contains $1 | rg "master"
 }
 
 function is-ancestor () {
