@@ -15,9 +15,9 @@
   	b = branch
   	bd = branch -D
   	rom = rebase origin/staging
-  	ri = rebase -i
-  	ra = rebase --abort
-  	rc = rebase --continue
+  	rbi = rebase -i
+  	rba = rebase --abort
+  	rbc = rebase --continue
         sw = switch
         swc = switch -c
   	sws = switch staging
@@ -46,8 +46,8 @@
 	adog = log --all --decorate --oneline --graph
 	cp = cherry-pick
         cpa = cherry-pick --abort
-	cpc = cherry-pick --continue
-
+        cpc = cherry-pick --continue
+        ma = merge-abort
 [core]
 	editor = nvim
   	excludesFile = /Users/robbienohra/.gitignore
