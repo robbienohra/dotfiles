@@ -3,6 +3,7 @@ bat
 bazelisk
 cloc
 cmake
+commitzen
 drawio
 exa
 fd

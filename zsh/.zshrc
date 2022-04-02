@@ -94,8 +94,8 @@ function rconf () {
   vim -c 'Gvdiffsplit!' "$@";
 }
 
-function contains () {
-  g branch --contains $1 | rg "master"
+function ct () {
+  g branch --contains $1
 }
 
 function is-ancestor () {
@@ -161,6 +161,10 @@ function my () {
 
 function rgv () {
   rg --vimgrep "$@";
+}
+
+function fu () {
+  fnm use;
 }
 
 # nav aliases
