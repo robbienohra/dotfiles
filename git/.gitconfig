@@ -44,6 +44,10 @@
         diu = diff @ @{upstream}
         diun = diff @ @{upstream} --name-only
 	adog = log --all --decorate --oneline --graph
+	cp = cherry-pick
+        cpa = cherry-pick --abort
+	cpc = cherry-pick --continue
+
 [core]
 	editor = nvim
   	excludesFile = /Users/robbienohra/.gitignore
