@@ -1,95 +1,97 @@
 [filter "lfs"]
-	required = true
-  	clean = git-lfs clean -- %f
-  	smudge = git-lfs smudge -- %f
-  	process = git-lfs filter-process
+  required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
 [log]
-        date = relative
+  date = relative
 [format]
-	pretty = format:%C(yellow)%h %Cred%ad %Cblue%an%Cgreen%d %Creset%s
-	; pretty = format:%h %Cblue%ad%Creset %ae %Cgreen%s%Creset
+  pretty = format:%C(yellow)%h %Cred%ad %Cblue%an%Cgreen%d %Creset%s
 [alias]
-	last = log -1 HEAD
-	rl = reflog
-	h = log -p .
-  	b = branch
-  	bd = branch -D
-  	rom = rebase origin/staging
-  	rbi = rebase -i
-  	rba = rebase --abort
-  	rbc = rebase --continue
-        sw = switch
-        swc = switch -c
-  	sws = switch staging
-  	res = restore .
-	ca = commit --amend
-	cm = commit -m
-	cms = commit -S -m
-	cme = commit --allow-empty-message
-        cl = clean -f . 
-  	po = pull origin staging
-  	dn = !git push --force-with-lease origin HEAD
-  	st = status -sb
-  	stu = stash -u
-	ac = !git add . && git commit -am
-  	rhom = reset --hard origin/staging
-  	cf = clean -f .
-  	re = reset --hard @{u}
-        ru = remote update
-        fe = fetch
-	pr = diff staging...head
-	prn = pr --name-only
-        di = diff
-	din = diff --name-only 
-        diu = diff @ @{upstream}
-        diun = diff @ @{upstream} --name-only
-	adog = log --all --decorate --oneline --graph
-	cp = cherry-pick
-        cpa = cherry-pick --abort
-        cpc = cherry-pick --continue
-        ma = merge-abort
+  # logs
+  l = log
+  last = log -1 HEAD
+  adog = log --all --decorate --oneline --graph
+  rl = reflog
+  h = log -p .
+  # switch
+  sw = switch
+  swc = switch -c
+  sws = switch staging
+  # branch
+  bd = branch -D
+  # rebase
+  rom = rebase origin/staging
+  rbi = rebase -i
+  rba = rebase --abort
+  rbc = rebase --continue
+  # commit
+  ca = commit --amend
+  cm = commit -m
+  cms = commit -S -m
+  cme = commit --allow-empty-message
+  # push
+  pu = push -u head 
+  pf = push --force-with-lease origin head
+  # diffs
+  di = diff
+  din = diff --name-only 
+  diu = diff @ @{upstream}
+  diun = diff @ @{upstream} --name-only
+  pr = diff staging...head
+  # cherry picks
+  cp = cherry-pick
+  cpa = cherry-pick --abort
+  cpc = cherry-pick --continue
+  ac = !git add . && git commit -am
+  st = status -sb
+  stu = stash -u
+  rhom = reset --hard origin/staging
+  ru = remote update
+  fe = fetch
+  prn = pr --name-only
+  ma = merge-abort
+  re = reset --hard @{u}
+  res = restore .
+  cl = clean -f . 
 [core]
-	editor = nvim
-  	excludesFile = /Users/robbienohra/.gitignore
+  editor = nvim
+  excludesFile = /Users/robbienohra/.gitignore
 [filter "lfs"]
-	required = true
-  	clean = git-lfs clean -- %f
-  	smudge = git-lfs smudge -- %f
-  	process = git-lfs filter-process
+  required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
 [user]
-	name = Robbie Nohra
-  	signingkey = rnohra 
-  	email = robbie.nohra@clearbanc.com
+  name = Robbie Nohra
+  signingkey = rnohra 
+  email = robbie.nohra@clearbanc.com
 [init]
-	defaultBranch = main
+  defaultBranch = main
 [pager]
-	diff = delta
-	log = delta
-	reflog = delta
-	show = delta
+  diff = delta
+  log = delta
+  reflog = delta
+  show = delta
 [interactive]
-	diffFilter = delta --color-only --features=interactive
+  diffFilter = delta --color-only --features=interactive
 [init]
-	defaultBranch = main
+  defaultBranch = main
 [pager]
-	branch = true
+  branch = true
 [merge]
-	tool = fugitive
-        conflictstyle = diff3
+  tool = fugitive
+  conflictstyle = diff3
 [mergetool "fugitive"]
-	cmd = vim -f -c "Gvdiffsplit!"
+  cmd = vim -f -c "Gvdiffsplit!"
 [diff]
-	colorMoved = default
+  colorMoved = default
 [mergetool]
-	prompt = false
+  prompt = false
 [credential]
-	helper = store
+  helper = store
 [pull]
-        rebase = true
+  rebase = true
 [delta]
   navigate = true  # use n and N to move between diff sections
   side-by-side = true
-[diff]
-  tool = vscode
-[difftool "vscode"]
-  cmd = code --wait --diff $LOCAL $REMOTE 
