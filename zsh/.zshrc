@@ -71,9 +71,6 @@ alias t0="t a -t 0"
 # fzf
 
 export FZF_DEFAULT_OPTS="
---preview 'bat --style=numbers --color=always --line-range :500 {}'
---preview-window right,50%
---bind ctrl-d:page-down,ctrl-u:page-up \
 --color='bg+:#3c3836,\
 bg+:#282828,\
 spinner:#fb4934,\
@@ -86,6 +83,16 @@ marker:#fb4934,\
 fg+:#ebdbb2,\
 prompt:#fb4934,\
 hl+:#fb4934'"
+
+export FZF_CTRL_T_OPTS="
+ --preview 'bat --style=numbers --color=always --line-range :500 {}' \
+ --preview-window right,50% \
+ --bind ctrl-d:preview-page-down,ctrl-u:preview-page-up"
+
+export FZF_ALT_C_OPTS="
+ --bind ctrl-d:page-down,ctrl-u:page-up \
+ --preview-window right,50% \
+ --preview 'exa --tree --level=2 {}'"
 
 export FZF_DEFAULT_COMMAND='rg --files --hidden --follow'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
