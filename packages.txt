@@ -39,4 +39,5 @@ watchman
 wget
 xo/xo/usql
 yq
+zk
 zoxide
