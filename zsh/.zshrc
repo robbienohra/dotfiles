@@ -96,7 +96,7 @@ export FZF_ALT_C_OPTS="
 
 export FZF_DEFAULT_COMMAND='rg --files --hidden --follow'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-export FZF_ALT_C_COMMAND="fd -H --type d"
+export FZF_ALT_C_COMMAND="fd -H -E .git --type d"
 
 # git
 
