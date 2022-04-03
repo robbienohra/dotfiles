@@ -11,6 +11,7 @@
 # https://github.com/wbthomason/packer.nvim
 # https://stackoverflow.com/questions/36657321/after-installing-homebrew-i-get-zsh-command-not-found-brew
 # reminder: disable mission control keyboard shortcuts to free control key
+# https://dandavison.github.io/delta/installation.html
 
 brew install $(<packages.txt)
 
@@ -36,6 +37,7 @@ gh extension install mislav/gh-branch
 # cargo packages
 cargo install fnm 
 cargo install stylua
+cargo install viu
 
 # apply stow
 for d in */ ; do (stow "$d"); done
