@@ -31,7 +31,7 @@
   cms = commit -S -m
   cme = commit --allow-empty-message
   # push
-  pu = push -u head 
+  pu = push --set-upstream origin head
   pf = push --force-with-lease origin head
   # diffs
   di = diff

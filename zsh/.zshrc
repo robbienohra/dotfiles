@@ -169,44 +169,33 @@ function my () {
   cd ~/code/my.clearbanc.com;
 }
 
-function rgv () {
-  rg --vimgrep "$@";
-}
 
 function fu () {
   fnm use;
 }
 
-# nav aliases
+# ripgrep
 
-# configs
+function rgl () {
+  rg -p "$@" | less -RMFXK
+}
+
+function rgv () {
+  rg --vimgrep "$@";
+}
+
+# shortcuts
 
 function dt () {
   cd ~/dotfiles 
 }
 
-# notes
-
-function n () {
-  v "$HOME/arc/$@ $(date +%s).md";
-}
-
-function arc () {
-  cd $HOME/arc
-}
-
-function j () {
-  v $HOME/arc/diary/$(date +%F).md
-}
-
-# blog
-
-function ro () {
-  cd "$HOME/robbie/";
-}
-
 function sol () {
   cd $HOME/solns
+}
+
+function nb () {
+  cd $HOME/nb
 }
 
 . "$HOME/.cargo/env"
