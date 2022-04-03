@@ -24,6 +24,7 @@ pass
 postgres
 procs
 pure
+pyenv
 python
 rectangle
 restic

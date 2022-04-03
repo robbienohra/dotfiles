@@ -16,6 +16,7 @@ alias dc="dc-fn"
 
 export ZSH="/Users/robbienohra/.oh-my-zsh"
 export RIPGREP_CONFIG_PATH=$HOME/.ripgreprc
+export ZK_NOTEBOOK_DIR=$HOME/nb
 
 plugins=(zsh-syntax-highlighting)
 
@@ -70,6 +71,7 @@ alias t0="t a -t 0"
 # fzf
 
 export FZF_DEFAULT_OPTS="
+--preview 'bat --style=numbers --color=always --line-range :500 {}'
 --bind ctrl-d:page-down,ctrl-u:page-up \
 --color='bg+:#3c3836,\
 bg+:#282828,\
@@ -86,7 +88,7 @@ hl+:#fb4934'"
 
 export FZF_DEFAULT_COMMAND='rg --files --hidden --follow'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-export FZF_ALT_C_COMMAND="fd --type d"
+export FZF_ALT_C_COMMAND="fd -H --type d"
 
 # git
 
