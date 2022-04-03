@@ -43,6 +43,7 @@
   cp = cherry-pick
   cpa = cherry-pick --abort
   cpc = cherry-pick --continue
+  # misc
   ac = !git add . && git commit -am
   st = status -sb
   stu = stash -u

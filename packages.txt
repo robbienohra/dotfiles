@@ -12,6 +12,7 @@ gh
 git-delta
 glow
 gnu-sed
+graphviz
 htop
 hugo
 jq
