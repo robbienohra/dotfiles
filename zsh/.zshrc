@@ -72,6 +72,7 @@ alias t0="t a -t 0"
 
 export FZF_DEFAULT_OPTS="
 --preview 'bat --style=numbers --color=always --line-range :500 {}'
+--preview-window right,50%
 --bind ctrl-d:page-down,ctrl-u:page-up \
 --color='bg+:#3c3836,\
 bg+:#282828,\
