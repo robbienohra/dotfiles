@@ -198,6 +198,10 @@ function nb () {
   cd $HOME/nb
 }
 
+function sb () {
+  cd $HOME/sandbox
+}
+
 . "$HOME/.cargo/env"
 
 alias luamake=/Users/robbienohra/Documents/lua-language-server/3rd/luamake/luamake
