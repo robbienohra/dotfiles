@@ -70,8 +70,9 @@ alias t0="t a -t 0"
 
 # fzf
 
+# --bind ctrl-d:preview-page-down,ctrl-u:preview-page-up \
 export FZF_DEFAULT_OPTS="
---bind ctrl-d:preview-page-down,ctrl-u:preview-page-up \
+--bind ctrl-d:page-down,ctrl-u:page-up \
 --color='bg+:#3c3836,\
 bg+:#282828,\
 spinner:#fb4934,\
