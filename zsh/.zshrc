@@ -138,8 +138,10 @@ function gch() {
 }
 
 # psql
+DB="banking"
+USER="postgres"
 function u () {
-  usql "postgres://robbienohra@localhost:5432/robbienohra?sslmode=disable" "$@";
+  usql "postgres://${USER}@localhost:5432/${DB}?sslmode=disable" "$@";
 }
 
 # react
@@ -201,6 +203,10 @@ function nb () {
 
 function sb () {
   cd $HOME/sandbox
+}
+
+function sp () {
+  lsof -nP -iTCP -sTCP:LISTEN | rg "$@"
 }
 
 . "$HOME/.cargo/env"
