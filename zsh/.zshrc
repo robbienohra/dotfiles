@@ -41,17 +41,18 @@ export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
 # zoxide
 eval "$(zoxide init zsh)"
 
+
+# aliases
 alias sz='source ~/.zshrc'
 alias g='git'
 alias b="bash"
-alias vim="nvim"
-alias vi="nvim"
 alias v="nvim"
+alias n="nvim ."
 alias l="exa -l"
 alias la="exa -la"
+alias lt="exa --tree"
 export PYENV_ROOT="$HOME/.pyenv"
 export EDITOR=nvim
-export SOLN="4da1f2ae4ef03a88efef3ebbc745ac0d"
 export SUDO_ASKPASS=${HOME}/pass.sh
 
 # gpg
@@ -144,7 +145,7 @@ function u () {
   usql "postgres://${USER}@localhost:5432/${DB}?sslmode=disable" "$@";
 }
 
-# react
+# npm
 function dev () {
   npm run dev;
 }
