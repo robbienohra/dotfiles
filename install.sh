@@ -12,6 +12,8 @@
 # https://stackoverflow.com/questions/36657321/after-installing-homebrew-i-get-zsh-command-not-found-brew
 # reminder: disable mission control keyboard shortcuts to free control key
 # https://dandavison.github.io/delta/installation.html
+# Tmux Plugin Manager
+# https://github.com/tmux-plugins/tpm#installation
 
 brew install $(<packages.txt)
 
