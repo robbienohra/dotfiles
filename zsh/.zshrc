@@ -71,6 +71,14 @@ alias t0="t a -t 0"
 
 # fzf
 
+_fzf_compgen_dir() {
+  fd --type d --hidden --follow --exclude ".git" --exclude "node_modules" . "$1"
+}
+
+_fzf_compgen_path() {
+  fd --hidden --follow --exclude ".git" --exclude "node_modules" . "$1"
+}
+
 # --bind ctrl-d:preview-page-down,ctrl-u:preview-page-up \
 export FZF_DEFAULT_OPTS="
 --bind ctrl-d:page-down,ctrl-u:page-up \
