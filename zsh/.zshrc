@@ -171,6 +171,10 @@ function srr () {
   sudo -A rm -r "$@";
 }
 
+function su () {
+  sudo -A "$@";
+}
+
 # work
 
 function co () {
