@@ -16,6 +16,7 @@ graphviz
 htop
 hugo
 jq
+lazygit
 llvm
 lua
 neovim

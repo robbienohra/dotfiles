@@ -72,6 +72,10 @@ map("n", "<M-Left>", "<C-w>h")
 map("n", "<M-Right>", "<C-w>l")
 map("n", "<Leader>\\", ":15Lexplore <CR>")
 
+-- full file path
+
+map("n", "f", "1<C-g>")
+
 -- zk
 
 local opts = { noremap=true, silent=false }
