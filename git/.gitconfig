@@ -47,7 +47,7 @@
   ac = !git add . && git commit -am
   st = status -sb
   stu = stash -u
-  rhom = reset --hard origin/staging
+  rhos = reset --hard origin/staging
   ru = remote update
   fe = fetch
   prn = pr --name-only
