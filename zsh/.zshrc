@@ -147,7 +147,8 @@ function gch() {
 }
 
 # psql
-DB="banking"
+# DB="banking"
+DB="postgres"
 USER="postgres"
 function u () {
   usql "postgres://${USER}@localhost:5432/${DB}?sslmode=disable" "$@";
