@@ -20,6 +20,7 @@ o.ch = 1
 o.cole = 2
 o.cot = { "menuone", "noinsert", "noselect" }
 o.fdm = "marker"
+-- https://neovim.io/doc/user/change.html#fo-table
 o.formatoptions:append("l")
 o.ls = 2
 o.re = 0

@@ -14,6 +14,9 @@
 # https://dandavison.github.io/delta/installation.html
 # Tmux Plugin Manager
 # https://github.com/tmux-plugins/tpm#installation
+# xh
+# https://github.com/ducaale/xh
+# https://github.com/bootandy/dust
 
 brew install $(<packages.txt)
 

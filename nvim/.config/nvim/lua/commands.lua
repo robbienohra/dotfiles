@@ -21,4 +21,5 @@ autocmd(
 )
 
 -- disable auto-comment
-autocmd("FileType *", { command = "setlocal formatoptions-=c formatoptions-=r formatoptions-=o" })
+-- https://neovim.io/doc/user/change.html#fo-table
+-- autocmd("FileType *", { command = "setlocal formatoptions-=c formatoptions-=r formatoptions-=o" })
