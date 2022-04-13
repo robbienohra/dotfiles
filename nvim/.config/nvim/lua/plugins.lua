@@ -29,11 +29,14 @@ return packer.startup(function(use)
   })
   use({ "windwp/nvim-autopairs", "windwp/nvim-ts-autotag" })
   use({
+    "nvim-lualine/lualine.nvim",
+    requires = { "kyazdani42/nvim-web-devicons", opt = true },
+  })
+  use({
     "neovim/nvim-lspconfig",
     "williamboman/nvim-lsp-installer",
     "jose-elias-alvarez/null-ls.nvim",
     { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" },
-    { "michaelb/sniprun", run = "bash ./install.sh" },
   })
   use({ "luisiacc/gruvbox-baby", branch = "main" })
   use("Yggdroot/indentLine")
@@ -41,8 +44,6 @@ return packer.startup(function(use)
   use("mhinz/vim-signify")
   use("norcalli/nvim-colorizer.lua")
   use("rktjmp/lush.nvim")
-  use("hoob3rt/lualine.nvim")
-  use("kyazdani42/nvim-web-devicons")
   use("nvim-lua/plenary.nvim")
   use("plasticboy/vim-markdown")
   use("reedes/vim-pencil")
