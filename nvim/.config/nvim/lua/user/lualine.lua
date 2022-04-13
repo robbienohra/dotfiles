@@ -1,5 +1,14 @@
 require("lualine").setup({
   sections = {
+
+    lualine_b = {
+      {
+        "branch",
+        fmt = function(str)
+          return str:sub(1, vim.o.columns * 1 / 6)
+        end,
+      },
+    },
     lualine_c = {
       {
         "filename",
@@ -12,5 +21,6 @@ require("lualine").setup({
   options = {
     theme = "gruvbox_dark",
     icons_enabled = true,
+    fmt = string.lower,
   },
 })
