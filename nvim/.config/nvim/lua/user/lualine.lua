@@ -5,7 +5,7 @@ require("lualine").setup({
       {
         "branch",
         fmt = function(str)
-          return str:sub(1, vim.o.columns * 1 / 6)
+          return str:sub(1, vim.o.columns * 1 / 8)
         end,
       },
     },

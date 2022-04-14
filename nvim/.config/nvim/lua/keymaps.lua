@@ -9,7 +9,7 @@ end
 -- fzf
 map("n", "<C-t>", ":Files <CR>")
 map("n", "<C-f>", ":Rg <CR>")
-map("n", "<C-p>", ":Ag <CR>")
+-- map("n", "<C-p>", ":Ag <CR>")
 map("n", "<C-y>", ":call fzf#run(fzf#wrap({'source': 'fd --type d'})) <CR>")
 map("n", "<Leader>y", ":History: <CR>")
 map("n", "<Leader>b", ":Buffers <CR>")

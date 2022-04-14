@@ -80,7 +80,9 @@ _fzf_compgen_path() {
 }
 
 # --bind ctrl-d:preview-page-down,ctrl-u:preview-page-up \
+# https://github.com/junegunn/fzf/issues/249
 export FZF_DEFAULT_OPTS="
+--history=$HOME/.fzf_history \
 --bind ctrl-d:page-down,ctrl-u:page-up \
 --color='bg+:#3c3836,\
 bg+:#282828,\
@@ -147,8 +149,8 @@ function gch() {
 }
 
 # psql
-# DB="banking"
-DB="postgres"
+DB="banking"
+# DB="postgres"
 USER="postgres"
 function u () {
   usql "postgres://${USER}@localhost:5432/${DB}?sslmode=disable" "$@";
