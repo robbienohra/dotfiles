@@ -114,11 +114,6 @@ _G.packer_plugins = {
     path = "/Users/robbienohra/.local/share/nvim/site/pack/packer/start/gruvbox-baby",
     url = "https://github.com/luisiacc/gruvbox-baby"
   },
-  ["gruvbox.nvim"] = {
-    loaded = true,
-    path = "/Users/robbienohra/.local/share/nvim/site/pack/packer/start/gruvbox.nvim",
-    url = "https://github.com/ellisonleao/gruvbox.nvim"
-  },
   indentLine = {
     loaded = true,
     path = "/Users/robbienohra/.local/share/nvim/site/pack/packer/start/indentLine",
@@ -127,12 +122,17 @@ _G.packer_plugins = {
   ["lualine.nvim"] = {
     loaded = true,
     path = "/Users/robbienohra/.local/share/nvim/site/pack/packer/start/lualine.nvim",
-    url = "https://github.com/hoob3rt/lualine.nvim"
+    url = "https://github.com/nvim-lualine/lualine.nvim"
   },
   ["lush.nvim"] = {
     loaded = true,
     path = "/Users/robbienohra/.local/share/nvim/site/pack/packer/start/lush.nvim",
     url = "https://github.com/rktjmp/lush.nvim"
+  },
+  ["markdown-preview.nvim"] = {
+    loaded = true,
+    path = "/Users/robbienohra/.local/share/nvim/site/pack/packer/start/markdown-preview.nvim",
+    url = "https://github.com/iamcco/markdown-preview.nvim"
   },
   ["null-ls.nvim"] = {
     loaded = true,
@@ -154,6 +154,11 @@ _G.packer_plugins = {
     path = "/Users/robbienohra/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua",
     url = "https://github.com/norcalli/nvim-colorizer.lua"
   },
+  ["nvim-dap"] = {
+    loaded = true,
+    path = "/Users/robbienohra/.local/share/nvim/site/pack/packer/start/nvim-dap",
+    url = "https://github.com/mfussenegger/nvim-dap"
+  },
   ["nvim-lsp-installer"] = {
     loaded = true,
     path = "/Users/robbienohra/.local/share/nvim/site/pack/packer/start/nvim-lsp-installer",
@@ -168,6 +173,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/robbienohra/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
+  },
+  ["nvim-ts-autotag"] = {
+    loaded = true,
+    path = "/Users/robbienohra/.local/share/nvim/site/pack/packer/start/nvim-ts-autotag",
+    url = "https://github.com/windwp/nvim-ts-autotag"
   },
   ["nvim-web-devicons"] = {
     loaded = true,
@@ -184,11 +194,6 @@ _G.packer_plugins = {
     path = "/Users/robbienohra/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
-  sniprun = {
-    loaded = true,
-    path = "/Users/robbienohra/.local/share/nvim/site/pack/packer/start/sniprun",
-    url = "https://github.com/michaelb/sniprun"
-  },
   ["vim-fugitive"] = {
     loaded = true,
     path = "/Users/robbienohra/.local/share/nvim/site/pack/packer/start/vim-fugitive",
@@ -197,17 +202,12 @@ _G.packer_plugins = {
   ["vim-markdown"] = {
     loaded = true,
     path = "/Users/robbienohra/.local/share/nvim/site/pack/packer/start/vim-markdown",
-    url = "https://github.com/plasticboy/vim-markdown"
+    url = "https://github.com/preservim/vim-markdown"
   },
   ["vim-peekaboo"] = {
     loaded = true,
     path = "/Users/robbienohra/.local/share/nvim/site/pack/packer/start/vim-peekaboo",
     url = "https://github.com/junegunn/vim-peekaboo"
-  },
-  ["vim-pencil"] = {
-    loaded = true,
-    path = "/Users/robbienohra/.local/share/nvim/site/pack/packer/start/vim-pencil",
-    url = "https://github.com/reedes/vim-pencil"
   },
   ["vim-repeat"] = {
     loaded = true,
@@ -248,6 +248,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/robbienohra/.local/share/nvim/site/pack/packer/start/vim-vsnip-integ",
     url = "https://github.com/hrsh7th/vim-vsnip-integ"
+  },
+  ["zk-nvim"] = {
+    loaded = true,
+    path = "/Users/robbienohra/.local/share/nvim/site/pack/packer/start/zk-nvim",
+    url = "https://github.com/mickael-menu/zk-nvim"
   }
 }
 
