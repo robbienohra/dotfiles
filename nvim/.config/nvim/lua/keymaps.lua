@@ -76,6 +76,11 @@ map("n", "<Leader>\\", ":15Lexplore <CR>")
 
 map("n", "f", "1<C-g>")
 
+-- plugins
+-- refresh
+
+map("n", "<Leader>r", ":luafile %<CR>")
+
 -- zk
 
 local opts = { noremap=true, silent=false }

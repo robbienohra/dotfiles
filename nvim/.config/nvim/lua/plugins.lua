@@ -38,6 +38,7 @@ return packer.startup(function(use)
     "jose-elias-alvarez/null-ls.nvim",
     { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" },
   })
+  use({ "iamcco/markdown-preview.nvim", run = "cd app && yarn install" })
   use({ "luisiacc/gruvbox-baby", branch = "main" })
   use("Yggdroot/indentLine")
   use("numToStr/Comment.nvim")
