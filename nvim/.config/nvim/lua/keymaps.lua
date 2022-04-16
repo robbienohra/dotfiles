@@ -10,7 +10,7 @@ end
 map("n", "<C-t>", ":Files <CR>")
 map("n", "<C-f>", ":Rg <CR>")
 -- map("n", "<C-p>", ":Ag <CR>")
-map("n", "<C-y>", ":call fzf#run(fzf#wrap({'source': 'fd --type d'})) <CR>")
+map("n", "<C-y>", ":call fzf#run(fzf#wrap({'source': 'fd --type d --hidden --exclude \".git\"'})) <CR>")
 map("n", "<Leader>y", ":History: <CR>")
 map("n", "<Leader>b", ":Buffers <CR>")
 map("n", "<Leader>e", ":FZF <CR>")
