@@ -39,7 +39,7 @@ return packer.startup(function(use)
     { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" },
     "mfussenegger/nvim-dap",
   })
-  use({ "preservim/vim-markdown", { "iamcco/markdown-preview.nvim", run = "cd app && yarn install" } })
+  use({ "iamcco/markdown-preview.nvim", run = "cd app && yarn install" })
   use({ "luisiacc/gruvbox-baby", branch = "main" })
   use("Yggdroot/indentLine")
   use("numToStr/Comment.nvim")
