@@ -1,7 +1,7 @@
 local cmd = vim.cmd
 local autocmd = vim.api.nvim_create_autocmd
 cmd("colo gruvbox-baby")
-autocmd("FileType *", { command = "highlight LineNr guifg=#665C54" })
+autocmd("FileType", { pattern = { "*" }, command = "highlight LineNr guifg=#665C54" })
 vim.opt.bg = "dark"
 -- legacy gruvbox theme
 -- vim.g.gruvbox_contrast_dark = 'medium'
