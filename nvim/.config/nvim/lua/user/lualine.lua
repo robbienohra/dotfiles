@@ -4,7 +4,8 @@ require("lualine").setup({
       {
         "mode",
         fmt = function(str)
-          return str:sub(1, 1):lower()
+          return str:sub(1, 1)
+          -- return str:sub(1, 1):lower()
         end,
       },
     },
@@ -24,6 +25,9 @@ require("lualine").setup({
         shorting_target = 40, -- Shortens path to leave 40 spaces in the window
       },
     },
+    lualine_x = { "filetype" },
+    lualine_y = {},
+    lualine_z = { "progress" },
   },
   options = {
     theme = "gruvbox_dark",
