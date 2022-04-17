@@ -1,5 +1,8 @@
 ZSH_DISABLE_COMPFIX=true
 
+# plugins
+# nvim/site/pack/packer/start
+
 # cco
 
 export NPM_TOKEN=$(pass show robbie/npm_token)
