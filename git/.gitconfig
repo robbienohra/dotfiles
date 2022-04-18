@@ -45,6 +45,7 @@
   cpc = cherry-pick --continue
   # misc
   ac = !git add . && git commit -am
+  aa = add .
   st = status -sb
   stu = stash -u
   rhos = reset --hard origin/staging

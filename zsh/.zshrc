@@ -117,7 +117,7 @@ export FZF_ALT_C_COMMAND="fd -H -E .git --type d"
 # git
 
 function rconf () { 
-  vim -c 'Gvdiffsplit!' "$@";
+  nvim -c 'Gvdiffsplit!' "$@";
 }
 
 function ct () {
