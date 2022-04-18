@@ -2,6 +2,7 @@ ZSH_DISABLE_COMPFIX=true
 
 # plugins
 # nvim/site/pack/packer/start
+alias uuidgen='uuidgen | tr "[:upper:]" "[:lower:]"'
 
 # cco
 
@@ -227,6 +228,13 @@ function sb () {
 function sp () {
   lsof -nP -iTCP -sTCP:LISTEN | rg "$@"
 }
+
+function post() {
+  cd $HOME/robbie
+  POST="content/posts/$(uuidgen).md"
+  hugo new $POST
+  nvim $POST 
+} 
 
 . "$HOME/.cargo/env"
 
