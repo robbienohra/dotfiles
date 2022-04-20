@@ -25,3 +25,4 @@ lsp_installer.on_server_ready(function(server)
 end)
 
 require("user.lsp.null-ls")
+require("user.lsp.groovyls")

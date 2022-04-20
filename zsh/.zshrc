@@ -4,6 +4,12 @@ ZSH_DISABLE_COMPFIX=true
 # nvim/site/pack/packer/start
 alias uuidgen='uuidgen | tr "[:upper:]" "[:lower:]"'
 
+# jenkins
+
+export CLUSTER_NAME=jenkins-test
+export REGION_NAME=us-central1-a
+export PROJECT_ID=clearbanc-build
+
 # cco
 
 export NPM_TOKEN=$(pass show robbie/npm_token)
@@ -192,6 +198,9 @@ function my () {
   cd ~/code/my.clearbanc.com;
 }
 
+function comp () {
+  cd ~/clear-components;
+}
 
 function fu () {
   fnm use;
@@ -248,3 +257,4 @@ if [ -f '/Users/robbienohra/Downloads/google-cloud-sdk/completion.zsh.inc' ]; th
 
 export PNPM_HOME="/Users/robbienohra/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
