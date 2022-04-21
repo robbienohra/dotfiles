@@ -10,6 +10,10 @@ export CLUSTER_NAME=jenkins-test
 export REGION_NAME=us-central1-a
 export PROJECT_ID=clearbanc-build
 
+export JENKINS_USER_ID=admin
+export JENKINS_API_TOKEN=$(pass show robbie/jenkins)
+export JENKINS_URL="http://localhost:8080/"
+
 # cco
 
 export NPM_TOKEN=$(pass show robbie/npm_token)
@@ -58,7 +62,7 @@ alias g='git'
 alias b="bash"
 alias v="nvim"
 alias n="nvim ."
-alias l="exa -l"
+alias l="exa -l --icons"
 alias la="exa -la"
 alias lt="exa --tree"
 alias chrome="open -a 'Google Chrome'"

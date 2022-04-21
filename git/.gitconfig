@@ -31,6 +31,8 @@
   cm = commit -m
   cms = commit -S -m
   cme = commit --allow-empty-message
+  # pull
+  p = pull
   # push
   pu = push --set-upstream origin head
   pf = push --force-with-lease origin head
