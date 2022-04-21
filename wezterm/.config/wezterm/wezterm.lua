@@ -9,7 +9,9 @@ return {
   -- font = wezterm.font("JetBrainsMonoNL Nerd Font Mono", { weight = "Regular" }),
   font = wezterm.font("JetBrains Mono", { bold = true }),
   keys = {
-    { key = "w", mods = "CMD", action = wezterm.action({ CloseCurrentPane = { confirm = true } }) },
+    { key = "w", mods = "CMD", action = wezterm.action({ CloseCurrentPane = { confirm = false } }) },
+    { key = "9", mods = "ALT", action = wezterm.action({ ShowLauncherArgs = { flags = "FUZZY|TABS" } }) },
+    -- { key = "9", mods = "ALT", action = "ShowTabNavigator" },
   },
   window_decorations = "RESIZE",
   font_size = 13.5,

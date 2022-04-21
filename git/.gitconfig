@@ -21,6 +21,7 @@
   # branch
   bd = branch -D
   # rebase
+  rb = rebase
   rom = rebase origin/staging
   rbi = rebase -i
   rba = rebase --abort

@@ -61,6 +61,7 @@ alias n="nvim ."
 alias l="exa -l"
 alias la="exa -la"
 alias lt="exa --tree"
+alias chrome="open -a 'Google Chrome'"
 export PYENV_ROOT="$HOME/.pyenv"
 export EDITOR=nvim
 export SUDO_ASKPASS=${HOME}/pass.sh
@@ -217,6 +218,10 @@ function rgv () {
 }
 
 # shortcuts
+
+function wi () {
+  wezterm imgcat "$@"
+}
 
 function dt () {
   cd ~/dotfiles 

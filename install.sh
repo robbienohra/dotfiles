@@ -25,6 +25,9 @@ brew install $(<packages.txt)
 brew tap homebrew/cask-fonts
 brew install --cask font-jetbrains-mono
 
+# wezterm
+# https://wezfurlong.org/wezterm/install/macos.html#homebrew
+
 # fzf
 
 $(brew --prefix)/opt/fzf/install
