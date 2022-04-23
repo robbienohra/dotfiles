@@ -23,4 +23,12 @@ return {
     bottom = 0,
   },
   window_close_confirmation = "NeverPrompt",
+  hyperlink_rules = {
+    -- Linkify things that look like URLs
+    -- This is actually the default if you don't specify any hyperlink_rules
+    {
+      regex = "\\b\\w+://(?:[\\w.-]+)\\.[a-z]{2,15}\\S*\\b",
+      format = "$0",
+    },
+  },
 }
