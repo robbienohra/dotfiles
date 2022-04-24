@@ -14,6 +14,10 @@ export JENKINS_USER_ID=admin
 export JENKINS_API_TOKEN=$(pass show robbie/jenkins)
 export JENKINS_URL="http://localhost:8080/"
 
+function j() {
+  kubectl -n jenkins port-forward svc/jenkins 8080:8080
+}
+
 # cco
 
 export NPM_TOKEN=$(pass show robbie/npm_token)
