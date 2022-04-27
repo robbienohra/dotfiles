@@ -20,10 +20,7 @@ autocmd(
   { pattern = { "*.py" }, command = "set tabstop=4 softtabstop=4 shiftwidth=4 expandtab smarttab autoindent" }
 )
 
-autocmd(
-  { "BufLeave" },
-  { pattern = { "*" }, command = "if &buftype == 'quickfix'|q|endif" }
-)
+autocmd({ "BufLeave" }, { pattern = { "*" }, command = "if &buftype == 'quickfix'|q|endif" })
 
 -- disable auto-comment
 -- https://neovim.io/doc/user/change.html#fo-table
