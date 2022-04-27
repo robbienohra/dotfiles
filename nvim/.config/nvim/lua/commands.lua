@@ -5,7 +5,7 @@ cmd(":command! FixWhitespace :%s/s+$//e")
 
 -- https://github.com/junegunn/fzf.vim/issues/346#issuecomment-288483704
 cmd(
-  [[command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1, fzf#vim#with_preview(), <bang>0)]]
+  [[command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1, fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}), <bang>0)]]
 )
 
 cmd(":command! -bang -nargs=* Ag call fzf#vim#ag(<q-args>, {'options': '--delimiter : --nth 4..'}, <bang>0)")
@@ -18,6 +18,11 @@ autocmd("FileType", { pattern = { "cpp" }, command = "nnoremap <C-x> :!./%:r.out
 autocmd(
   { "BufNewFile", "BufRead" },
   { pattern = { "*.py" }, command = "set tabstop=4 softtabstop=4 shiftwidth=4 expandtab smarttab autoindent" }
+)
+
+autocmd(
+  { "BufLeave" },
+  { pattern = { "*" }, command = "if &buftype == 'quickfix'|q|endif" }
 )
 
 -- disable auto-comment

@@ -98,6 +98,7 @@ _fzf_compgen_path() {
   fd --hidden --follow --exclude ".git" . "$1"
 }
 
+# https://gist.github.com/gnanderson/d74079d16714bb8b2822a7a07cc883d4
 function fif() {
 	rg  \
 	--column \
