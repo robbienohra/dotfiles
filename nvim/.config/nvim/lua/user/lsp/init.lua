@@ -1,9 +1,13 @@
 local capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities())
 -- local coq = require("coq") -- add this
 
-require("nvim-lsp-installer").setup()
+require("nvim-lsp-installer").setup({
+  ensure_installed = { "clangd", "rust_analyzer", "sumneko_lua", "svelte", "vuels", "tsserver", "eslint", "jsonls" },
+})
 
 local lspconfig = require("lspconfig")
+
+lspconfig.util.default_config = vim.tbl_extend("force", lspconfig.util.default_config, { capabilities = capabilities })
 
 local function on_attach(client)
   client.resolved_capabilities.document_formatting = false

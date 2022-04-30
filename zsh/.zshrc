@@ -278,7 +278,11 @@ function post() {
   POST="content/posts/$(uuidgen).md"
   hugo new $POST
   nvim $POST 
-} 
+}
+
+function npm_login() {
+  npm login --registry=https://npm.pkg.github.com
+}
 
 . "$HOME/.cargo/env"
 
