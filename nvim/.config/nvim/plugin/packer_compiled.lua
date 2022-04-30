@@ -159,6 +159,11 @@ _G.packer_plugins = {
     path = "/Users/robbienohra/.local/share/nvim/site/pack/packer/start/nvim-dap",
     url = "https://github.com/mfussenegger/nvim-dap"
   },
+  ["nvim-jenkinsfile-linter"] = {
+    loaded = true,
+    path = "/Users/robbienohra/.local/share/nvim/site/pack/packer/start/nvim-jenkinsfile-linter",
+    url = "https://github.com/ckipp01/nvim-jenkinsfile-linter"
+  },
   ["nvim-lsp-installer"] = {
     loaded = true,
     path = "/Users/robbienohra/.local/share/nvim/site/pack/packer/start/nvim-lsp-installer",

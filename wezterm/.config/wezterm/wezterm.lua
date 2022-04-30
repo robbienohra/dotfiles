@@ -17,7 +17,7 @@ return {
   font_size = 13.5,
   window_background_opacity = 1.0,
   window_padding = {
-    left = 2,
+    left = 20,
     right = 2,
     top = 0,
     bottom = 0,
