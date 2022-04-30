@@ -191,6 +191,12 @@ function u () {
   usql "postgres://${USER}@localhost:5432/${DB}?sslmode=disable" "$@";
 }
 
+# lsp
+
+function lsp () {
+  tail -f ~/.cache/nvim/lsp.log;
+}
+
 # npm
 function dev () {
   npm run dev;
