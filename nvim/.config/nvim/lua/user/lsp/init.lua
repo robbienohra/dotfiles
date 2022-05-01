@@ -2,19 +2,29 @@ local capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protoco
 -- local coq = require("coq") -- add this
 
 require("nvim-lsp-installer").setup({
-  ensure_installed = { "clangd", "rust_analyzer", "sumneko_lua", "svelte", "vuels", "tsserver", "eslint", "jsonls" },
+  ensure_installed = {
+    "clangd",
+    "eslint",
+    "jsonls",
+    "rust_analyzer",
+    "sumneko_lua",
+    "svelte",
+    "tsserver",
+    "vuels",
+  },
 })
 
 local lspconfig = require("lspconfig")
-
-lspconfig.util.default_config = vim.tbl_extend("force", lspconfig.util.default_config, { capabilities = capabilities })
 
 local function on_attach(client)
   client.resolved_capabilities.document_formatting = false
   client.resolved_capabilities.document_range_formatting = false
 end
 
-lspconfig.tsserver.setup({})
+lspconfig.tsserver.setup({ on_attach = on_attach, capabilities = capabilities })
+
+-- lspconfig.vuels.setup(coq.lsp_ensure_capabilities())
+lspconfig.vuels.setup({ capabilities = capabilities })
 
 local sumneko_opts = require("user.lsp.settings.sumneko_lua")
 lspconfig.sumneko_lua.setup(sumneko_opts)
@@ -25,8 +35,6 @@ lspconfig.eslint.setup(eslint_opts)
 lspconfig.jsonls.setup({ on_attach = on_attach })
 lspconfig.tsserver.setup({ on_attach = on_attach, capabilities = capabilities })
 
--- lspconfig.vuels.setup(coq.lsp_ensure_capabilities())
-lspconfig.vuels.setup({ capabilities = capabilities })
 
 require("user.lsp.null-ls")
 require("user.lsp.groovyls")
