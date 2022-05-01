@@ -1,3 +1,3 @@
-require("zk").setup({
+require("zk").setup {
   picker = "fzf",
-})
+}

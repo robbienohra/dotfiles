@@ -2,7 +2,7 @@ vim.g.mapleader = ","
 vim.g.loaded_ruby_provider = 0
 vim.g.loaded_perl_provider = 0
 vim.g.loaded_python_provider = 0
-local udir = os.getenv("HOME") .. "/undodir"
+local udir = os.getenv "HOME" .. "/undodir"
 local o = vim.opt
 o.lazyredraw = true
 o.backup = false
@@ -21,7 +21,7 @@ o.conceallevel = 2
 o.completeopt = { "menuone", "noinsert", "noselect" }
 o.foldmethod = "marker"
 -- https://neovim.io/doc/user/change.html#fo-table
-o.formatoptions:append("l")
+o.formatoptions:append "l"
 o.laststatus = 2
 o.regexpengine = 0
 o.shortmess = "atW"

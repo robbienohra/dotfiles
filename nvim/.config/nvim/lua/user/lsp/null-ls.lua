@@ -6,10 +6,10 @@ end
 local formatting = null_ls.builtins.formatting
 local diagnostics = null_ls.builtins.diagnostics
 
-null_ls.setup({
+null_ls.setup {
   debug = false,
   sources = {
-    formatting.prettier.with({
+    formatting.prettier.with {
       filetypes = {
         "javascript",
         "javascriptreact",
@@ -27,10 +27,10 @@ null_ls.setup({
         "solidity",
       },
       -- extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote" },
-    }),
-    formatting.stylua.with({
-      extra_args = { "--config-path", vim.fn.expand("~/.config/stylua.toml") },
-    }),
+    },
+    formatting.stylua.with {
+      extra_args = { "--config-path", vim.fn.expand "~/.config/stylua.toml" },
+    },
     diagnostics.tsc,
   },
-})
+}

@@ -1,4 +1,4 @@
-require("lualine").setup({
+require("lualine").setup {
   sections = {
     lualine_a = {
       {
@@ -33,4 +33,4 @@ require("lualine").setup({
     icons_enabled = true,
     fmt = string.lower,
   },
-})
+}

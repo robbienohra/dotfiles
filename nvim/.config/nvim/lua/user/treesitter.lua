@@ -1,4 +1,4 @@
-require("nvim-treesitter.configs").setup({
+require("nvim-treesitter.configs").setup {
   ensure_installed = {
     "bash",
     "cpp",
@@ -24,4 +24,4 @@ require("nvim-treesitter.configs").setup({
     enable = true,
     additional_vim_regex_highlighting = { "markdown" },
   },
-})
+}

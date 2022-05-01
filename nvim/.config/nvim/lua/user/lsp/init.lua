@@ -1,7 +1,7 @@
-local util = require("lspconfig.util")
-local lspconfig = require("lspconfig")
+local util = require "lspconfig.util"
+local lspconfig = require "lspconfig"
 
-require("nvim-lsp-installer").setup({
+require("nvim-lsp-installer").setup {
   ensure_installed = {
     "clangd",
     "eslint",
@@ -12,7 +12,7 @@ require("nvim-lsp-installer").setup({
     "tsserver",
     "vuels",
   },
-})
+}
 
 -- disable formatting for cases where null-ls is the desired default
 local function on_attach(client)
@@ -20,14 +20,14 @@ local function on_attach(client)
   client.resolved_capabilities.document_range_formatting = false
 end
 
-lspconfig.tsserver.setup({ on_attach = on_attach })
-lspconfig.jsonls.setup({ on_attach = on_attach })
-lspconfig.vuels.setup({})
+lspconfig.tsserver.setup { on_attach = on_attach }
+lspconfig.jsonls.setup { on_attach = on_attach }
+lspconfig.vuels.setup {}
 
-local sumneko_opts = require("user.lsp.settings.sumneko_lua")
+local sumneko_opts = require "user.lsp.settings.sumneko_lua"
 lspconfig.sumneko_lua.setup(sumneko_opts)
 
-local eslint_opts = require("user.lsp.settings.eslint")
+local eslint_opts = require "user.lsp.settings.eslint"
 lspconfig.eslint.setup(eslint_opts)
 
 local capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities())
@@ -37,5 +37,5 @@ util.default_config = vim.tbl_extend("force", util.default_config, {
   capabilities = capabilities,
 })
 
-require("user.lsp.null-ls")
-require("user.lsp.groovyls")
+require "user.lsp.null-ls"
+require "user.lsp.groovyls"

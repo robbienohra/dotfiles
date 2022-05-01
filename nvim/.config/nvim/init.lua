@@ -1,21 +1,21 @@
-require("colorscheme")
-require("commands")
-require("options")
-require("keymaps")
-require("plugins")
-require("user.autopairs")
-require("user.autotag")
-require("user.cmp")
-require("user.colorizer")
-require("user.comment")
-require("user.fzf")
-require("user.indent")
-require("user.lsp")
-require("user.lualine")
-require("user.markdown")
-require("user.nvim-dap")
-require("user.nvim")
-require("user.treesitter")
-require("user.vinegar")
-require("user.zk")
+require "colorscheme"
+require "commands"
+require "options"
+require "keymaps"
+require "plugins"
+require "user.autopairs"
+require "user.autotag"
+require "user.cmp"
+require "user.colorizer"
+require "user.comment"
+require "user.fzf"
+require "user.indent"
+require "user.lsp"
+require "user.lualine"
+require "user.markdown"
+require "user.nvim-dap"
+require "user.nvim"
+require "user.treesitter"
+require "user.vinegar"
+require "user.zk"
 -- require("jenkinsfile_linter").validate()

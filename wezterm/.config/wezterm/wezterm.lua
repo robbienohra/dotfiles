@@ -1,4 +1,4 @@
-local wezterm = require("wezterm")
+local wezterm = require "wezterm"
 local scheme = wezterm.get_builtin_color_schemes()["Gruvbox Dark"]
 scheme.background = "#282828"
 return {
@@ -9,8 +9,8 @@ return {
   -- font = wezterm.font("JetBrainsMonoNL Nerd Font Mono", { weight = "Regular" }),
   font = wezterm.font("JetBrains Mono", { bold = true }),
   keys = {
-    { key = "w", mods = "CMD", action = wezterm.action({ CloseCurrentPane = { confirm = false } }) },
-    { key = "9", mods = "ALT", action = wezterm.action({ ShowLauncherArgs = { flags = "FUZZY|TABS" } }) },
+    { key = "w", mods = "CMD", action = wezterm.action { CloseCurrentPane = { confirm = false } } },
+    { key = "9", mods = "ALT", action = wezterm.action { ShowLauncherArgs = { flags = "FUZZY|TABS" } } },
     -- { key = "9", mods = "ALT", action = "ShowTabNavigator" },
   },
   window_decorations = "RESIZE",
