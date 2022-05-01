@@ -134,11 +134,11 @@ hl+:#fb4934'"
 
 export FZF_CTRL_T_OPTS="
  --preview 'bat --style=numbers --color=always --line-range :500 {}' \
- --preview-window right,50%"
+ --preview-window down,50%"
 
 export FZF_ALT_C_OPTS="
  --bind ctrl-d:page-down,ctrl-u:page-up \
- --preview-window right,50% \
+ --preview-window down,50% \
  --preview 'exa --tree --level=2 {}'"
 
 export FZF_DEFAULT_COMMAND='rg --files --hidden --follow'
@@ -275,7 +275,8 @@ function sp () {
 
 function post() {
   cd $HOME/robbie
-  POST="content/posts/$(uuidgen).md"
+  ID=$(uuidgen | sed 's/[-]//g' | head -c 10; echo)
+  POST="content/posts/${ID}.md"
   hugo new $POST
   nvim $POST 
 }
