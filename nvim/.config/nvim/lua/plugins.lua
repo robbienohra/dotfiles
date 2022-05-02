@@ -5,16 +5,6 @@ end
 
 return packer.startup(function(use)
   use {
-    "hrsh7th/cmp-buffer",
-    "hrsh7th/cmp-cmdline",
-    "hrsh7th/cmp-nvim-lsp",
-    "hrsh7th/cmp-path",
-    "hrsh7th/cmp-vsnip",
-    "hrsh7th/nvim-cmp",
-    "hrsh7th/vim-vsnip",
-    "hrsh7th/vim-vsnip-integ",
-  }
-  use {
     "tpope/vim-fugitive",
     "tpope/vim-repeat",
     "tpope/vim-rhubarb", -- required by fugitive to :Gbrowse
@@ -24,31 +14,44 @@ return packer.startup(function(use)
   }
   use {
     "junegunn/fzf.vim",
-    { "junegunn/fzf", run = ":call fzf#install()" },
     "junegunn/vim-peekaboo",
+    { "junegunn/fzf", run = ":call fzf#install()" },
   }
-  use { "windwp/nvim-autopairs", "windwp/nvim-ts-autotag" }
+  -- theming
   use {
-    "nvim-lualine/lualine.nvim",
-    requires = { "kyazdani42/nvim-web-devicons", opt = true },
+    {
+      "nvim-lualine/lualine.nvim",
+      requires = { "kyazdani42/nvim-web-devicons", opt = true },
+    },
+    { "luisiacc/gruvbox-baby", branch = "main" },
   }
+  -- development
   use {
-    "neovim/nvim-lspconfig",
-    "williamboman/nvim-lsp-installer",
+    "Yggdroot/indentLine",
+    "hrsh7th/cmp-buffer",
+    "hrsh7th/cmp-cmdline",
+    "hrsh7th/cmp-nvim-lsp",
+    "hrsh7th/cmp-path",
+    "hrsh7th/cmp-vsnip",
+    "hrsh7th/nvim-cmp",
+    "hrsh7th/vim-vsnip",
+    "hrsh7th/vim-vsnip-integ",
     "jose-elias-alvarez/null-ls.nvim",
-    { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" },
     "mfussenegger/nvim-dap",
+    "mhinz/vim-signify",
+    "ms-jpq/coq_nvim",
+    "neovim/nvim-lspconfig",
+    "norcalli/nvim-colorizer.lua",
+    "numToStr/Comment.nvim",
+    -- "rktjmp/lush.nvim",
+    "williamboman/nvim-lsp-installer",
+    "windwp/nvim-autopairs",
+    "windwp/nvim-ts-autotag",
+    { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" },
   }
   use { "preservim/vim-markdown", { "iamcco/markdown-preview.nvim", run = "cd app && yarn install" } }
-  use { "luisiacc/gruvbox-baby", branch = "main" }
-  use "Yggdroot/indentLine"
-  use "numToStr/Comment.nvim"
-  use "mhinz/vim-signify"
-  use "norcalli/nvim-colorizer.lua"
-  use "rktjmp/lush.nvim"
-  use "nvim-lua/plenary.nvim"
   use "mickael-menu/zk-nvim"
+  use "nvim-lua/plenary.nvim"
   use "wbthomason/packer.nvim"
-  use { "ckipp01/nvim-jenkinsfile-linter", requires = { "nvim-lua/plenary.nvim" } }
-  use "ms-jpq/coq_nvim"
+  use { "ckipp01/nvim-jenkinsfile-linter" }
 end)
