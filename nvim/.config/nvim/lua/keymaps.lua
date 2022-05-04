@@ -81,6 +81,9 @@ map("n", "f", "1<C-g>")
 
 map("n", "<Leader>r", ":luafile %<CR>")
 
+-- tab
+map("n", "tn", ":tabnew <CR>")
+
 -- zk
 
 local opts = { noremap = true, silent = false }

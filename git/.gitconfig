@@ -39,8 +39,8 @@
   # diffs
   di = diff
   din = diff --name-only 
-  diu = diff @ @{upstream}
-  diun = diff @ @{upstream} --name-only
+  diu = diff @{upstream} @
+  diun = diff @{upstream} @ --name-only
   pr = diff staging...head
   # cherry picks
   cp = cherry-pick
