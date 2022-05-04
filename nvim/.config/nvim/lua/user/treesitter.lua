@@ -1,4 +1,7 @@
 require("nvim-treesitter.configs").setup {
+  rainbow = {
+    enable = true,
+  },
   ensure_installed = {
     "bash",
     "cpp",

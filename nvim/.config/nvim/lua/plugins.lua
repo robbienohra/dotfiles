@@ -54,4 +54,5 @@ return packer.startup(function(use)
   use "nvim-lua/plenary.nvim"
   use "wbthomason/packer.nvim"
   use { "ckipp01/nvim-jenkinsfile-linter" }
+  use "p00f/nvim-ts-rainbow"
 end)
