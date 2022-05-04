@@ -3,14 +3,17 @@ local lspconfig = require "lspconfig"
 
 require("nvim-lsp-installer").setup {
   ensure_installed = {
+    "bashls",
     "clangd",
     "eslint",
     "jsonls",
+    "pyright",
     "rust_analyzer",
     "sumneko_lua",
     "svelte",
     "tsserver",
     "vuels",
+    "yamlls"
   },
 }
 

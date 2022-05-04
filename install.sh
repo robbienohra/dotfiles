@@ -55,15 +55,3 @@ npm install -g typescript typescript-language-server eslint prettier
 npm install -g @volar/server
 
 pip3 install pynvim
-
-nvim -c ":LspInstall \
-bashls  \
-clangd \
-jsonls \
-pyright \
-rust_analyzer \
-sumneko_lua \
-svelte \
-tsserver \
-vuels \
-yamlls"
