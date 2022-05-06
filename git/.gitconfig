@@ -12,7 +12,7 @@
   l = log
   last = log -1 HEAD
   adog = log --all --decorate --oneline --graph
-  rl = reflog
+  rl = reflog --format='%C(auto)%h %<|(20)%gd %C(blue)%cr%C(reset) %gs (%s)'
   h = log -p .
   # switch
   sw = switch

@@ -43,6 +43,7 @@ return packer.startup(function(use)
     "neovim/nvim-lspconfig",
     "norcalli/nvim-colorizer.lua",
     "numToStr/Comment.nvim",
+    "p00f/nvim-ts-rainbow",
     -- "rktjmp/lush.nvim",
     "williamboman/nvim-lsp-installer",
     "windwp/nvim-autopairs",
@@ -54,5 +55,4 @@ return packer.startup(function(use)
   use "nvim-lua/plenary.nvim"
   use "wbthomason/packer.nvim"
   use { "ckipp01/nvim-jenkinsfile-linter" }
-  use "p00f/nvim-ts-rainbow"
 end)

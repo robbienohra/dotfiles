@@ -84,6 +84,9 @@ map("n", "<Leader>r", ":luafile %<CR>")
 -- tab
 map("n", "tn", ":tabnew <CR>")
 
+-- yank filename
+map("n", "<leader>c", ":let @+=expand('%')<CR>")
+
 -- zk
 
 local opts = { noremap = true, silent = false }

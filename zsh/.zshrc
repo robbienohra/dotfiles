@@ -151,6 +151,11 @@ function rconf () {
   nvim -c 'Gvdiffsplit!' "$@";
 }
 
+function rv () {
+   FILES=$(git diff --name-only --diff-filter=U)                                    
+   echo $FILES | xargs nvim -c "tabdo Gvdiffsplit! | tabn" -p                              
+}
+
 function ct () {
   g branch --contains $1
 }
