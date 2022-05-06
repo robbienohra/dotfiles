@@ -23,6 +23,7 @@ map("n", "<space>h", "<cmd>lua vim.lsp.buf.hover()<CR>")
 map("n", "<space>m", "<cmd>lua vim.lsp.buf.rename()<CR>")
 map("n", "<space>r", "<cmd>lua vim.lsp.buf.references()<CR>")
 map("n", "<space>s", "<cmd>lua vim.lsp.buf.document_symbol()<CR>")
+map("n", "<space>e", "<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>")
 
 -- git
 map("n", "<Leader>ga", ":Gwrite<CR>")
@@ -62,7 +63,7 @@ map("n", "<S-b>", "dvb")
 map("n", "<S-w>", "diw")
 map("n", "<leader>f", ":%s/")
 map("i", "<C-S>", "<Esc>:update<CR>")
-map("n", "<space>e", ":g/^$/d<CR>")
+-- map("n", "<space>e", ":g/^$/d<CR>")
 
 -- navigation
 
