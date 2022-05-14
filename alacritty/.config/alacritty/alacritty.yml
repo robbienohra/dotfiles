@@ -67,3 +67,4 @@ key_bindings:
   - { key: PageDown, mods: Shift,   action: ScrollPageDown }
   - { key: End,      mods: Shift,   action: ScrollToBottom }
   - { key: Home,     mods: Shift,   action: ScrollToTop    }
+  - { key: O,        mods: Control, chars: "\x03" }
