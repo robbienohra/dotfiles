@@ -315,3 +315,8 @@ if [ -f '/Users/robbienohra/Downloads/google-cloud-sdk/completion.zsh.inc' ]; th
 export PNPM_HOME="/Users/robbienohra/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+
+bindkey -r '^T'
+bindkey -r '^R'
+bindkey '^N' fzf-file-widget
+bindkey '^Y' fzf-history-widget

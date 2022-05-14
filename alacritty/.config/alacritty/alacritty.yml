@@ -3,13 +3,13 @@ window:
   padding:
     x: 10
   dynamic_padding: true
-# shell:
-#   program: /bin/zsh
-# args:
-#   - -l
-#   - -c
-# - "tmux new -As0"
-# - "tmux new"
+shell:
+  program: /bin/zsh
+  args:
+    - -l
+    - -c
+    - "tmux new -As0"
+  # - "tmux new"
 env:
   TERM: alacritty
 scrolling:
