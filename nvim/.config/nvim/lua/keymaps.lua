@@ -6,14 +6,6 @@ local function map(mode, lhs, rhs, opts)
   vim.api.nvim_set_keymap(mode, lhs, rhs, options)
 end
 
--- fzf
-map("n", "<C-t>", ":Files <CR>")
-map("n", "<C-f>", ":Rg <CR>")
--- map("n", "<C-p>", ":Ag <CR>")
-map("n", "<C-y>", ":call fzf#run(fzf#wrap({'source': 'fd --type d --hidden --exclude \".git\"'})) <CR>")
-map("n", "<Leader>y", ":History: <CR>")
-map("n", "<Leader>b", ":BLines <CR>")
-map("n", "<Leader>e", ":FZF <CR>")
 
 -- lsp
 map("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>")
@@ -58,12 +50,13 @@ map("n", "<leader>p", '"+gP<CR>')
 map("n", "ZZ", "ZZ")
 map("n", "Q", "ZQ")
 -- hello
-map("n", "<F2>", ":update<CR>")
+map("n", "<leader>s", ":update<CR>")
+map("n", "U", "<C-r>")
 map("n", "<S-d>", "_dd")
 map("n", "<S-b>", "dvb")
 map("n", "<S-w>", "diw")
 map("n", "<leader>f", ":%s/")
-map("i", "<F2>", "<Esc>:update<CR>")
+-- map("i", "<F2>", "<Esc>:update<CR>")
 -- map("n", "<space>e", ":g/^$/d<CR>")
 
 -- navigation
@@ -110,3 +103,9 @@ vim.api.nvim_set_keymap(
 )
 -- Search for the notes matching the current visual selection.
 vim.api.nvim_set_keymap("v", "<leader>zf", ":'<,'>ZkMatch<CR>", opts)
+
+-- fzf
+map("n", "<leader>t", ":Files <CR>")
+map("n", "<C-y>", ":call fzf#run(fzf#wrap({'source': 'fd --type d --hidden --exclude \".git\"'})) <CR>")
+map("n", "<leader>b", ":BLines <CR>")
+map("n", "<leader>f", ":Rg <CR>")
