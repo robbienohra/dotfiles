@@ -151,6 +151,14 @@ function rconf () {
   nvim -c 'Gvdiffsplit!' "$@";
 }
 
+function br () {
+  gh branch;
+}
+
+function conf (){
+  git diff --name-only --diff-filter=U;
+}
+
 function rv () {
    FILES=$(git diff --name-only --diff-filter=U)                                    
    echo $FILES | xargs nvim -c "tabdo Gvdiffsplit! | tabn" -p                              
@@ -284,6 +292,10 @@ function post() {
   POST="content/posts/${ID}.md"
   hugo new $POST
   nvim $POST 
+}
+
+function dk() {
+  docker kill $(docker ps -q)
 }
 
 function npm_login() {

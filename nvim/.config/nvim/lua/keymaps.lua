@@ -12,7 +12,7 @@ map("n", "<C-f>", ":Rg <CR>")
 -- map("n", "<C-p>", ":Ag <CR>")
 map("n", "<C-y>", ":call fzf#run(fzf#wrap({'source': 'fd --type d --hidden --exclude \".git\"'})) <CR>")
 map("n", "<Leader>y", ":History: <CR>")
-map("n", "<Leader>b", ":Buffers <CR>")
+map("n", "<Leader>b", ":BLines <CR>")
 map("n", "<Leader>e", ":FZF <CR>")
 
 -- lsp
@@ -57,12 +57,13 @@ map("n", "<leader>p", '"+gP<CR>')
 -- editing
 map("n", "ZZ", "ZZ")
 map("n", "Q", "ZQ")
-map("n", "<C-S>", ":update<CR>")
+-- hello
+map("n", "<F2>", ":update<CR>")
 map("n", "<S-d>", "_dd")
 map("n", "<S-b>", "dvb")
 map("n", "<S-w>", "diw")
 map("n", "<leader>f", ":%s/")
-map("i", "<C-S>", "<Esc>:update<CR>")
+map("i", "<F2>", "<Esc>:update<CR>")
 -- map("n", "<space>e", ":g/^$/d<CR>")
 
 -- navigation

@@ -19,8 +19,8 @@ require("nvim-lsp-installer").setup {
 
 -- disable formatting for cases where null-ls is the desired default
 local function on_attach(client)
-  client.resolved_capabilities.document_formatting = false
-  client.resolved_capabilities.document_range_formatting = false
+  client.server_capabilities.document_formatting = false
+  client.server_capabilities.document_range_formatting = false
 end
 
 lspconfig.tsserver.setup { on_attach = on_attach }
