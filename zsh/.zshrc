@@ -266,8 +266,8 @@ function wi () {
   wezterm imgcat "$@"
 }
 
-function dt () {
-  cd ~/dotfiles 
+function dl () {
+  cd ~/dotfiles
 }
 
 function sol () {

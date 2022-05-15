@@ -106,6 +106,6 @@ vim.api.nvim_set_keymap("v", "<leader>zf", ":'<,'>ZkMatch<CR>", opts)
 
 -- fzf
 map("n", "<leader>t", ":Files <CR>")
-map("n", "<C-y>", ":call fzf#run(fzf#wrap({'source': 'fd --type d --hidden --exclude \".git\"'})) <CR>")
+map("n", "<leader>d", ":call fzf#run(fzf#wrap({'source': 'fd --type d --hidden --exclude \".git\"'})) <CR>")
 map("n", "<leader>b", ":BLines <CR>")
 map("n", "<leader>f", ":Rg <CR>")
