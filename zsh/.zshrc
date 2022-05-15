@@ -318,5 +318,6 @@ export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 
 bindkey -r '^T'
 bindkey -r '^R'
+bindkey -r '^A'
 bindkey '^N' fzf-file-widget
 bindkey '^Y' fzf-history-widget

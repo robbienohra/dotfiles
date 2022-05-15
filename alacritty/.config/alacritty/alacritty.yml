@@ -67,4 +67,8 @@ key_bindings:
   - { key: PageDown, mods: Shift,   action: ScrollPageDown }
   - { key: End,      mods: Shift,   action: ScrollToBottom }
   - { key: Home,     mods: Shift,   action: ScrollToTop    }
-  - { key: O,        mods: Control, chars: "\x03" }
+  - { key: O,        mods: Control, chars: "\x03"           }
+  - { key: LBracket,        mods: Alt,     chars: "\x1b["   }
+  - { key: RBracket,        mods: Alt,     chars: "\x1b]"   } 
+  - { key: W,        mods: Alt,     chars: "\x1bw"          } 
+  - { key: T,        mods: Alt,     chars: "\x1bt"          } 
