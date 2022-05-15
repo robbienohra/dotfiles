@@ -24,7 +24,7 @@ require("lualine").setup {
         shorting_target = 40, -- Shortens path to leave 40 spaces in the window
       },
     },
-    -- lualine_x = { { "buffers", mode = 1, icons_enabled = false } },
+    lualine_x = {},
     lualine_y = { "filetype" },
     lualine_z = { "progress" },
   },
