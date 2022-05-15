@@ -3,6 +3,9 @@ window:
   padding:
     x: 10
   dynamic_padding: true
+  # startup_mode: Fullscreen
+mouse:
+  hide_when_typing: true
 shell:
   program: /bin/zsh
   args:
@@ -63,12 +66,10 @@ font:
   offset:
     y: 1
 key_bindings:
-  - { key: PageUp,   mods: Shift,   action: ScrollPageUp   }
-  - { key: PageDown, mods: Shift,   action: ScrollPageDown }
-  - { key: End,      mods: Shift,   action: ScrollToBottom }
-  - { key: Home,     mods: Shift,   action: ScrollToTop    }
   - { key: K,        mods: Control, chars: "\x03"           }
   - { key: LBracket,        mods: Alt,     chars: "\x1b["   }
   - { key: RBracket,        mods: Alt,     chars: "\x1b]"   } 
   - { key: W,        mods: Alt,     chars: "\x1bw"          } 
   - { key: T,        mods: Alt,     chars: "\x1bt"          } 
+  - { key: A,        mods: Alt,     chars: "\x1ba"          } 
+  - { key: G,        mods: Alt,     chars: "\x1bg"          } 

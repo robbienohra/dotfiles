@@ -69,7 +69,6 @@ alias n="nvim ."
 alias l="exa -l --icons"
 alias la="exa -la"
 alias lt="exa --tree"
-alias chrome="open -a 'Google Chrome'"
 export PYENV_ROOT="$HOME/.pyenv"
 export EDITOR=nvim
 export SUDO_ASKPASS=${HOME}/pass.sh
@@ -262,8 +261,8 @@ function rgv () {
 
 # shortcuts
 
-function wi () {
-  wezterm imgcat "$@"
+function ch () {
+  open http://google.com;
 }
 
 function dl () {
@@ -321,4 +320,5 @@ bindkey -r '^R'
 bindkey -r '^A'
 bindkey '^N' fzf-file-widget
 bindkey '^Y' fzf-history-widget
-bindkey '^I' beginning-of-line
+bindkey '^[a' beginning-of-line
+bindkey '^[g' end-of-line
