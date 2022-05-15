@@ -13,15 +13,17 @@ require("nvim-lsp-installer").setup {
     "svelte",
     "tsserver",
     "vuels",
-    "yamlls"
+    "yamlls",
   },
 }
 
 -- disable formatting for cases where null-ls is the desired default
 -- https://www.reddit.com/r/neovim/comments/ubgi6h/nullls_issues/
 local function on_attach(client)
-  client.server_capabilities.document_formatting = false
-  client.server_capabilities.document_range_formatting = false
+  -- client.server_capabilities.document_formatting = false
+  -- client.server_capabilities.document_range_formatting = false
+  client.resolved_capabilities.document_formatting = false
+  client.resolved_capabilities.document_range_formatting = false
 end
 
 lspconfig.tsserver.setup { on_attach = on_attach }
