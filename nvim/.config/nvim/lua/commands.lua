@@ -8,6 +8,9 @@ cmd [[command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --line-number --
 
 cmd ":command! -bang -nargs=* Ag call fzf#vim#ag(<q-args>, {'options': '--delimiter : --nth 4..'}, <bang>0)"
 
+-- https://github.com/junegunn/fzf.vim/issues/374#issuecomment-724301156
+cmd [[command! -bang -nargs=* BLines call fzf#vim#grep('rg --with-filename --column --line-number --no-heading --smart-case . '.fnameescape(expand('%:p')), 1, fzf#vim#with_preview({'options': '--layout reverse --query '.shellescape(<q-args>).' --with-nth=4.. --delimiter=":"'}, 'right:50%')) "fzf#vim#with_preview({'options': '--layout reverse  --with-nth=-1.. --delimiter="/"'}, 'right:50%'))]]
+
 -- compile and run c++ program
 autocmd("FileType", { pattern = { "cpp" }, command = "nnoremap <C-c> :!g++ -o  %:r.out % -std=c++11<Enter>" })
 autocmd("FileType", { pattern = { "cpp" }, command = "nnoremap <C-x> :!./%:r.out<Enter>" })
