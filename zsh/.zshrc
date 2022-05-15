@@ -321,3 +321,4 @@ bindkey -r '^R'
 bindkey -r '^A'
 bindkey '^N' fzf-file-widget
 bindkey '^Y' fzf-history-widget
+bindkey '^I' beginning-of-line
