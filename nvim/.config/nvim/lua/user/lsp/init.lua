@@ -12,6 +12,7 @@ require("nvim-lsp-installer").setup {
     "sumneko_lua",
     "svelte",
     "tsserver",
+    "volar",
     "vuels",
     "yamlls",
   },
@@ -26,13 +27,14 @@ end
 
 lspconfig.tsserver.setup { on_attach = on_attach }
 lspconfig.jsonls.setup { on_attach = on_attach }
-lspconfig.vuels.setup {}
 
 local sumneko_opts = require "user.lsp.settings.sumneko_lua"
 lspconfig.sumneko_lua.setup(sumneko_opts)
 
-local eslint_opts = require "user.lsp.settings.eslint"
-lspconfig.eslint.setup(eslint_opts)
+-- local eslint_opts = require "user.lsp.settings.eslint"
+-- lspconfig.eslint.setup(eslint_opts)
+
+lspconfig.vuels.setup {}
 
 local capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities())
 

@@ -6,7 +6,6 @@ local function map(mode, lhs, rhs, opts)
   vim.api.nvim_set_keymap(mode, lhs, rhs, options)
 end
 
-
 -- lsp
 map("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>")
 map("n", "<space>f", "<cmd>lua vim.lsp.buf.format { async = true } <CR>")
@@ -15,7 +14,7 @@ map("n", "<space>h", "<cmd>lua vim.lsp.buf.hover()<CR>")
 map("n", "<space>m", "<cmd>lua vim.lsp.buf.rename()<CR>")
 map("n", "<space>r", "<cmd>lua vim.lsp.buf.references()<CR>")
 map("n", "<space>s", "<cmd>lua vim.lsp.buf.document_symbol()<CR>")
-map("n", "<space>e", "<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>")
+map("n", "<space>e", "<cmd>lua vim.diagnostic.open_float()<CR>")
 
 -- git
 map("n", "<Leader>ga", ":Gwrite<CR>")
