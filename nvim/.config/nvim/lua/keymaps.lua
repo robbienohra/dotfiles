@@ -8,7 +8,8 @@ end
 
 -- lsp
 map("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>")
-map("n", "<space>f", "<cmd>lua vim.lsp.buf.format { async = true } <CR>")
+-- map("n", "<space>f", "<cmd>lua vim.lsp.buf.format { async = true } <CR>")
+map("n", "<space>f", "<cmd>lua vim.lsp.buf.formatting() <CR>")
 map("n", "<space>a", "<cmd>lua vim.lsp.buf.code_action()<CR>")
 map("n", "<space>h", "<cmd>lua vim.lsp.buf.hover()<CR>")
 map("n", "<space>m", "<cmd>lua vim.lsp.buf.rename()<CR>")
@@ -48,15 +49,11 @@ map("n", "<leader>p", '"+gP<CR>')
 -- editing
 map("n", "ZZ", "ZZ")
 map("n", "Q", "ZQ")
--- hello
 map("n", "<leader>s", ":update<CR>")
 map("n", "U", "<C-r>")
 map("n", "<S-d>", "_dd")
 map("n", "<S-b>", "dvb")
 map("n", "<S-w>", "diw")
-map("n", "<leader>f", ":%s/")
--- map("i", "<F2>", "<Esc>:update<CR>")
--- map("n", "<space>e", ":g/^$/d<CR>")
 
 -- navigation
 
@@ -80,28 +77,6 @@ map("n", "tn", ":tabnew <CR>")
 
 -- yank filename
 map("n", "<leader>c", ":let @+=expand('%')<CR>")
-
--- zk
-
-local opts = { noremap = true, silent = false }
-
--- Create a new note after asking for its title.
-vim.api.nvim_set_keymap("n", "<leader>zn", "<Cmd>ZkNew { title = vim.fn.input('Title: ') }<CR>", opts)
-
--- Open notes.
-vim.api.nvim_set_keymap("n", "<leader>zo", "<Cmd>ZkNotes { sort = { 'modified' } }<CR>", opts)
--- Open notes associated with the selected tags.
-vim.api.nvim_set_keymap("n", "<leader>zt", "<Cmd>ZkTags<CR>", opts)
-
--- Search for the notes matching a given query.
-vim.api.nvim_set_keymap(
-  "n",
-  "<leader>zf",
-  "<Cmd>ZkNotes { sort = { 'modified' }, match = vim.fn.input('Search: ') }<CR>",
-  opts
-)
--- Search for the notes matching the current visual selection.
-vim.api.nvim_set_keymap("v", "<leader>zf", ":'<,'>ZkMatch<CR>", opts)
 
 -- fzf
 map("n", "<leader>t", ":Files <CR>")

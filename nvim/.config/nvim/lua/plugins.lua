@@ -1,9 +1,10 @@
-local status_ok, packer = pcall(require, "packer")
-if not status_ok then
-  return
+local fn = vim.fn
+local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
+if fn.empty(fn.glob(install_path)) > 0 then
+  packer_bootstrap = fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
 end
 
-return packer.startup(function(use)
+return require('packer').startup(function(use)
   use {
     "tpope/vim-fugitive",
     "tpope/vim-repeat",
@@ -55,4 +56,7 @@ return packer.startup(function(use)
   use "nvim-lua/plenary.nvim"
   use "wbthomason/packer.nvim"
   use { "ckipp01/nvim-jenkinsfile-linter" }
+  if packer_bootstrap then
+    require('packer').sync()
+  end
 end)
