@@ -62,7 +62,6 @@ eval "$(starship init zsh)"
 # cco
 #######################
 
-export NPM_TOKEN=$(pass show robbie/npm_token)
 export DOCKER_BUILDKIT=1
 export COMPOSE_DOCKER_CLI_BUILD=1
 export DOCKER_CLIENT_TIMEOUT=120
@@ -83,8 +82,16 @@ export REGION_NAME=us-central1-a
 export PROJECT_ID=clearbanc-build
 
 export JENKINS_USER_ID=admin
-export JENKINS_API_TOKEN=$(pass show robbie/jenkins)
 export JENKINS_URL="http://localhost:8080/"
+
+#######################
+# pass
+#######################
+
+export NPM_TOKEN=$(pass show robbie/npm_token)
+# export JENKINS_API_TOKEN=$(pass show robbie/jenkins)
+# GPG_TTY=$(tty)
+# export GPG_TTY
 
 #######################
 # gnu-sed
@@ -104,11 +111,6 @@ alias lt="exa --tree"
 export PYENV_ROOT="$HOME/.pyenv"
 export EDITOR=nvim
 export SUDO_ASKPASS=${HOME}/pass.sh
-
-# gpg
-
-GPG_TTY=$(tty)
-export GPG_TTY
 
 # tmux
 
@@ -273,8 +275,6 @@ function dk() {
 function npm_login() {
   npm login --registry=https://npm.pkg.github.com
 }
-
-. "$HOME/.cargo/env"
 
 alias luamake=/Users/robbienohra/Documents/lua-language-server/3rd/luamake/luamake
 

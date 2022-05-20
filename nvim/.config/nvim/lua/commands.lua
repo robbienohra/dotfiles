@@ -23,6 +23,8 @@ autocmd(
 
 autocmd({ "BufLeave" }, { pattern = { "*" }, command = "if &buftype == 'quickfix'|q|endif" })
 
+autocmd({ "BufEnter" }, { pattern = { "*" }, command = "let &titlestring = ' ' . expand('%:t') | set title" })
+
 -- disable auto-comment
 -- https://neovim.io/doc/user/change.html#fo-table
 -- autocmd("FileType *", { command = "setlocal formatoptions-=c formatoptions-=r formatoptions-=o" })
