@@ -2,9 +2,6 @@ ZSH_DISABLE_COMPFIX=true
 setopt auto_cd
 setopt globdots
 
-alias uuidgen='uuidgen | tr "[:upper:]" "[:lower:]"'
-
-
 #######################
 # configs
 #######################
