@@ -46,6 +46,7 @@ gh extension install mislav/gh-branch
 cargo install fnm 
 cargo install stylua
 cargo install viu
+cargo install zoxide
 
 # apply stow
 for d in */ ; do (stow "$d"); done
