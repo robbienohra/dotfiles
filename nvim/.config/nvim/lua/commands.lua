@@ -3,6 +3,19 @@ local autocmd = vim.api.nvim_create_autocmd
 
 cmd ":command! FixWhitespace :%s/s+$//e"
 
+-- https://vim.fandom.com/wiki/Invoke_a_function_with_a_count_prefix
+vim.api.nvim_exec(
+  [[
+function! Cline(count)
+  execute a:count
+  execute "normal zz"
+endfunction
+command! -nargs=1 ClineCmd call Cline(<args>)
+map ,a :<C-U>ClineCmd(v:count)<CR>
+]],
+  true
+)
+
 -- https://github.com/junegunn/fzf.vim/issues/346#issuecomment-288483704
 cmd [[command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case --hidden --glob '!.git/*' ".shellescape(<q-args>), 1, fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}), <bang>0)]]
 
