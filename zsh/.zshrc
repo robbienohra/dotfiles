@@ -57,6 +57,7 @@ export FZF_ALT_C_COMMAND="fd -H -E .git --type d"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 source /Users/robbienohra/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 eval "$(starship init zsh)"
+eval "$(fnm env --use-on-cd)"
 
 #######################
 # cco
@@ -179,8 +180,8 @@ function gch() {
 # psql
 #######################
 
-DB="banking"
-# DB="postgres"
+# DB="banking"
+DB="postgres"
 USER="postgres"
 function u () {
   usql "postgres://${USER}@localhost:5432/${DB}?sslmode=disable" "$@";
