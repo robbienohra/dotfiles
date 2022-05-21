@@ -38,6 +38,17 @@ autocmd({ "BufLeave" }, { pattern = { "*" }, command = "if &buftype == 'quickfix
 
 autocmd({ "BufEnter" }, { pattern = { "*" }, command = "let &titlestring = ' ' . expand('%:t') | set title" })
 
+-- autocmd({ "ColorScheme" }, { pattern = { "*" }, command = "hi Normal guibg=none | hi NoneText guibg=none" })
+
 -- disable auto-comment
 -- https://neovim.io/doc/user/change.html#fo-table
 -- autocmd("FileType *", { command = "setlocal formatoptions-=c formatoptions-=r formatoptions-=o" })
+-- https://www.reddit.com/r/neovim/comments/3v06lo/making_the_background_transparent/
+vim.api.nvim_exec(
+  [[
+  highlight Normal guibg=none
+  highlight NonText guibg=none
+  highlight SignColumn ctermbg=NONE cterm=NONE guibg=NONE gui=NONE
+  ]],
+  true
+)

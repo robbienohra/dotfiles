@@ -25,9 +25,7 @@ _fzf_compgen_path() {
 export FZF_DEFAULT_OPTS="
 --history=$HOME/.fzf_history \
 --bind ctrl-d:page-down,ctrl-u:page-up \
---color='bg+:#3c3836,\
-bg+:#282828,\
-spinner:#fb4934,\
+--color='spinner:#fb4934,\
 hl:#928374,\
 fg:#ebdbb2,\
 header:#928374,\
@@ -36,7 +34,8 @@ pointer:#fb4934,\
 marker:#fb4934,\
 fg+:#ebdbb2,\
 prompt:#fb4934,\
-hl+:#fb4934'"
+hl+:#fb4934,\
+gutter:-1'"
 
 export FZF_CTRL_T_OPTS="
  --preview 'bat --style=numbers --color=always --line-range :500 {}' \

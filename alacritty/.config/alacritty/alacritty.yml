@@ -4,6 +4,7 @@ window:
     x: 10
   dynamic_padding: true
   # startup_mode: Fullscreen
+  opacity: 0.95
 mouse:
   hide_when_typing: true
 shell:
