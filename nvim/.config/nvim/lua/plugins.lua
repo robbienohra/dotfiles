@@ -1,3 +1,15 @@
+-- https://github.com/wbthomason/packer.nvim/issues/53#issuecomment-732610544
+local execute = vim.api.nvim_command
+local fn = vim.fn
+
+local install_path = fn.stdpath "data" .. "/site/pack/packer/opt/packer.nvim"
+
+if fn.empty(fn.glob(install_path)) > 0 then
+  execute("!git clone https://github.com/wbthomason/packer.nvim " .. install_path)
+end
+
+execute "packadd packer.nvim"
+
 return require("packer").startup(function(use)
   use {
     "tpope/vim-fugitive",
