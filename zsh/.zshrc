@@ -355,6 +355,9 @@ if [ -f '/Users/robbienohra/Downloads/google-cloud-sdk/completion.zsh.inc' ]; th
 ZSH_DISABLE_COMPFIX=true
 setopt auto_cd
 setopt globdots
+export HISTSIZE=1000000000
+export SAVEHIST=$HISTSIZE
+setopt EXTENDED_HISTORY
 bindkey -r '^T'
 bindkey -r '^R'
 bindkey -r '^A'
