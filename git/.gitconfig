@@ -100,3 +100,7 @@
 [delta]
   navigate = true  # use n and N to move between diff sections
   side-by-side = true
+[branch]
+	autosetupmerge = true
+[push]
+	default = tracking
