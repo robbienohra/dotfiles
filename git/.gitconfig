@@ -69,7 +69,7 @@
   process = git-lfs filter-process
 [user]
   name = Robbie Nohra
-  signingkey = rnohra 
+  signingkey = robbie@robbienohra.com
   email = robbie.nohra@clearbanc.com
 [init]
   defaultBranch = main
