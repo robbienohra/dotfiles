@@ -47,6 +47,7 @@ cargo install fnm
 cargo install stylua
 cargo install viu
 cargo install zoxide
+cargo install --locked ripgrep_all
 
 # apply stow
 for d in */ ; do (stow "$d"); done
