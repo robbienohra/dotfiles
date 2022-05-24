@@ -76,3 +76,4 @@ key_bindings:
   - { key: G,        mods: Alt,     chars: "\x1bg"          } 
   - { key: Y,        mods: Alt,     chars: "\x1by"          } 
   - { key: C,        mods: Alt,     chars: "\x1bc"          } 
+  - { key: K,        mods: Alt,     chars: "\x1bk"          } 

@@ -17,6 +17,36 @@ eval "$(zoxide init zsh)"
 # fzf
 #######################
 
+# --bind ctrl-d:preview-page-down,ctrl-u:preview-page-up \
+# https://github.com/junegunn/fzf/issues/249
+export FZF_DEFAULT_OPTS="
+--history=$HOME/.fzf_history \
+--bind ctrl-d:page-down,ctrl-u:page-up \
+--color='spinner:#fb4934,\
+hl:#928374,\
+fg:#ebdbb2,\
+header:#928374,\
+info:#8ec07c,\
+pointer:#fb4934,\
+marker:#fb4934,\
+fg+:#ebdbb2,\
+prompt:#fb4934,\
+hl+:#fb4934,\
+gutter:-1'"
+
+export FZF_CTRL_T_OPTS="
+ --preview 'bat --style=numbers --color=always --line-range :500 {}' \
+ --preview-window right,50%"
+
+export FZF_ALT_C_OPTS="
+ --bind ctrl-d:page-down,ctrl-u:page-up \
+ --preview-window right,50% \
+ --preview 'exa --tree --level=2 {}'"
+
+export FZF_DEFAULT_COMMAND='rg --files --hidden --follow'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_ALT_C_COMMAND="fd -H -E .git --type d"
+
 function _fzf_compgen_dir() {
   fd --type d --hidden --follow --exclude ".git" . "$1"
 }
@@ -113,36 +143,6 @@ function fif() {
     local file
     file="$(rga --max-count=1 --ignore-case --files-with-matches --no-messages "$*" | fzf-tmux +m --preview="rga --ignore-case --pretty --context 10 '"$*"' {}")" && echo "opening $file" && open "$file" || return 1;
 }
-
-# --bind ctrl-d:preview-page-down,ctrl-u:preview-page-up \
-# https://github.com/junegunn/fzf/issues/249
-export FZF_DEFAULT_OPTS="
---history=$HOME/.fzf_history \
---bind ctrl-d:page-down,ctrl-u:page-up \
---color='spinner:#fb4934,\
-hl:#928374,\
-fg:#ebdbb2,\
-header:#928374,\
-info:#8ec07c,\
-pointer:#fb4934,\
-marker:#fb4934,\
-fg+:#ebdbb2,\
-prompt:#fb4934,\
-hl+:#fb4934,\
-gutter:-1'"
-
-export FZF_CTRL_T_OPTS="
- --preview 'bat --style=numbers --color=always --line-range :500 {}' \
- --preview-window right,50%"
-
-export FZF_ALT_C_OPTS="
- --bind ctrl-d:page-down,ctrl-u:page-up \
- --preview-window right,50% \
- --preview 'exa --tree --level=2 {}'"
-
-export FZF_DEFAULT_COMMAND='rg --files --hidden --follow'
-export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-export FZF_ALT_C_COMMAND="fd -H -E .git --type d"
 
 #######################
 # cco
