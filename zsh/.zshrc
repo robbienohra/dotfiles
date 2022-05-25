@@ -2,6 +2,7 @@
 # zsh
 #######################
 ZSH_DISABLE_COMPFIX=true
+local WORDCHARS='*?_[]~=&;!#$%^(){}<>'
 setopt auto_cd
 setopt globdots
 export HISTFILE="$HOME/.zsh_history"
