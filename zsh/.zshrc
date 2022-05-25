@@ -1,4 +1,29 @@
 #######################
+# zsh
+#######################
+ZSH_DISABLE_COMPFIX=true
+setopt auto_cd
+setopt globdots
+export HISTFILE="$HOME/.zsh_history"
+export HISTSIZE=1000000000
+export SAVEHIST=$HISTSIZE
+setopt SHARE_HISTORY
+bindkey -r '^T'
+bindkey -r '^R'
+bindkey -r '^A'
+bindkey -r '^G'
+bindkey '^N' fzf-file-widget
+bindkey '^Y' fzf-history-widget
+bindkey '^[a' beginning-of-line
+bindkey '^[g' end-of-line
+bindkey "^[[1;3C" forward-word
+bindkey "^[[1;3D" backward-word
+
+export PNPM_HOME="/Users/robbienohra/Library/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+
+#######################
 # configs
 #######################
 export RIPGREP_CONFIG_PATH=$HOME/.ripgreprc
@@ -220,6 +245,10 @@ function ct () {
   g branch --contains $1
 }
 
+function dex () {
+  g diff "$@" -- . ':(exclude)package-lock.json'
+}
+
 function is-ancestor () {
   MAYBE_ANCESTOR_COMMIT=$1;
   DESCENDENT_COMMIT=$2;
@@ -347,28 +376,3 @@ function su () {
 if [ -f '/Users/robbienohra/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/robbienohra/Downloads/google-cloud-sdk/path.zsh.inc'; fi
 
 if [ -f '/Users/robbienohra/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/robbienohra/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
-
-
-#######################
-# zsh
-#######################
-ZSH_DISABLE_COMPFIX=true
-setopt auto_cd
-setopt globdots
-export HISTSIZE=1000000000
-export SAVEHIST=$HISTSIZE
-setopt EXTENDED_HISTORY
-bindkey -r '^T'
-bindkey -r '^R'
-bindkey -r '^A'
-bindkey -r '^G'
-bindkey '^N' fzf-file-widget
-bindkey '^Y' fzf-history-widget
-bindkey '^[a' beginning-of-line
-bindkey '^[g' end-of-line
-bindkey "^[[1;3C" forward-word
-bindkey "^[[1;3D" backward-word
-
-export PNPM_HOME="/Users/robbienohra/Library/pnpm"
-export PATH="$PNPM_HOME:$PATH"
-export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
