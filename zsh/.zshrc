@@ -325,7 +325,6 @@ function ch () {
   open http://google.com;
 }
 
-
 function sp () {
   lsof -nP -iTCP -sTCP:LISTEN | rg "$@"
 }
@@ -368,6 +367,10 @@ function srr () {
 
 function su () {
   sudo -A "$@";
+}
+
+function t () {
+  npm run test:unit "$@";
 }
 
 #######################

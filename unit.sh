@@ -1,10 +1,8 @@
 cd ~/code/my.clearbanc.com
 
-shopt -s expand_aliases
-
 sed -i 's/collectCoverage: true/collectCoverage: false/g' jest.config.js
-git apply ~/Downloads/comp.diff;
-git apply ~/Downloads/jest.diff;
+git apply ~/dotfiles/comp.diff;
+git apply ~/dotfiles/jest.diff;
 rg "\.destroy\(\)" -g '*.spec.js' -l | xargs sed -i 's/.destroy()/.unmount()/g'
 
 rg "localVue," -g '*.spec.js' -l | xargs sed -i '/localVue,$/d'; \
@@ -26,6 +24,7 @@ rg "import Vuex" -g '*.spec.js' -l | xargs sed -i "/import Vuex/d"; \
 rg "Vue.use\(Vuex\)" -g '*.spec.js' -l | xargs sed -i "/Vue.use(Vuex)/d"; \
 rg "import Vue from" -g '*.spec.js' -l | xargs sed -i "/import Vue/d"; 
 
-rg "new Store" -g '*.spec.js' -l | xargs sed -i "1 i\ import { createStore } from 'vuex'"; \
-rg "new Store" -g '*.spec.js' -l | xargs sed -i "s/new Store/createStore/g"; \
+# rg "new Store" -g '*.spec.js' -l | xargs sed -i "1 i\ import { createStore } from 'vuex'"; \
+# rg "new Store" -g '*.spec.js' -l | xargs sed -i "s/new Store/createStore/g"; \
+rg "new Store" -g '*.spec.js' -l | xargs sed -i "s/new Store//g"; \
 rg "import \{ Store \}" -g '*.spec.js' -l | xargs sed -i "/import { Store }/d";
