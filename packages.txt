@@ -42,3 +42,4 @@ xo/xo/usql
 yq
 zk
 zoxide
+k9s
