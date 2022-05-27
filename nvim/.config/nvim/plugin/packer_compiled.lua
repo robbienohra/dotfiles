@@ -159,11 +159,6 @@ _G.packer_plugins = {
     path = "/Users/robbienohra/.local/share/nvim/site/pack/packer/start/nvim-dap",
     url = "https://github.com/mfussenegger/nvim-dap"
   },
-  ["nvim-jenkinsfile-linter"] = {
-    loaded = true,
-    path = "/Users/robbienohra/.local/share/nvim/site/pack/packer/start/nvim-jenkinsfile-linter",
-    url = "https://github.com/ckipp01/nvim-jenkinsfile-linter"
-  },
   ["nvim-lsp-installer"] = {
     loaded = true,
     path = "/Users/robbienohra/.local/share/nvim/site/pack/packer/start/nvim-lsp-installer",
@@ -195,8 +190,9 @@ _G.packer_plugins = {
     url = "https://github.com/kyazdani42/nvim-web-devicons"
   },
   ["packer.nvim"] = {
-    loaded = true,
-    path = "/Users/robbienohra/.local/share/nvim/site/pack/packer/start/packer.nvim",
+    loaded = false,
+    needs_bufread = false,
+    path = "/Users/robbienohra/.local/share/nvim/site/pack/packer/opt/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   },
   ["plenary.nvim"] = {

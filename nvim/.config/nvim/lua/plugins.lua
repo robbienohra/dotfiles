@@ -1,14 +1,20 @@
--- https://github.com/wbthomason/packer.nvim/issues/53#issuecomment-732610544
--- local execute = vim.api.nvim_command
--- local fn = vim.fn
---
--- local install_path = fn.stdpath "data" .. "/site/pack/packer/opt/packer.nvim"
---
--- if fn.empty(fn.glob(install_path)) > 0 then
---   execute("!git clone https://github.com/wbthomason/packer.nvim " .. install_path)
--- end
+local fn = vim.fn
+local install_path = fn.stdpath "data" .. "/site/pack/packer/opt/packer.nvim"
 
--- execute "packadd packer.nvim"
+local packer_bootstrap
+
+if fn.empty(fn.glob(install_path)) > 0 then
+  packer_bootstrap = fn.system {
+    "git",
+    "clone",
+    "--depth",
+    "1",
+    "https://github.com/wbthomason/packer.nvim",
+    install_path,
+  }
+end
+
+vim.cmd "packadd packer.nvim"
 
 return require("packer").startup(function(use)
   use {
@@ -59,6 +65,9 @@ return require("packer").startup(function(use)
   use { "preservim/vim-markdown", { "iamcco/markdown-preview.nvim", run = "cd app && yarn install" } }
   use "mickael-menu/zk-nvim"
   use "nvim-lua/plenary.nvim"
-  use "wbthomason/packer.nvim"
+  use { "wbthomason/packer.nvim", opt = true }
+  if packer_bootstrap then
+    require("packer").sync()
+  end
   use { "ckipp01/nvim-jenkinsfile-linter" }
 end)
