@@ -2,7 +2,7 @@ local fn = vim.fn
 local install_path = fn.stdpath "data" .. "/site/pack/packer/opt/packer.nvim"
 
 local packer_bootstrap
-
+-- https://github.com/wbthomason/packer.nvim/issues/718#issuecomment-1009018188
 if fn.empty(fn.glob(install_path)) > 0 then
   packer_bootstrap = fn.system {
     "git",
