@@ -43,3 +43,4 @@ yq
 zk
 zoxide
 k9s
+shfmt

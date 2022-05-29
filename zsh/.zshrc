@@ -13,7 +13,6 @@ bindkey -r '^T'
 bindkey -r '^R'
 bindkey -r '^A'
 bindkey -r '^G'
-bindkey '^N' fzf-file-widget
 bindkey '^Y' fzf-history-widget
 bindkey '^[a' beginning-of-line
 bindkey '^[g' end-of-line
@@ -169,6 +168,35 @@ function fif() {
     local file
     file="$(rga --max-count=1 --ignore-case --files-with-matches --no-messages "$*" | fzf-tmux +m --preview="rga --ignore-case --pretty --context 10 '"$*"' {}")" && echo "opening $file" && open "$file" || return 1;
 }
+
+function __fsel() {
+  local cmd="${FZF_CTRL_T_COMMAND:-"command find -L . -mindepth 1 \\( -path '*/\\.*' -o -fstype 'sysfs' -o -fstype 'devfs' -o -fstype 'devtmpfs' -o -fstype 'proc' \\) -prune \
+    -o -type f -print \
+    -o -type d -print \
+    -o -type l -print 2> /dev/null | cut -b3-"}"
+  setopt localoptions pipefail no_aliases 2> /dev/null
+  local item
+  local file=$(eval "$cmd" | FZF_DEFAULT_OPTS="--height ${FZF_TMUX_HEIGHT:-40%} --reverse --bind=ctrl-z:ignore $FZF_DEFAULT_OPTS $FZF_CTRL_T_OPTS" $(__fzfcmd) -m "$@" | while read item; do
+    echo -n "${(q)item}"
+  done
+)
+  local ret=$?
+  if [[ -n $file ]]; then
+    $EDITOR $file
+  fi
+  return $ret
+}
+
+function fzf-file-widget() {
+  __fsel
+  local ret=$?
+  zle reset-prompt
+  return $ret
+}
+
+zle -N fzf-file-widget
+bindkey -r '^N'
+bindkey '^N' fzf-file-widget
 
 #######################
 # cco

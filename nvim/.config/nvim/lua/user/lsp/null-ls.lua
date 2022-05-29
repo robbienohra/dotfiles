@@ -32,5 +32,11 @@ null_ls.setup {
       extra_args = { "--config-path", vim.fn.expand "~/.config/stylua.toml" },
     },
     diagnostics.tsc,
+    formatting.shfmt.with {
+      filetypes = {
+        "sh",
+        "zsh",
+      },
+    },
   },
 }
