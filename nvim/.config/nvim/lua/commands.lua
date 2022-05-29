@@ -16,6 +16,18 @@ map ,a :<C-U>ClineCmd(v:count)<CR>
   true
 )
 
+vim.api.nvim_exec(
+  [[
+function! Dline(count)
+  execute a:count
+  execute "normal dd"
+endfunction
+command! -nargs=1 DlineCmd call Dline(<args>)
+map ,d :<C-U>DlineCmd(v:count)<CR>
+]],
+  true
+)
+
 -- https://github.com/junegunn/fzf.vim/issues/346#issuecomment-288483704
 cmd [[command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case --hidden --glob '!.git/*' ".shellescape(<q-args>), 1, fzf#vim#with_preview({'options': '--delimiter : --preview-window bottom:50% --nth 4..'}), <bang>0)]]
 
