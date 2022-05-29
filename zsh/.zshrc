@@ -172,7 +172,7 @@ function fif() {
     file="$(rga --max-count=1 --ignore-case --files-with-matches --no-messages "$*" | fzf-tmux +m --preview="rga --ignore-case --pretty --context 10 '"$*"' {}")" && echo "opening $file" && open "$file" || return 1;
 }
 
-function __fsel() {
+function __fo() {
   local cmd="${FZF_CTRL_T_COMMAND:-"command find -L . -mindepth 1 \\( -path '*/\\.*' -o -fstype 'sysfs' -o -fstype 'devfs' -o -fstype 'devtmpfs' -o -fstype 'proc' \\) -prune \
     -o -type f -print \
     -o -type d -print \
@@ -190,16 +190,16 @@ function __fsel() {
   return $ret
 }
 
-function fzf-file-widget() {
-  __fsel
+function fzf-open-file-widget() {
+  __fo
   local ret=$?
   zle reset-prompt
   return $ret
 }
 
-zle -N fzf-file-widget
+zle -N fzf-open-file-widget
 bindkey -r '^N'
-bindkey '^N' fzf-file-widget
+bindkey '^N' fzf-open-file-widget
 
 #######################
 # cco
@@ -402,6 +402,11 @@ function su () {
 
 function t () {
   npm run test:unit "$@";
+}
+
+function rand_str () {
+# https://unix.stackexchange.com/questions/230673/how-to-generate-a-random-string
+ LC_ALL=C tr -dc A-Za-z0-9 </dev/urandom | head -c 10 ; echo ''
 }
 
 source /Users/robbienohra/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

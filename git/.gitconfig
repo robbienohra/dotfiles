@@ -56,6 +56,7 @@
   re = reset --hard @{u}
   res = restore .
   cl = clean -f . 
+  rh = reset --hard 
   # cco
   sws = switch staging
 [core]
