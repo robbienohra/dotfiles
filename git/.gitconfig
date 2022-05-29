@@ -17,20 +17,16 @@
   # switch
   sw = switch
   swc = switch -c
-  sws = switch staging
   # branch
   bd = branch -D
   # rebase
   rb = rebase
-  rom = rebase origin/staging
   rbi = rebase -i
   rba = rebase --abort
   rbc = rebase --continue
   # commit
   ca = commit --amend
-  cm = commit -m
-  cms = commit -S -m
-  cme = commit --allow-empty-message
+  cm = commit -n -m
   # pull
   p = pull
   # push
@@ -41,7 +37,9 @@
   din = diff --name-only 
   diu = diff @{upstream} @
   diun = diff @{upstream} @ --name-only
-  pr = diff staging...head
+  oldest-ancestor = !zsh -c 'diff --old-line-format= --new-line-format= <(git rev-list --first-parent \"${1:-$1}\") <(git rev-list --first-parent \"${2:-HEAD}\") | head -1' -
+  pr ="!f() { git diff origin/$1...head; }; f"
+  po ="!f() { git diff $(git oldest-ancestor $1)...head; }; f"
   # cherry picks
   cp = cherry-pick
   cpa = cherry-pick --abort
@@ -51,7 +49,6 @@
   aa = add .
   st = status -sb
   stu = stash -u
-  rhos = reset --hard origin/staging
   ru = remote update
   fe = fetch
   prn = pr --name-only
@@ -59,6 +56,8 @@
   re = reset --hard @{u}
   res = restore .
   cl = clean -f . 
+  # cco
+  sws = switch staging
 [core]
   editor = nvim
   excludesFile = /Users/robbienohra/.gitignore

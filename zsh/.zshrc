@@ -1,6 +1,10 @@
 #######################
 # zsh
 #######################
+
+# https://superuser.com/questions/1092033/how-can-i-make-zsh-tab-completion-fix-capitalization-errors-for-directories-and
+autoload -Uz compinit && compinit
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 ZSH_DISABLE_COMPFIX=true
 local WORDCHARS='*?_[]~=&;!#$%^(){}<>'
 setopt auto_cd
@@ -33,7 +37,6 @@ export ZK_NOTEBOOK_DIR=$HOME/nb
 # sources
 #######################
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-source /Users/robbienohra/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 eval "$(starship init zsh)"
 eval "$(fnm env --use-on-cd)"
 eval "$(zoxide init zsh)"
@@ -401,6 +404,11 @@ function t () {
   npm run test:unit "$@";
 }
 
+source /Users/robbienohra/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# https://github.com/zsh-users/zsh-syntax-highlighting/issues/780
+if [[ $TERM == "alacritty" ]]; then
+    ZSH_HIGHLIGHT_STYLES[comment]="fg=whatever_color,bold"
+fi
 #######################
 # gcloud
 #######################
