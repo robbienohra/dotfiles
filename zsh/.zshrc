@@ -339,7 +339,7 @@ function sol () {
 }
 
 function nb () {
-  cd $HOME/nb
+  cd $HOME/Users/robbienohra/nb
 }
 
 function sb () {
@@ -396,6 +396,16 @@ function re () {
   RESTIC_PASSWORD=$(pass show restic) \
   restic -r gs:robbie-backups:/restic "$@";
 }
+
+function nb_bu() {
+  re backup $HOME/Users/robbienohra/nb
+}
+
+function nb_res() {
+  re restore latest --target $HOME
+}
+
+function re_nb
 
 function srr () {
   sudo -A rm -r "$@";
