@@ -392,7 +392,7 @@ function dev () {
 
 function re () {
   GOOGLE_PROJECT_ID=robbie-329220 \
-  GOOGLE_APPLICATION_CREDENTIALS=$HOME/.config/robbie-329220-7d1a680d1c9a.json \
+  GOOGLE_APPLICATION_CREDENTIALS=$HOME/.config/robbie-329220-d0e67915e0de.json \
   RESTIC_PASSWORD=$(pass show restic) \
   restic -r gs:robbie-backups:/restic "$@";
 }
