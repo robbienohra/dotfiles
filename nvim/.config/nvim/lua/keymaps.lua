@@ -65,7 +65,7 @@ map("n", "<Leader>\\", ":15Lexplore <CR>")
 
 -- full file path
 
-map("n", "f", "1<C-g>")
+-- map("n", "f", "1<C-g>")
 
 -- plugins
 -- refresh

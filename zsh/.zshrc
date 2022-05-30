@@ -19,7 +19,7 @@ bindkey -r '^A'
 bindkey -r '^G'
 bindkey '^Y' fzf-history-widget
 bindkey '^[a' beginning-of-line
-bindkey '^[g' end-of-line
+bindkey '^[r' end-of-line
 bindkey "^[[1;3C" forward-word
 bindkey "^[[1;3D" backward-word
 
@@ -45,11 +45,15 @@ eval "$(zoxide init zsh)"
 # fzf
 #######################
 
+export FZF_COMPLETION_TRIGGER='*'
+
 # --bind ctrl-d:preview-page-down,ctrl-u:preview-page-up \
 # https://github.com/junegunn/fzf/issues/249
 export FZF_DEFAULT_OPTS="
 --history=$HOME/.fzf_history \
 --bind ctrl-d:page-down,ctrl-u:page-up \
+--bind alt-p:previous-history \
+--bind alt-n:next-history \
 --color='spinner:#fb4934,\
 hl:#928374,\
 fg:#ebdbb2,\
@@ -200,6 +204,7 @@ function fzf-open-file-widget() {
 zle -N fzf-open-file-widget
 bindkey -r '^N'
 bindkey '^N' fzf-open-file-widget
+bindkey '^E' fzf-file-widget
 
 #######################
 # cco

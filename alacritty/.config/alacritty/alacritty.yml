@@ -72,7 +72,10 @@ key_bindings:
   - { key: W,        mods: Alt,     chars: "\x1bw"          } 
   - { key: T,        mods: Alt,     chars: "\x1bt"          } 
   - { key: A,        mods: Alt,     chars: "\x1ba"          } 
+  - { key: R,        mods: Alt,     chars: "\x1br"          } 
   - { key: G,        mods: Alt,     chars: "\x1bg"          } 
   - { key: Y,        mods: Alt,     chars: "\x1by"          } 
   - { key: C,        mods: Alt,     chars: "\x1bc"          } 
   - { key: K,        mods: Alt,     chars: "\x1bk"          } 
+  - { key: P,        mods: Alt,     chars: "\x1bp"          } 
+  - { key: N,        mods: Alt,     chars: "\x1bn"          } 
