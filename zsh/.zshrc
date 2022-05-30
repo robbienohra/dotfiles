@@ -405,8 +405,6 @@ function nb_res() {
   re restore latest --target $HOME --include $HOME/Users/robbienohra/nb
 }
 
-function re_nb
-
 function srr () {
   sudo -A rm -r "$@";
 }
