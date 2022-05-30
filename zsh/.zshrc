@@ -339,7 +339,7 @@ function sol () {
 }
 
 function nb () {
-  cd $HOME/Users/robbienohra/nb
+  cd $HOME/nb
 }
 
 function sb () {
@@ -398,11 +398,11 @@ function re () {
 }
 
 function nb_bu() {
-  re backup $HOME/Users/robbienohra/nb
+  re backup $HOME/nb
 }
 
 function nb_res() {
-  re restore latest --target $HOME
+  re restore latest --target $HOME --include $HOME/Users/robbienohra/nb
 }
 
 function re_nb
