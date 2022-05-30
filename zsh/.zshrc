@@ -397,14 +397,6 @@ function re () {
   restic -r gs:robbie-backups:/restic "$@";
 }
 
-function nb_bu() {
-  re backup $HOME/nb
-}
-
-function nb_res() {
-  re restore latest --target $HOME --include $HOME/Users/robbienohra/nb
-}
-
 function srr () {
   sudo -A rm -r "$@";
 }
