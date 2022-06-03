@@ -261,16 +261,17 @@ export SUDO_ASKPASS=${HOME}/pass.sh
 # git
 #######################
 
-function rconf () { 
-  nvim -c 'Gvdiffsplit!' "$@";
+function rconf () {
+  if [[ $1 ]]; then
+    a=$(git diff --name-only --diff-filter=U | sed -n "$1"p);
+    if [[ $a ]]; then
+      nvim -c 'Gvdiffsplit!' "$a";
+    fi
+  fi
 }
 
 function br () {
   gh branch;
-}
-
-function conf (){
-  git diff --name-only --diff-filter=U;
 }
 
 function rv () {
