@@ -233,12 +233,6 @@ export JENKINS_USER_ID=admin
 export JENKINS_URL="http://localhost:8080/"
 
 #######################
-# pass
-#######################
-
-export NPM_TOKEN=$(pass show robbie/npm_token)
-
-#######################
 # gnu-sed
 #######################
 
