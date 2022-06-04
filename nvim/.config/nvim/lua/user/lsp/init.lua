@@ -2,6 +2,9 @@ local util = require "lspconfig.util"
 local lspconfig = require "lspconfig"
 
 require("nvim-lsp-installer").setup {
+
+  automatic_installation = true,
+
   ensure_installed = {
     "bashls",
     "clangd",
@@ -30,6 +33,8 @@ end
 lspconfig.tsserver.setup { on_attach = on_attach }
 lspconfig.jsonls.setup { on_attach = on_attach }
 
+lspconfig.bashls.setup {}
+
 local sumneko_opts = require "user.lsp.settings.sumneko_lua"
 lspconfig.sumneko_lua.setup(sumneko_opts)
 
@@ -46,4 +51,4 @@ util.default_config = vim.tbl_extend("force", util.default_config, {
 })
 
 require "user.lsp.null-ls"
-require "user.lsp.groovyls"
+-- require "user.lsp.groovyls"

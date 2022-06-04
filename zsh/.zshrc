@@ -350,6 +350,15 @@ function sb () {
 #######################
 # misc fns
 #######################
+
+# create a new blog post
+
+function po () {
+  (cd $HOME/robbie/content/posts && zk new --title $1)
+}
+
+# function 
+
 function rgl () {
   rg -p "$@" | less -RMFXK
 }

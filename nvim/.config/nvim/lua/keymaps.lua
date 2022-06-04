@@ -54,6 +54,8 @@ map("n", "U", "<C-r>")
 map("n", "<S-d>", "_dd")
 map("n", "<S-b>", "dvb")
 map("n", "<S-w>", "diw")
+map("i", "<S-n>", "<Esc>")
+map("n", "<Leader>o", "o<Esc>^Da")
 
 -- navigation
 
