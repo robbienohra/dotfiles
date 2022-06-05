@@ -12,7 +12,8 @@ shell:
   args:
     - -l
     - -c
-    - "tmux new -As0"
+    - "tmux new"
+    # - "tmux new -As0"
 env:
   TERM: alacritty
 scrolling:
