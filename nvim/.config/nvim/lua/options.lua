@@ -25,7 +25,7 @@ o.formatoptions:append "l"
 o.laststatus = 2
 o.regexpengine = 0
 o.shortmess = "atW"
-o.synmaxcol = 200
+o.synmaxcol = 3000
 o.shiftwidth = 2
 o.timeoutlen = 1000
 o.ttimeoutlen = 0

@@ -390,6 +390,10 @@ function lsp () {
   tail -f ~/.cache/nvim/lsp.log;
 }
 
+function plugins () {
+  cd $HOME/.local/share/nvim/site/pack/packer/start
+}
+
 function dev () {
   npm run dev;
 }
