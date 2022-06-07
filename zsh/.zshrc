@@ -264,6 +264,19 @@ function rconf () {
   fi
 }
 
+function conf () {
+  if [[ $1 ]]; then
+    a=$(git diff --name-only --diff-filter=U | sed -n "$1"p);
+    if [[ $a ]]; then
+      echo $a
+    fi
+  fi
+}
+
+function ours () {
+  conf "$1" | xargs git checkout --ours
+}
+
 function br () {
   gh branch;
 }
