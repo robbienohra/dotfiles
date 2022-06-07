@@ -255,6 +255,13 @@ export SUDO_ASKPASS=${HOME}/pass.sh
 # git
 #######################
 
+function fcoc() {
+  local commits commit
+  commits=$(git log --pretty=oneline --abbrev-commit --reverse) &&
+  commit=$(echo "$commits" | fzf --tac +s +m -e) &&
+  git checkout $(echo "$commit" | sed "s/ .*//")
+}
+
 function rconf () {
   if [[ $1 ]]; then
     a=$(git diff --name-only --diff-filter=U | sed -n "$1"p);
