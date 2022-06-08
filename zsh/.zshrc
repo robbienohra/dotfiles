@@ -209,7 +209,7 @@ bindkey '^E' fzf-file-widget
 #######################
 # cco
 #######################
-
+export NPM_TOKEN=$(pass show robbie/npm_token)
 export DOCKER_BUILDKIT=1
 export COMPOSE_DOCKER_CLI_BUILD=1
 export DOCKER_CLIENT_TIMEOUT=120
