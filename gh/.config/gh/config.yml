@@ -16,3 +16,4 @@ aliases:
     st: pr status
     ch: pr checks
     rob: pr list -A robbienohra
+    bb: browse -b
