@@ -41,3 +41,6 @@ o.smartcase = true
 o.foldlevel = 20
 o.foldmethod = "expr"
 o.foldexpr = "nvim_treesitter#foldexpr()"
+local a = {}
+a["ctrl-n"] = "tab split"
+vim.g.fzf_action = a
