@@ -86,7 +86,7 @@
   branch = true
 [merge]
   tool = fugitive
-  conflictstyle = diff3
+  conflictstyle = merge
 [mergetool "fugitive"]
   cmd = vim -f -c "Gvdiffsplit!"
 [diff]
@@ -104,3 +104,4 @@
   autosetupmerge = true
 [push]
   default = tracking
+[http]

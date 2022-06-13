@@ -165,7 +165,7 @@
                     },
                     "to": [
                         {
-                            "key_code": "escape"
+                            "key_code": "delete_or_backspace"
                         }
                     ]
                 }

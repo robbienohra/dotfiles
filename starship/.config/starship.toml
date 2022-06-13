@@ -1,17 +1,17 @@
 format = """
 $directory\
 $git_branch\
-$git_status
-$character"""
+$git_status\
+$fill\
+$time\
+$line_break\
+$character
+"""
 
-[directory]
-truncation_length=5
-
-[git_commit]
-only_detached = false
-
-[git_metrics]
-disabled = false
+[fill]
+symbol=" " 
 
 [time]
-disabled = true
+format = '[$time]($style) '
+disabled=false
+time_format = "%I:%M%p"
