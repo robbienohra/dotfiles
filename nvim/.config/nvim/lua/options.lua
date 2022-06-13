@@ -43,4 +43,6 @@ o.foldmethod = "expr"
 o.foldexpr = "nvim_treesitter#foldexpr()"
 local a = {}
 a["ctrl-n"] = "tab split"
+a["ctrl-v"] = "vertical split"
+a["ctrl-t"] = "tabe"
 vim.g.fzf_action = a
