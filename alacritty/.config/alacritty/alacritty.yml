@@ -66,16 +66,19 @@ font:
   offset:
     y: 1
 key_bindings:
-  - { key: K,        mods: Control, chars: "\x03"           }
-  - { key: LBracket,        mods: Alt,     chars: "\x1b["   }
-  - { key: RBracket,        mods: Alt,     chars: "\x1b]"   } 
-  - { key: W,        mods: Alt,     chars: "\x1bw"          } 
-  - { key: T,        mods: Alt,     chars: "\x1bt"          } 
-  - { key: A,        mods: Alt,     chars: "\x1ba"          } 
-  - { key: R,        mods: Alt,     chars: "\x1br"          } 
-  - { key: G,        mods: Alt,     chars: "\x1bg"          } 
-  - { key: Y,        mods: Alt,     chars: "\x1by"          } 
-  - { key: C,        mods: Alt,     chars: "\x1bc"          } 
-  - { key: K,        mods: Alt,     chars: "\x1bk"          } 
-  - { key: P,        mods: Alt,     chars: "\x1bp"          } 
-  - { key: N,        mods: Alt,     chars: "\x1bn"          } 
+  - { key: K, mods: Control, chars: "\x03" }
+  - { key: LBracket, mods: Alt, chars: "\x1b[" }
+  - { key: RBracket, mods: Alt, chars: "\x1b]" }
+  - { key: W, mods: Alt, chars: "\x1bw" }
+  - { key: T, mods: Alt, chars: "\x1bt" }
+  - { key: A, mods: Alt, chars: "\x1ba" }
+  - { key: R, mods: Alt, chars: "\x1br" }
+  - { key: G, mods: Alt, chars: "\x1bg" }
+  - { key: Y, mods: Alt, chars: "\x1by" }
+  - { key: C, mods: Alt, chars: "\x1bc" }
+  - { key: K, mods: Alt, chars: "\x1bk" }
+  - { key: P, mods: Alt, chars: "\x1bp" }
+  - { key: N, mods: Alt, chars: "\x1bn" }
+    # https://github.com/alacritty/alacritty/issues/1408#issuecomment-403250434
+  - { key: Left, mods: Control, chars: "\x1bb" }
+  - { key: Right, mods: Control, chars: "\x1bf" }
