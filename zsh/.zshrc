@@ -403,8 +403,8 @@ function npm_login() {
 
 alias luamake=/Users/robbienohra/Documents/lua-language-server/3rd/luamake/luamake
 
-# DB="banking"
-DB="postgres"
+DB="banking"
+# DB="postgres"
 USER="postgres"
 function u () {
   usql "postgres://${USER}@localhost:5432/${DB}?sslmode=disable" "$@";
