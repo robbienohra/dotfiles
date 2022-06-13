@@ -1,0 +1,1 @@
+{"title":"","rules":[{"description":"Map fn + spacebar to backspace_or_delete","manipulators":[{"type":"basic","from":{"simultaneous":[{"key_code":"spacebar"}],"key_code":"fn"},"to":[{"repeat":true,"key_code":"delete_or_backspace"}]}]}]}

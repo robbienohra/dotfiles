@@ -262,6 +262,10 @@ function fcoc() {
   git checkout $(echo "$commit" | sed "s/ .*//")
 }
 
+function vdiff () {
+  nvim -c 'Gvdiffsplit!' "$@";
+}
+
 function rconf () {
   if [[ $1 ]]; then
     a=$(git diff --name-only --diff-filter=U | sed -n "$1"p);
