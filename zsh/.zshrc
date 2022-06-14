@@ -409,7 +409,7 @@ function u () {
   usql "postgres://${USER}@localhost:5432/${DB}?sslmode=disable";
 }
 
-function uu () {
+function u-cols () {
   DB=$1;
   TABLE=$2;
   read -r -d '' VAR << EOM
