@@ -83,6 +83,7 @@ map("n", "<leader>c", ":let @+=expand('%')<CR>")
 -- fzf
 map("n", "<leader>t", ":Files <CR>")
 map("n", "<leader>y", ":History <CR>")
+map("n", "<leader>yy", ":History: <CR>")
 map("n", "<leader>m", ":Marks <CR>")
 map("n", "<M-c>", ":call fzf#run(fzf#wrap({'source': 'fd --type d --hidden --exclude \".git\"'})) <CR>")
 map("n", "<leader>b", ":BLines <CR>")

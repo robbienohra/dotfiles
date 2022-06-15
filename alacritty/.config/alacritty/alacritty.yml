@@ -79,6 +79,7 @@ key_bindings:
   - { key: K, mods: Alt, chars: "\x1bk" }
   - { key: P, mods: Alt, chars: "\x1bp" }
   - { key: N, mods: Alt, chars: "\x1bn" }
+  - { key: Backslash, mods: Alt, chars: "\x1b\\" }
     # https://github.com/alacritty/alacritty/issues/1408#issuecomment-403250434
   - { key: Left, mods: Control, chars: "\x1bb" }
   - { key: Right, mods: Control, chars: "\x1bf" }
