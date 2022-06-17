@@ -70,5 +70,4 @@ return require("packer").startup(function(use)
   if packer_bootstrap then
     require("packer").sync()
   end
-  use { "ckipp01/nvim-jenkinsfile-linter" }
 end)
