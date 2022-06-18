@@ -383,6 +383,10 @@ function po () {
   (cd $HOME/robbie/content/posts && zk new --title $1)
 }
 
+function p () {
+  (cd $HOME/robbie/content/posts && zk ed)
+}
+
 # function 
 
 function rgl () {
