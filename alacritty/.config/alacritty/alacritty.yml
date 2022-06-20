@@ -83,3 +83,4 @@ key_bindings:
     # https://github.com/alacritty/alacritty/issues/1408#issuecomment-403250434
   - { key: Left, mods: Control, chars: "\x1bb" }
   - { key: Right, mods: Control, chars: "\x1bf" }
+  - { key: Slash,   mods: Control,       chars: "\x1f" }

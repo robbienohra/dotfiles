@@ -25,7 +25,7 @@ map("n", "<Leader>gll", ":G pull<CR>")
 map("n", "<Leader>gs", ":G<CR>")
 map("n", "<Leader>gb", ":G blame<CR>")
 map("n", "<Leader>gd", ":Gvdiffsplit! main...head <CR>")
-map("n", "<Leader>gr", ":GRemove<CR>")
+map("n", "<Leader>gr", ":GDelete<CR>")
 map("n", "<Leader>ge", ":.GBrowse<CR>")
 map("n", "<Leader>gf", ":!bash ~/dotfiles/diff.sh % <CR>")
 
@@ -82,8 +82,7 @@ map("n", "<leader>c", ":let @+=expand('%')<CR>")
 
 -- fzf
 map("n", "<leader>t", ":Files <CR>")
-map("n", "<leader>y", ":History <CR>")
-map("n", "<leader>yy", ":History: <CR>")
+map("n", "<leader>p", ":History <CR>")
 map("n", "<leader>m", ":Marks <CR>")
 map("n", "<M-c>", ":call fzf#run(fzf#wrap({'source': 'fd --type d --hidden --exclude \".git\"'})) <CR>")
 map("n", "<leader>b", ":BLines <CR>")

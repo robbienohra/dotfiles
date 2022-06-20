@@ -54,6 +54,7 @@ export FZF_DEFAULT_OPTS="
 --bind ctrl-d:page-down,ctrl-u:page-up \
 --bind alt-p:previous-history \
 --bind alt-n:next-history \
+--bind ctrl-/:toggle-preview \
 --color='spinner:#fb4934,\
 hl:#928374,\
 fg:#ebdbb2,\
