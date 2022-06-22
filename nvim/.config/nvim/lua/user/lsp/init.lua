@@ -33,6 +33,7 @@ end
 
 lspconfig.tsserver.setup { on_attach = on_attach }
 lspconfig.jsonls.setup { on_attach = on_attach }
+lspconfig.ccls.setup { on_attach = on_attach }
 
 lspconfig.bashls.setup {}
 
