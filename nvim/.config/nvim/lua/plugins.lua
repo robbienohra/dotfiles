@@ -61,8 +61,11 @@ return require("packer").startup(function(use)
     "windwp/nvim-ts-autotag",
     { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" },
   }
-  use { "preservim/vim-markdown", { "iamcco/markdown-preview.nvim", run = "cd app && yarn install" } }
-  use "preservim/vim-pencil"
+  use {
+    "preservim/vim-markdown",
+    "preservim/vim-pencil",
+    { "iamcco/markdown-preview.nvim", run = "cd app && yarn install" },
+  }
   use "mickael-menu/zk-nvim"
   use "nvim-lua/plenary.nvim"
   use { "wbthomason/packer.nvim", opt = true }
