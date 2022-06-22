@@ -52,7 +52,6 @@ return require("packer").startup(function(use)
     "jose-elias-alvarez/null-ls.nvim",
     "mfussenegger/nvim-dap",
     "mhinz/vim-signify",
-    "ms-jpq/coq_nvim",
     "neovim/nvim-lspconfig",
     "norcalli/nvim-colorizer.lua",
     "numToStr/Comment.nvim",
