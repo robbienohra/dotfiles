@@ -335,7 +335,7 @@ function di() {
 }
 
 function prune () {
-  git branch | egrep -v "(^\*|master)" | xargs git branch -D;
+  git branch | egrep -v "(^\*|$1)" | xargs git branch -D;
 }
 
 function gch() {
