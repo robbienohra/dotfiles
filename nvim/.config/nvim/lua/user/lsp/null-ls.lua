@@ -26,7 +26,7 @@ null_ls.setup {
         "graphql",
         "solidity",
       },
-      -- extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote" },
+      -- extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote", "--tab-width 2" },
     },
     formatting.stylua.with {
       extra_args = { "--config-path", vim.fn.expand "~/.config/stylua.toml" },

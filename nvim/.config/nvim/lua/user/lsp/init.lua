@@ -43,6 +43,7 @@ lspconfig.sumneko_lua.setup(sumneko_opts)
 -- lspconfig.eslint.setup(eslint_opts)
 
 lspconfig.volar.setup {}
+lspconfig.yamlls.setup { on_attach = on_attach }
 
 local capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
@@ -52,4 +53,3 @@ util.default_config = vim.tbl_extend("force", util.default_config, {
 })
 
 require "user.lsp.null-ls"
--- require "user.lsp.groovyls"
