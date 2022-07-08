@@ -471,6 +471,10 @@ function rand_str () {
  LC_ALL=C tr -dc A-Za-z0-9 </dev/urandom | head -c 10 ; echo ''
 }
 
+function da () {
+  date "+%a %e %b %Y" | pbcopy
+}
+
 source /Users/robbienohra/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # https://github.com/zsh-users/zsh-syntax-highlighting/issues/780
 if [[ $TERM == "alacritty" ]]; then

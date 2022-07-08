@@ -2,7 +2,6 @@ format = """
 $directory\
 $git_branch\
 $git_status\
-$fill\
 $time\
 $line_break\
 $character
