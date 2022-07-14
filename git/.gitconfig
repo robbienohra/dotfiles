@@ -30,7 +30,7 @@
   # pull
   p = pull
   # push
-  pu = push --set-upstream origin head
+  pu = push
   pf = push --force-with-lease origin head
   # diffs
   di = diff
@@ -106,3 +106,4 @@
   autosetupmerge = true
 [push]
   default = tracking
+  autoSetupRemote = true
