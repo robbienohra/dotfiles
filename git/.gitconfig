@@ -56,7 +56,7 @@
   fe = fetch
   ma = merge --abort
   re = reset --hard @{u}
-  res = restore .
+  res = restore
   cl = clean -f . 
   rh = reset --hard 
   # cco
