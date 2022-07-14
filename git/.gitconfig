@@ -105,5 +105,5 @@
 [branch]
   autosetupmerge = true
 [push]
-  default = tracking
+  default = upstream
   autoSetupRemote = true
