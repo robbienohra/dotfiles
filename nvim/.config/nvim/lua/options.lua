@@ -22,7 +22,7 @@ o.completeopt = { "menuone", "noinsert", "noselect" }
 o.foldmethod = "marker"
 -- https://neovim.io/doc/user/change.html#fo-table
 o.formatoptions:append "l"
-o.laststatus = 2
+o.laststatus = 3
 o.regexpengine = 0
 o.synmaxcol = 3000
 o.shiftwidth = 2
