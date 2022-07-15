@@ -17,3 +17,5 @@ aliases:
     ch: pr checks
     rob: pr list -A robbienohra
     bb: browse -b
+    rc: release delete
+    rc: release create
