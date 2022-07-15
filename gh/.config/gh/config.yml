@@ -19,5 +19,5 @@ aliases:
     bb: browse -b
     rd: release delete
     rc: release create
-    rv: release view
+    rv: release view -w
     rl: release list
