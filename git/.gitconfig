@@ -20,13 +20,14 @@
   # branch
   bd = branch -D
   # rebase
-  rb = rebase
-  rbi = rebase -i
-  rba = rebase --abort
-  rbc = rebase --continue
+  r = rebase
+  ri = rebase -i
+  ra = rebase --abort
+  rr = rebase --continue
   # commit
   cc = commit
   ca = commit --amend
+  ce = commit --amend --no-edit
   # pull
   ll = pull
   # push
@@ -48,7 +49,6 @@
   cpa = cherry-pick --abort
   cpc = cherry-pick --continue
   # misc
-  ac = !git add . && git commit -am
   aa = add .
   st = status -sb
   stu = stash -u
@@ -59,8 +59,6 @@
   res = restore
   cl = clean -f . 
   rh = reset --hard 
-  # cco
-  sws = switch staging
 [core]
   editor = nvim
   excludesFile = /Users/robbienohra/.gitignore
