@@ -19,6 +19,7 @@
   swc = switch -c
   # branch
   bd = branch -D
+  nuke = !sh -c 'git branch -D $1 && git push origin :$1' -
   # rebase
   r = rebase
   ri = rebase -i
