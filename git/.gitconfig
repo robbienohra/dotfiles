@@ -25,10 +25,10 @@
   rba = rebase --abort
   rbc = rebase --continue
   # commit
+  cc = commit
   ca = commit --amend
-  cm = commit
   # pull
-  p = pull
+  ll = pull
   # push
   pu = push
   pf = push --force-with-lease origin head
