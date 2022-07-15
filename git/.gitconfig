@@ -43,7 +43,6 @@
   prs ="!f() { git diff --shortstat origin/$1...head; }; f"
   prn = pr --name-only
   po ="!f() { git diff $(git oldest-ancestor $1)...head; }; f"
-  no ="!f() { git rev-list --count HEAD ^$1; };f"
   # cherry picks
   cp = cherry-pick
   cpa = cherry-pick --abort
@@ -59,6 +58,7 @@
   res = restore
   cl = clean -f . 
   rh = reset --hard 
+  no ="!f() { git rev-list --count HEAD ^$1; };f"
 [core]
   editor = nvim
   excludesFile = /Users/robbienohra/.gitignore
