@@ -42,7 +42,6 @@
   oldest-ancestor = !zsh -c 'diff --old-line-format= --new-line-format= <(git rev-list --first-parent \"${1:-$1}\") <(git rev-list --first-parent \"${2:-HEAD}\") | head -1' -
   pr ="!f() { git diff origin/$1...head; }; f"
   prs ="!f() { git diff --shortstat origin/$1...head; }; f"
-  prn = pr --name-only
   po ="!f() { git diff $(git oldest-ancestor $1)...head; }; f"
   # cherry picks
   cp = cherry-pick
