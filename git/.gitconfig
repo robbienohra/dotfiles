@@ -50,6 +50,7 @@
   # misc
   aa = add .
   st = status -sb
+  stl = stash list
   stu = stash -u
   ru = remote update
   fe = fetch
