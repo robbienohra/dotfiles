@@ -1,3 +1,3 @@
 . "$HOME/.cargo/env"
 
-nvim .
+# nvim .
