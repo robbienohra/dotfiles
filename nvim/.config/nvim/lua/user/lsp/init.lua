@@ -7,7 +7,7 @@ require("nvim-lsp-installer").setup {
 
   ensure_installed = {
     "bashls",
-    "ccls",
+    -- "ccls",
     "clangd",
     "eslint",
     "jsonls",

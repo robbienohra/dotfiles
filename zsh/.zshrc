@@ -472,7 +472,11 @@ function rand_str () {
 }
 
 function da () {
-  date "+%a %e %b %Y" | pbcopy
+ date "+%a %e %b %Y" | pbcopy
+}
+
+function ge () {
+  gh gist edit 4da1f2ae4ef03a88efef3ebbc745ac0d -a "$@";
 }
 
 source /Users/robbienohra/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -488,3 +492,5 @@ if [ -f '/Users/robbienohra/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '
 
 if [ -f '/Users/robbienohra/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/robbienohra/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
 export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
+export LDFLAGS="-L/opt/homebrew/opt/llvm/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/llvm/include"
