@@ -1,7 +1,9 @@
 local util = require "lspconfig.util"
 local lspconfig = require "lspconfig"
 
-require("nvim-lsp-installer").setup {
+require("mason").setup {}
+
+require("mason-lspconfig").setup {
 
   automatic_installation = true,
 
@@ -26,8 +28,6 @@ require("nvim-lsp-installer").setup {
 local function on_attach(client)
   client.server_capabilities.document_formatting = false
   client.server_capabilities.document_range_formatting = false
-  -- client.resolved_capabilities.document_formatting = false
-  -- client.resolved_capabilities.document_range_formatting = false
 end
 
 lspconfig.tsserver.setup { on_attach = on_attach }

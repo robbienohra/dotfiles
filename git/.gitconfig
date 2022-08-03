@@ -52,6 +52,7 @@
   st = status -sb
   stl = stash list
   stu = stash -u
+  std = stash drop
   ru = remote update
   fe = fetch
   ma = merge --abort
@@ -60,6 +61,7 @@
   cl = clean -f . 
   rh = reset --hard 
   no ="!f() { git rev-list --count HEAD ^$1; };f"
+  deltag = !sh -c 'git tag -d $1 && git push origin :refs/tags/$1' -
 [core]
   editor = nvim
   excludesFile = /Users/robbienohra/.gitignore
