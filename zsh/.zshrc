@@ -479,6 +479,10 @@ function ge () {
   gh gist edit 4da1f2ae4ef03a88efef3ebbc745ac0d -a "$@";
 }
 
+function gv () {
+  gh gist view -w 4da1f2ae4ef03a88efef3ebbc745ac0d;
+}
+
 source /Users/robbienohra/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # https://github.com/zsh-users/zsh-syntax-highlighting/issues/780
 if [[ $TERM == "alacritty" ]]; then

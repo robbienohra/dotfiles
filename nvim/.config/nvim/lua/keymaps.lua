@@ -88,5 +88,9 @@ map("n", "<M-c>", ":call fzf#run(fzf#wrap({'source': 'fd --type d --hidden --exc
 map("n", "<leader>b", ":BLines <CR>")
 map("n", "<leader>f", ":Rg <CR>")
 
+-- pencil
+
+map("n", "<F7>", ":TogglePencil<CR>")
+
 -- map("n", "<leader>a", "<C-U>FooCmd(v:count)<CR>")
 -- map <leader>a <C-U>FooCmd(v:count)<CR>
