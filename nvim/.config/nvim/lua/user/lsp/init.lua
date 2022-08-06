@@ -9,7 +9,6 @@ require("mason-lspconfig").setup {
 
   ensure_installed = {
     "bashls",
-    -- "ccls",
     "clangd",
     "eslint",
     "jsonls",
@@ -32,15 +31,13 @@ end
 
 lspconfig.tsserver.setup { on_attach = on_attach }
 lspconfig.jsonls.setup { on_attach = on_attach }
-lspconfig.ccls.setup { on_attach = on_attach }
 
 lspconfig.bashls.setup {}
 
 local sumneko_opts = require "user.lsp.settings.sumneko_lua"
 lspconfig.sumneko_lua.setup(sumneko_opts)
 
--- local eslint_opts = require "user.lsp.settings.eslint"
--- lspconfig.eslint.setup(eslint_opts)
+lspconfig.clangd.setup {}
 
 lspconfig.volar.setup {}
 lspconfig.yamlls.setup { on_attach = on_attach }

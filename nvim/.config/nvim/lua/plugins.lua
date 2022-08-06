@@ -67,7 +67,6 @@ return require("packer").startup(function(use)
     "preservim/vim-pencil",
     { "iamcco/markdown-preview.nvim", run = "cd app && yarn install" },
   }
-  use "mickael-menu/zk-nvim"
   use "nvim-lua/plenary.nvim"
   use { "wbthomason/packer.nvim", opt = true }
   if packer_bootstrap then
