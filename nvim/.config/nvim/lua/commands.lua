@@ -37,7 +37,7 @@ cmd ":command! -bang -nargs=* Ag call fzf#vim#ag(<q-args>, {'options': '--delimi
 cmd [[command! -bang -nargs=* BLines call fzf#vim#grep('rg --with-filename --column --line-number --no-heading --smart-case . '.fnameescape(expand('%:p')), 1, fzf#vim#with_preview({'options': '--layout reverse --query '.shellescape(<q-args>).' --with-nth=4.. --delimiter=":"'}, 'up:50%')) "fzf#vim#with_preview({'options': '--layout reverse  --with-nth=-1.. --delimiter="/"'}, 'up:50%'))]]
 
 -- compile and run c++ program
-autocmd("FileType", { pattern = { "cpp" }, command = "nnoremap <C-c> :!g++ -o  %:r.out % -std=c++11<Enter>" })
+autocmd("FileType", { pattern = { "cpp" }, command = "nnoremap <C-c> :!g++ -g -o  %:r.out % -std=c++11<Enter>" })
 autocmd("FileType", { pattern = { "cpp" }, command = "nnoremap <C-x> :!./%:r.out<Enter>" })
 
 -- override default python indentation

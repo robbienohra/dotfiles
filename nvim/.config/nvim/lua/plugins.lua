@@ -69,6 +69,7 @@ return require("packer").startup(function(use)
   }
   use "nvim-lua/plenary.nvim"
   use { "wbthomason/packer.nvim", opt = true }
+  use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } }
   if packer_bootstrap then
     require("packer").sync()
   end
