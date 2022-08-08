@@ -5,7 +5,7 @@ dap.adapters.codelldb = {
   port = "13000",
   host = "127.0.0.1",
   -- executable = {
-  --   command = "/Users/robbienohra/Downloads/extension/adapter/codelldb",
+  --   command = "codelldb",
   --   args = { "--port", "13000" },
   -- },
 }
