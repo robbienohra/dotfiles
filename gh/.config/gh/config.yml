@@ -8,7 +8,7 @@ prompt: enabled
 pager:
 # Aliases allow you to create nicknames for gh commands
 aliases:
-    pc: pr create --web
+    pc: pr create
     pv: pr view --web
     pa: pr review -a
     bs: browse
