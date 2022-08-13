@@ -454,13 +454,6 @@ function re () {
   restic -r gs:robbie-backups:/restic "$@";
 }
 
-function srr () {
-  sudo -A rm -r "$@";
-}
-
-function su () {
-  sudo -A "$@";
-}
 
 function t () {
   npm run test:unit "$@";
@@ -483,7 +476,7 @@ function gv () {
   gh gist view -w 4da1f2ae4ef03a88efef3ebbc745ac0d;
 }
 
-source /Users/robbienohra/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # https://github.com/zsh-users/zsh-syntax-highlighting/issues/780
 if [[ $TERM == "alacritty" ]]; then
     ZSH_HIGHLIGHT_STYLES[comment]="fg=whatever_color,bold"

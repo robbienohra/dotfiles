@@ -36,7 +36,6 @@ o.clipboard = { "unnamed", "unnamedplus" }
 o.ignorecase = true
 o.smartcase = true
 -- Folding
--- o.syntax = "off"
 o.foldlevel = 20
 o.foldmethod = "expr"
 o.foldexpr = "nvim_treesitter#foldexpr()"
