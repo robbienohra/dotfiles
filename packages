@@ -28,7 +28,6 @@ stow
 the_silver_searcher
 tmux
 tokei
-watchman
 wget
 xo/xo/usql
 yq
@@ -38,3 +37,4 @@ k9s
 shfmt
 kubectx
 zsh-syntax-highlighting
+helm

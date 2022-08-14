@@ -182,7 +182,11 @@ bindkey '^E' fzf-file-widget
 #######################
 # cco
 #######################
-export NPM_TOKEN=$(pass show robbie/npm_token)
+
+if [ command -v pass &> /dev/null ]; then
+  export NPM_TOKEN=$(pass show robbie/npm_token);
+fi
+
 export DOCKER_BUILDKIT=1
 export COMPOSE_DOCKER_CLI_BUILD=1
 export DOCKER_CLIENT_TIMEOUT=120
@@ -226,7 +230,10 @@ alias la="exa -la"
 alias lt="exa --tree"
 export PYENV_ROOT="$HOME/.pyenv"
 export EDITOR=nvim
-export SUDO_ASKPASS=${HOME}/pass.sh
+
+PASS=${HOME}/pass.sh
+
+if [ -f $PASS ]; then export SUDO_ASKPASS=$PASS; fi
 
 #######################
 # git
@@ -452,7 +459,7 @@ function gv () {
   gh gist view -w 4da1f2ae4ef03a88efef3ebbc745ac0d;
 }
 
-source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+if [ -f /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh; fi
 # https://github.com/zsh-users/zsh-syntax-highlighting/issues/780
 if [[ $TERM == "alacritty" ]]; then
     ZSH_HIGHLIGHT_STYLES[comment]="fg=whatever_color,bold"
