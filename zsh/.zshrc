@@ -87,7 +87,11 @@ function _fzf_compgen_path() {
   fd --hidden --follow --exclude ".git" . "$1"
 }
 
-# fshow - git commit browser
+
+#######################
+# fzf git
+#######################
+
 function fshow() {
   git log --graph --color=always \
       --format="%C(auto)%h%d %s %C(black)%C(bold)%cr" "$@" |
@@ -149,34 +153,6 @@ function fif() {
     file="$(rga --max-count=1 --ignore-case --files-with-matches --no-messages "$*" | fzf-tmux +m --preview="rga --ignore-case --pretty --context 10 '"$*"' {}")" && echo "opening $file" && open "$file" || return 1;
 }
 
-function __fo() {
-  local cmd="${FZF_CTRL_T_COMMAND:-"command find -L . -mindepth 1 \\( -path '*/\\.*' -o -fstype 'sysfs' -o -fstype 'devfs' -o -fstype 'devtmpfs' -o -fstype 'proc' \\) -prune \
-    -o -type f -print \
-    -o -type d -print \
-    -o -type l -print 2> /dev/null | cut -b3-"}"
-  setopt localoptions pipefail no_aliases 2> /dev/null
-  local item
-  local file=$(eval "$cmd" | FZF_DEFAULT_OPTS="--height ${FZF_TMUX_HEIGHT:-40%} --reverse --bind=ctrl-z:ignore $FZF_DEFAULT_OPTS $FZF_CTRL_T_OPTS" $(__fzfcmd) -m "$@" | while read item; do
-    echo -n "${(q)item}"
-  done
-)
-  local ret=$?
-  if [[ -n $file ]]; then
-    $EDITOR $file
-  fi
-  return $ret
-}
-
-function fzf-open-file-widget() {
-  __fo
-  local ret=$?
-  zle reset-prompt
-  return $ret
-}
-
-zle -N fzf-open-file-widget
-bindkey -r '^N'
-bindkey '^N' fzf-open-file-widget
 bindkey '^E' fzf-file-widget
 
 #######################
@@ -198,10 +174,6 @@ function j() {
 
 function dc-fn() {
   docker compose $*
-}
-
-function srr() {
-  sudo -A rm -r "$@";
 }
 
 alias dc="dc-fn"
@@ -362,6 +334,10 @@ function sb () {
 #######################
 
 # create a new blog post
+
+function srr() {
+  sudo -A rm -r "$@";
+}
 
 function po () {
   (cd $HOME/robbie/content/posts && zk new --title $1)

@@ -10,9 +10,12 @@ fzf
 gh
 git-delta
 gnu-sed
+helm
 htop
 hugo
 jq
+k9s
+kubectx
 llvm
 lua
 ninja
@@ -23,6 +26,7 @@ pure
 rectangle
 restic
 ripgrep
+shfmt
 starship
 stow
 the_silver_searcher
@@ -33,8 +37,4 @@ xo/xo/usql
 yq
 zk
 zoxide
-k9s
-shfmt
-kubectx
 zsh-syntax-highlighting
-helm
