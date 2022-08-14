@@ -1,13 +1,13 @@
 # install brew
 # https://brew.sh/
-# /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # install node
 # https://nodejs.org/en/download/
 
-# install zash
+# install zsh
 # https://ohmyz.sh/#install
-# sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # install cargo
 # https://doc.rust-lang.org/cargo/getting-started/installation.html
@@ -17,12 +17,13 @@ curl https://sh.rustup.rs -sSf | sh
 cargo install fnm stylua zoxide du-dust xh git-delta
 
 # install brew packages
-# bash packages.sh
+bash packages.sh
 
 git config credential.helper store
 
-# apply stow
-for d in */ ; do (stow "$d"); done
+# stow
+
+bash stow.sh
 
 pip3 install pynvim
 
@@ -30,7 +31,6 @@ pip3 install pynvim
 # create a gpg key with same name as store
 # gpg --gen-key
 # http://irtfweb.ifa.hawaii.edu/~lockhart/gpg/
-
 
 # setup mod-dh
 # https://github.com/ColemakMods/mod-dh

@@ -23,8 +23,6 @@ bindkey '^[r' end-of-line
 bindkey "^[[1;3C" forward-word
 bindkey "^[[1;3D" backward-word
 
-export PNPM_HOME="/Users/robbienohra/Library/pnpm"
-export PATH="$PNPM_HOME:$PATH"
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 
 #######################
@@ -37,9 +35,10 @@ export ZK_NOTEBOOK_DIR=$HOME/nb
 # sources
 #######################
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-eval "$(starship init zsh)"
-eval "$(fnm env --use-on-cd)"
-eval "$(zoxide init zsh)"
+
+command -v fnm &> /dev/null && eval "$(fnm env --use-on-cd)"
+command -v zoxide &> /dev/null && eval "$(zoxide init zsh)"
+command -v starship &> /dev/null && eval "$(starship init zsh)"
 
 #######################
 # fzf
@@ -118,12 +117,6 @@ function _gb() {
   sed 's#^remotes/origin/##'
 }
 
-function _gs() {
-  is_in_git_repo || return
-  git stash list | fzf-down --reverse -d: --preview 'git show --color=always {1}' |
-  cut -d: -f1
-}
-
 function _gh() {
   is_in_git_repo || return
   git log --date=short --format="%C(green)%C(bold)%cd %C(auto)%h%d %s (%an)" --graph --color=always |
@@ -148,28 +141,7 @@ function join-lines() {
     eval "zle -N fzf-g$c-widget"
     eval "bindkey '^g^$c' fzf-g$c-widget"
   done
-} b r s h
-
-# c - browse chrome history
-function c() {
-  local cols sep google_history open
-  cols=$(( COLUMNS / 2 ))
-  sep='{::}'
-
-  if [ "$(uname)" = "Darwin" ]; then
-    google_history="$HOME/Library/Application Support/Google/Chrome/Profile 2/History"
-    open=open
-  else
-    google_history="$HOME/.config/google-chrome/Default/History"
-    open=xdg-open
-  fi
-  cp -f "$google_history" /tmp/h
-  sqlite3 -separator $sep /tmp/h \
-    "select substr(title, 1, $cols), url
-     from urls order by last_visit_time desc" |
-  awk -F $sep '{printf "%-'$cols's  \x1b[36m%s\x1b[m\n", $1, $2}' |
-  fzf --ansi --multi | sed 's#.*\(https*://\)#\1#' | xargs $open > /dev/null 2> /dev/null
-}
+} b h
 
 function fif() {
     if [ ! "$#" -gt 0 ]; then echo "Need a string to search for!"; return 1; fi
@@ -222,6 +194,10 @@ function j() {
 
 function dc-fn() {
   docker compose $*
+}
+
+function srr() {
+  sudo -A rm -r "$@";
 }
 
 alias dc="dc-fn"
