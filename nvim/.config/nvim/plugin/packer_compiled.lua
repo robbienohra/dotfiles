@@ -99,11 +99,6 @@ _G.packer_plugins = {
     path = "/Users/robbienohra/.local/share/nvim/site/pack/packer/start/cmp-vsnip",
     url = "https://github.com/hrsh7th/cmp-vsnip"
   },
-  coq_nvim = {
-    loaded = true,
-    path = "/Users/robbienohra/.local/share/nvim/site/pack/packer/start/coq_nvim",
-    url = "https://github.com/ms-jpq/coq_nvim"
-  },
   fzf = {
     loaded = true,
     path = "/Users/robbienohra/.local/share/nvim/site/pack/packer/start/fzf",
@@ -134,6 +129,16 @@ _G.packer_plugins = {
     path = "/Users/robbienohra/.local/share/nvim/site/pack/packer/start/markdown-preview.nvim",
     url = "https://github.com/iamcco/markdown-preview.nvim"
   },
+  ["mason-lspconfig.nvim"] = {
+    loaded = true,
+    path = "/Users/robbienohra/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
+    url = "https://github.com/williamboman/mason-lspconfig.nvim"
+  },
+  ["mason.nvim"] = {
+    loaded = true,
+    path = "/Users/robbienohra/.local/share/nvim/site/pack/packer/start/mason.nvim",
+    url = "https://github.com/williamboman/mason.nvim"
+  },
   ["null-ls.nvim"] = {
     loaded = true,
     path = "/Users/robbienohra/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
@@ -159,10 +164,10 @@ _G.packer_plugins = {
     path = "/Users/robbienohra/.local/share/nvim/site/pack/packer/start/nvim-dap",
     url = "https://github.com/mfussenegger/nvim-dap"
   },
-  ["nvim-lsp-installer"] = {
+  ["nvim-dap-ui"] = {
     loaded = true,
-    path = "/Users/robbienohra/.local/share/nvim/site/pack/packer/start/nvim-lsp-installer",
-    url = "https://github.com/williamboman/nvim-lsp-installer"
+    path = "/Users/robbienohra/.local/share/nvim/site/pack/packer/start/nvim-dap-ui",
+    url = "https://github.com/rcarriga/nvim-dap-ui"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
@@ -215,6 +220,11 @@ _G.packer_plugins = {
     path = "/Users/robbienohra/.local/share/nvim/site/pack/packer/start/vim-peekaboo",
     url = "https://github.com/junegunn/vim-peekaboo"
   },
+  ["vim-pencil"] = {
+    loaded = true,
+    path = "/Users/robbienohra/.local/share/nvim/site/pack/packer/start/vim-pencil",
+    url = "https://github.com/preservim/vim-pencil"
+  },
   ["vim-repeat"] = {
     loaded = true,
     path = "/Users/robbienohra/.local/share/nvim/site/pack/packer/start/vim-repeat",
@@ -254,11 +264,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/robbienohra/.local/share/nvim/site/pack/packer/start/vim-vsnip-integ",
     url = "https://github.com/hrsh7th/vim-vsnip-integ"
-  },
-  ["zk-nvim"] = {
-    loaded = true,
-    path = "/Users/robbienohra/.local/share/nvim/site/pack/packer/start/zk-nvim",
-    url = "https://github.com/mickael-menu/zk-nvim"
   }
 }
 

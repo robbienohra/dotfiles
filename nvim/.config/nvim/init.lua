@@ -1,3 +1,4 @@
+require "plugins"
 require "colorscheme"
 require "commands"
 require "options"
