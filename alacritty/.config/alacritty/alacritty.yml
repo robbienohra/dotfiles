@@ -79,6 +79,7 @@ key_bindings:
   - { key: K, mods: Alt, chars: "\x1bk" }
   - { key: P, mods: Alt, chars: "\x1bp" }
   - { key: N, mods: Alt, chars: "\x1bn" }
+  - { key: O, mods: Alt, chars: "\x1bo" }
     # https://github.com/alacritty/alacritty/issues/62#issuecomment-347552058
     # https://superuser.com/questions/1657097/bash-on-macos-altd-inserts-%E2%88%82-instead-of-removing-word
   - { key: Key1,      mods: Alt,       chars: "\x1b1"                       }
