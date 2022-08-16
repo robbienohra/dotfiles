@@ -159,9 +159,9 @@ bindkey '^E' fzf-file-widget
 # cco
 #######################
 
-if [ command -v pass &> /dev/null ]; then
-  export NPM_TOKEN=$(pass show robbie/npm_token);
-fi
+NPM_TOKEN="" && command -v pass >/dev/null 2>&1 && NPM_TOKEN=$(pass show robbie/npm_token);
+
+export NPM_TOKEN=$NPM_TOKEN
 
 export DOCKER_BUILDKIT=1
 export COMPOSE_DOCKER_CLI_BUILD=1
