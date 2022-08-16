@@ -15,3 +15,7 @@ symbol=" "
 format = '[$time]($style) '
 disabled=false
 time_format = "%I:%M%p"
+
+[kubernetes]
+format = 'on [⛵ ($user on )($cluster in )$context \($namespace\)](dimmed green) '
+disabled = false

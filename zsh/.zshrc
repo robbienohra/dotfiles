@@ -192,6 +192,7 @@ export JENKINS_URL="http://localhost:8080/"
 export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
 
 # aliases
+alias git="/opt/homebrew/bin/git"
 alias sz='source ~/.zshrc'
 alias g='git'
 alias b="bash"
