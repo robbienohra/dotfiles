@@ -2,7 +2,7 @@
 
 bindkey '^Y' fzf-history-widget
 
-export FZF_COMPLETION_TRIGGER=''
+export FZF_COMPLETION_TRIGGER='*'
 
 # --bind ctrl-d:preview-page-down,ctrl-u:preview-page-up \
 # https://github.com/junegunn/fzf/issues/249
