@@ -36,6 +36,5 @@ tokei
 wget
 xo/xo/usql
 yq
-zk
 zoxide
 zsh-syntax-highlighting
