@@ -1,5 +1,3 @@
-export NPM_TOKEN=$(pass show robbie/npm_token)
-
 cd ~/code
 gcloud config set project clearbanc-api-staging && kubectl config use-context gke_clearbanc-api-staging_us-central1_k8s-staging-live
 gcloud container clusters get-credentials k8s-staging-live --region=us-central1
