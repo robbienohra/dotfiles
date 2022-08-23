@@ -41,3 +41,6 @@ git config credential.helper store
 
 # setup tmux plugin manager
 # https://github.com/tmux-plugins/tpm#installation
+
+# app switcher
+# https://manytricks.com/witch/
