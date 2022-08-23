@@ -37,6 +37,7 @@ o.ignorecase = true
 o.smartcase = true
 -- Folding
 o.foldlevel = 20
+-- https://neovim.io/doc/user/fold.html#[z
 o.foldmethod = "expr"
 o.foldexpr = "nvim_treesitter#foldexpr()"
 local a = {}
