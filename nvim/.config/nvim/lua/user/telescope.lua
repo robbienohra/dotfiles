@@ -10,6 +10,7 @@ require("telescope").setup {
     mappings = {
       i = {
         ["<C-h>"] = actions.select_horizontal,
+        ["<esc>"] = actions.close,
       },
     },
   },
