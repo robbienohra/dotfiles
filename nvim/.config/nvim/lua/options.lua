@@ -40,10 +40,3 @@ o.foldlevel = 20
 -- https://neovim.io/doc/user/fold.html#[z
 o.foldmethod = "expr"
 o.foldexpr = "nvim_treesitter#foldexpr()"
-local a = {}
--- https://github.com/junegunn/fzf/blob/master/README-VIM.md#examples
-a["ctrl-n"] = "tab split"
-a["ctrl-v"] = "vsplit"
-a["ctrl-h"] = "split"
-a["ctrl-t"] = "tabe"
-vim.g.fzf_action = a

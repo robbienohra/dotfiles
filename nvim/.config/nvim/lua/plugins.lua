@@ -25,11 +25,6 @@ return require("packer").startup(function(use)
     "tpope/vim-unimpaired",
     "tpope/vim-vinegar",
   }
-  use {
-    "junegunn/fzf.vim",
-    "junegunn/vim-peekaboo",
-    { "junegunn/fzf", run = ":call fzf#install()" },
-  }
   -- theming
   use {
     {
@@ -39,6 +34,13 @@ return require("packer").startup(function(use)
     { "luisiacc/gruvbox-baby", branch = "main" },
   }
   -- development
+  use {
+    "nvim-telescope/telescope.nvim",
+    requires = { { "nvim-lua/plenary.nvim" } },
+  }
+  use { "nvim-telescope/telescope-fzf-native.nvim", run = "make" }
+  use "nvim-lua/plenary.nvim"
+  use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } }
   use {
     "Yggdroot/indentLine",
     "hrsh7th/cmp-buffer",
@@ -62,9 +64,7 @@ return require("packer").startup(function(use)
     "windwp/nvim-ts-autotag",
     { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" },
   }
-  use "nvim-lua/plenary.nvim"
   use { "wbthomason/packer.nvim", opt = true }
-  use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } }
   if packer_bootstrap then
     require("packer").sync()
   end
