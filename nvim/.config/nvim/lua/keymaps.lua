@@ -101,3 +101,10 @@ map("n", "<leader>f", "<cmd>lua require('telescope.builtin').live_grep()<cr>")
 map("n", "<leader>b", "<cmd>lua require('telescope.builtin').current_buffer_fuzzy_find()<cr>")
 -- map("n", "<leader>fb", "<cmd>lua require('telescope.builtin').buffers()<cr>")
 -- map("n", "<leader>fh", "<cmd>lua require('telescope.builtin').help_tags()<cr>")
+
+vim.api.nvim_set_keymap(
+  "n",
+  "<M-c>",
+  ":Telescope file_browser<cr>",
+  { noremap = true }
+)
