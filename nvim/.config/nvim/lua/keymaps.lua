@@ -80,25 +80,10 @@ map("n", "tn", ":tabnew <CR>")
 -- yank filename
 map("n", "<leader>c", ":let @+=expand('%')<CR>")
 
--- fzf
--- map("n", "<leader>t", ":Files <CR>")
--- map("n", "<leader>p", ":History <CR>")
--- map("n", "<leader>y", ":History: <CR>")
--- map("n", "<leader>m", ":Marks <CR>")
--- map("n", "<M-c>", ":call fzf#run(fzf#wrap({'source': 'fd --type d --hidden --exclude \".git\"'})) <CR>")
--- map("n", "<leader>b", ":BLines <CR>")
--- map("n", "<leader>f", ":Rg <CR>")
-
--- pencil
-
-map("n", "<F7>", ":TogglePencil<CR>")
-
--- map("n", "<leader>a", "<C-U>FooCmd(v:count)<CR>")
--- map <leader>a <C-U>FooCmd(v:count)<CR>
-
 map("n", "<leader>t", "<cmd>lua require('telescope.builtin').find_files()<cr>")
 map("n", "<leader>f", "<cmd>lua require('telescope.builtin').live_grep()<cr>")
 map("n", "<leader>b", "<cmd>lua require('telescope.builtin').current_buffer_fuzzy_find()<cr>")
+map("n", "<leader>y", "<cmd>lua require('telescope.builtin').search_history()<cr>")
 -- map("n", "<leader>fb", "<cmd>lua require('telescope.builtin').buffers()<cr>")
 -- map("n", "<leader>fh", "<cmd>lua require('telescope.builtin').help_tags()<cr>")
 

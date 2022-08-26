@@ -11,6 +11,8 @@ require("telescope").setup {
       i = {
         ["<C-h>"] = actions.select_horizontal,
         ["<esc>"] = actions.close,
+        ["<C-Down>"] = actions.cycle_history_next,
+        ["<C-Up>"] = actions.cycle_history_prev,
       },
     },
   },
@@ -30,10 +32,11 @@ require("telescope").setup {
     file_browser = {
       theme = "ivy",
       -- disables netrw and use telescope-file-browser in its place
-      hijack_netrw = true,
+      -- hijack_netrw = true,
     },
   },
 }
 
 require("telescope").load_extension "fzf"
 require("telescope").load_extension "file_browser"
+require("telescope").load_extension "gh"
