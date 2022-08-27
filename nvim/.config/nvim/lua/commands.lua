@@ -28,6 +28,10 @@ map ,d :<C-U>DlineCmd(v:count)<CR>
   true
 )
 
+-- compile and run c++ program
+autocmd("FileType", { pattern = { "cpp" }, command = "nnoremap <C-c> :!g++ -g -o  %:r.out % -std=c++11<Enter>" })
+autocmd("FileType", { pattern = { "cpp" }, command = "nnoremap <C-x> :!./%:r.out<Enter>" })
+
 -- override default python indentation
 autocmd(
   { "BufNewFile", "BufRead" },
