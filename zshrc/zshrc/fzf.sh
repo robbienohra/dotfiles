@@ -20,6 +20,7 @@ info:#8ec07c,\
 pointer:#fb4934,\
 marker:#fb4934,\
 fg+:#ebdbb2,\
+bg+:-1,\
 prompt:#fb4934,\
 hl+:#fb4934,\
 gutter:-1'"

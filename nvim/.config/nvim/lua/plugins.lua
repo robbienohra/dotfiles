@@ -45,7 +45,6 @@ return require("packer").startup(function(use)
   }
   use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } }
   use {
-    "Yggdroot/indentLine",
     "hrsh7th/cmp-buffer",
     "hrsh7th/cmp-cmdline",
     "hrsh7th/cmp-nvim-lsp",
@@ -54,6 +53,9 @@ return require("packer").startup(function(use)
     "hrsh7th/nvim-cmp",
     "hrsh7th/vim-vsnip",
     "hrsh7th/vim-vsnip-integ",
+  }
+  use {
+    "Yggdroot/indentLine",
     "jose-elias-alvarez/null-ls.nvim",
     "mfussenegger/nvim-dap",
     "mhinz/vim-signify",
