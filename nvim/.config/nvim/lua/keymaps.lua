@@ -9,7 +9,6 @@ end
 -- lsp
 map("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>")
 map("n", "<space>f", "<cmd>lua vim.lsp.buf.format { async = false } <CR>")
--- map("n", "<space>f", "<cmd>lua vim.lsp.buf.formatting() <CR>")
 map("n", "<space>a", "<cmd>lua vim.lsp.buf.code_action()<CR>")
 map("n", "<space>h", "<cmd>lua vim.lsp.buf.hover()<CR>")
 map("n", "<space>m", "<cmd>lua vim.lsp.buf.rename()<CR>")
@@ -54,7 +53,6 @@ map("n", "U", "<C-r>")
 map("n", "<S-d>", "_dd")
 map("n", "<S-b>", "dvb")
 map("n", "<S-w>", "diw")
--- map("i", "nn", "<Esc>")
 map("n", "<Leader>o", "o<Esc>^Da")
 
 -- navigation
@@ -65,11 +63,6 @@ map("n", "<M-Left>", "<C-w>h")
 map("n", "<M-Right>", "<C-w>l")
 map("n", "<Leader>\\", ":15Lexplore <CR>")
 
--- full file path
-
--- map("n", "f", "1<C-g>")
-
--- plugins
 -- refresh
 
 map("n", "<Leader>r", ":luafile %<CR>")
@@ -80,16 +73,11 @@ map("n", "tn", ":tabnew <CR>")
 -- yank filename
 map("n", "<leader>c", ":let @+=expand('%')<CR>")
 
-map("n", "<leader>t", "<cmd>lua require('telescope.builtin').find_files()<cr>")
-map("n", "<leader>f", "<cmd>lua require('telescope.builtin').live_grep()<cr>")
-map("n", "<leader>b", "<cmd>lua require('telescope.builtin').current_buffer_fuzzy_find()<cr>")
-map("n", "<leader>y", "<cmd>lua require('telescope.builtin').search_history()<cr>")
--- map("n", "<leader>fb", "<cmd>lua require('telescope.builtin').buffers()<cr>")
--- map("n", "<leader>fh", "<cmd>lua require('telescope.builtin').help_tags()<cr>")
-
-vim.api.nvim_set_keymap(
-  "n",
-  "<M-c>",
-  ":Telescope file_browser<cr>",
-  { noremap = true }
-)
+-- fzf
+map("n", "<leader>t", ":Files <CR>")
+map("n", "<leader>p", ":History <CR>")
+map("n", "<leader>y", ":History: <CR>")
+map("n", "<leader>m", ":Marks <CR>")
+map("n", "<M-c>", ":call fzf#run(fzf#wrap({'source': 'fd --type d --hidden --exclude \".git\"'})) <CR>")
+map("n", "<leader>b", ":BLines <CR>")
+map("n", "<leader>f", ":Rg <CR>")

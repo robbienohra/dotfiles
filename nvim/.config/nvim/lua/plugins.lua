@@ -34,15 +34,7 @@ return require("packer").startup(function(use)
     { "luisiacc/gruvbox-baby", branch = "main" },
   }
   -- development
-  use {
-    "nvim-telescope/telescope.nvim",
-    requires = {
-      { "nvim-lua/plenary.nvim" },
-      { "nvim-telescope/telescope-github.nvim" },
-      { "nvim-telescope/telescope-fzf-native.nvim", run = "make" },
-      { "nvim-telescope/telescope-file-browser.nvim" },
-    },
-  }
+  use { "junegunn/fzf.vim", { "junegunn/fzf", run = ":call fzf#install()" } }
   use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } }
   use {
     "hrsh7th/cmp-buffer",
@@ -69,6 +61,7 @@ return require("packer").startup(function(use)
     "windwp/nvim-ts-autotag",
     { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" },
   }
+  use "nvim-lua/plenary.nvim"
   use { "wbthomason/packer.nvim", opt = true }
   if packer_bootstrap then
     require("packer").sync()
