@@ -74,7 +74,7 @@ function fzf-down() {
 function _gb() {
   is_in_git_repo || return
   git branch -a --color=always | grep -v '/HEAD\s' | sort |
-  fzf-down --ansi --multi --tac --preview-window down:70% \
+  fzf-down --ansi --multi --tac --preview-window down:60% \
     --preview 'git log --oneline --graph --date=short --color=always --pretty="format:%C(auto)%cd %h%d %s" $(sed s/^..// <<< {} | cut -d" " -f1)' |
   sed 's/^..//' | cut -d' ' -f1 |
   sed 's#^remotes/origin/##'
@@ -113,13 +113,6 @@ function join-lines() {
     eval "bindkey '^g^$c' fzf-g$c-widget"
   done
 } b h
-
-function fcoc() {
-  local commits commit
-  commits=$(git log --pretty=oneline --abbrev-commit --reverse) &&
-  commit=$(echo "$commits" | fzf --tac +s +m -e) &&
-  git checkout $(echo "$commit" | sed "s/ .*//")
-}
 
 bindkey '^E' fzf-file-widget
 

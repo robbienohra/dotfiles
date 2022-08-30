@@ -79,6 +79,6 @@ map("n", "<leader>p", ":History <CR>")
 map("n", "<leader>y", ":History: <CR>")
 map("n", "<leader>m", ":Marks <CR>")
 -- https://github.com/junegunn/fzf/blob/master/README-VIM.md
-map("n", "<M-c>", ":call fzf#run(fzf#wrap({'source': 'fd --type d --hidden --exclude \".git\"'})) <CR>")
+map("n", "<M-c>", ":call fzf#run(fzf#wrap({'source': 'fd --type d --hidden --exclude \".git\"', 'options':'--bind ctrl-d:page-down,ctrl-u:page-up --preview-window right,50% --preview \"exa --tree --level=2 {}\"'})) <CR>")
 map("n", "<leader>b", ":BLines <CR>")
 map("n", "<leader>f", ":Rg <CR>")
