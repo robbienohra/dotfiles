@@ -5,42 +5,28 @@ function rconf() {
   if [[ $a ]]; then
     nvim -c 'Gvdiffsplit!' "$a"
   fi
-  if [[ $1 ]]; then
-    a=$(git diff --name-only --diff-filter=U | sed -n "$1"p)
-    if [[ $a ]]; then
-      nvim -c 'Gvdiffsplit!' "$a"
-    fi
-  fi
 }
 
 # echo next file with conflict
 function conf() {
-  if [[ $1 ]]; then
-    a=$(git diff --name-only --diff-filter=U | sed -n "$1"p)
-    if [[ $a ]]; then
-      echo $a
-    fi
+  a=$(git diff --name-only --diff-filter=U | sed -n 1p)
+  if [[ $a ]]; then
+    echo $a
   fi
 }
 
 # take remote change
 function ours() {
-  FILE=$(conf "$1")
+  FILE=$(conf)
   echo $FILE | xargs git checkout --ours
   git add $FILE
 }
 
 # take local change
 function theirs() {
-  FILE=$(conf "$1")
+  FILE=$(conf)
   echo $FILE | xargs git checkout --theirs
   git add $FILE
-}
-
-# open all conflicts across tabs
-function rv() {
-  FILES=$(git diff --name-only --diff-filter=U)
-  echo $FILES | xargs nvim -c "tabdo Gvdiffsplit! | tabn" -p
 }
 
 # check if branch contains commit
