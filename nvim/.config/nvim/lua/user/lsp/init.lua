@@ -8,17 +8,19 @@ require("mason-lspconfig").setup {
   automatic_installation = true,
 
   ensure_installed = {
-    "bashls",
+    "bash-language-server",
     "clangd",
-    "eslint",
-    "jsonls",
+    "eslint-lsp",
+    "json-lsp",
+    "lua-language-server",
     "pyright",
-    "rust_analyzer",
-    "sumneko_lua",
-    "svelte",
-    "tsserver",
-    "volar",
-    "yamlls",
+    "rust-analyzer",
+    "shfmt",
+    "sqlls",
+    "svelte-language-server",
+    "typescript-language-server",
+    "vue-language-server",
+    "yaml-language-server",
   },
 }
 
@@ -45,7 +47,7 @@ lspconfig.yamlls.setup { on_attach = on_attach }
 local capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
 util.default_config = vim.tbl_extend("force", util.default_config, {
-  autostart = false,
+  autostart = true,
   capabilities = capabilities,
 })
 
