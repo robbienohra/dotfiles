@@ -32,6 +32,7 @@ null_ls.setup {
       extra_args = { "--config-path", vim.fn.expand "~/.config/stylua.toml" },
     },
     diagnostics.tsc,
+    formatting.sql_formatter,
     formatting.shfmt.with {
       filetypes = {
         "sh",
