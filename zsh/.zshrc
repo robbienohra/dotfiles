@@ -1,1 +1,1 @@
-for f in ~/zshrc/*; do source $f; done
+for f in ~/zshrc/*.sh; do source $f; done
