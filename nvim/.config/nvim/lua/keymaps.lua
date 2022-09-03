@@ -8,7 +8,7 @@ end
 
 -- lsp
 map("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>")
-map("n", "<space>f", "<cmd>lua vim.lsp.buf.format { async = false } <CR>")
+map("n", "<space>f", "<cmd>lua vim.lsp.buf.format { async = true } <CR>")
 map("n", "<space>a", "<cmd>lua vim.lsp.buf.code_action()<CR>")
 map("n", "<space>h", "<cmd>lua vim.lsp.buf.hover()<CR>")
 map("n", "<space>m", "<cmd>lua vim.lsp.buf.rename()<CR>")
