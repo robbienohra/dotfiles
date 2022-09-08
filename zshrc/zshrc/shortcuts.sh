@@ -14,8 +14,8 @@ function dl () {
   cd $HOME/dotfiles
 }
 
-function sol () {
-  cd $HOME/solns
+function alg () {
+  cd $HOME/algorithms
 }
 
 function plugins () {
