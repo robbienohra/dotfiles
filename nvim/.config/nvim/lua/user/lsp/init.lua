@@ -31,20 +31,17 @@ local function on_attach(client)
   client.server_capabilities.documentFormattingProvider = false
 end
 
-lspconfig.tsserver.setup { on_attach = on_attach }
+lspconfig.bashls.setup { on_attach = on_attach }
 lspconfig.jsonls.setup { on_attach = on_attach }
-
-lspconfig.bashls.setup {}
+lspconfig.tsserver.setup { on_attach = on_attach }
+lspconfig.volar.setup { on_attach = on_attach }
+lspconfig.yamlls.setup { on_attach = on_attach }
 
 local sumneko_opts = require "user.lsp.settings.sumneko_lua"
 lspconfig.sumneko_lua.setup(sumneko_opts)
 
 lspconfig.clangd.setup {}
 
-lspconfig.volar.setup {
-  on_attach = on_attach,
-}
-lspconfig.yamlls.setup { on_attach = on_attach }
 
 local capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
