@@ -26,7 +26,8 @@ map("n", "<Leader>gb", ":G blame<CR>")
 map("n", "<Leader>gd", ":Gvdiffsplit! main...head <CR>")
 map("n", "<Leader>gr", ":GDelete<CR>")
 map("n", "<Leader>ge", ":.GBrowse<CR>")
-map("n", "<Leader>gf", ":!bash ~/dotfiles/diff.sh % <CR>")
+map("n", "<Leader>gf", ":GBrowse<CR>")
+-- map("n", "<Leader>gf", ":!bash ~/dotfiles/diff.sh % <CR>")
 
 -- Set working directory
 map("n", "<leader>.", ":lcd %:p:h<CR>")
