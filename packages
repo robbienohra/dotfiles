@@ -15,6 +15,7 @@ helm
 htop
 hugo
 jq
+kind
 k9s
 kubectx
 llvm
