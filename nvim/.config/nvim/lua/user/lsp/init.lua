@@ -21,7 +21,7 @@ require("mason-lspconfig").setup {
     "typescript-language-server",
     "vue-language-server",
     "yaml-language-server",
-    "yamlfmt"
+    "yamlfmt",
   },
 }
 
@@ -41,7 +41,6 @@ lspconfig.yamlls.setup { on_attach = on_attach }
 
 local sumneko_opts = require "user.lsp.settings.sumneko_lua"
 lspconfig.sumneko_lua.setup(sumneko_opts)
-
 
 local capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
