@@ -109,4 +109,4 @@
   default = upstream
   autoSetupRemote = true
 [commit]
-	verbose = true
+  verbose = true
