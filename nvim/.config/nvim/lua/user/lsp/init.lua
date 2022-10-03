@@ -21,6 +21,7 @@ require("mason-lspconfig").setup {
     "typescript-language-server",
     "vue-language-server",
     "yaml-language-server",
+    "yamlfmt"
   },
 }
 
