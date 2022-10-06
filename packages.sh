@@ -9,3 +9,14 @@ $(brew --prefix)/opt/fzf/install
 brew update
 brew tap dbt-labs/dbt
 brew install dbt-postgres
+
+# gooseberry
+# https://github.com/out-of-cheese-error/gooseberry#with-brew-osx
+
+brew tap out-of-cheese-error/gooseberry && brew install gooseberry
+
+# terraform
+
+brew tap hashicorp/tap
+
+brew install hashicorp/tap/terraform

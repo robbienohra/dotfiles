@@ -22,18 +22,7 @@ cargo install fnm stylua zoxide du-dust xh git-delta
 # install brew packages
 bash packages.sh
 
-# gooseberry
-# https://github.com/out-of-cheese-error/gooseberry#with-brew-osx
-
-brew tap out-of-cheese-error/gooseberry && brew install gooseberry
-
 git config credential.helper store
-
-# terraform
-
-brew tap hashicorp/tap
-
-brew install hashicorp/tap/terraform
 
 # stow
 
