@@ -21,6 +21,7 @@ kubectx
 llvm
 lua
 ninja
+nvim
 pandoc
 pass
 procs

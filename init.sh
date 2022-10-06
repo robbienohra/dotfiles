@@ -29,6 +29,12 @@ brew tap out-of-cheese-error/gooseberry && brew install gooseberry
 
 git config credential.helper store
 
+# terraform
+
+brew tap hashicorp/tap
+
+brew install hashicorp/tap/terraform
+
 # stow
 
 # bash stow.sh
