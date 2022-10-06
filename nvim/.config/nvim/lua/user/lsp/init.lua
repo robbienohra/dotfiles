@@ -18,6 +18,7 @@ require("mason-lspconfig").setup {
     "shfmt",
     "sqlls",
     "svelte-language-server",
+    "terraform-ls",
     "typescript-language-server",
     "vue-language-server",
     "yaml-language-server",
@@ -35,6 +36,7 @@ end
 lspconfig.bashls.setup { on_attach = on_attach }
 lspconfig.clangd.setup {}
 lspconfig.jsonls.setup { on_attach = on_attach }
+lspconfig.terraformls.setup { on_attach = on_attach }
 lspconfig.tsserver.setup { on_attach = on_attach }
 lspconfig.volar.setup { on_attach = on_attach }
 lspconfig.yamlls.setup { on_attach = on_attach }
