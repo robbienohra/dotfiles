@@ -1,0 +1,24 @@
+hypothesis_username = 'robbienohra';
+hypothesis_group = 'RL65k37o'
+db_dir = '/Users/robbienohra/Library/Application Support/rs.gooseberry/gooseberry_db'
+kb_dir = '/Users/robbienohra/Documents/pkm/annotations'
+annotation_template = '''
+{{#each highlight}}> {{this}}{{/each}}
+
+{{text}}
+'''
+index_link_template = '''
+- [{{name}}]({{relative_path}})\n
+'''
+page_template = '''
+
+# {{name}}
+
+{{raw_annotations.0.uri}}
+
+{{#each annotations}}{{this}}{{/each}}
+
+'''
+index_name = 'SUMMARY'
+file_extension = 'md'
+hierarchy = ['Title']
