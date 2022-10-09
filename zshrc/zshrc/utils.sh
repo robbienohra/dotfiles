@@ -30,7 +30,7 @@ EOM
 }
 
 function lsp() {
-  tail -f ~/.cache/nvim/lsp.log
+  tail -f ~/.cache/nvim/mason.log
 }
 
 function dev() {
