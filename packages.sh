@@ -6,10 +6,6 @@ brew tap out-of-cheese-error/gooseberry && brew install gooseberry
 brew install --force $(<packages)
 $(brew --prefix)/opt/fzf/install
 
-brew update
-brew tap dbt-labs/dbt
-brew install dbt-postgres
-
 # gooseberry
 # https://github.com/out-of-cheese-error/gooseberry#with-brew-osx
 
