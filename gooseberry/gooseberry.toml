@@ -11,13 +11,11 @@ index_link_template = '''
 - [{{name}}]({{relative_path}})\n
 '''
 page_template = '''
-
 # {{name}}
 
 {{raw_annotations.0.uri}}
 
 {{#each annotations}}{{this}}{{/each}}
-
 '''
 index_name = 'SUMMARY'
 file_extension = 'md'
