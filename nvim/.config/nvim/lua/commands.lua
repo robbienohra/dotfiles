@@ -28,9 +28,12 @@ map ,d :<C-U>DlineCmd(v:count)<CR>
   true
 )
 
--- compile and run c++ program
+-- compile and run c++ script
 autocmd("FileType", { pattern = { "cpp" }, command = "nnoremap <C-c> :!clang++ -o  %:r.out % -std=c++11<Enter>" })
 autocmd("FileType", { pattern = { "cpp" }, command = "nnoremap <C-x> :!./%:r.out<Enter>" })
+
+-- compile and run TS script
+autocmd("FileType", { pattern = { "typescript" }, command = "nnoremap <C-x> :!ts-node %<Enter>" })
 
 -- override default python indentation
 autocmd(
