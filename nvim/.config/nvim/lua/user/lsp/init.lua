@@ -33,6 +33,25 @@ local function on_attach(client)
   client.server_capabilities.documentFormattingProvider = false
 end
 
+local function get_forced_lsp_capabilities()
+  local capabilities = vim.lsp.protocol.make_client_capabilities()
+  capabilities.textDocument.completion.completionItem.snippetSupport = true
+  capabilities.textDocument.completion.completionItem.resolveSupport = {
+    properties = { "documentation", "detail", "additionalTextEdits" },
+  }
+  return capabilities
+end
+
+local function my_lsp_on_attach()
+  require("cmp_nvim_lsp").update_capabilities(get_forced_lsp_capabilities())
+end
+
+util.default_config = vim.tbl_extend("force", util.default_config, {
+  autostart = true,
+  on_attach = my_lsp_on_attach,
+  capabilities = get_forced_lsp_capabilities(),
+})
+
 lspconfig.bashls.setup { on_attach = on_attach }
 lspconfig.clangd.setup {}
 lspconfig.jsonls.setup { on_attach = on_attach }
@@ -40,15 +59,5 @@ lspconfig.terraformls.setup { on_attach = on_attach }
 lspconfig.tsserver.setup { on_attach = on_attach }
 lspconfig.volar.setup { on_attach = on_attach }
 lspconfig.yamlls.setup { on_attach = on_attach }
-
-local sumneko_opts = require "user.lsp.settings.sumneko_lua"
-lspconfig.sumneko_lua.setup(sumneko_opts)
-
-local capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities())
-
-util.default_config = vim.tbl_extend("force", util.default_config, {
-  autostart = true,
-  capabilities = capabilities,
-})
 
 require "user.lsp.null-ls"
