@@ -19,7 +19,6 @@ bindkey "^[[1;3C" forward-word
 bindkey "^[[1;3D" backward-word
 
 export RIPGREP_CONFIG_PATH=$HOME/.ripgreprc
-export ZK_NOTEBOOK_DIR=$HOME/nb
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
 export PYENV_ROOT="$HOME/.pyenv"
