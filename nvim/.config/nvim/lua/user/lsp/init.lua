@@ -21,7 +21,6 @@ require("mason-lspconfig").setup {
     "tsserver",
     "volar",
     "yamlls",
-    "yamlfmt",
   },
 }
 
