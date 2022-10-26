@@ -44,10 +44,11 @@ function re() {
     restic -r gs:robbie-backups:/restic "$@"
 }
 
-function rand_str() {
+function new_post() {
   # https://unix.stackexchange.com/questions/230673/how-to-generate-a-random-string
-  LC_ALL=C tr -dc A-Za-z0-9 </dev/urandom | head -c 5
-  FILE=$(echo '')
-  echo $FILE
+  FILE=$(
+    LC_ALL=C tr -dc A-Za-z0-9 </dev/urandom | head -c 5
+    echo ''
+  )
   touch "$FILE.md"
 }
