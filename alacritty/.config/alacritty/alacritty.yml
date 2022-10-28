@@ -62,7 +62,6 @@ font:
     style: Bold
   offset:
     y: 1
-AppleFontSmoothing: 0
 key_bindings:
   - { key: K, mods: Control, chars: "\x03" }
   - { key: LBracket, mods: Alt, chars: "\e[" }

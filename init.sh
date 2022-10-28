@@ -2,7 +2,7 @@
 # https://brew.sh/
 # /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/uninstall.sh)"
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/robbienohra/.zprofile
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >>/Users/robbienohra/.zprofile
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # install node
@@ -23,6 +23,10 @@ cargo install fnm stylua zoxide du-dust xh git-delta
 bash packages.sh
 
 git config credential.helper store
+
+# alacritty
+
+defaults write -g AppleFontSmoothing -int 0
 
 # stow
 
