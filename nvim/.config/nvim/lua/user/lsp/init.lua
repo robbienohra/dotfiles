@@ -58,6 +58,7 @@ util.default_config = vim.tbl_extend("force", util.default_config, {
 lspconfig.bashls.setup { on_attach = on_attach }
 lspconfig.clangd.setup {}
 lspconfig.jsonls.setup { on_attach = on_attach }
+lspconfig.prismals.setup { on_attach = on_attach }
 lspconfig.terraformls.setup { on_attach = on_attach }
 lspconfig.tsserver.setup { on_attach = on_attach }
 lspconfig.volar.setup { on_attach = on_attach }
