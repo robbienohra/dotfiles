@@ -46,7 +46,7 @@ local function get_forced_lsp_capabilities()
 end
 
 local function my_lsp_on_attach()
-  require("cmp_nvim_lsp").update_capabilities(get_forced_lsp_capabilities())
+  require("cmp_nvim_lsp").default_capabilities(get_forced_lsp_capabilities())
 end
 
 util.default_config = vim.tbl_extend("force", util.default_config, {

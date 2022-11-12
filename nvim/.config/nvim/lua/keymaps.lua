@@ -15,6 +15,8 @@ map("n", "<space>m", "<cmd>lua vim.lsp.buf.rename()<CR>")
 map("n", "<space>r", "<cmd>lua vim.lsp.buf.references()<CR>")
 map("n", "<space>s", "<cmd>lua vim.lsp.buf.document_symbol()<CR>")
 map("n", "<space>e", "<cmd>lua vim.diagnostic.open_float()<CR>")
+map("n", "[d", "<cmd>lua vim.diagnostic.goto_prev()<CR>")
+map("n", "]d", "<cmd>lua vim.diagnostic.goto_next()<CR>")
 
 -- git
 map("n", "<Leader>ga", ":Gwrite<CR>")
@@ -80,6 +82,10 @@ map("n", "<leader>p", ":History <CR>")
 map("n", "<leader>y", ":History: <CR>")
 map("n", "<leader>m", ":Marks <CR>")
 -- https://github.com/junegunn/fzf/blob/master/README-VIM.md
-map("n", "<M-c>", ":call fzf#run(fzf#wrap({'source': 'fd --type d --hidden --exclude \".git\"', 'options':'--bind ctrl-d:page-down,ctrl-u:page-up --preview-window right,50% --preview \"exa --tree --level=2 {}\"'})) <CR>")
+map(
+  "n",
+  "<M-c>",
+  ":call fzf#run(fzf#wrap({'source': 'fd --type d --hidden --exclude \".git\"', 'options':'--bind ctrl-d:page-down,ctrl-u:page-up --preview-window right,50% --preview \"exa --tree --level=2 {}\"'})) <CR>"
+)
 map("n", "<leader>b", ":BLines <CR>")
 map("n", "<leader>f", ":Rg <CR>")
