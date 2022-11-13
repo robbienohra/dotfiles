@@ -29,6 +29,7 @@ pure
 rectangle
 restic
 ripgrep
+shellcheck
 shfmt
 starship
 stow
