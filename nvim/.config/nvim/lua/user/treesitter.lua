@@ -12,6 +12,7 @@ require("nvim-treesitter.configs").setup {
     "hcl",
     "javascript",
     "json",
+    "prisma",
     "python",
     "rust",
     "scss",
