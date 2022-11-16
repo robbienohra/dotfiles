@@ -31,9 +31,12 @@ require("mason-lspconfig").setup {
 
 -- disable formatting for cases where null-ls is the desired default
 -- https://microsoft.github.io/language-server-protocol/specifications/lsp/3.17/specification/#serverCapabilities
-local function on_attach(client)
+local function on_attach(client, bufnr)
   client.server_capabilities.documentFormattingProvider = false
   client.server_capabilities.documentFormattingProvider = false
+  if vim.bo[bufnr].buftype ~= "" or vim.bo[bufnr].filetype == "helm" then
+    vim.diagnostic.disable()
+  end
 end
 
 local function get_forced_lsp_capabilities()
