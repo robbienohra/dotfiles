@@ -17,6 +17,7 @@ map("n", "<space>s", "<cmd>lua vim.lsp.buf.document_symbol()<CR>")
 map("n", "<space>e", "<cmd>lua vim.diagnostic.open_float()<CR>")
 map("n", "[d", "<cmd>lua vim.diagnostic.goto_prev()<CR>")
 map("n", "]d", "<cmd>lua vim.diagnostic.goto_next()<CR>")
+map("n", "<space>d", "<cmd>lua vim.diagnostic.disable()<CR>")
 
 -- git
 map("n", "<Leader>ga", ":Gwrite<CR>")

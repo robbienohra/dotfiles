@@ -28,6 +28,11 @@ git config credential.helper store
 
 defaults write -g AppleFontSmoothing -int 0
 
+# global npm packages
+
+npm i -g typescript
+npm i -g prettier
+
 # stow
 
 # bash stow.sh
