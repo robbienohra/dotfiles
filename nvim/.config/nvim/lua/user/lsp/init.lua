@@ -34,7 +34,7 @@ require("mason-lspconfig").setup {
 local function on_attach(client, bufnr)
   client.server_capabilities.documentFormattingProvider = false
   client.server_capabilities.documentFormattingProvider = false
--- https://www.reddit.com/r/neovim/comments/rwoxne/comment/hre6iu3/?utm_source=share&utm_medium=web2x&context=3
+  -- https://www.reddit.com/r/neovim/comments/rwoxne/comment/hre6iu3/?utm_source=share&utm_medium=web2x&context=3
   if vim.bo[bufnr].buftype ~= "" or vim.bo[bufnr].filetype == "helm" then
     vim.diagnostic.disable()
   end
@@ -63,7 +63,7 @@ lspconfig.bashls.setup { on_attach = on_attach }
 lspconfig.clangd.setup {}
 lspconfig.jsonls.setup { on_attach = on_attach }
 lspconfig.prismals.setup { on_attach = on_attach }
-lspconfig.terraformls.setup { on_attach = on_attach }
+lspconfig.terraformls.setup {}
 lspconfig.tsserver.setup { on_attach = on_attach }
 lspconfig.volar.setup { on_attach = on_attach }
 lspconfig.yamlls.setup { on_attach = on_attach }
