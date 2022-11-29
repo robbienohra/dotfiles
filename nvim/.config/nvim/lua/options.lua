@@ -2,6 +2,7 @@ vim.g.mapleader = ","
 vim.g.loaded_ruby_provider = 0
 vim.g.loaded_perl_provider = 0
 vim.g.loaded_python_provider = 0
+vim.g["pencil#textwidth"] = 100
 local udir = os.getenv "HOME" .. "/undodir"
 local o = vim.opt
 o.lazyredraw = true
