@@ -42,7 +42,6 @@ return require("packer").startup(function(use)
   use "lewis6991/impatient.nvim"
   use { "junegunn/fzf.vim", { "junegunn/fzf", run = ":call fzf#install()" } }
   use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } }
-  use "preservim/vim-pencil"
   use {
     "hrsh7th/cmp-buffer",
     "hrsh7th/cmp-cmdline",
