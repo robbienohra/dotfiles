@@ -53,6 +53,7 @@
   stl = stash list
   stu = stash -u
   std = stash drop
+  stp = stash pop
   ru = remote update
   fe = fetch
   ma = merge --abort
