@@ -10,6 +10,7 @@ require("mason-lspconfig").setup {
   ensure_installed = {
     "bashls",
     "clangd",
+    "denols",
     "eslint",
     "jsonls",
     "sumneko_lua",

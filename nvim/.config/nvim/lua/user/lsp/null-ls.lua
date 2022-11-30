@@ -11,6 +11,7 @@ null_ls.setup {
   sources = {
     formatting.deno_fmt.with {
       filetypes = { "markdown" }, -- only runs `deno fmt` for markdown
+      extra_args = { "--options-line-width=100" },
     },
     formatting.yamlfmt,
     formatting.prettier,
