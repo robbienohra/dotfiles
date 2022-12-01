@@ -14,7 +14,9 @@ null_ls.setup {
       extra_args = { "--options-line-width=100" },
     },
     formatting.yamlfmt,
-    formatting.prettier,
+    formatting.prettier.with {
+      disabled_filetypes = { "markdown" },
+    },
     formatting.stylua.with {
       extra_args = { "--config-path", vim.fn.expand "~/.config/stylua.toml" },
     },

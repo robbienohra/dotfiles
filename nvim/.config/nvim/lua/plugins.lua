@@ -67,6 +67,12 @@ return require("packer").startup(function(use)
     "windwp/nvim-ts-autotag",
     { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" },
   }
+  use {
+    "iamcco/markdown-preview.nvim",
+    run = function()
+      vim.fn["mkdp#util#install"]()
+    end,
+  }
   use "nvim-lua/plenary.nvim"
   use { "wbthomason/packer.nvim", opt = true }
   if packer_bootstrap then
