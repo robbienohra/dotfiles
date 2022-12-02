@@ -9,6 +9,7 @@ local diagnostics = null_ls.builtins.diagnostics
 null_ls.setup {
   debug = false,
   sources = {
+    formatting.terraform_fmt,
     formatting.deno_fmt.with {
       filetypes = { "markdown" }, -- only runs `deno fmt` for markdown
       extra_args = { "--options-line-width=100" },
