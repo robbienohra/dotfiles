@@ -49,3 +49,7 @@ function rand_str() {
   LC_ALL=C tr -dc a-z0-9 </dev/urandom | head -c 4 
   echo ''
 }
+
+function snip() {
+  pbpaste | gh gist create -f "$1"
+}
