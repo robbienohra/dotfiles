@@ -216,26 +216,6 @@
             "simple_modifications": [
                 {
                     "from": {
-                        "key_code": "b"
-                    },
-                    "to": [
-                        {
-                            "key_code": "z"
-                        }
-                    ]
-                },
-                {
-                    "from": {
-                        "key_code": "c"
-                    },
-                    "to": [
-                        {
-                            "key_code": "d"
-                        }
-                    ]
-                },
-                {
-                    "from": {
                         "key_code": "caps_lock"
                     },
                     "to": [
@@ -246,21 +226,71 @@
                 },
                 {
                     "from": {
-                        "key_code": "d"
-                    },
-                    "to": [
-                        {
-                            "key_code": "s"
-                        }
-                    ]
-                },
-                {
-                    "from": {
                         "key_code": "e"
                     },
                     "to": [
                         {
                             "key_code": "f"
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "key_code": "r"
+                    },
+                    "to": [
+                        {
+                            "key_code": "p"
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "key_code": "t"
+                    },
+                    "to": [
+                        {
+                            "key_code": "b"
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "key_code": "y"
+                    },
+                    "to": [
+                        {
+                            "key_code": "j"
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "key_code": "i"
+                    },
+                    "to": [
+                        {
+                            "key_code": "u"
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "key_code": "s"
+                    },
+                    "to": [
+                        {
+                            "key_code": "r"
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "key_code": "d"
+                    },
+                    "to": [
+                        {
+                            "key_code": "s"
                         }
                     ]
                 },
@@ -281,16 +311,6 @@
                     "to": [
                         {
                             "key_code": "m"
-                        }
-                    ]
-                },
-                {
-                    "from": {
-                        "key_code": "i"
-                    },
-                    "to": [
-                        {
-                            "key_code": "u"
                         }
                     ]
                 },
@@ -326,101 +346,11 @@
                 },
                 {
                     "from": {
-                        "key_code": "m"
-                    },
-                    "to": [
-                        {
-                            "key_code": "h"
-                        }
-                    ]
-                },
-                {
-                    "from": {
-                        "key_code": "n"
-                    },
-                    "to": [
-                        {
-                            "key_code": "k"
-                        }
-                    ]
-                },
-                {
-                    "from": {
-                        "key_code": "o"
-                    },
-                    "to": [
-                        {
-                            "key_code": "y"
-                        }
-                    ]
-                },
-                {
-                    "from": {
-                        "key_code": "r"
-                    },
-                    "to": [
-                        {
-                            "key_code": "p"
-                        }
-                    ]
-                },
-                {
-                    "from": {
-                        "key_code": "s"
-                    },
-                    "to": [
-                        {
-                            "key_code": "r"
-                        }
-                    ]
-                },
-                {
-                    "from": {
                         "key_code": "semicolon"
                     },
                     "to": [
                         {
                             "key_code": "o"
-                        }
-                    ]
-                },
-                {
-                    "from": {
-                        "key_code": "t"
-                    },
-                    "to": [
-                        {
-                            "key_code": "b"
-                        }
-                    ]
-                },
-                {
-                    "from": {
-                        "key_code": "u"
-                    },
-                    "to": [
-                        {
-                            "key_code": "l"
-                        }
-                    ]
-                },
-                {
-                    "from": {
-                        "key_code": "x"
-                    },
-                    "to": [
-                        {
-                            "key_code": "c"
-                        }
-                    ]
-                },
-                {
-                    "from": {
-                        "key_code": "y"
-                    },
-                    "to": [
-                        {
-                            "key_code": "j"
                         }
                     ]
                 },
@@ -436,11 +366,71 @@
                 },
                 {
                     "from": {
-                        "key_code": "p"
+                        "key_code": "x"
                     },
                     "to": [
                         {
-                            "key_code": "semicolon"
+                            "key_code": "c"
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "key_code": "c"
+                    },
+                    "to": [
+                        {
+                            "key_code": "d"
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "key_code": "b"
+                    },
+                    "to": [
+                        {
+                            "key_code": "z"
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "key_code": "n"
+                    },
+                    "to": [
+                        {
+                            "key_code": "k"
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "key_code": "m"
+                    },
+                    "to": [
+                        {
+                            "key_code": "h"
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "key_code": "u"
+                    },
+                    "to": [
+                        {
+                            "key_code": "l"
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "key_code": "o"
+                    },
+                    "to": [
+                        {
+                            "key_code": "y"
                         }
                     ]
                 }
