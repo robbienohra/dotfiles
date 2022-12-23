@@ -66,6 +66,8 @@ map("n", "<M-Up>", "<C-w>k")
 map("n", "<M-Left>", "<C-w>h")
 map("n", "<M-Right>", "<C-w>l")
 map("n", "<Leader>\\", ":15Lexplore <CR>")
+map("n", "<C-d>", "<C-d>zz")
+map("n", "<C-u>", "<C-u>zz")
 
 -- refresh
 -- map("n", "<Leader>r", ":luafile %<CR>")
