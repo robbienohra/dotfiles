@@ -94,3 +94,7 @@ map(
 )
 map("n", "<leader>b", ":BLines <CR>")
 map("n", "<leader>f", ":Rg <CR>")
+
+-- move snippets
+map("v", "J", ":m '>+1<CR>gv=gv")
+map("v", "K", ":m '<-2<CR>gv=gv")
