@@ -21,6 +21,7 @@ bindkey "^[[1;3D" backward-word
 export RIPGREP_CONFIG_PATH=$HOME/.ripgreprc
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
+export PATH=$HOME/.istioctl/bin:$PATH
 export PYENV_ROOT="$HOME/.pyenv"
 export EDITOR=nvim
 
