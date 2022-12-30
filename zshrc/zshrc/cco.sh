@@ -1,6 +1,5 @@
-NPM_TOKEN="" && command -v pass >/dev/null 2>&1 && NPM_TOKEN=$(pass show robbie/npm_token);
-
-export NPM_TOKEN=$NPM_TOKEN
+# NPM_TOKEN="" && command -v pass >/dev/null 2>&1 && NPM_TOKEN=$(pass show robbie/npm_token)
+# export NPM_TOKEN=$NPM_TOKEN
 
 export DOCKER_BUILDKIT=1
 export COMPOSE_DOCKER_CLI_BUILD=1
@@ -12,7 +11,7 @@ function j() {
 }
 
 function dc-fn() {
-  docker compose $*
+  docker compose "$*"
 }
 
 alias dc="dc-fn"
@@ -24,6 +23,6 @@ export PROJECT_ID=clearbanc-build
 export JENKINS_USER_ID=admin
 export JENKINS_URL="http://localhost:8080/"
 
-function t () {
-  npm run test:unit "$@";
+function t() {
+  npm run test:unit "$@"
 }
