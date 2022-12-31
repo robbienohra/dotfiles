@@ -1,4 +1,4 @@
 #!/bin/zsh
 
-# PW=$(pass show robbie/root) 
-# echo $PW
+PW=$(pass show robbie/root) 
+echo $PW
