@@ -7,7 +7,8 @@ function ch() {
 }
 
 function npm_login() {
-  npm login --registry=https://npm.pkg.github.com
+  # npm login --registry=https://npm.pkg.github.com
+  npm login --scope=@clearbanc
 }
 
 USER="postgres"
