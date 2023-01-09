@@ -17,6 +17,7 @@ require("nvim-treesitter.configs").setup {
     "rust",
     "scss",
     "svelte",
+    "terraform",
     "toml",
     "typescript",
     "vue",
