@@ -12,6 +12,7 @@ require("mason-lspconfig").setup {
     "clangd",
     "denols",
     "eslint",
+    "jdtls",
     "jsonls",
     "sumneko_lua",
     "prismals",
@@ -62,6 +63,7 @@ util.default_config = vim.tbl_extend("force", util.default_config, {
 
 lspconfig.bashls.setup { on_attach = on_attach }
 lspconfig.clangd.setup {}
+lspconfig.jdtls.setup { on_attach = on_attach }
 lspconfig.jsonls.setup { on_attach = on_attach }
 lspconfig.prismals.setup { on_attach = on_attach }
 lspconfig.terraformls.setup { on_attach = on_attach }
