@@ -2,14 +2,8 @@
 # https://github.com/ryanoasis/nerd-fonts
 brew tap homebrew/cask-fonts
 brew install --force --cask font-jetbrains-mono
-brew tap out-of-cheese-error/gooseberry && brew install gooseberry
 brew install --force $(<packages)
 $(brew --prefix)/opt/fzf/install
-
-# gooseberry
-# https://github.com/out-of-cheese-error/gooseberry#with-brew-osx
-
-brew tap out-of-cheese-error/gooseberry && brew install gooseberry
 
 # terraform
 
