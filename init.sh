@@ -1,3 +1,7 @@
+# reminders when reinstalling
+# remove zsh/.zshrc
+# ensure that opt/homebrew does not exist
+# remove .zprofile from root
 # install brew
 # https://brew.sh/
 # /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/uninstall.sh)"
