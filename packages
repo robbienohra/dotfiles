@@ -33,6 +33,7 @@ shellcheck
 shfmt
 starship
 stow
+sops
 the_silver_searcher
 tmux
 tokei
