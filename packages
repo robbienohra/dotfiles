@@ -34,6 +34,7 @@ shfmt
 starship
 stow
 sops
+terragrunt
 the_silver_searcher
 tmux
 tokei
