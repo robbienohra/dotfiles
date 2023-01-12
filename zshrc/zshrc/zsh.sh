@@ -17,6 +17,7 @@ bindkey '^[a' beginning-of-line
 bindkey '^[r' end-of-line
 bindkey "^[[1;3C" forward-word
 bindkey "^[[1;3D" backward-word
+export PROMPT_EOL_MARK=''
 
 export RIPGREP_CONFIG_PATH=$HOME/.ripgreprc
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
