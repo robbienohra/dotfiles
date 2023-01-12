@@ -46,8 +46,17 @@
     "disabledApps" : {
 
     },
+    "dragFromStage" : {
+      "int" : 0
+    },
+    "enhancedUI" : {
+      "int" : 1
+    },
     "footprintAlpha" : {
       "float" : 0.30000001192092896
+    },
+    "footprintAnimationDurationMultiplier" : {
+      "float" : 0
     },
     "footprintBorderWidth" : {
       "float" : 2
@@ -70,6 +79,9 @@
     "ignoredSnapAreas" : {
       "int" : 0
     },
+    "landscapeSnapAreas" : {
+
+    },
     "launchOnLogin" : {
       "bool" : true
     },
@@ -78,6 +90,15 @@
     },
     "minimumWindowWidth" : {
       "float" : 0
+    },
+    "missionControlDragging" : {
+      "int" : 0
+    },
+    "missionControlDraggingAllowedOffscreenDistance" : {
+      "float" : 25
+    },
+    "missionControlDraggingDisallowedDuration" : {
+      "int" : 250
     },
     "moveCursor" : {
       "int" : 0
@@ -90,6 +111,9 @@
     },
     "obtainWindowOnClick" : {
       "int" : 0
+    },
+    "portraitSnapAreas" : {
+
     },
     "relaunchOpensMenu" : {
       "bool" : false
@@ -145,6 +169,9 @@
     "specifiedWidth" : {
       "float" : 1680
     },
+    "stageSize" : {
+      "float" : 190
+    },
     "subsequentExecutionMode" : {
       "int" : 1
     },
@@ -174,42 +201,54 @@
     }
   },
   "shortcuts" : {
-    "bottomHalf" : {
+    "center" : {
       "keyCode" : 125,
       "modifierFlags" : 786432
     },
-    "center" : {
-      "keyCode" : 125,
-      "modifierFlags" : 393216
+    "centerThird" : {
+      "keyCode" : 3,
+      "modifierFlags" : 786432
+    },
+    "firstThird" : {
+      "keyCode" : 2,
+      "modifierFlags" : 786432
+    },
+    "firstThreeFourths" : {
+      "keyCode" : 123,
+      "modifierFlags" : 786432
     },
     "firstTwoThirds" : {
-      "keyCode" : 123,
-      "modifierFlags" : 393216
+      "keyCode" : 14,
+      "modifierFlags" : 786432
+    },
+    "lastThird" : {
+      "keyCode" : 5,
+      "modifierFlags" : 786432
+    },
+    "lastTwoThirds" : {
+      "keyCode" : 17,
+      "modifierFlags" : 786432
     },
     "leftHalf" : {
       "keyCode" : 123,
-      "modifierFlags" : 786432
+      "modifierFlags" : 1572864
     },
     "maximize" : {
       "keyCode" : 36,
-      "modifierFlags" : 786432
+      "modifierFlags" : 1310720
     },
     "nextDisplay" : {
       "keyCode" : 121,
-      "modifierFlags" : 393216
+      "modifierFlags" : 1310720
     },
     "previousDisplay" : {
       "keyCode" : 116,
-      "modifierFlags" : 393216
+      "modifierFlags" : 1310720
     },
     "rightHalf" : {
       "keyCode" : 124,
-      "modifierFlags" : 786432
-    },
-    "topHalf" : {
-      "keyCode" : 126,
-      "modifierFlags" : 786432
+      "modifierFlags" : 1572864
     }
   },
-  "version" : "62"
+  "version" : "70"
 }
