@@ -47,7 +47,7 @@ function dev() {
 
 function rand_str() {
   # https://unix.stackexchange.com/questions/230673/how-to-generate-a-random-string
-  LC_ALL=C tr -dc a-z0-9 </dev/urandom | head -c 4 
+  LC_ALL=C tr -dc a-z0-9 </dev/urandom | head -c 4
   echo ''
 }
 
@@ -56,5 +56,10 @@ function snip() {
 }
 
 function jwt-decode() {
-  sed 's/\./\n/g' <<< $(cut -d. -f1,2 <<< "$1") | base64 --decode | jq
+  sed 's/\./\n/g' <<<$(cut -d. -f1,2 <<<"$1") | base64 --decode | jq
+}
+
+function gen-pairs() {
+  openssl genpkey -algorithm RSA -out private.pem -pkeyopt rsa_keygen_bits:2048
+  openssl rsa -in private.pem -pubout -out public.pem
 }
