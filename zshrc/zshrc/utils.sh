@@ -62,7 +62,7 @@ function gen-pairs() {
 
 function gen-token() {
   PEM=$(cat $1)
-  GITHUB_APP_ID=4 # Whatever your github app id is
+  ISSUER="foo" # Whatever your github app id is
 
   NOW=$(date +%s)
   IAT="${NOW}"
@@ -70,7 +70,7 @@ function gen-token() {
   EXP=$((${NOW} + 540))
   HEADER_RAW='{"alg":"RS256"}'
   HEADER=$(echo -n "${HEADER_RAW}" | openssl base64 | tr -d '=' | tr '/+' '_-' | tr -d '\n')
-  PAYLOAD_RAW='{"iat":'"${IAT}"',"exp":'"${EXP}"',"iss":'"${GITHUB_APP_ID}"'}'
+  PAYLOAD_RAW='{"iat":'"${IAT}"',"exp":'"${EXP}"',"iss":'"${ISSUER}"'}'
   PAYLOAD=$(echo -n "${PAYLOAD_RAW}" | openssl base64 | tr -d '=' | tr '/+' '_-' | tr -d '\n')
   HEADER_PAYLOAD="${HEADER}"."${PAYLOAD}"
   SIGNATURE=$(openssl dgst -sha256 -sign <(echo -n "${PEM}") <(echo -n "${HEADER_PAYLOAD}") | openssl base64 | tr -d '=' | tr '/+' '_-' | tr -d '\n')
