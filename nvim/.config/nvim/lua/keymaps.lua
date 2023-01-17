@@ -30,6 +30,7 @@ map("n", "<Leader>gd", ":Gvdiffsplit! main...head <CR>")
 map("n", "<Leader>gr", ":GDelete<CR>")
 map("n", "<Leader>ge", ":.GBrowse<CR>")
 map("n", "<Leader>gf", ":GBrowse<CR>")
+map("n", "<Leader>gt", ":G tag<CR>")
 -- map("n", "<Leader>gf", ":!bash ~/dotfiles/diff.sh % <CR>")
 
 -- Set working directory
