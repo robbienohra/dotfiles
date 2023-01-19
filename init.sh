@@ -36,6 +36,7 @@ defaults write -g AppleFontSmoothing -int 0
 
 npm i -g typescript
 npm i -g prettier
+npm i -g npm-groovy-lint
 
 # stow
 
