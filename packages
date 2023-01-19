@@ -20,6 +20,7 @@ llvm
 lua
 ninja
 nvim
+openjdk
 pandoc
 pass
 procs
