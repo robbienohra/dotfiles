@@ -65,6 +65,7 @@ return require("packer").startup(function(use)
     "williamboman/mason-lspconfig.nvim",
     "windwp/nvim-autopairs",
     "windwp/nvim-ts-autotag",
+    'junegunn/vim-peekaboo',
     { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" },
   }
   use {
