@@ -11,6 +11,7 @@ require("mason-lspconfig").setup {
     "bashls",
     "clangd",
     "denols",
+    "dockerls",
     "eslint",
     "jdtls",
     "jsonls",
