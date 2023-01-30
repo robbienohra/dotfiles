@@ -10,7 +10,7 @@ export FZF_DEFAULT_OPTS="
 --history=$HOME/.fzf_history \
 --bind ctrl-d:page-down,ctrl-u:page-up \
 --bind alt-p:previous-history \
---bind alt-n:next-history \
+--bind alt-f:next-history \
 --bind ctrl-/:toggle-preview \
 --color='spinner:#fb4934,\
 hl:#928374,\

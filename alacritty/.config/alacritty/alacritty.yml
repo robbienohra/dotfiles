@@ -75,6 +75,7 @@ key_bindings:
   - { key: C, mods: Alt, chars: "\ec" }
   - { key: K, mods: Alt, chars: "\ek" }
   - { key: P, mods: Alt, chars: "\ep" }
+  - { key: F, mods: Alt, chars: "\ef" }
   - { key: N, mods: Alt, chars: "\en" }
   - { key: O, mods: Alt, chars: "\eo" }
   - { key: M, mods: Alt, chars: "\em" }
