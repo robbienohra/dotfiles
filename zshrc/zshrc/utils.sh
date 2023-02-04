@@ -47,7 +47,7 @@ function dev() {
 
 function rand_str() {
   # https://unix.stackexchange.com/questions/230673/how-to-generate-a-random-string
-  LC_ALL=C tr -dc a-z0-9 </dev/urandom | head -c 4
+  LC_ALL=C tr -dc a-z0-9 </dev/urandom | head -c 5
   echo ''
 }
 
