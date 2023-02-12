@@ -15,7 +15,7 @@ require("mason-lspconfig").setup {
     "eslint",
     "jdtls",
     "jsonls",
-    "sumneko_lua",
+    "lua_ls",
     "prismals",
     "pyright",
     "rust_analyzer",
