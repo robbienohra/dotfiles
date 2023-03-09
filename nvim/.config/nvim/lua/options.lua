@@ -19,7 +19,6 @@ o.undofile = true
 o.cmdheight = 0
 o.conceallevel = 2
 o.completeopt = { "menuone", "noinsert", "noselect" }
-o.foldmethod = "marker"
 -- https://neovim.io/doc/user/change.html#fo-table
 -- o.formatoptions:append "l"
 -- can also append multiple values using a table
@@ -39,8 +38,8 @@ o.clipboard = { "unnamed", "unnamedplus" }
 o.ignorecase = true
 o.smartcase = true
 -- Folding
-o.foldlevel = 20
 -- https://neovim.io/doc/user/fold.html#[z
+o.foldlevel = 20
 o.foldmethod = "expr"
 o.foldexpr = "nvim_treesitter#foldexpr()"
 local a = {}
