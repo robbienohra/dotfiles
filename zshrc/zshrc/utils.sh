@@ -1,5 +1,5 @@
 function srr() {
-  sudo -A rm -r "$@"
+  sudo rm -rf "$@"
 }
 
 function npm_login() {
