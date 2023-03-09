@@ -28,10 +28,6 @@ require("mason-lspconfig").setup {
   },
 }
 
--- formatters
--- shfmt
--- yamlfmt
-
 -- disable formatting for cases where null-ls is the desired default
 -- https://microsoft.github.io/language-server-protocol/specifications/lsp/3.17/specification/#serverCapabilities
 local function on_attach(client, bufnr)
