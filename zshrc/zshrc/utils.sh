@@ -7,10 +7,9 @@ function npm_login() {
   npm login --scope=@clearbanc --registry=https://npm.pkg.github.com
 }
 
-USER="postgres"
 function u() {
   DB=$1
-  usql "postgres://${USER}@localhost:5432/${DB}?sslmode=disable"
+  usql "postgres://postgres@localhost:5432/${DB}?sslmode=disable"
 }
 
 function u-cols() {
