@@ -36,6 +36,7 @@
   pf = push --force-with-lease origin head
   # diffs
   di = diff
+  dis = diff --staged
   din = diff --name-only 
   diu = diff @{upstream} @
   diun = diff @{upstream} @ --name-only

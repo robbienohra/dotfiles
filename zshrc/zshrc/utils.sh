@@ -30,18 +30,10 @@ function lsp() {
   tail -f ~/.cache/nvim/mason.log
 }
 
-function dev() {
-  npm run dev
-}
-
 function rand_str() {
   # https://unix.stackexchange.com/questions/230673/how-to-generate-a-random-string
   LC_ALL=C tr -dc a-z0-9 </dev/urandom | head -c 5
   echo ''
-}
-
-function snip() {
-  pbpaste | gh gist create -f "$1"
 }
 
 function gen-pairs() {
@@ -75,4 +67,8 @@ function jwtd() {
 
 function dr() {
   dcli p root;
+}
+
+function et() {
+  exa --tree "$@"
 }
