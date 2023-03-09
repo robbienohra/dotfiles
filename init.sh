@@ -9,9 +9,6 @@
 echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >>/Users/robbienohra/.zprofile
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
-# install node
-# https://nodejs.org/en/download/
-
 # install cargo
 # https://doc.rust-lang.org/cargo/getting-started/installation.html
 curl https://sh.rustup.rs -sSf | sh
@@ -40,12 +37,5 @@ npm i -g npm-groovy-lint
 
 # pip3 install pynvim
 
-# setup mod-dh
-# https://github.com/ColemakMods/mod-dh
-# reminder: disable mission control keyboard shortcuts to free control key
-
 # setup tmux plugin manager
 # https://github.com/tmux-plugins/tpm#installation
-
-# app switcher
-# https://manytricks.com/witch/
