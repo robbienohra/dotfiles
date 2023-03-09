@@ -40,11 +40,6 @@ npm i -g npm-groovy-lint
 
 # pip3 install pynvim
 
-# pass setup
-# create a gpg key with same name as store
-# gpg --gen-key
-# http://irtfweb.ifa.hawaii.edu/~lockhart/gpg/
-
 # setup mod-dh
 # https://github.com/ColemakMods/mod-dh
 # reminder: disable mission control keyboard shortcuts to free control key

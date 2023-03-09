@@ -72,3 +72,7 @@ function jwtd() {
     echo "Signature: $(echo "${1}" | awk -F'.' '{print $3}')"
   fi
 }
+
+function dr() {
+  dcli p root;
+}
