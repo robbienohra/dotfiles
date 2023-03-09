@@ -1,4 +1,4 @@
 #!/bin/zsh
 
-PW=$(pass show robbie/root) 
+PW=$(dcli p root) 
 echo $PW
