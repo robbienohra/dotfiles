@@ -1,8 +1,3 @@
-# https://superuser.com/questions/1092033/how-can-i-make-zsh-tab-completion-fix-capitalization-errors-for-directories-and
-# autoload -Uz compinit && compinit
-# zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
-# ZSH_DISABLE_COMPFIX=true
-# local WORDCHARS='*?_[]~=&;!#$%^(){}<>'
 setopt auto_cd
 setopt globdots
 export HISTFILE="$HOME/.zsh_history"
