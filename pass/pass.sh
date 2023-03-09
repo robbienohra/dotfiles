@@ -1,4 +1,4 @@
 #!/bin/zsh
-
-PW=$(dcli p root) 
+dcli p root
+PW=$(pbpaste) 
 echo $PW

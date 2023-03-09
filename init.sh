@@ -12,10 +12,6 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 # install node
 # https://nodejs.org/en/download/
 
-# install zsh
-# https://ohmyz.sh/#install
-# sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
 # install cargo
 # https://doc.rust-lang.org/cargo/getting-started/installation.html
 curl https://sh.rustup.rs -sSf | sh

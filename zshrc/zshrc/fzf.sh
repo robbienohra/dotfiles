@@ -25,10 +25,6 @@ prompt:#fb4934,\
 hl+:#fb4934,\
 gutter:-1'"
 
-# export FZF_CTRL_T_OPTS="
-#  --preview 'bat --style=numbers --color=always --line-range :500 {}' \
-#  --preview-window right,50%"
-
 export FZF_ALT_C_OPTS="
  --bind ctrl-d:page-down,ctrl-u:page-up \
  --preview-window right,50% \

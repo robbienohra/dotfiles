@@ -2,10 +2,6 @@ function srr() {
   sudo -A rm -r "$@"
 }
 
-function ch() {
-  open http://google.com
-}
-
 function npm_login() {
   # npm login --registry=https://npm.pkg.github.com
   npm login --scope=@clearbanc --registry=https://npm.pkg.github.com

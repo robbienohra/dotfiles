@@ -1,5 +1,4 @@
 alias git="/opt/homebrew/bin/git"
-alias sz='source ~/.zshrc'
 alias g='git'
 alias b="bash"
 alias v="nvim"
