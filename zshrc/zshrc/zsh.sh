@@ -1,3 +1,7 @@
+autoload -Uz compinit && compinit
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+ZSH_DISABLE_COMPFIX=true
+local WORDCHARS='*?.[]~=&;!#$%^(){}<>'
 setopt auto_cd
 setopt globdots
 export HISTFILE="$HOME/.zsh_history"
