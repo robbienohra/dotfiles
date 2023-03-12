@@ -1,49 +1,19 @@
-local fn = vim.fn
-local install_path = fn.stdpath "data" .. "/site/pack/packer/opt/packer.nvim"
-
-local packer_bootstrap
--- https://github.com/wbthomason/packer.nvim/issues/718#issuecomment-1009018188
-if fn.empty(fn.glob(install_path)) > 0 then
-  packer_bootstrap = fn.system {
-    "git",
-    "clone",
-    "--depth",
-    "1",
-    "https://github.com/wbthomason/packer.nvim",
-    install_path,
-  }
-end
-
-vim.cmd "packadd packer.nvim"
-
-return require("packer").startup(function(use)
-  use {
+return {
     "tpope/vim-fugitive",
     "tpope/vim-repeat",
     "tpope/vim-rhubarb", -- required by fugitive to :Gbrowse
     "tpope/vim-surround",
     "tpope/vim-unimpaired",
     "tpope/vim-vinegar",
-  }
-  -- theming
-  use {
     {
       "nvim-lualine/lualine.nvim",
-      requires = { "kyazdani42/nvim-web-devicons", opt = true },
+      dependencies = { "kyazdani42/nvim-web-devicons", opt = true },
     },
     { "luisiacc/gruvbox-baby", branch = "main" },
-  }
-  -- development
-  use "nvim-tree/nvim-web-devicons"
-  use {
-    "goolord/alpha-nvim",
-    requires = { "kyazdani42/nvim-web-devicons" },
-  }
-  use "lewis6991/impatient.nvim"
-  use { "junegunn/fzf.vim", { "junegunn/fzf", run = ":call fzf#install()" } }
-  use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } }
-  use {
-    "hrsh7th/cmp-buffer",
+"lewis6991/impatient.nvim",
+{ "junegunn/fzf", build = ":call fzf#install()", lazy=false },
+   { "junegunn/fzf.vim", lazy=false },
+"hrsh7th/cmp-buffer",
     "hrsh7th/cmp-cmdline",
     "hrsh7th/cmp-nvim-lsp",
     "hrsh7th/cmp-path",
@@ -51,10 +21,9 @@ return require("packer").startup(function(use)
     "hrsh7th/nvim-cmp",
     "hrsh7th/vim-vsnip",
     "hrsh7th/vim-vsnip-integ",
-  }
-  use {
     "Yggdroot/indentLine",
     "jose-elias-alvarez/null-ls.nvim",
+    "nvim-lua/plenary.nvim",
     "mfussenegger/nvim-dap",
     "mhinz/vim-signify",
     "neovim/nvim-lspconfig",
@@ -66,17 +35,5 @@ return require("packer").startup(function(use)
     "windwp/nvim-autopairs",
     "windwp/nvim-ts-autotag",
     "junegunn/vim-peekaboo",
-    { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" },
-  }
-  use {
-    "iamcco/markdown-preview.nvim",
-    run = function()
-      vim.fn["mkdp#util#install"]()
-    end,
-  }
-  use "nvim-lua/plenary.nvim"
-  use { "wbthomason/packer.nvim", opt = true }
-  if packer_bootstrap then
-    require("packer").sync()
-  end
-end)
+    { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
+ }

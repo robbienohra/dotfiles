@@ -67,5 +67,3 @@ lspconfig.terraformls.setup { on_attach = on_attach }
 lspconfig.tsserver.setup { on_attach = on_attach }
 lspconfig.volar.setup { on_attach = on_attach }
 lspconfig.yamlls.setup { on_attach = on_attach }
-
-require "user.lsp.null-ls"
