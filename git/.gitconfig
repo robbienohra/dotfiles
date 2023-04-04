@@ -30,15 +30,15 @@
   ca = commit --amend
   ce = commit --amend --no-edit
   # pull
-  ll = pull
+  l = pull
   # push
-  pu = push
+  p = push
   pf = push --force-with-lease origin head
   # diffs
-  di = diff
-  dis = diff --staged
+  d = diff
+  ds = diff --staged
   din = diff --name-only 
-  diu = diff @{upstream} @
+  dup = diff @{upstream} @
   diun = diff @{upstream} @ --name-only
   oldest-ancestor = !zsh -c 'diff --old-line-format= --new-line-format= <(git rev-list --first-parent \"${1:-$1}\") <(git rev-list --first-parent \"${2:-HEAD}\") | head -1' -
   pr ="!f() { git diff origin/$1...head; }; f"
@@ -61,7 +61,9 @@
   std = stash drop
   stp = stash pop
   ru = remote update
-  fe = fetch
+  f = fetch
+  fa = fetch --all --prune
+  fo = fetch origin
   ma = merge --abort
   re = reset --hard @{u}
   res = restore
