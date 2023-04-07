@@ -26,7 +26,7 @@
   ra = rebase --abort
   rr = rebase --continue
   # commit
-  cc = commit
+  c = commit -v
   ca = commit --amend
   ce = commit --amend --no-edit
   # pull
