@@ -30,7 +30,6 @@ stow
 sops
 terragrunt
 the_silver_searcher
-tmux
 tokei
 wget
 xo/xo/usql
