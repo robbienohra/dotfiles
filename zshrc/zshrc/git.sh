@@ -51,10 +51,6 @@ function s() {
   gh pr view -w $(gh pr list --search "$@" --state merged --json number | jq '.[].number')
 }
 
-function di() {
-  bash ~/dotfiles/diff.sh "$@"
-}
-
 function prune() {
   git branch | egrep -v "(^\*|$1)" | xargs git branch -D
 }

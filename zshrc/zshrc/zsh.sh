@@ -8,10 +8,6 @@ export HISTFILE="$HOME/.zsh_history"
 export HISTSIZE=1000000000
 export SAVEHIST=$HISTSIZE
 setopt SHARE_HISTORY
-bindkey -r '^T'
-bindkey -r '^R'
-bindkey -r '^A'
-bindkey -r '^G'
 bindkey '^[a' beginning-of-line
 bindkey '^[r' end-of-line
 bindkey "^[[1;3C" forward-word
