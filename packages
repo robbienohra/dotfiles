@@ -25,7 +25,6 @@ pure
 rectangle
 ripgrep
 shfmt
-starship
 stow
 sops
 terragrunt
