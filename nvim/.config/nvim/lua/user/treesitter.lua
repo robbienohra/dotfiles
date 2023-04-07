@@ -21,6 +21,7 @@ require("nvim-treesitter.configs").setup {
     "terraform",
     "toml",
     "typescript",
+    "vim",
     "vue",
     "yaml",
   },

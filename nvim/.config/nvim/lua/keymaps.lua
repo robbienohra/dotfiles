@@ -71,10 +71,10 @@ map("n", "<C-d>", "<C-d>zz")
 map("n", "<C-u>", "<C-u>zz")
 
 -- refresh
--- map("n", "<Leader>r", ":luafile %<CR>")
+map("n", "<Leader>r", ":luafile %<CR>")
 
 -- reattach
-map("n", "<Leader>r", ":e <CR>")
+-- map("n", "<Leader>r", ":e <CR>")
 
 -- tab
 map("n", "tn", ":tabnew <CR>")
