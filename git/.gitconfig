@@ -16,6 +16,7 @@
   rl = reflog --format='%C(auto)%h %<|(20)%gd %C(blue)%cr%C(reset) %gs (%s)'
   # switch
   sw = switch
+  swt = switch -t
   swc = switch -c
   # branch
   bd = branch -D
