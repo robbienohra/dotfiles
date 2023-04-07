@@ -21,10 +21,6 @@ bash packages.sh
 
 git config credential.helper store
 
-# alacritty
-
-defaults write -g AppleFontSmoothing -int 0
-
 # global npm packages
 
 npm i -g typescript

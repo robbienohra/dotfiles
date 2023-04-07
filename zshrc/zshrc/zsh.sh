@@ -29,8 +29,3 @@ export EDITOR=nvim
 export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
 export LDFLAGS="-L/opt/homebrew/opt/llvm/lib"
 export CPPFLAGS="-I/opt/homebrew/opt/llvm/include"
-
-if [ -f /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh; fi
-# https://github.com/zsh-users/zsh-syntax-highlighting/issues/780
-
-if [[ $TERM == "alacritty" ]]; then ZSH_HIGHLIGHT_STYLES[comment]="fg=whatever_color,bold"; fi
