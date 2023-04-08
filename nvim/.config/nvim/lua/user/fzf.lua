@@ -8,8 +8,10 @@ local cmd = vim.api.nvim_command
 -- https://github.com/junegunn/fzf.vim/issues/346#issuecomment-288483704
 cmd(
   [[command! -bang -nargs=* Rg call ]]
-    .. [[ fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case --hidden --glob '!.git/*' ".shellescape(<q-args>), 1,]]
-    .. [[ fzf#vim#with_preview({'options': []}), <bang>0)
+    .. [[fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case --hidden --glob '!.git/*' ".shellescape(<q-args>),]]
+    .. [[1,]]
+    .. [[fzf#vim#with_preview({'options': []}),]]
+    .. [[<bang>0)
 ]]
 )
 
@@ -18,8 +20,8 @@ cmd(
   [[command! -bang -nargs=* BLines call ]]
     .. [[fzf#vim#grep(]]
     .. [['rg --with-filename --column --line-number --no-heading --smart-case . '.fnameescape(expand('%:p')),]]
-    .. [[ 1,]]
+    .. [[1,]]
     .. [[fzf#vim#with_preview({'options': '--query '.shellescape(<q-args>).' --with-nth=4..'}, 'up:60%'),]]
-    .. [[0)
+    .. [[<bang>0)
 ]]
 )
