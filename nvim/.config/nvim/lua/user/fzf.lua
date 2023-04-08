@@ -13,16 +13,13 @@ cmd(
 ]]
 )
 
-cmd(
-  [[ command! -bang -nargs=? -complete=dir Files call ]]
-    .. [[ fzf#vim#files(<q-args>,]]
-    .. [[ fzf#vim#with_preview({'options': []}), <bang>0)]]
-)
-
 -- https://github.com/junegunn/fzf.vim/issues/374#issuecomment-724301156
 cmd(
   [[command! -bang -nargs=* BLines call ]]
-    .. [[fzf#vim#grep('rg --with-filename --column --line-number --no-heading --smart-case . '.fnameescape(expand('%:p')), 1,]]
-    .. [[fzf#vim#with_preview({'options': '--query '.shellescape(<q-args>).' --with-nth=4..'}))
+    .. [[fzf#vim#grep(]]
+    .. [['rg --with-filename --column --line-number --no-heading --smart-case . '.fnameescape(expand('%:p')),]]
+    .. [[ 1,]]
+    .. [[fzf#vim#with_preview({'options': '--query '.shellescape(<q-args>).' --with-nth=4..'}, 'up:60%'),]]
+    .. [[0)
 ]]
 )
