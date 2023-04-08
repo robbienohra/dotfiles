@@ -14,13 +14,3 @@ cmd(
     .. [[<bang>0)
 ]]
 )
-
--- https://github.com/junegunn/fzf.vim/issues/374#issuecomment-724301156
-cmd(
-  [[command! -bang -nargs=* BLines call ]]
-    .. [[fzf#vim#grep('rg --with-filename --column --line-number --no-heading --smart-case . '.fnameescape(expand('%:p')),]]
-    .. [[1,]]
-    .. [[fzf#vim#with_preview({'options': '--query '.shellescape(<q-args>).' --with-nth=4..'}, 'down:60%,hidden'),]]
-    .. [[<bang>0)
-]]
-)
