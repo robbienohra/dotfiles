@@ -10,7 +10,7 @@ cmd(
   [[command! -bang -nargs=* Rg call ]]
     .. [[fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case --hidden --glob '!.git/*' ".shellescape(<q-args>),]]
     .. [[1,]]
-    .. [[fzf#vim#with_preview({'options': []}),]]
+    .. [[fzf#vim#with_preview({'options': ['--layout=default']}, 'up:60%'),]]
     .. [[<bang>0)
 ]]
 )
