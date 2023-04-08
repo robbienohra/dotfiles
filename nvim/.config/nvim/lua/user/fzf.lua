@@ -1,4 +1,4 @@
-vim.g.fzf_preview_window = { "down:50%" }
+vim.g.fzf_preview_window = { "down:hidden" }
 vim.g.fzf_history_dir = "~/.local/share/fzf-history"
 vim.g.fzf_layout = { window = { width = 0.90, height = 0.80, relative = true } }
 vim.g.fzf_colors = { fg = { "fg", "Normal" }, bg = { "bg", "Normal" } }
@@ -10,7 +10,7 @@ cmd(
   [[command! -bang -nargs=* Rg call ]]
     .. [[fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case --hidden --glob '!.git/*' ".shellescape(<q-args>),]]
     .. [[1,]]
-    .. [[fzf#vim#with_preview({'options': ['--layout=default']}, 'up:60%'),]]
+    .. [[fzf#vim#with_preview({'options': []}, 'down:50%'),]]
     .. [[<bang>0)
 ]]
 )
