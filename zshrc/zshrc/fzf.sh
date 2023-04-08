@@ -1,8 +1,5 @@
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-
-# --bind ctrl-d:preview-page-down,ctrl-u:preview-page-up \
-# https://github.com/junegunn/fzf/issues/249
 export FZF_DEFAULT_OPTS="
 --history=$HOME/.fzf_history \
 --bind ctrl-d:page-down,ctrl-u:page-up \
@@ -11,7 +8,7 @@ export FZF_DEFAULT_OPTS="
 --bind ctrl-/:toggle-preview \
 --info=hidden \
 --color='spinner:#fb4934,\
-hl:#928374,\
+hl:#DA9690,\
 fg:#ebdbb2,\
 header:#928374,\
 info:#8ec07c,\
@@ -23,5 +20,5 @@ prompt:#fb4934,\
 hl+:#fb4934,\
 gutter:-1'"
 
-export FZF_DEFAULT_COMMAND="rg --files --hidden --follow --column" # picked up by vim
+export FZF_DEFAULT_COMMAND="rg --files --hidden --follow" # picked up by vim
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"

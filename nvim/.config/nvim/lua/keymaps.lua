@@ -94,7 +94,7 @@ map(
   ":call fzf#run(fzf#wrap({'source': 'fd --type d --hidden --exclude \".git\"', 'options':'--bind ctrl-d:page-down,ctrl-u:page-up --preview-window right,50% --preview \"exa --tree --level=2 {}\"'})) <CR>"
 )
 map("n", "<leader>b", ":BLines <CR>")
-map("n", "<leader>f", ":Rg <CR>")
+map("n", "<leader>f", ":Rg<space>")
 
 -- move snippets
 map("v", "J", ":m '>+1<CR>gv=gv")

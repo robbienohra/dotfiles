@@ -36,7 +36,7 @@ function rand_str() {
 }
 
 function dr() {
-  dcli p root;
+  dcli p root
 }
 
 function et() {
