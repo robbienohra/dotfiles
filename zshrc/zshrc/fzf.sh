@@ -8,7 +8,21 @@ export FZF_DEFAULT_OPTS="
 --bind ctrl-d:page-down,ctrl-u:page-up \
 --bind ctrl-p:previous-history \
 --bind ctrl-f:next-history \
---bind ctrl-/:toggle-preview"
+--bind ctrl-/:toggle-preview \
+--info=hidden \
+--layout=reverse \
+--color='spinner:#fb4934,\
+hl:#928374,\
+fg:#ebdbb2,\
+header:#928374,\
+info:#8ec07c,\
+pointer:#fb4934,\
+marker:#fb4934,\
+fg+:#ebdbb2,\
+bg+:-1,\
+prompt:#fb4934,\
+hl+:#fb4934,\
+gutter:-1'"
 
 export FZF_ALT_C_OPTS="
  --bind ctrl-d:page-down,ctrl-u:page-up \

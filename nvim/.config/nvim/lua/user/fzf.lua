@@ -6,7 +6,23 @@ vim.g.fzf_colors = { fg = { "fg", "Normal" }, bg = { "bg", "Normal" } }
 local cmd = vim.api.nvim_command
 
 -- https://github.com/junegunn/fzf.vim/issues/346#issuecomment-288483704
-cmd [[command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case --hidden --glob '!.git/*' ".shellescape(<q-args>), 1, fzf#vim#with_preview({'options': '--delimiter : --preview-window bottom:50% --nth 4..'}), <bang>0)]]
+cmd(
+  [[command! -bang -nargs=* Rg call ]]
+    .. [[ fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case --hidden --glob '!.git/*' ".shellescape(<q-args>), 1,]]
+    .. [[ fzf#vim#with_preview({'options': []}), <bang>0)
+]]
+)
+
+cmd(
+  [[ command! -bang -nargs=? -complete=dir Files call ]]
+    .. [[ fzf#vim#files(<q-args>,]]
+    .. [[ fzf#vim#with_preview({'options': []}), <bang>0)]]
+)
 
 -- https://github.com/junegunn/fzf.vim/issues/374#issuecomment-724301156
-cmd [[command! -bang -nargs=* BLines call fzf#vim#grep('rg --with-filename --column --line-number --no-heading --smart-case . '.fnameescape(expand('%:p')), 1, fzf#vim#with_preview({'options': '--query '.shellescape(<q-args>).' --with-nth=4.. --delimiter=":"'}, 'down:50%')) "fzf#vim#with_preview({'options': '--layout reverse  --with-nth=-1.. --delimiter="/"'}, 'down:50%'))]]
+cmd(
+  [[command! -bang -nargs=* BLines call ]]
+    .. [[fzf#vim#grep('rg --with-filename --column --line-number --no-heading --smart-case . '.fnameescape(expand('%:p')), 1,]]
+    .. [[fzf#vim#with_preview({'options': '--query '.shellescape(<q-args>).' --with-nth=4..'}))
+]]
+)
