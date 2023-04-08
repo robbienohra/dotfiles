@@ -10,7 +10,7 @@ cmd(
   [[command! -bang -nargs=* Rg call ]]
     .. [[fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case --hidden --glob '!.git/*' ".shellescape(<q-args>),]]
     .. [[1,]]
-    .. [[fzf#vim#with_preview({'options': []}, 'down:50%'),]]
+    .. [[fzf#vim#with_preview({'options': []}, 'down:60%'),]]
     .. [[<bang>0)
 ]]
 )
@@ -21,7 +21,7 @@ cmd(
     .. [[fzf#vim#grep(]]
     .. [['rg --with-filename --column --line-number --no-heading --smart-case . '.fnameescape(expand('%:p')),]]
     .. [[1,]]
-    .. [[fzf#vim#with_preview({'options': '--query '.shellescape(<q-args>).' --with-nth=4..'}, 'up:60%'),]]
+    .. [[fzf#vim#with_preview({'options': '--query '.shellescape(<q-args>).' --with-nth=4..'}, 'down:60%'),]]
     .. [[<bang>0)
 ]]
 )
