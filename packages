@@ -26,6 +26,7 @@ ripgrep
 shfmt
 stow
 sops
+terraform
 terragrunt
 the_silver_searcher
 tokei
