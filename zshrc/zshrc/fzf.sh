@@ -23,6 +23,5 @@ prompt:#fb4934,\
 hl+:#fb4934,\
 gutter:-1'"
 
-export FZF_DEFAULT_COMMAND='rg --files --hidden --follow'
+export FZF_DEFAULT_COMMAND='rg --files --hidden --follow' # picked up by vim
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-export FZF_ALT_C_COMMAND="fd -H -E .git --type d"
