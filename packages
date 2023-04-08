@@ -21,7 +21,6 @@ ninja
 nvim
 openjdk
 procs
-pure
 rectangle
 ripgrep
 shfmt
