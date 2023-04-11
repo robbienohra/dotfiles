@@ -8,10 +8,6 @@ export HISTFILE="$HOME/.zsh_history"
 export HISTSIZE=1000000000
 export SAVEHIST=$HISTSIZE
 setopt SHARE_HISTORY
-bindkey '^[a' beginning-of-line
-bindkey '^[r' end-of-line
-bindkey "^[[1;3C" forward-word
-bindkey "^[[1;3D" backward-word
 export PROMPT_EOL_MARK=''
 
 export RIPGREP_CONFIG_PATH=$HOME/.ripgreprc

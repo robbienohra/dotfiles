@@ -22,7 +22,7 @@ function u-cols() {
   AND table_name = '${TABLE}' 
   ORDER BY column_name ASC;
 EOM
-  usql "postgres://${USER}@localhost:5432/${DB}?sslmode=disable" -c $VAR
+  usql "postgres://${USER}@localhost:5432/${DB}?sslmode=disable" -c "$VAR"
 }
 
 function lsp() {

@@ -2,9 +2,3 @@ export DOCKER_BUILDKIT=1
 export COMPOSE_DOCKER_CLI_BUILD=1
 export DOCKER_CLIENT_TIMEOUT=120
 export COMPOSE_HTTP_TIMEOUT=120
-
-function dc-fn() {
-  docker compose "$*"
-}
-
-alias dc="dc-fn"
