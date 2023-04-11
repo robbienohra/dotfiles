@@ -25,20 +25,12 @@ EOM
   usql "postgres://${USER}@localhost:5432/${DB}?sslmode=disable" -c "$VAR"
 }
 
-function lsp() {
-  tail -f ~/.cache/nvim/mason.log
-}
-
 function rand_str() {
   # https://unix.stackexchange.com/questions/230673/how-to-generate-a-random-string
   LC_ALL=C tr -dc a-z0-9 </dev/urandom | head -c 5
   echo ''
 }
 
-function dr() {
-  dcli p root
-}
-
-function et() {
-  exa --tree "$@"
+function pat() {
+  dcli p GH_PAT
 }
