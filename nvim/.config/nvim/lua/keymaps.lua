@@ -31,7 +31,6 @@ map("n", "<Leader>gr", ":GDelete<CR>")
 map("n", "<Leader>ge", ":.GBrowse<CR>")
 map("n", "<Leader>gf", ":GBrowse<CR>")
 map("n", "<Leader>gt", ":G tag<CR>")
--- map("n", "<Leader>gf", ":!bash ~/dotfiles/diff.sh % <CR>")
 
 -- Set working directory
 map("n", "<leader>.", ":lcd %:p:h<CR>")
@@ -76,9 +75,6 @@ map("n", "<Leader>r", ":luafile %<CR>")
 -- reattach
 -- map("n", "<Leader>r", ":e <CR>")
 
--- tab
-map("n", "tn", ":tabnew <CR>")
-
 -- yank filename
 map("n", "<leader>c", ":let @+=expand('%')<CR>")
 
@@ -94,7 +90,7 @@ map(
   ":call fzf#run(fzf#wrap({'source': 'fd --type d --hidden --exclude \".git\"', 'options':'--bind ctrl-d:page-down,ctrl-u:page-up --preview-window right,50% --preview \"exa --tree --level=2 {}\"'})) <CR>"
 )
 map("n", "<leader>b", ":BLines <CR>")
-map("n", "<leader>f", ":Rg<space>")
+map("n", "<leader>f", ":Rg<space>", { silent = false })
 
 -- move snippets
 map("v", "J", ":m '>+1<CR>gv=gv")
