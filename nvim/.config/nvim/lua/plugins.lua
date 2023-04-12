@@ -43,4 +43,5 @@ return {
   "windwp/nvim-ts-autotag",
   "junegunn/vim-peekaboo",
   { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
+  "WhoIsSethDaniel/mason-tool-installer.nvim",
 }

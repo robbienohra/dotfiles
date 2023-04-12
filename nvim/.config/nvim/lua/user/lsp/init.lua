@@ -4,13 +4,12 @@ local lspconfig = require "lspconfig"
 require("mason-tool-installer").setup {
 
   ensure_installed = {
-    "clang_format",
-    "deno_fmt",
+    "clang-format",
+    -- "deno_fmt",
     "prettier",
     "shfmt",
-    "sql_formatter",
+    "sql-formatter",
     "stylua",
-    "terraform_fmt",
     "yamlfmt",
   },
 
