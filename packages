@@ -23,7 +23,6 @@ openjdk
 procs
 rectangle
 ripgrep
-shfmt
 stow
 sops
 terraform
