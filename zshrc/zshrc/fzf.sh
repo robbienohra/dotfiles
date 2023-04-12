@@ -52,7 +52,7 @@ export FZF_DEFAULT_OPTS="
 --color=preview-fg:${FOREGROUND} \
 --color=preview-bg:${BACKGROUND}"
 
-export FZF_DEFAULT_COMMAND="rg --files --hidden --follow" # picked up by vim
+export FZF_DEFAULT_COMMAND="rg --files --follow" # picked up by vim
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 function fzf-down() {
