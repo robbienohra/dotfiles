@@ -1,8 +1,30 @@
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-RED="#fb4934"
-ORANGE="#FCA65F"
-WHITE="#ebdbb2"
+
+DARK0=#0D0E0F
+DARK=#0D0E0F
+BACKGROUND_DARK=#171A1A
+BACKGROUND=#1D2021
+BACKGROUND_LIGHT=#32302F
+FOREGROUND=#EBDBB2
+GRAY=#DEDEDE
+MEDIUM_GRAY=#504945
+COMMENT=#665C54
+MILK=#E7D7AD
+ERROR_RED=#CC241D
+RED=#FB4934
+ORANGE=#D65D0E
+BRIGHT_YELLOW=#FABD2F
+SOFT_YELLOW=#EEBD35
+PINK=#D4879C
+MAGENTA=#B16286
+SOFT_GREEN=#98971A
+FOREST_GREEN=#689D6A
+CLEAN_GREEN=#8EC07C
+BLUE_GRAY=#458588
+DARK_GRAY=#83A598
+LIGHT_BLUE=#7FA2AC
+
 
 export FZF_DEFAULT_OPTS="
 --history=$HOME/.fzf_history \
@@ -11,18 +33,24 @@ export FZF_DEFAULT_OPTS="
 --bind ctrl-f:next-history \
 --bind ctrl-/:toggle-preview \
 --info=hidden \
---color='spinner:$RED,\
-hl:$ORANGE,\
-fg:$WHITE,\
-header:#928374,\
-info:#8ec07c,\
-pointer:$RED,\
-marker:$RED,\
-fg+:$WHITE,\
-bg+:-1,\
-prompt:$RED,\
-hl+:$RED,\
-gutter:-1'"
+--color=fg:${FOREGROUND} \
+--color=bg:${BACKGROUND} \
+--color=hl:${BRIGHT_YELLOW} \
+--color=fg+:bold:${FOREGROUND} \
+--color=bg+:${COMMENT} \
+--color=hl+:${BRIGHT_YELLOW} \
+--color=gutter:${BACKGROUND} \
+--color=info:${ORANGE} \
+--color=separator:${BACKGROUND} \
+--color=border:${MILK} \
+--color=label:${SOFT_YELLOW} \
+--color=prompt:${LIGHT_BLUE} \
+--color=spinner:${BRIGHT_YELLOW} \
+--color=pointer:bold:${BRIGHT_YELLOW} \
+--color=marker:${ERROR_RED} \
+--color=header:${ORANGE} \
+--color=preview-fg:${FOREGROUND} \
+--color=preview-bg:${BACKGROUND}"
 
 export FZF_DEFAULT_COMMAND="rg --files --hidden --follow" # picked up by vim
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
