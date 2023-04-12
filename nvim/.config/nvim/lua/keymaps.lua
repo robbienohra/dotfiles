@@ -91,6 +91,7 @@ map(
 )
 map("n", "<leader>b", ":BLines <CR>")
 map("n", "<leader>f", ":Rg<space>", { silent = false })
+map("n", "<M-f>", ":RG<cr>")
 
 -- move snippets
 map("v", "J", ":m '>+1<CR>gv=gv")
