@@ -1,5 +1,7 @@
 local util = require "lspconfig.util"
 local lspconfig = require "lspconfig"
+local yaml_settings = require "user.lsp.settings.yaml"
+local lua_settings = require "user.lsp.settings.lua"
 
 require("mason-tool-installer").setup {
 
@@ -80,8 +82,9 @@ lspconfig.bashls.setup { on_attach = on_attach }
 lspconfig.clangd.setup {}
 lspconfig.jdtls.setup { on_attach = on_attach }
 lspconfig.jsonls.setup { on_attach = on_attach }
+lspconfig.lua_ls.setup { on_attach = on_attach, settings = lua_settings }
 lspconfig.prismals.setup { on_attach = on_attach }
 lspconfig.terraformls.setup { on_attach = on_attach }
 lspconfig.tsserver.setup { on_attach = on_attach }
 lspconfig.volar.setup { on_attach = on_attach }
-lspconfig.yamlls.setup { on_attach = on_attach }
+lspconfig.yamlls.setup { on_attach = on_attach, settings = yaml_settings }
