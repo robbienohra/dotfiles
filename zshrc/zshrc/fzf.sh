@@ -1,5 +1,9 @@
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+RED="#fb4934"
+ORANGE="#FCA65F"
+WHITE="#ebdbb2"
+
 export FZF_DEFAULT_OPTS="
 --history=$HOME/.fzf_history \
 --bind ctrl-d:page-down,ctrl-u:page-up \
@@ -7,17 +11,17 @@ export FZF_DEFAULT_OPTS="
 --bind ctrl-f:next-history \
 --bind ctrl-/:toggle-preview \
 --info=hidden \
---color='spinner:#fb4934,\
-hl:#DA9690,\
-fg:#ebdbb2,\
+--color='spinner:$RED,\
+hl:$ORANGE,\
+fg:$WHITE,\
 header:#928374,\
 info:#8ec07c,\
-pointer:#fb4934,\
-marker:#fb4934,\
-fg+:#ebdbb2,\
+pointer:$RED,\
+marker:$RED,\
+fg+:$WHITE,\
 bg+:-1,\
-prompt:#fb4934,\
-hl+:#fb4934,\
+prompt:$RED,\
+hl+:$RED,\
 gutter:-1'"
 
 export FZF_DEFAULT_COMMAND="rg --files --hidden --follow" # picked up by vim
