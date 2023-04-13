@@ -32,5 +32,5 @@ function rand_str() {
 }
 
 function t() {
-  v $(fzf);
+  v $(fzf)
 }

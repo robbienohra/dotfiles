@@ -44,4 +44,5 @@ return {
   "junegunn/vim-peekaboo",
   { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
   "WhoIsSethDaniel/mason-tool-installer.nvim",
+  "ThePrimeagen/harpoon",
 }

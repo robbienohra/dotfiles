@@ -39,8 +39,8 @@ map("n", "<leader>.", ":lcd %:p:h<CR>")
 map("n", "<leader><space>", ":noh<cr>")
 
 -- Split
-map("n", "<Leader>h", ":<C-u>split<CR>")
-map("n", "<Leader>v", ":<C-u>vsplit<CR>")
+map("n", "<Leader>-", ":<C-u>split<CR>")
+map("n", "<Leader><bs>", ":<C-u>vsplit<CR>")
 
 -- Search mappings: These will make it so that going to the next one in a
 -- search will center on the line it's found in.
@@ -96,3 +96,7 @@ map("n", "<M-f>", ":RG<cr>")
 -- move snippets
 map("v", "J", ":m '>+1<CR>gv=gv")
 map("v", "K", ":m '<-2<CR>gv=gv")
+
+-- harpoon
+map("n", "<leader>ha", ":lua require('harpoon.mark').add_file()<CR>")
+map("n", "<bs>h", ":lua require('harpoon.ui').toggle_quick_menu()<CR>")
