@@ -1,6 +1,5 @@
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-
 DARK0=#0D0E0F
 DARK=#0D0E0F
 BACKGROUND_DARK=#171A1A
@@ -24,7 +23,6 @@ CLEAN_GREEN=#8EC07C
 BLUE_GRAY=#458588
 DARK_GRAY=#83A598
 LIGHT_BLUE=#7FA2AC
-
 
 export FZF_DEFAULT_OPTS="
 --history=$HOME/.fzf_history \
@@ -56,10 +54,13 @@ export FZF_DEFAULT_COMMAND="rg --files --follow" # picked up by vim
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 function is_in_git_repo() {
-  git rev-parse HEAD > /dev/null 2>&1
+  git rev-parse HEAD >/dev/null 2>&1
 }
 
-function gb() {
-  is_in_git_repo || return
-  g sw $(git branch -a --color=always | grep -v '/HEAD\s' | sort | fzf)
+function sw() {
+  local branches branch
+  branches=$(git branch --all | grep -v HEAD) &&
+    branch=$(echo "$branches" |
+      fzf -d $((2 + $(wc -l <<<"$branches"))) +m) &&
+    git switch $(echo "$branch" | sed "s/.* //" | sed "s#remotes/[^/]*/##")
 }

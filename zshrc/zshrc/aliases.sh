@@ -1,6 +1,5 @@
 alias git="/opt/homebrew/bin/git"
 alias g='git'
-alias b="bash"
 alias v="nvim"
 alias n="nvim ."
 

@@ -29,6 +29,7 @@ null_ls.setup {
     formatting.shfmt.with {
       filetypes = {
         "sh",
+        "zsh",
       },
     },
   },
