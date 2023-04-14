@@ -98,5 +98,5 @@ map("v", "J", ":m '>+1<CR>gv=gv")
 map("v", "K", ":m '<-2<CR>gv=gv")
 
 -- harpoon
-map("n", "<leader>ha", ":lua require('harpoon.mark').add_file()<CR>")
-map("n", "<bs>h", ":lua require('harpoon.ui').toggle_quick_menu()<CR>")
+map("n", "<leader>h", ":lua require('harpoon.mark').add_file()<CR>")
+map("n", "<esc>h", ":lua require('harpoon.ui').toggle_quick_menu()<CR>")
