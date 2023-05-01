@@ -1,5 +1,4 @@
 bat
-cloc
 cmake
 commitizen
 exa
@@ -27,9 +26,7 @@ sops
 stow
 terraform
 terragrunt
-the_silver_searcher
 tokei
-warp
 wget
 xo/xo/usql
 yq
