@@ -31,6 +31,15 @@ function rand_str() {
   echo ''
 }
 
-function t() {
-  v $(fzf)
+function vif() {
+  # https://stackoverflow.com/questions/65366464/is-there-a-way-to-cancel-fzf-by-pressing-escape
+  local fname
+  fname=$(fzf) || return
+  v "$fname"
+}
+
+function fcd() {
+  local dirname
+  dirname=$(fd --type d --hidden -E .git . | fzf) || return
+  cd "$dirname"
 }
