@@ -32,5 +32,4 @@ xo/xo/usql
 yq
 zoxide
 docker
-kind
-colima
+minikube
