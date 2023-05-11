@@ -39,8 +39,7 @@ map("n", "<leader>.", ":lcd %:p:h<CR>")
 map("n", "<leader><space>", ":noh<cr>")
 
 -- Split
-map("n", "<Leader>-", ":<C-u>split<CR>")
-map("n", "<Leader><bs>", ":<C-u>vsplit<CR>")
+map("n", "<Leader>w", "<C-w>")
 
 -- Search mappings: These will make it so that going to the next one in a
 -- search will center on the line it's found in.

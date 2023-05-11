@@ -41,7 +41,7 @@ function vif() {
 function fcd() {
   local dirname
   dirname=$(fd --type d --hidden -E .git . | fzf) || return
-  cd "$dirname"
+  cd "$dirname" || exit
 }
 
 function convip() {
