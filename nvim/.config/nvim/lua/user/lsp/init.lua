@@ -33,6 +33,7 @@ require("mason-lspconfig").setup {
     "denols",
     "dockerls",
     "eslint",
+    "gopls",
     "jdtls",
     "jsonls",
     "lua_ls",
