@@ -8,6 +8,7 @@ require("mason-tool-installer").setup {
   ensure_installed = {
     "clang-format",
     -- "deno_fmt",
+    "golangci-lint",
     "prettier",
     "shfmt",
     "sql-formatter",
@@ -81,6 +82,7 @@ util.default_config = vim.tbl_extend("force", util.default_config, {
 
 lspconfig.bashls.setup { on_attach = on_attach }
 lspconfig.clangd.setup {}
+lspconfig.gopls.setup {}
 lspconfig.jdtls.setup { on_attach = on_attach }
 lspconfig.jsonls.setup { on_attach = on_attach }
 lspconfig.lua_ls.setup { on_attach = on_attach, settings = lua_settings }
