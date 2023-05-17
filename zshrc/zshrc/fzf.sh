@@ -57,7 +57,7 @@ function is_in_git_repo() {
   git rev-parse HEAD >/dev/null 2>&1
 }
 
-function sw() {
+function fsw() {
   local branches branch
   branches=$(git branch --all | grep -v HEAD) &&
     branch=$(echo "$branches" |
