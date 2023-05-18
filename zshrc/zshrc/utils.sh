@@ -31,7 +31,7 @@ function rand_str() {
   echo ''
 }
 
-function vif() {
+function fvi() {
   # https://stackoverflow.com/questions/65366464/is-there-a-way-to-cancel-fzf-by-pressing-escape
   local fname
   fname=$(fzf) || return
@@ -52,4 +52,8 @@ function convip() {
     ip="${ip}.${CONV[${byte}]}"
   done
   echo "${ip:1}"
+}
+
+function nd() {
+  vi "~/Documents/diary/$(date +'%Y-%m-%d').md"
 }
