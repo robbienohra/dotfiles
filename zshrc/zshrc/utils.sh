@@ -55,5 +55,7 @@ function convip() {
 }
 
 function nd() {
-  vi "~/Documents/diary/$(date +'%Y-%m-%d').md"
+   ENTRY="$HOME/Documents/diary/$(date +'%Y-%m-%d').md"
+   touch $ENTRY
+   nvim $ENTRY
 }
