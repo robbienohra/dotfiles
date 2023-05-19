@@ -65,3 +65,4 @@ autocmd("BufLeave", { command = "set laststatus=3 showmode ruler" })
 -- markdown
 
 autocmd("FileType", { pattern = { "markdown" }, command = "setlocal nonumber" })
+autocmd("FileType", { pattern = { "markdown" }, command = "setlocal spell spelllang=en_us" })
