@@ -66,4 +66,5 @@ autocmd("BufLeave", { command = "set laststatus=3 showmode ruler" })
 
 autocmd("FileType", { pattern = { "markdown" }, command = "setlocal nonumber" })
 autocmd("FileType", { pattern = { "markdown" }, command = "setlocal spell spelllang=en_us" })
-autocmd({ "BufWritePre" }, { pattern = { "markdown" }, command = "lua vim.lsp.buf.format()" })
+autocmd("FileType", { pattern = { "markdown" }, command = "set laststatus=0 noshowmode noruler" })
+autocmd({ "BufWritePost" }, { pattern = { "*.md" }, command = "lua vim.lsp.buf.format()" })
