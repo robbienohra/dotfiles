@@ -41,8 +41,8 @@ autocmd(
   { pattern = { "*.py" }, command = "set tabstop=4 softtabstop=4 shiftwidth=4 expandtab smarttab autoindent" }
 )
 
+-- https://stackoverflow.com/questions/7476126/how-to-automatically-close-the-quick-fix-window-when-leaving-a-file
 autocmd({ "BufLeave" }, { pattern = { "*" }, command = "if &buftype == 'quickfix'|q|endif" })
-
 autocmd({ "BufEnter" }, { pattern = { "*" }, command = "let &titlestring = ' ' . expand('%:t') | set title" })
 
 -- disable auto-comment
@@ -66,3 +66,4 @@ autocmd("BufLeave", { command = "set laststatus=3 showmode ruler" })
 
 autocmd("FileType", { pattern = { "markdown" }, command = "setlocal nonumber" })
 autocmd("FileType", { pattern = { "markdown" }, command = "setlocal spell spelllang=en_us" })
+autocmd({ "BufWritePre" }, { pattern = { "markdown" }, command = "lua vim.lsp.buf.format()" })
