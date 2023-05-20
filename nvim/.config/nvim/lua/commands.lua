@@ -18,6 +18,16 @@ map ,a :<C-U>ClineCmd(v:count)<CR>
 
 vim.api.nvim_exec(
   [[
+function! UpdateFile()
+    lua vim.lsp.buf.format()
+    update
+endfunction
+]],
+  true
+)
+
+vim.api.nvim_exec(
+  [[
 function! Dline(count)
   execute a:count
   execute "normal dd"
@@ -67,4 +77,4 @@ autocmd("BufLeave", { command = "set laststatus=3 showmode ruler" })
 autocmd("FileType", { pattern = { "markdown" }, command = "setlocal nonumber" })
 autocmd("FileType", { pattern = { "markdown" }, command = "setlocal spell spelllang=en_us" })
 autocmd("FileType", { pattern = { "markdown" }, command = "set laststatus=0 noshowmode noruler" })
-autocmd({ "BufWritePost" }, { pattern = { "*.md" }, command = "lua vim.lsp.buf.format()" })
+autocmd({ "InsertLeave" }, { pattern = { "*.md" }, command = "call UpdateFile()" })
