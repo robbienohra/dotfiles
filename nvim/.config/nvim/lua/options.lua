@@ -4,6 +4,7 @@ vim.g.loaded_perl_provider = 0
 vim.g.loaded_python_provider = 0
 local udir = os.getenv "HOME" .. "/undodir"
 local o = vim.opt
+o.tabstop = 4
 o.lazyredraw = true
 o.backup = false
 o.cursorcolumn = false
