@@ -24,8 +24,7 @@ BLUE_GRAY=#458588
 DARK_GRAY=#83A598
 LIGHT_BLUE=#7FA2AC
 
-export FZF_DEFAULT_OPTS="
---history=$HOME/.fzf_history \
+export FZF_DEFAULT_OPTS="--history=$HOME/.fzf_history \
 --bind ctrl-d:page-down,ctrl-u:page-up \
 --bind ctrl-p:previous-history \
 --bind ctrl-f:next-history \
