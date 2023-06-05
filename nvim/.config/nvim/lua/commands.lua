@@ -39,7 +39,7 @@ map ,d :<C-U>DlineCmd(v:count)<CR>
 )
 
 -- compile and run c++ script
-autocmd("FileType", { pattern = { "cpp" }, command = "nnoremap <C-c> :!clang++ -o  %:r.out % -std=c++11<Enter>" })
+autocmd("FileType", { pattern = { "cpp" }, command = "nnoremap <C-c> :!clang++ -o  %:r.out % -std=c++17<Enter>" })
 autocmd("FileType", { pattern = { "cpp" }, command = "nnoremap <C-x> :!%:r.out<Enter>" })
 
 -- compile and run TS script
