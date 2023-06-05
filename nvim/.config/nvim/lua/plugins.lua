@@ -1,49 +1,62 @@
 return {
-  "tpope/vim-fugitive",
-  "tpope/vim-repeat",
-  "tpope/vim-rhubarb", -- required by fugitive to :Gbrowse
-  "tpope/vim-scriptease",
-  "tpope/vim-surround",
-  "tpope/vim-unimpaired",
-  "tpope/vim-vinegar",
+  -- plugin management
   {
-    "nvim-lualine/lualine.nvim",
-    dependencies = { "kyazdani42/nvim-web-devicons", opt = true },
+    "WhoIsSethDaniel/mason-tool-installer.nvim",
+    "nvim-lua/plenary.nvim",
+    "williamboman/mason.nvim",
   },
-  { "luisiacc/gruvbox-baby", branch = "main" },
-  "lewis6991/impatient.nvim",
-  { "junegunn/fzf", build = ":call fzf#install()" },
-  { "junegunn/fzf.vim" },
+  -- lsp
   {
-
-    "hrsh7th/nvim-cmp",
-    dependencies = {
-      "hrsh7th/cmp-buffer",
-      "hrsh7th/cmp-cmdline",
-      "hrsh7th/cmp-nvim-lsp",
-      "hrsh7th/cmp-path",
-      "hrsh7th/cmp-vsnip",
-      "hrsh7th/vim-vsnip",
-      "hrsh7th/vim-vsnip-integ",
+    "jose-elias-alvarez/null-ls.nvim",
+    "mfussenegger/nvim-dap",
+    "neovim/nvim-lspconfig",
+    "williamboman/mason-lspconfig.nvim",
+    { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
+  },
+  -- dev
+  {
+    "Yggdroot/indentLine",
+    "mhinz/vim-signify",
+    "norcalli/nvim-colorizer.lua",
+    "numToStr/Comment.nvim",
+    "p00f/nvim-ts-rainbow",
+    "windwp/nvim-autopairs",
+    "windwp/nvim-ts-autotag",
+    { "luisiacc/gruvbox-baby", branch = "main" },
+    {
+      "nvim-lualine/lualine.nvim",
+      dependencies = { "kyazdani42/nvim-web-devicons", opt = true },
     },
-    lazy = true,
-    event = "InsertEnter",
+    {
+
+      "hrsh7th/nvim-cmp",
+      dependencies = {
+        "hrsh7th/cmp-buffer",
+        "hrsh7th/cmp-cmdline",
+        "hrsh7th/cmp-nvim-lsp",
+        "hrsh7th/cmp-path",
+        "hrsh7th/cmp-vsnip",
+        "hrsh7th/vim-vsnip",
+        "hrsh7th/vim-vsnip-integ",
+      },
+    },
   },
-  "Yggdroot/indentLine",
-  "jose-elias-alvarez/null-ls.nvim",
-  "nvim-lua/plenary.nvim",
-  "mfussenegger/nvim-dap",
-  "mhinz/vim-signify",
-  "neovim/nvim-lspconfig",
-  "norcalli/nvim-colorizer.lua",
-  "numToStr/Comment.nvim",
-  "p00f/nvim-ts-rainbow",
-  "williamboman/mason.nvim",
-  "williamboman/mason-lspconfig.nvim",
-  "windwp/nvim-autopairs",
-  "windwp/nvim-ts-autotag",
-  "junegunn/vim-peekaboo",
-  { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
-  "WhoIsSethDaniel/mason-tool-installer.nvim",
-  "ThePrimeagen/harpoon",
+  -- utilities
+  {
+    "ThePrimeagen/harpoon",
+    "junegunn/vim-peekaboo",
+    "lewis6991/impatient.nvim",
+    { "junegunn/fzf", build = ":call fzf#install()" },
+    { "junegunn/fzf.vim" },
+  },
+  -- tpope goodies
+  {
+    "tpope/vim-fugitive",
+    "tpope/vim-repeat",
+    "tpope/vim-rhubarb", -- required by fugitive to :Gbrowse
+    "tpope/vim-scriptease",
+    "tpope/vim-surround",
+    "tpope/vim-unimpaired",
+    "tpope/vim-vinegar",
+  },
 }
