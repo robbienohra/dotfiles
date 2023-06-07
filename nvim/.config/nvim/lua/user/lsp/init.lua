@@ -9,6 +9,7 @@ require("mason-tool-installer").setup {
     "clang-format",
     -- "deno_fmt",
     "golangci-lint",
+    "go-debug-adapter",
     "prettier",
     "shfmt",
     "sql-formatter",
