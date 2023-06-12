@@ -1,7 +1,4 @@
 return {
-  {
-    "goolord/alpha-nvim",
-  },
   -- plugin management
   {
     "WhoIsSethDaniel/mason-tool-installer.nvim",
@@ -50,6 +47,9 @@ return {
     "junegunn/vim-peekaboo",
     { "junegunn/fzf", build = ":call fzf#install()" },
     { "junegunn/fzf.vim" },
+    {
+      "goolord/alpha-nvim",
+    },
   },
   -- tpope goodies
   {
