@@ -33,8 +33,8 @@ require("lazy").setup("plugins", {
 
 require "colorscheme"
 require "commands"
-require "impatient"
 require "keymaps"
+require "user.alpha"
 require "user.autopairs"
 require "user.autotag"
 require "user.cmp"

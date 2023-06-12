@@ -3,13 +3,12 @@ vim.g.fzf_history_dir = "~/.local/share/fzf-history"
 vim.g.fzf_layout = { window = { width = 0.90, height = 0.80, relative = true } }
 vim.g.fzf_colors = { fg = { "fg", "Normal" }, bg = { "bg", "Normal" } }
 
-
 -- https://github.com/junegunn/fzf.vim/issues/824
 local cmd = vim.api.nvim_command
 
 cmd [[
 function! RipgrepFzf(query, fullscreen)
-  let command_fmt = 'rg --column --line-number --no-heading --color=always --smart-case -- %s || true'
+  let command_fmt = 'rg --column --line-number --no-heading --color=always --hidden --smart-case -- %s || true'
   let initial_command = printf(command_fmt, shellescape(a:query))
   let reload_command = printf(command_fmt, '{q}')
   let spec = {'options': ['--disabled', '--query', a:query, '--bind', 'change:reload:'.reload_command]}

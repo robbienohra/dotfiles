@@ -1,3 +1,4 @@
+-- https://stackoverflow.com/questions/71789108/how-to-configure-alpha-nvim
 local status_ok, alpha = pcall(require, "alpha")
 if not status_ok then
   return
