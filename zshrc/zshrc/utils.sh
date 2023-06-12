@@ -34,7 +34,7 @@ function fvi() {
   # https://stackoverflow.com/questions/65366464/is-there-a-way-to-cancel-fzf-by-pressing-escape
   local fname
   fname=$(fzf) || return
-  v "$fname"
+  nvim "$fname"
 }
 
 function fcd() {
