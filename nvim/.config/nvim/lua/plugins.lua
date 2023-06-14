@@ -50,6 +50,7 @@ return {
     {
       "goolord/alpha-nvim",
     },
+    "dkarter/bullets.vim",
   },
   -- tpope goodies
   {
