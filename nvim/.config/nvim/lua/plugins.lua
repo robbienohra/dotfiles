@@ -61,4 +61,7 @@ return {
     "tpope/vim-unimpaired",
     "tpope/vim-vinegar",
   },
+  -- markdown
+  "godlygeek/tabular",
+  "preservim/vim-markdown",
 }

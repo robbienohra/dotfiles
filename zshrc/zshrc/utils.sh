@@ -60,3 +60,7 @@ function nd() {
   fi
   nvim $ENTRY
 }
+
+function compile_and_run() {
+  clang++ "$1" -o output -std=c++17 && ./output && rm output
+}
