@@ -42,7 +42,7 @@
   dup = diff @{upstream} @
   diun = diff @{upstream} @ --name-only
   oldest-ancestor = !zsh -c 'diff --old-line-format= --new-line-format= <(git rev-list --first-parent \"${1:-$1}\") <(git rev-list --first-parent \"${2:-HEAD}\") | head -1' -
-  pr ="!f() { git diff origin/$1...head; }; f"
+  pr ="!f() { git diff origin/$1...head ':(exclude)package-lock.json'; }; f"
   prs ="!f() { git diff --shortstat origin/$1...head; }; f"
   po ="!f() { git diff $(git oldest-ancestor $1)...head; }; f"
   # cherry picks
