@@ -4,5 +4,11 @@
     "prefix": "log",
     "body": ["console.log($1);", "$2"],
     "description": "Log output to console"
+  },
+  "Deno fmt ignore": {
+    "scope": "markdown",
+    "prefix": "fmt",
+    "body": ["<!-- deno-fmt-ignore -->"],
+    "description": "Ignore deno fmt"
   }
 }
