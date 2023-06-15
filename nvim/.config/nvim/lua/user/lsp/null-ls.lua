@@ -13,7 +13,7 @@ null_ls.setup {
     formatting.terraform_fmt,
     formatting.deno_fmt.with {
       filetypes = { "markdown" }, -- only runs `deno fmt` for markdown
-      extra_args = { "--options-line-width=100" },
+      extra_args = { "--options-line-width=80" },
     },
     formatting.yamlfmt,
     formatting.prettier.with {
