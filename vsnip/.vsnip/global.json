@@ -10,5 +10,11 @@
     "prefix": "fmt",
     "body": ["<!-- deno-fmt-ignore -->"],
     "description": "Ignore deno fmt"
+  },
+  "HTML refresh": {
+    "scope": "html",
+    "prefix": "ref",
+    "body": ["<meta http-equiv=\"refresh\" content=\"2\" />"],
+    "description": "Auto-refresh HTML"
   }
 }

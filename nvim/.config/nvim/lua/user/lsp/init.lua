@@ -36,6 +36,7 @@ require("mason-lspconfig").setup {
     "dockerls",
     "eslint",
     "gopls",
+    "html",
     "jdtls",
     "jsonls",
     "lua_ls",
@@ -84,6 +85,7 @@ util.default_config = vim.tbl_extend("force", util.default_config, {
 lspconfig.bashls.setup { on_attach = on_attach }
 lspconfig.clangd.setup {}
 lspconfig.gopls.setup {}
+lspconfig.html.setup {}
 lspconfig.jdtls.setup { on_attach = on_attach }
 lspconfig.jsonls.setup { on_attach = on_attach }
 lspconfig.lua_ls.setup { on_attach = on_attach, settings = lua_settings }

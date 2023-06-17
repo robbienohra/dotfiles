@@ -4,12 +4,13 @@ require("nvim-treesitter.configs").setup {
   },
   ensure_installed = {
     "bash",
-    "cpp",
     "cmake",
+    "cpp",
     "css",
     "dockerfile",
     "go",
     "hcl",
+    "html",
     "javascript",
     "json",
     "lua",
@@ -29,6 +30,7 @@ require("nvim-treesitter.configs").setup {
   },
   autotag = {
     enable = true,
+    filetypes = { "html" },
   },
   highlight = {
     enable = true,
