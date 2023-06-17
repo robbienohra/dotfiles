@@ -75,7 +75,8 @@ map("n", "<Leader>r", ":luafile %<CR>")
 -- map("n", "<Leader>r", ":e <CR>")
 
 -- yank filename
-map("n", "<leader>c", ":let @+=expand('%')<CR>")
+-- map("n", "<leader>c", ":let @+=expand('%')<CR>")
+map("n", "<leader>c", ":let @+=expand('%:p')<CR>")
 
 -- fzf
 map("n", "<leader>t", ":Files <CR>")
