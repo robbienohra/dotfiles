@@ -12,3 +12,6 @@ alias k="kubectl"
 alias h="helm"
 alias tf="terraform"
 alias tg="terragrunt"
+
+# yarn
+alias ynw="yarn workspace"
