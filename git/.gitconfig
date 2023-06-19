@@ -38,7 +38,7 @@
   # diffs
   d = diff
   ds = diff --staged
-  din = diff --name-only 
+  dn = diff --name-only 
   dup = diff @{upstream} @
   diun = diff @{upstream} @ --name-only
   oldest-ancestor = !zsh -c 'diff --old-line-format= --new-line-format= <(git rev-list --first-parent \"${1:-$1}\") <(git rev-list --first-parent \"${2:-HEAD}\") | head -1' -
