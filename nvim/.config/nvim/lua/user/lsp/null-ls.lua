@@ -24,7 +24,7 @@ null_ls.setup {
     },
     diagnostics.tsc,
     formatting.sql_formatter.with {
-      extra_args = { "--language=postgresql" },
+      extra_args = { "--language=postgresql, --dialect=postgresql" },
     },
     formatting.shfmt.with {
       filetypes = {
