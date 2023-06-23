@@ -12,7 +12,6 @@ require("mason-tool-installer").setup {
     "go-debug-adapter",
     "prettier",
     "shfmt",
-    "sql-formatter",
     "stylua",
     "yamlfmt",
   },
