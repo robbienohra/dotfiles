@@ -78,20 +78,11 @@ map("n", "<Leader>r", ":luafile %<CR>")
 -- map("n", "<leader>c", ":let @+=expand('%')<CR>")
 map("n", "<leader>c", ":let @+=expand('%:p')<CR>")
 
--- fzf
-map("n", "<leader>t", ":Files <CR>")
-map("n", "<leader>p", ":History <CR>")
-map("n", "<leader>y", ":History: <CR>")
-map("n", "<leader>m", ":Marks <CR>")
--- https://github.com/junegunn/fzf/blob/master/README-VIM.md
-map(
-  "n",
-  "<M-c>",
-  ":call fzf#run(fzf#wrap({'source': 'fd --type d --hidden --exclude \".git\"', 'options':'--bind ctrl-d:page-down,ctrl-u:page-up --preview-window right,50% --preview \"exa --tree --level=2 {}\"'})) <CR>"
-)
-map("n", "<leader>b", ":BLines <CR>")
-map("n", "<leader>f", ":Rg<space>", { silent = false })
-map("n", "<M-f>", ":RG<cr>")
+-- telescope
+map("n", "<leader>f", "<cmd>Telescope current_buffer_fuzzy_find<cr>")
+map("n", "<leader>ff", "<cmd>Telescope find_files<cr>")
+map("n", "<leader>fg", "<cmd>Telescope live_grep<cr>")
+map("n", "<leader>fb", "<cmd>Telescope buffers<cr>")
 
 -- move snippets
 map("v", "J", ":m '>+1<CR>gv=gv")
