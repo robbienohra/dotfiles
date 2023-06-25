@@ -61,5 +61,6 @@ return {
     "tpope/vim-surround",
     "tpope/vim-unimpaired",
     "tpope/vim-vinegar",
+    "preservim/vim-pencil",
   },
 }

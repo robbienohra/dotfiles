@@ -82,3 +82,6 @@ autocmd("BufLeave", { command = "set laststatus=3 showmode ruler" })
 autocmd("FileType", { pattern = { "markdown" }, command = "set laststatus=0 noshowmode noruler" })
 autocmd({ "BufNewFile", "BufFilePre", "BufRead" }, { pattern = { "*.md" }, command = "set syntax=markdown" })
 autocmd({ "InsertLeave" }, { pattern = { "*" }, command = "call UpdateFile()" })
+
+-- pencil
+autocmd("FileType", { pattern = { "markdown" }, command = "call pencil#init()" })
