@@ -63,3 +63,16 @@ function fsw() {
       fzf -d $((2 + $(wc -l <<<"$branches"))) +m) &&
     git switch $(echo "$branch" | sed "s/.* //" | sed "s#remotes/[^/]*/##")
 }
+
+function fvi() {
+  # https://stackoverflow.com/questions/65366464/is-there-a-way-to-cancel-fzf-by-pressing-escape
+  local fname
+  fname=$(fzf) || return
+  nvim "$fname"
+}
+
+function fcd() {
+  local dirname
+  dirname=$(fd --type d --hidden -E .git . | fzf) || return
+  cd "$dirname" || exit
+}
