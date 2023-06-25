@@ -30,19 +30,6 @@ function rand_str() {
   LC_ALL=C tr -dc a-z0-9 </dev/urandom | head -c 5 | pbcopy
 }
 
-function fvi() {
-  # https://stackoverflow.com/questions/65366464/is-there-a-way-to-cancel-fzf-by-pressing-escape
-  local fname
-  fname=$(fzf) || return
-  nvim "$fname"
-}
-
-function fcd() {
-  local dirname
-  dirname=$(fd --type d --hidden -E .git . | fzf) || return
-  cd "$dirname" || exit
-}
-
 function convip() {
   CONV=({0..1}{0..1}{0..1}{0..1}{0..1}{0..1}{0..1}{0..1})
 

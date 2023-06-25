@@ -45,8 +45,6 @@ return {
   {
     "ThePrimeagen/harpoon",
     "junegunn/vim-peekaboo",
-    { "junegunn/fzf", build = ":call fzf#install()" },
-    { "junegunn/fzf.vim" },
     {
       "goolord/alpha-nvim",
     },

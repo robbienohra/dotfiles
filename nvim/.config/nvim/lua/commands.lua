@@ -71,10 +71,6 @@ vim.api.nvim_exec(
   true
 )
 
--- https://github.com/junegunn/fzf/blob/master/README-VIM.md#hide-statusline
-autocmd("FileType", { pattern = { "fzf" }, command = "set laststatus=0 noshowmode noruler" })
-autocmd("BufLeave", { command = "set laststatus=3 showmode ruler" })
-
 -- markdown
 
 -- autocmd("FileType", { pattern = { "markdown" }, command = "setlocal nonumber" })

@@ -1,0 +1,17 @@
+-- https://github.com/nvim-telescope/telescope.nvim/wiki/Configuration-Recipes#mapping-esc-to-quit-in-insert-mode
+local actions = require "telescope.actions"
+local action_layout = require "telescope.actions.layout"
+require("telescope").setup {
+  defaults = {
+    mappings = {
+      n = {
+        ["<M-p>"] = action_layout.toggle_preview,
+      },
+      i = {
+        ["<esc>"] = actions.close,
+        ["<C-u>"] = false,
+        ["<M-p>"] = action_layout.toggle_preview,
+      },
+    },
+  },
+}
