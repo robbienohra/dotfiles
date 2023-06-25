@@ -9,7 +9,6 @@ require("telescope").setup {
       },
       i = {
         ["<esc>"] = actions.close,
-        ["<C-u>"] = false,
         ["<M-p>"] = action_layout.toggle_preview,
       },
     },
