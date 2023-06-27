@@ -89,6 +89,7 @@ lspconfig.jdtls.setup { on_attach = on_attach }
 lspconfig.jsonls.setup { on_attach = on_attach }
 lspconfig.lua_ls.setup { on_attach = on_attach, settings = lua_settings }
 lspconfig.prismals.setup { on_attach = on_attach }
+lspconfig.svelte.setup {}
 lspconfig.terraformls.setup { on_attach = on_attach }
 lspconfig.tsserver.setup { on_attach = on_attach }
 lspconfig.volar.setup { on_attach = on_attach }

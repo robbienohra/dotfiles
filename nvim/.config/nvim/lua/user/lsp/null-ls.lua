@@ -17,6 +17,22 @@ null_ls.setup {
     },
     formatting.yamlfmt,
     formatting.prettier.with {
+      filetypes = {
+        "css",
+        "graphql",
+        "html",
+        "javascript",
+        "javascriptreact",
+        "json",
+        "jsonc",
+        "less",
+        "scss",
+        "svelte",
+        "typescript",
+        "typescriptreact",
+        "vue",
+        "yaml",
+      },
       disabled_filetypes = { "markdown" },
     },
     formatting.stylua.with {
