@@ -24,6 +24,7 @@ procs
 rectangle
 ripgrep
 sops
+starship
 stow
 terraform
 terragrunt
@@ -35,3 +36,4 @@ yq
 zoxide
 docker
 minikube
+zellij

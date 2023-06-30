@@ -49,27 +49,8 @@ return {
       "goolord/alpha-nvim",
     },
     "dkarter/bullets.vim",
-    {
-      "nvim-telescope/telescope.nvim",
-      tag = "0.1.2",
-      dependencies = { "nvim-lua/plenary.nvim" },
-    },
-    {
-      "nvim-telescope/telescope-fzf-native.nvim",
-      build = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build",
-    },
-    -- {
-    --   "jackMort/ChatGPT.nvim",
-    --   event = "VeryLazy",
-    --   config = function()
-    --     require("chatgpt").setup()
-    --   end,
-    --   dependencies = {
-    --     "MunifTanjim/nui.nvim",
-    --     "nvim-lua/plenary.nvim",
-    --     "nvim-telescope/telescope.nvim",
-    --   },
-    -- },
+    -- optional for icon support
+    requires = { "nvim-tree/nvim-web-devicons" },
   },
   -- tpope goodies
   {

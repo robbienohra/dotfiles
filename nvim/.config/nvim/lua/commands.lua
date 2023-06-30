@@ -81,3 +81,5 @@ autocmd({ "BufNewFile", "BufFilePre", "BufRead" }, { pattern = { "*.md" }, comma
 
 -- pencil
 autocmd("FileType", { pattern = { "markdown" }, command = "call pencil#init()" })
+-- https://github.com/neovim/neovim/issues/6005#issuecomment-835825265
+autocmd({ "VimLeave" }, { pattern = { "*" }, command = "set guicursor=a:ver90" })
