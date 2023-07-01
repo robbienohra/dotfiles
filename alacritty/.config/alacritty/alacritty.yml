@@ -58,6 +58,9 @@ font:
     style: Bold
   offset:
     y: 1
+# key_bindings:
+#   - { key: LBracket, mods: Alt|Shift, chars: '[' }
+#   - { key: RBracket, mods: Alt|Shift, chars: ']' }
 #   # https://github.com/alacritty/alacritty/issues/474#issuecomment-338803299
 #   # https://github.com/alacritty/alacritty/issues/2716
 #   # https://github.com/alacritty/alacritty/issues/62#issuecomment-347552058

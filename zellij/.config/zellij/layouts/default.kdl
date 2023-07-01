@@ -1,9 +1,30 @@
 layout {
-    pane size=1 borderless=true {
-        plugin location="zellij:compact-bar"
-    }
-	pane
-//    pane size=1 borderless=true {
-//        plugin location="zellij:status-bar"
-//    }
+default_tab_template {
+	// the default zellij tab-bar and status bar plugins
+	// https://zellij.dev/documentation/creating-a-layout.html#default-tab-template
+	pane size=1 borderless=true {
+		plugin location="zellij:compact-bar"
+	}
+	children
+	}
+
+	// https://zellij.dev/documentation/swap-layouts.html#multiple-swap-layout-nodes
+
+	swap_tiled_layout {
+		tab {
+		  pane {
+			plugin location="zellij:tab-bar"
+		  }
+		  pane
+		}
+	}
+
+	swap_tiled_layout name="stack" {
+		tab {
+			pane stacked=true {
+				pane
+			}
+		}
+	}
+
 }
