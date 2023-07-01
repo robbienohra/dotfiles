@@ -1,0 +1,1 @@
+/Users/robbienohra/Library/Application Support/nushell/env.nu
