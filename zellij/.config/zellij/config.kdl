@@ -1,3 +1,10 @@
+keybinds {
+ unbind "Ctrl t"
+ normal { 
+	bind "Alt n" { NewTab; }
+ }
+}
+
 themes {
 	gruvbox-light {
 		fg 60 56 54
