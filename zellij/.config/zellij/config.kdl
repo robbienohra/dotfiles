@@ -1,7 +1,10 @@
 keybinds {
  unbind "Ctrl t"
+ unbind "Ctrl o"
  normal { 
 	bind "Alt n" { NewTab; }
+	bind "Alt w" { CloseTab; }
+	bind "Alt d" { NewPane; }
  }
 }
 

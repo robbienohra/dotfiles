@@ -51,28 +51,3 @@ export FZF_DEFAULT_OPTS="--history=$HOME/.fzf_history \
 
 export FZF_DEFAULT_COMMAND="rg --files --follow" # picked up by vim
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-
-function is_in_git_repo() {
-  git rev-parse HEAD >/dev/null 2>&1
-}
-
-function fsw() {
-  local branches branch
-  branches=$(git branch --all | grep -v HEAD) &&
-    branch=$(echo "$branches" |
-      fzf -d $((2 + $(wc -l <<<"$branches"))) +m) &&
-    git switch $(echo "$branch" | sed "s/.* //" | sed "s#remotes/[^/]*/##")
-}
-
-function fvi() {
-  # https://stackoverflow.com/questions/65366464/is-there-a-way-to-cancel-fzf-by-pressing-escape
-  local fname
-  fname=$(fzf) || return
-  nvim "$fname"
-}
-
-function fcd() {
-  local dirname
-  dirname=$(fd --type d --hidden -E .git . | fzf) || return
-  cd "$dirname" || exit
-}

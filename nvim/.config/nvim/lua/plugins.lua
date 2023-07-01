@@ -12,21 +12,6 @@ return {
     "neovim/nvim-lspconfig",
     "williamboman/mason-lspconfig.nvim",
     { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
-  },
-  -- dev
-  {
-    "Yggdroot/indentLine",
-    "mhinz/vim-signify",
-    "norcalli/nvim-colorizer.lua",
-    "numToStr/Comment.nvim",
-    "p00f/nvim-ts-rainbow",
-    "windwp/nvim-autopairs",
-    "windwp/nvim-ts-autotag",
-    { "luisiacc/gruvbox-baby", branch = "main" },
-    {
-      "nvim-lualine/lualine.nvim",
-      dependencies = { "kyazdani42/nvim-web-devicons", opt = true },
-    },
     {
 
       "hrsh7th/nvim-cmp",
@@ -40,17 +25,32 @@ return {
         "hrsh7th/vim-vsnip-integ",
       },
     },
+    -- dev
+    {
+      "Yggdroot/indentLine",
+      "mhinz/vim-signify",
+      "norcalli/nvim-colorizer.lua",
+      "numToStr/Comment.nvim",
+      "p00f/nvim-ts-rainbow",
+      "windwp/nvim-autopairs",
+      "windwp/nvim-ts-autotag",
+      { "luisiacc/gruvbox-baby", branch = "main" },
+    },
   },
   -- utilities
   {
     "ThePrimeagen/harpoon",
     "junegunn/vim-peekaboo",
-    {
-      "goolord/alpha-nvim",
-    },
     "dkarter/bullets.vim",
-    -- optional for icon support
-    requires = { "nvim-tree/nvim-web-devicons" },
+    {
+      "nvim-lualine/lualine.nvim",
+      dependencies = { "kyazdani42/nvim-web-devicons", opt = true, name = "nvim-web-devicons2" },
+    },
+    {
+      "ibhagwan/fzf-lua",
+      -- optional for icon support
+      dependencies = { "nvim-tree/nvim-web-devicons" },
+    },
   },
   -- tpope goodies
   {

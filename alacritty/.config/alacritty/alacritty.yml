@@ -1,7 +1,7 @@
 window:
   decorations: none
   padding:
-    x: 10
+    x: 5
   dynamic_padding: true
   option_as_alt: Both
 cursor:
@@ -48,7 +48,7 @@ selection:
 font:
   size: 13
   normal:
-    family: 'JetBrains Mono NL'
+    family: 'JetBrainsMono Nerd Font Mono'
     style: Regular
   italic:
     family: 'JetBrains Mono'

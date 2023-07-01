@@ -79,12 +79,12 @@ map("n", "<Leader>r", ":luafile %<CR>")
 map("n", "<leader>c", ":let @+=expand('%:p')<CR>")
 
 -- telescope
-map("n", "<leader>f", "<cmd>Telescope current_buffer_fuzzy_find<cr>")
-map("n", "<leader>ff", "<cmd>Telescope find_files<cr>")
-map("n", "<leader>fg", "<cmd>Telescope live_grep<cr>")
-map("n", "<leader>fb", "<cmd>Telescope buffers<cr>")
-map("n", "<leader>y", "<cmd>Telescope command_history<cr>")
-map("n", "<leader>t", ":Telescope<space>", { silent = false })
+map("n", "<leader>f", "<cmd>FzfLua blines<cr>")
+map("n", "<leader>t", "<cmd>FzfLua files<cr>")
+map("n", "<leader>fg", "<cmd>FzfLua live_grep<cr>")
+map("n", "<leader>fb", "<cmd>FzfLua buffers<cr>")
+map("n", "<leader>p", "<cmd>FzfLua oldfiles<cr>")
+-- map("n", "<leader>t", ":FzfLua<space>", { silent = false })
 
 -- move snippets
 map("v", "J", ":m '>+1<CR>gv=gv")
