@@ -29,6 +29,8 @@ npm i -g npm-groovy-lint
 
 # stow
 
+# nushell symlink
+ln -s /Users/robbienohra/dotfiles/nushell /Users/robbienohra/Library/Application\ Support/nushell 
 # bash stow.sh
 
 # pip3 install pynvim
