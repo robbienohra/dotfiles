@@ -56,3 +56,5 @@ let-env NU_LIB_DIRS = [
 let-env NU_PLUGIN_DIRS = [
     ($nu.default-config-dir | path join 'plugins')
 ]
+
+zoxide init nushell | save -f ~/.zoxide.nu
