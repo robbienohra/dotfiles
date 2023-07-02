@@ -352,16 +352,6 @@ let-env config = {
   ]
   # https://github.com/nushell/nushell/issues/5785#issuecomment-1243733398
   keybindings: [
- #  {
-	# name: fuzzy_history
-	# modifier: control
-	# keycode: char_e
-	# mode: emacs
-	# event: {
-	#   send: executehostcommand
-	#   cmd: "commandline (history | each { |it| $it.command } | uniq | reverse | str join (char nl) | fzf --layout=reverse --height=40% -q (commandline) | decode utf-8 | str trim)"
-	# }
- #  }
     {
    	 name: reload_config
    	 modifier: none
@@ -473,6 +463,16 @@ let-env config = {
 		  event: {
 			send: executehostcommand,
 			cmd: "fzf --bind 'enter:become(nvim {})'"
+		  }
+	}
+	{
+		  name: cd_with_zi
+		  modifier: control
+		  keycode: char_z
+		  mode: emacs
+		  event: {
+			send: executehostcommand,
+			cmd: "zi"
 		  }
 	}
   ]
