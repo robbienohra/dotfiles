@@ -115,4 +115,4 @@ let-env FZF_DEFAULT_OPTS = $"--history=($env.HOME)/.fzf_history
 --color=preview-fg:($FOREGROUND)
 --color=preview-bg:($BACKGROUND)"
 
-let-env FZF_DEFAULT_COMMAND = "rg --files --follow" # picked up by vim
+let-env FZF_DEFAULT_COMMAND = "fd --type f --follow --hidden --exclude .git"

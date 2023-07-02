@@ -350,7 +350,18 @@ let-env config = {
         }
       }
   ]
+  # https://github.com/nushell/nushell/issues/5785#issuecomment-1243733398
   keybindings: [
+ #  {
+	# name: fuzzy_history
+	# modifier: control
+	# keycode: char_e
+	# mode: emacs
+	# event: {
+	#   send: executehostcommand
+	#   cmd: "commandline (history | each { |it| $it.command } | uniq | reverse | str join (char nl) | fzf --layout=reverse --height=40% -q (commandline) | decode utf-8 | str trim)"
+	# }
+ #  }
     {
       name: completion_menu
       modifier: none
@@ -430,13 +441,13 @@ let-env config = {
       mode: [emacs, vi_normal, vi_insert]
       event: { send: menu name: commands_menu }
     }
-    {
-      name: vars_menu
-      modifier: alt
-      keycode: char_o
-      mode: [emacs, vi_normal, vi_insert]
-      event: { send: menu name: vars_menu }
-    }
+    # {
+    #   name: vars_menu
+    #   modifier: alt
+    #   keycode: char_o
+    #   mode: [emacs, vi_normal, vi_insert]
+    #   event: { send: menu name: vars_menu }
+    # }
     {
       name: commands_with_description
       modifier: control
@@ -446,7 +457,7 @@ let-env config = {
     }
 	{
 		  name: change_dir_with_fzf
-		  modifier: CONTROL
+		  modifier: control
 		  keycode: Char_y
 		  mode: emacs
 		  event: {
@@ -456,12 +467,12 @@ let-env config = {
 	}
 	{
 		  name: open_file_with_fzf
-		  modifier: CONTROL
+		  modifier: control
 		  keycode: char_o
 		  mode: emacs
 		  event: {
 			send: executehostcommand,
-			cmd: "nvim (fd --type f --follow --hidden --exclude .git | fzf)"
+			cmd: "fzf --bind 'enter:become(nvim {})'"
 		  }
 	}
   ]
