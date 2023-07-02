@@ -29,6 +29,7 @@ themes {
 }
 
 theme "gruvbox-dark"
+// default_shell "nu"
 pane_frames true
 
 simplified_ui true

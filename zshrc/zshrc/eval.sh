@@ -1,3 +1,2 @@
 command -v fnm &> /dev/null && eval "$(fnm env --use-on-cd)"
 command -v zoxide &> /dev/null && eval "$(zoxide init zsh)"
-eval "$(starship init zsh)"

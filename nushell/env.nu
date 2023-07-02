@@ -2,6 +2,11 @@
 #
 # version = 0.82.0
 
+let-env PATH = ($env.PATH | split row (char esep) | prepend '/opt/homebrew/bin' | append $'($env.HOME)/.cargo/bin' )
+
+mkdir ~/.cache/starship
+starship init nu | save -f ~/.cache/starship/init.nu
+
 let-env STARSHIP_SHELL = "nu"
 
 def create_left_prompt [] {
@@ -51,6 +56,3 @@ let-env NU_LIB_DIRS = [
 let-env NU_PLUGIN_DIRS = [
     ($nu.default-config-dir | path join 'plugins')
 ]
-
-# To add entries to PATH (on Windows you might use Path), you can use the following pattern:
-# let-env PATH = ($env.PATH | split row (char esep) | prepend '/some/path')
