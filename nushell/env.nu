@@ -58,3 +58,10 @@ let-env NU_PLUGIN_DIRS = [
 ]
 
 zoxide init nushell | save -f ~/.zoxide.nu
+
+if not (which fnm | is-empty) {
+  ^fnm env --json | from json | load-env
+  let-env PATH = ($env.PATH | prepend [
+	$"($env.FNM_MULTISHELL_PATH)/bin"
+  ])
+}
