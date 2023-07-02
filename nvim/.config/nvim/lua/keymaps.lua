@@ -60,12 +60,13 @@ map("n", "<Leader>o", "o<Esc>^Da")
 
 -- navigation
 
-map("n", "<M-Down>", "<C-w>j")
-map("n", "<M-Up>", "<C-w>k")
-map("n", "<M-Left>", "<C-w>h")
-map("n", "<M-Right>", "<C-w>l")
-map("n", "<Leader>\\", ":15Lexplore <CR>")
-map("n", "<C-d>", "<C-d>zz")
+map("n", "<C-Down>", "<C-w>j")
+map("n", "<C-Up>", "<C-w>k")
+map("n", "<C-Left>", "<C-w>h")
+map("n", "<C-Right>", "<C-w>l")
+
+-- page up/down with centering
+map("n", "<C-k>", "<C-d>zz")
 map("n", "<C-u>", "<C-u>zz")
 
 -- refresh
@@ -79,10 +80,9 @@ map("n", "<Leader>r", ":luafile %<CR>")
 map("n", "<leader>c", ":let @+=expand('%:p')<CR>")
 
 -- telescope
-map("n", "<leader>f", "<cmd>FzfLua blines<cr>")
+map("n", "<leader>b", "<cmd>FzfLua blines<cr>")
 map("n", "<leader>t", "<cmd>FzfLua files<cr>")
-map("n", "<leader>fg", "<cmd>FzfLua live_grep<cr>")
-map("n", "<leader>fb", "<cmd>FzfLua buffers<cr>")
+map("n", "<leader>f", "<cmd>FzfLua live_grep<cr>")
 map("n", "<leader>p", "<cmd>FzfLua oldfiles<cr>")
 -- map("n", "<leader>t", ":FzfLua<space>", { silent = false })
 

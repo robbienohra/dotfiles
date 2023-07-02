@@ -5,10 +5,14 @@ keybinds {
    unbind "Ctrl b"
  }
  normal { 
-	bind "Alt n" { NewTab; }
+	bind "Alt t" { NewTab; }
 	bind "Alt w" { CloseTab; }
-	bind "Alt d" { NewPane; }
-	bind "Alt x" { CloseFocus; }
+	bind "Ctrl n" { NewPane; }
+	bind "Ctrl e" { CloseFocus; }
+ }
+ pane {
+	bind "|" { NewPane "Right"; SwitchToMode "Normal"; }
+	bind "-" { NewPane "Down"; SwitchToMode "Normal"; }
  }
 }
 

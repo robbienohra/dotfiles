@@ -466,16 +466,6 @@ let-env config = {
       event: { send: menu name: commands_with_description }
     }
 	{
-		  name: change_dir_with_fzf
-		  modifier: control
-		  keycode: Char_y
-		  mode: emacs
-		  event: {
-			send: executehostcommand,
-			cmd: "cd (fd --type d --follow --hidden --exclude .git | fzf)"
-		  }
-	}
-	{
 		  name: open_file_with_fzf
 		  modifier: control
 		  keycode: char_o
@@ -498,6 +488,7 @@ alias la = ls -la
 alias k = kubectl
 alias g = git
 alias ynw = yarn workspace
+alias n = nvim .
 
 # https://github.com/nushell/nu_scripts/blob/a61256da0ee77a29b478877b47eea88f522a6c11/custom-completions/auto-generate/completions/git.nu
 
@@ -939,7 +930,7 @@ $env.config = (
 		| append {
 			name: atuin
 			modifier: control
-			keycode: char_r
+			keycode: char_y
 			mode: [emacs, vi_normal, vi_insert]
 			event: { send: executehostcommand cmd: (_atuin_search_cmd) }
 		}
