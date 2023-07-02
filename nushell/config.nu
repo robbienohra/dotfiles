@@ -85,12 +85,6 @@ let dark_theme = {
     cursor: "#d5c4a1" 
 }
 
-# External completer example
-# let carapace_completer = {|spans|
-#     carapace $spans.0 nushell $spans | from json
-# }
-
-
 # The default config record. This is where much of your global configuration is setup.
 let-env config = {
   show_banner: false
@@ -377,13 +371,6 @@ let-env config = {
       event: { send: menuprevious }
     }
     {
-      name: history_menu
-      modifier: control
-      keycode: char_r
-      mode: emacs
-      event: { send: menu name: history_menu }
-    }
-    {
       name: next_page
       modifier: control
       keycode: char_x
@@ -491,9 +478,7 @@ alias k = kubectl
 alias g = git
 alias ynw = yarn workspace
 
-def greet [name] {
-  ['hello' $name]
-}
+# https://github.com/nushell/nu_scripts/blob/a61256da0ee77a29b478877b47eea88f522a6c11/custom-completions/auto-generate/completions/git.nu
 
 def "nu-complete git available upstream" [] {
   ^git branch -a | lines | each { |line| $line | str replace '\* ' "" | str trim }
@@ -916,10 +901,41 @@ export extern "git help" [
 ]
 
 # https://github.com/Schniz/fnm/issues/463#issuecomment-1602216687
-
 if not (which fnm | is-empty) {
   ^fnm env --json | from json | load-env
   let-env PATH = ($env.PATH | prepend [
 	$"($env.FNM_MULTISHELL_PATH)/bin"
   ])
 }
+
+# https://github.com/ellie/atuin#install
+# let-env ATUIN_NOBIND = "true"
+# atuin init nu | save -f ~/.local/share/atuin/init.nu 
+source ~/.local/share/atuin/init.nu
+$env.config = (
+	$env.config | upsert keybindings (
+		$env.config.keybindings
+		| append {
+			name: atuin
+			modifier: control
+			keycode: char_r
+			mode: [emacs, vi_normal, vi_insert]
+			event: { send: executehostcommand cmd: (_atuin_search_cmd) }
+		}
+	)
+)
+
+#bind to ctrl-r in emacs, vi_normal and vi_insert modes, add any other bindings you want here too
+
+# https://github.com/nushell/tree-sitter-nu/blob/main/installation/neovim.md
+let remote = "https://raw.githubusercontent.com/nushell/tree-sitter-nu/main/queries/"
+let local = (
+	$env.XDG_DATA_HOME?
+	| default ($env.HOME | path join ".local" "share")
+	| path join "nvim" "lazy" "nvim-treesitter" "queries" "nu"
+)
+
+let file = "highlights.scm"
+
+mkdir $local
+http get ([$remote $file] | str join "/") | save --force ($local | path join $file)
