@@ -951,3 +951,13 @@ let file = "highlights.scm"
 
 mkdir $local
 http get ([$remote $file] | str join "/") | save --force ($local | path join $file)
+
+def diary [] {
+ let today = (date now | date format "%Y-%m-%d")
+ let note = $"($env.HOME)/.nb/diary/($today).md"
+ if ($note | path exists) {
+	nb e $"diary:($today)"
+ } else {
+	nb add diary: --title $today
+ }
+}

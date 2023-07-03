@@ -7,10 +7,10 @@ keybinds {
  normal { 
 	bind "Alt t" { NewTab; }
 	bind "Alt w" { CloseTab; }
-	bind "Ctrl n" { NewPane; }
-	bind "Ctrl e" { CloseFocus; }
+	bind "Alt n" { NewPane; }
  }
  pane {
+	bind "h" { CloseFocus; SwitchToMode "Normal"; }
 	bind "|" { NewPane "Right"; SwitchToMode "Normal"; }
 	bind "-" { NewPane "Down"; SwitchToMode "Normal"; }
  }
