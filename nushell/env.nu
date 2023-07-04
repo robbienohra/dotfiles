@@ -4,9 +4,6 @@
 
 let-env PATH = ($env.PATH | split row (char esep) | prepend '/opt/homebrew/bin' | append $'($env.HOME)/.cargo/bin' )
 
-mkdir ~/.cache/starship
-starship init nu | save -f ~/.cache/starship/init.nu
-
 let-env STARSHIP_SHELL = "nu"
 
 def create_left_prompt [] {
@@ -116,3 +113,6 @@ let-env FZF_DEFAULT_OPTS = $"--history=($env.HOME)/.fzf_history
 --color=preview-bg:($BACKGROUND)"
 
 let-env FZF_DEFAULT_COMMAND = "fd --type f --follow --hidden --exclude .git"
+
+# for glow
+let-env EDITOR = "nvim"

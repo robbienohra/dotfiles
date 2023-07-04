@@ -961,3 +961,7 @@ def diary [] {
 	nb add diary: --title $today
  }
 }
+
+def wglow [] {
+  watch ~/.nb --glob=**/*.md {|op, path, new_path| clear; glow $path}
+}

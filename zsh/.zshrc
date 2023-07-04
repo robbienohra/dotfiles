@@ -1,4 +1,3 @@
-for f in ~/zshrc/*.sh; do source $f; done
 export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 
 # The next line updates PATH for the Google Cloud SDK.
