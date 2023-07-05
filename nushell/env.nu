@@ -116,3 +116,5 @@ let-env FZF_DEFAULT_COMMAND = "fd --type f --follow --hidden --exclude .git"
 
 # for glow
 let-env EDITOR = "nvim"
+
+let-env RIPGREP_CONFIG_PATH = $"($env.HOME)/.ripgreprc"
