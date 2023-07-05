@@ -6,7 +6,7 @@
 # https://brew.sh/
 # /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/uninstall.sh)"
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >>/Users/robbienohra/.zprofile
+echo "eval '$(/opt/homebrew/bin/brew shellenv)'" >>/Users/robbienohra/.zprofile
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # install cargo
@@ -30,10 +30,16 @@ npm i -g npm-groovy-lint
 # stow
 
 # nushell symlink
-ln -s /Users/robbienohra/dotfiles/nushell /Users/robbienohra/Library/Application\ Support/nushell 
+ln -s /Users/robbienohra/dotfiles/nushell /Users/robbienohra/Library/Application\ Support/nushell
 # bash stow.sh
 
 # pip3 install pynvim
 
 # setup tmux plugin manager
 # https://github.com/tmux-plugins/tpm#installation
+#
+# karabiner
+# https://ke-complex-modifications.pqrs.org/#caps_lock_tapped_escape_held_left_control
+
+# colemak
+# https://ke-complex-modifications.pqrs.org/#colemak_dh_ansi_layout
