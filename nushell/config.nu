@@ -920,9 +920,6 @@ if not (which fnm | is-empty) {
   ])
 }
 
-# https://github.com/ellie/atuin#install
-# let-env ATUIN_NOBIND = "true"
-# atuin init nu | save -f ~/.local/share/atuin/init.nu 
 source ~/.local/share/atuin/init.nu
 $env.config = (
 	$env.config | upsert keybindings (
