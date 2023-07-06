@@ -1,4 +1,5 @@
 atuin
+bat
 du-dust
 dust
 fd
@@ -8,6 +9,7 @@ nu
 ripgrep
 starship
 stylua
+tokei
 xh
 zellij
 zoxide

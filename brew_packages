@@ -6,7 +6,6 @@ fzf
 gh
 git
 gnu-sed
-helm
 htop
 hugo
 jq
@@ -24,7 +23,6 @@ rectangle
 sops
 stow
 tig
-tokei
 wget
 xo/xo/usql
 yq
