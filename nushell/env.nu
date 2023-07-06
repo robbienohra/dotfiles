@@ -118,3 +118,13 @@ let-env FZF_DEFAULT_COMMAND = "fd --type f --follow --hidden --exclude .git"
 let-env EDITOR = "nvim"
 
 let-env RIPGREP_CONFIG_PATH = $"($env.HOME)/.ripgreprc"
+
+
+# todo
+# let-env PYENV_ROOT = $"($env.HOME)/.pyenv"
+# I cannot recall where exactly these are needed
+# let-env LDFLAGS = "-L/opt/homebrew/opt/llvm/lib"
+# let-env CPPFLAGS = "-I/opt/homebrew/opt/llvm/include"
+# let-env PATH = "/opt/homebrew/opt/llvm/bin"
+# "/opt/homebrew/opt/openjdk@11/bin"
+# "/opt/homebrew/opt/gnu-sed/libexec/gnubin"

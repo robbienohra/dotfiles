@@ -1,9 +1,7 @@
 # install brew
 # https://brew.sh/
 # /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/uninstall.sh)"
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-echo "eval '$(/opt/homebrew/bin/brew shellenv)'" >>/Users/robbienohra/.zprofile
-eval "$(/opt/homebrew/bin/brew shellenv)"
+# /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # install cargo
 # https://doc.rust-lang.org/cargo/getting-started/installation.html
@@ -24,13 +22,10 @@ git config credential.helper store
 
 # nushell symlink
 ln -s /Users/robbienohra/dotfiles/nushell /Users/robbienohra/Library/Application\ Support/nushell
-# bash stow.sh
 
+# bash stow.sh
 # pip3 install pynvim
 
-# setup tmux plugin manager
-# https://github.com/tmux-plugins/tpm#installation
-#
 # karabiner
 # https://ke-complex-modifications.pqrs.org/#caps_lock_tapped_escape_held_left_control
 
