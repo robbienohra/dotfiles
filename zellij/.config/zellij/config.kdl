@@ -10,7 +10,7 @@ keybinds {
 	bind "Alt n" { NewPane; }
  }
  pane {
-	bind "h" { CloseFocus; SwitchToMode "Normal"; }
+	bind "k" { CloseFocus; SwitchToMode "Normal"; }
 	bind "|" { NewPane "Right"; SwitchToMode "Normal"; }
 	bind "-" { NewPane "Down"; SwitchToMode "Normal"; }
  }
