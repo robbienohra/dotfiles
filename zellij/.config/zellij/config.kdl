@@ -5,9 +5,11 @@ keybinds {
    unbind "Ctrl b"
  }
  normal { 
-	bind "Alt t" { NewTab; }
-	bind "Alt w" { CloseTab; }
+	bind "Ctrl n" { NewTab; }
 	bind "Alt n" { NewPane; }
+ }
+ tab {
+	bind "k" { CloseTab; SwitchToMode "Normal"; }
  }
  pane {
 	bind "k" { CloseFocus; SwitchToMode "Normal"; }

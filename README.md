@@ -52,6 +52,11 @@ atuin init nu | save -f ~/.local/share/atuin/init.nu
 ln -s /Users/robbienohra/dotfiles/nushell /Users/robbienohra/Library/Application\ Support/nushell
 ```
 
+### Zellij
+
+- default config
+- https://github.com/zellij-org/zellij/blob/main/example/config.kdl
+
 ## Karabiner
 
 - https://ke-complex-modifications.pqrs.org/#caps_lock_tapped_escape_held_left_control
