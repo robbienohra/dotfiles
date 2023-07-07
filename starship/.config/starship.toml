@@ -1,41 +1,40 @@
 format = """
-[](bg:#DA627D fg:#9A348E)\
 $directory\
-[](fg:#DA627D bg:#FCA17D)\
+[](fg:pink bg:orange)\
 $git_branch\
 $git_status\
 $time\
-[ ](fg:#33658A)\
+[ ](blue)\
 """
+
+palette = 'robbie'
+
+[palettes.robbie]
+
+pink = '#DA627D'
+orange = '#FCA17D'
+white = '#F5F5DC'
+blue = '#33658A'
 
 # Disable the blank line at the start of the prompt
 # add_newline = false
 
 [directory]
-style = "bg:#DA627D"
+style = "bg:pink fg:white"
 format = "[ $path ]($style)"
 truncation_length = 3
 truncation_symbol = "…/"
 
-# Here is how you can shorten some long paths by text replacement
-# similar to mapped_locations in Oh My Posh:
-[directory.substitutions]
-"Documents" = "󰈙 "
-"Downloads" = " "
-"Music" = " "
-"Pictures" = " "
-
 [git_branch]
-symbol = ""
-style = "bg:#FCA17D"
+style = "bg:orange fg:white"
 format = '[ $symbol $branch ]($style)'
 
 [git_status]
-style = "bg:#FCA17D"
+style = "bg:orange fg:white"
 format = '[$all_status$ahead_behind ]($style)'
 
 [time]
 disabled = false
 time_format = "%R" # Hour:Minute Format
-style = "bg:#33658A"
+style = "bg:blue fg:white"
 format = '[ $time ]($style)'

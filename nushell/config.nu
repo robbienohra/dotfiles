@@ -3,7 +3,7 @@
 # version = 0.82.0
 
 let dark_theme = {
-   separator: "#d5c4a1"
+    separator: "#d5c4a1"
     leading_trailing_space_bg: { attr: "n" }
     header: { fg: "#b8bb26" attr: "b" }
     empty: "#83a598"
