@@ -39,15 +39,3 @@ function convip() {
   done
   echo "${ip:1}"
 }
-
-function nd() {
-  ENTRY="$HOME/Documents/diary/$(date +'%Y-%m-%d').md"
-  if [ ! -f $ENTRY ]; then
-    touch $ENTRY
-  fi
-  nvim $ENTRY
-}
-
-function compile_and_run() {
-  clang++ "$1" -o output -std=c++17 && ./output && rm output
-}

@@ -962,3 +962,7 @@ def diary [] {
 def wglow [] {
   watch ~/.nb --glob=**/*.md {|op, path, new_path| clear; glow $path}
 }
+
+def compile_and_run [file] {
+  clang++ $file -o output -std=c++17; ./output; rm output
+}
