@@ -73,11 +73,7 @@ vim.api.nvim_exec(
 
 -- markdown
 
--- autocmd("FileType", { pattern = { "markdown" }, command = "setlocal nonumber" })
--- autocmd("FileType", { pattern = { "markdown" }, command = "setlocal spell spelllang=en_us" })
-autocmd("FileType", { pattern = { "markdown" }, command = "set laststatus=0 noshowmode noruler" })
 autocmd({ "BufNewFile", "BufFilePre", "BufRead" }, { pattern = { "*.md" }, command = "set syntax=markdown" })
--- autocmd({ "InsertLeave" }, { pattern = { "*.md" }, command = "call UpdateFile()" })
 
 -- pencil
 autocmd("FileType", { pattern = { "markdown" }, command = "call pencil#init()" })
