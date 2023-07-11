@@ -51,6 +51,12 @@ return {
       -- optional for icon support
       dependencies = { "nvim-tree/nvim-web-devicons" },
     },
+    {
+      "iamcco/markdown-preview.nvim",
+      run = function()
+        vim.fn["mkdp#util#install"]()
+      end,
+    },
   },
   -- tpope goodies
   {
