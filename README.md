@@ -27,6 +27,10 @@ Install packages:
 
 ## Nushell
 
+### Treesitter
+
+- https://github.com/nushell/tree-sitter-nu/blob/main/installation/neovim.md
+
 ### Atuin
 
 - https://github.com/ellie/atuin#nushell
