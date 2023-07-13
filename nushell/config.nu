@@ -536,7 +536,7 @@ def "nu-complete git remote branches nonlocal without prefix" [] {
   ^git branch -r | lines | parse -r (['^[\* ]+', $remotes_regex, '?(?P<branch>\S+)'] | flatten | str join) | get branch | uniq | where {|branch| $branch != "HEAD"} | where {|branch| $branch not-in $local_branches }
 }
 
-def "nu-complete g sw" [] {
+def "nu-complete git switch" [] {
   (nu-complete git local branches)
   | parse "{value}"
   | insert description "local branch"
@@ -706,8 +706,8 @@ export extern "git pull" [
 ]
 
 # Switch between branches and commits
-export extern "g sw" [
-  switch?: string@"nu-complete g sw"        # name of branch to switch to
+export extern "git switch" [
+  switch?: string@"nu-complete git switch"        # name of branch to switch to
   --create(-c): string                            # create a new branch
   --detach(-d): string@"nu-complete git log"      # switch to a commit in a detatched state
   --force-create(-C): string                      # forces creation of new branch, if it exists then the existing branch will be reset to starting point
