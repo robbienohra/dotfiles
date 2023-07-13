@@ -2,7 +2,11 @@
 #
 # version = 0.82.0
 
-let-env PATH = ($env.PATH | split row (char esep) | prepend '/opt/homebrew/bin' | append $'($env.HOME)/.cargo/bin' )
+let-env PATH = ($env.PATH 
+	| split row (char esep) 
+	| prepend '/opt/homebrew/bin' 
+	| append $'($env.HOME)/.cargo/bin' 
+	| append $'($env.HOME)/Downloads/google-cloud-sdk/bin')
 
 let-env STARSHIP_SHELL = "nu"
 
