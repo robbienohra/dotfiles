@@ -29,6 +29,7 @@
   "nvim-web-devicons2": { "branch": "master", "commit": "9ab9b0b894b2388a9dbcdee5f00ce72e25d85bf9" },
   "plenary.nvim": { "branch": "master", "commit": "bda256fab0eb66a15e8190937e417e6a14ee5d72" },
   "vim-fugitive": { "branch": "master", "commit": "43f18ab9155c853a84ded560c6104e6300ad41da" },
+  "vim-helm": { "branch": "master", "commit": "c2e7b85711d410e1d73e64eb5df7b70b1c4c10eb" },
   "vim-peekaboo": { "branch": "master", "commit": "cc4469c204099c73dd7534531fa8ba271f704831" },
   "vim-pencil": { "branch": "master", "commit": "6d70438a8886eaf933c38a7a43a61adb0a7815ed" },
   "vim-repeat": { "branch": "master", "commit": "24afe922e6a05891756ecf331f39a1f6743d3d5a" },

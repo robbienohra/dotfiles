@@ -11,6 +11,7 @@ return {
     "mfussenegger/nvim-dap",
     "neovim/nvim-lspconfig",
     "williamboman/mason-lspconfig.nvim",
+    "towolf/vim-helm",
     { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
     {
 

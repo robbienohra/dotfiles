@@ -94,3 +94,20 @@ lspconfig.terraformls.setup { on_attach = on_attach }
 lspconfig.tsserver.setup { on_attach = on_attach }
 lspconfig.volar.setup { on_attach = on_attach }
 lspconfig.yamlls.setup { on_attach = on_attach, settings = yaml_settings }
+
+if not lspconfig.helm_ls then
+  lspconfig.helm_ls = {
+    default_config = {
+      cmd = { "helm_ls", "serve" },
+      filetypes = { "helm" },
+      root_dir = function(fname)
+        return util.root_pattern "Chart.yaml"(fname)
+      end,
+    },
+  }
+end
+
+lspconfig.helm_ls.setup {
+  filetypes = { "helm" },
+  cmd = { "helm_ls", "serve" },
+}

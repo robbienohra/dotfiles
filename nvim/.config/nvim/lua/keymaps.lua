@@ -84,6 +84,7 @@ map("n", "<leader>b", "<cmd>FzfLua blines<cr>")
 map("n", "<leader>t", "<cmd>FzfLua files<cr>")
 map("n", "<leader>f", "<cmd>FzfLua grep_project<cr>")
 map("n", "<leader>p", "<cmd>FzfLua oldfiles<cr>")
+map("n", "<leader>y", "<cmd>FzfLua command_history<cr>")
 -- map("n", "<leader>t", ":FzfLua<space>", { silent = false })
 
 -- move snippets
