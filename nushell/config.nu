@@ -966,3 +966,19 @@ def wglow [] {
 def compile_and_run [file] {
   clang++ $file -o output -std=c++17; ./output; rm output
 }
+
+def rconf [] {
+	let a = $"(git diff --name-only --diff-filter=U | sed -n 1p)"
+	if a != "" {
+		nvim -c 'Gvdiffsplit!' "$a"
+	}
+}
+
+# echo next file with conflict
+def conf [] {
+	let a = $"(git diff --name-only --diff-filter=U | sed -n 1p)"
+	if a != "" {
+		echo $a
+	}
+}
+
