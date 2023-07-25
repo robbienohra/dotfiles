@@ -485,6 +485,20 @@ let-env config = {
 			cmd: "zi"
 		  }
 	}
+	{
+			 name: change_dir_with_fzf
+			 modifier: alt
+			 keycode: Char_c
+			 mode: emacs
+			 event:[
+					 { edit: Clear }
+					 { edit: InsertString,
+						 value: "cd (fd --hidden --exclude .git | str join (char nl) | fzf | decode utf-8 | str trim)"
+
+					 }
+					 { send: Enter }
+				 ]
+		 }
   ]
 }
 
