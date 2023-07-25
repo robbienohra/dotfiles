@@ -456,6 +456,16 @@ let-env config = {
       event: { send: menu name: commands_with_description }
     }
 	{
+		  name: open_recent_file_with_fzf
+		  modifier: control
+		  keycode: char_k
+		  mode: emacs
+		  event: {
+			send: executehostcommand,
+			cmd: "nvim -c 'FzfLua oldfiles'"
+		  }
+	}
+	{
 		  name: open_file_with_fzf
 		  modifier: control
 		  keycode: char_o
