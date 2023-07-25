@@ -8,17 +8,17 @@ prompt: enabled
 pager:
 # Aliases allow you to create nicknames for gh commands
 aliases:
-    pc: pr create
-    pv: pr view --web
-    pa: pr review -a
-    bs: browse
-    co: pr checkout
-    st: pr status
-    ch: pr checks
-    rob: pr list -A robbienohra
-    bb: browse -b
-    rd: release delete
-    rc: release create
-    rv: release view -w
-    rl: release list
-    wv: workflow view -w
+  pc: pr create
+  pv: pr view --web
+  pa: pr review -a
+  bs: browse
+  co: pr checkout
+  st: pr status
+  ch: pr checks
+  rob: pr list -A robbienohra
+  bb: browse -b
+  rd: release delete
+  rc: release create
+  rv: release view -w
+  rl: release list
+  wv: workflow view -w
