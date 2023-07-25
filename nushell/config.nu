@@ -974,11 +974,23 @@ def rconf [] {
 	}
 }
 
-# echo next file with conflict
-def conf [] {
-	let a = $"(git diff --name-only --diff-filter=U | sed -n 1p)"
-	if a != "" {
-		echo $a
-	}
-}
-
+# # echo next file with conflict
+# def conf [] {
+# 	let a = $"(git diff --name-only --diff-filter=U | sed -n 1p)"
+# 	if a != "" {
+# 		echo $a
+# 	}
+# }
+#
+# def ours [] {
+# 	let FILE = $"(conf)"
+# 	echo $FILE | git checkout --ours $in
+# 	git add $FILE
+# }
+#
+# # take local change
+# function theirs() {
+# 	FILE=$(conf)
+# 	echo $FILE | xargs git checkout --theirs
+# 	git add $FILE
+# }

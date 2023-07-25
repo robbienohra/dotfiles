@@ -9,6 +9,10 @@ cmd ":command! WipeReg for i in range(34,122) | silent! call setreg(nr2char(i), 
 -- https://codingshower.com/vim-set-tab-to-n-spaces/
 autocmd("FileType", { pattern = { "*" }, command = "set noexpandtab shiftwidth=2 tabstop=2 softtabstop=2" })
 
+autocmd(
+  { "BufNewFile", "BufRead" },
+  { pattern = { "*.yaml", "*.yml" }, command = "set expandtab" }
+)
 -- https://vim.fandom.com/wiki/Invoke_a_function_with_a_count_prefix
 vim.api.nvim_exec(
   [[

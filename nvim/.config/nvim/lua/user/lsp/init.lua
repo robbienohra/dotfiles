@@ -81,13 +81,17 @@ util.default_config = vim.tbl_extend("force", util.default_config, {
   capabilities = get_forced_lsp_capabilities(),
 })
 
+lspconfig.efm.setup {
+  init_options = { documentFormatting = true },
+}
+
 lspconfig.bashls.setup { on_attach = on_attach }
 lspconfig.clangd.setup {}
 lspconfig.gopls.setup {}
 lspconfig.html.setup {}
 lspconfig.jdtls.setup { on_attach = on_attach }
 lspconfig.jsonls.setup { on_attach = on_attach }
-lspconfig.lua_ls.setup { on_attach = on_attach, settings = lua_settings }
+lspconfig.lua_ls.setup { settings = lua_settings }
 lspconfig.prismals.setup { on_attach = on_attach }
 lspconfig.svelte.setup {}
 lspconfig.terraformls.setup { on_attach = on_attach }

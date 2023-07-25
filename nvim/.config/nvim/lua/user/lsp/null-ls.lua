@@ -9,7 +9,6 @@ local diagnostics = null_ls.builtins.diagnostics
 null_ls.setup {
   debug = false,
   sources = {
-    formatting.clang_format,
     formatting.terraform_fmt,
     formatting.deno_fmt.with {
       filetypes = { "markdown" }, -- only runs `deno fmt` for markdown

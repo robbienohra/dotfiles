@@ -1,0 +1,11 @@
+version: 2
+root-markers:
+  - .git/
+lint-debounce: 1s
+tools:
+  lua-stylua: &lua-stylua
+     format-command: 'stylua --config-path ~/.config/stylua.toml -'
+     format-stdin: true
+languages:
+  lua:
+    - <<: *lua-stylua

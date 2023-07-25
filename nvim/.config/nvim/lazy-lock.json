@@ -6,6 +6,7 @@
   "cmp-nvim-lsp": { "branch": "main", "commit": "44b16d11215dce86f253ce0c30949813c0a90765" },
   "cmp-path": { "branch": "main", "commit": "91ff86cd9c29299a64f968ebb45846c485725f23" },
   "cmp-vsnip": { "branch": "main", "commit": "989a8a73c44e926199bfd05fa7a516d51f2d2752" },
+  "efmls-configs-nvim": { "branch": "main", "commit": "97ee24444ae96041aba7c25e20bfce396a01cfbb" },
   "fzf-lua": { "branch": "main", "commit": "1bba731df46feb1751dca1632268aae41ed5ac15" },
   "gruvbox-baby": { "branch": "main", "commit": "4f45f5182b986ea8099b8ad0207e07f1bc49a47f" },
   "harpoon": { "branch": "master", "commit": "21f4c47c6803d64ddb934a5b314dcb1b8e7365dc" },
