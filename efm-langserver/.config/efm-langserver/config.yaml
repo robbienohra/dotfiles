@@ -6,6 +6,11 @@ tools:
   lua-stylua: &lua-stylua
      format-command: 'stylua --config-path ~/.config/stylua.toml -'
      format-stdin: true
+  yaml-yamlfmt: &yaml-yamlfmt
+     format-command: 'yamlfmt -in'
+     format-stdin: true
 languages:
   lua:
     - <<: *lua-stylua
+  yaml:
+    - <<: *yaml-yamlfmt

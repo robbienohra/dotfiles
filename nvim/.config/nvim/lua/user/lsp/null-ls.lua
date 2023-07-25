@@ -14,7 +14,6 @@ null_ls.setup {
       filetypes = { "markdown" }, -- only runs `deno fmt` for markdown
       extra_args = { "--options-line-width=80", "--use-tabs=true" },
     },
-    formatting.yamlfmt,
     formatting.prettier.with {
       filetypes = {
         "css",

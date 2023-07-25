@@ -7,7 +7,10 @@ let-env PATH = ($env.PATH
 	| prepend '/opt/homebrew/bin' 
 	| append $'($env.HOME)/.cargo/bin' 
 	| append $'($env.HOME)/Downloads/google-cloud-sdk/bin'
-	| append $'/usr/local/bin')
+	| append $'/usr/local/bin'
+	| append $'/usr/local/go/bin')
+
+let-env PATH = ($env.PATH | append $'(go env GOPATH)/bin')
 
 let-env STARSHIP_SHELL = "nu"
 
