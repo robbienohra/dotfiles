@@ -4,13 +4,18 @@ root-markers:
 lint-debounce: 1s
 tools:
   lua-stylua: &lua-stylua
-     format-command: 'stylua --config-path ~/.config/stylua.toml -'
-     format-stdin: true
+    format-command: 'stylua --config-path ~/.config/stylua.toml -'
+    format-stdin: true
   yaml-yamlfmt: &yaml-yamlfmt
-     format-command: 'yamlfmt -in'
-     format-stdin: true
+    format-command: 'yamlfmt  -'
+    format-stdin: true
+  markdown-deno-fmt: &markdown-deno-fmt
+    format-command: 'deno fmt --options-line-width=80", "--use-tabs=true -'
+    format-stdin: true
 languages:
   lua:
     - <<: *lua-stylua
   yaml:
     - <<: *yaml-yamlfmt
+  markdown:
+    - <<: *markdown-deno-fmt
