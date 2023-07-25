@@ -7,7 +7,6 @@ return {
 	},
 	-- lsp
 	{
-		"jose-elias-alvarez/null-ls.nvim",
 		"mfussenegger/nvim-dap",
 		"neovim/nvim-lspconfig",
 		"williamboman/mason-lspconfig.nvim",

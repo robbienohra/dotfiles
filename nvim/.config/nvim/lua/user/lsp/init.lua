@@ -32,6 +32,7 @@ require("mason-lspconfig").setup {
 		"bashls",
 		"clangd",
 		"denols",
+		"efm",
 		"dockerls",
 		"eslint",
 		"gopls",
@@ -102,7 +103,7 @@ lspconfig.lua_ls.setup { settings = lua_settings }
 lspconfig.prismals.setup { on_attach = on_attach }
 lspconfig.svelte.setup {}
 lspconfig.terraformls.setup { on_attach = on_attach }
-lspconfig.tsserver.setup { on_attach = on_attach }
+lspconfig.tsserver.setup {}
 lspconfig.volar.setup { on_attach = on_attach }
 lspconfig.yamlls.setup { settings = yaml_settings }
 
@@ -112,7 +113,7 @@ if not lspconfig.helm_ls then
 			cmd = { "helm_ls", "serve" },
 			filetypes = { "helm" },
 			root_dir = function(fname)
-				return util.root_pattern "Chart.yaml"(fname)
+				return util.root_pattern "Chart.yaml" (fname)
 			end,
 		},
 	}

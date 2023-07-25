@@ -9,13 +9,39 @@ tools:
   yaml-yamlfmt: &yaml-yamlfmt
     format-command: 'yamlfmt  -'
     format-stdin: true
-  markdown-deno-fmt: &markdown-deno-fmt
-    format-command: 'deno fmt --options-line-width=80", "--use-tabs=true -'
+  markdown-pandoc: &markdown-pandoc
+    format-command: 'pandoc -f markdown -t gfm -sp --tab-stop=2'
+  prettierd: &prettierd
+    format-command: >
+      prettierd ${INPUT} ${--range-start=charStart} ${--range-end=charEnd} ${--tab-width=tabSize}
+
     format-stdin: true
+    root-markers:
+      - .prettierrc
+      - .prettierrc.json
+      - .prettierrc.js
+      - .prettierrc.yml
+      - .prettierrc.yaml
+      - .prettierrc.json5
+      - .prettierrc.mjs
+      - .prettierrc.cjs
+      - .prettierrc.toml
+  pg-format: &pg-format
+    format-command: 'pg_format'
+  html-prettier: &html-prettier
+    format-command: 'prettierd ${INPUT} ${--tab-width:tabWidth} ${--single-quote:singleQuote} --parser html'
 languages:
   lua:
     - <<: *lua-stylua
   yaml:
     - <<: *yaml-yamlfmt
   markdown:
-    - <<: *markdown-deno-fmt
+    - <<: *markdown-pandoc
+  javascript:
+    - <<: *prettierd
+  typescript:
+    - <<: *prettierd
+  sql:
+    - <<: *pg-format
+  html:
+    - <<: *html-prettier
