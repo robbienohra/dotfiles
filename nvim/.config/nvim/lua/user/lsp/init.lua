@@ -11,6 +11,7 @@ require("mason-tool-installer").setup {
 		"golangci-lint",
 		"go-debug-adapter",
 		"prettier",
+		"prettierd",
 		"shfmt",
 		"stylua",
 		"yamlfmt",
