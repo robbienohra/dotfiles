@@ -11,6 +11,7 @@ tools:
     format-stdin: true
   markdown-pandoc: &markdown-pandoc
     format-command: 'pandoc -f markdown -t gfm -sp --tab-stop=2'
+    format-stdin: true
   prettierd: &prettierd
     format-command: >
       prettierd ${INPUT} ${--range-start=charStart} ${--range-end=charEnd} ${--tab-width=tabSize}
