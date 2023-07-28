@@ -1,7 +1,7 @@
 local util = require "lspconfig.util"
 local lspconfig = require "lspconfig"
-local yaml_settings = require "user.lsp.settings.yaml"
-local lua_settings = require "user.lsp.settings.lua"
+local yaml_settings = require "robbie.plugins.lsp.settings.yaml"
+local lua_settings = require "robbie.plugins.lsp.settings.lua"
 
 require("mason-tool-installer").setup {
 

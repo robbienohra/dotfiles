@@ -1,5 +1,5 @@
-require "options"
-require "nvim"
+require "robbie.options"
+require "robbie.nvim"
 require "robbie.plugins"
 
 -- require("lazy").setup("plugins", {
@@ -19,7 +19,7 @@ require "robbie.plugins"
 --   },
 -- })
 
-require "colorscheme"
-require "commands"
-require "keymaps"
-require "user.nvim"
+require "robbie.colorscheme"
+require "robbie.commands"
+require "robbie.keymaps"
+require "robbie.nvim"
