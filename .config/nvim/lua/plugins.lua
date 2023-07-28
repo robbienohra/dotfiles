@@ -31,7 +31,6 @@ return {
 			"mhinz/vim-signify",
 			"norcalli/nvim-colorizer.lua",
 			"numToStr/Comment.nvim",
-			"p00f/nvim-ts-rainbow",
 			"windwp/nvim-autopairs",
 			"windwp/nvim-ts-autotag",
 			{ "luisiacc/gruvbox-baby", branch = "main" },
