@@ -1,11 +1,11 @@
 return {
-	"mfussenegger/nvim-dap",
+	'mfussenegger/nvim-dap',
 	config = function()
-		local dap = require "dap"
+		local dap = require 'dap'
 		dap.adapters.codelldb = {
-			type = "server",
-			port = "13000",
-			host = "127.0.0.1",
+			type = 'server',
+			port = '13000',
+			host = '127.0.0.1',
 			-- executable = {
 			--   command = "codelldb",
 			--   args = { "--port", "13000" },
@@ -13,13 +13,13 @@ return {
 		}
 		dap.configurations.cpp = {
 			{
-				name = "Launch",
-				type = "codelldb",
-				request = "launch",
+				name = 'Launch',
+				type = 'codelldb',
+				request = 'launch',
 				program = function()
-					return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")
+					return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
 				end,
-				cwd = "${workspaceFolder}",
+				cwd = '${workspaceFolder}',
 				stopOnEntry = false,
 			},
 		}

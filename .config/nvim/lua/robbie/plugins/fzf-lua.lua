@@ -1,17 +1,17 @@
 return {
-	"ibhagwan/fzf-lua",
+	'ibhagwan/fzf-lua',
 	-- optional for icon support
-	dependencies = { "nvim-tree/nvim-web-devicons" },
+	dependencies = { 'nvim-tree/nvim-web-devicons' },
 	config = function()
-		require("fzf-lua").setup {
+		require('fzf-lua').setup {
 			winopts = {
 				preview = {
-					layout = "vertical",
+					layout = 'vertical',
 				},
 			},
 
 			fzf_opts = {
-				["--layout"] = "default",
+				['--layout'] = 'default',
 			},
 		}
 	end,
