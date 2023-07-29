@@ -4,18 +4,12 @@ keybinds {
    unbind "Ctrl o"
    unbind "Ctrl g"
    unbind "Ctrl b"
- }
- normal { 
-	bind "Ctrl n" { NewTab; }
-	bind "Alt n" { NewPane; }
- }
- tab {
-	bind "k" { CloseTab; SwitchToMode "Normal"; }
+   unbind "Ctrl p"
+	 bind "Ctrl n" { SwitchToMode "Pane"; }
  }
  pane {
-	bind "k" { CloseFocus; SwitchToMode "Normal"; }
-	bind "|" { NewPane "Right"; SwitchToMode "Normal"; }
-	bind "-" { NewPane "Down"; SwitchToMode "Normal"; }
+	bind "v" { NewPane "Right"; SwitchToMode "Normal"; }
+	bind "s" { NewPane "Down"; SwitchToMode "Normal"; }
  }
 }
 

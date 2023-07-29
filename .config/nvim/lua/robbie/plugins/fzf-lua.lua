@@ -9,6 +9,12 @@ return {
 					layout = 'vertical',
 				},
 			},
+			keymap = {
+				fzf = {
+					['ctrl-k'] = 'previous-history',
+					['ctrl-j'] = 'next-history',
+				},
+			},
 
 			fzf_opts = {
 				['--layout'] = 'default',
