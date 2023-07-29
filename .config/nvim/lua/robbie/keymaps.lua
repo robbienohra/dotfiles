@@ -38,7 +38,7 @@ map("n", "<leader>.", ":lcd %:p:h<CR>")
 -- Clean search (highlight)
 map("n", "<leader><space>", ":noh<cr>")
 
--- Split
+-- Window mode
 map("n", "<Leader>w", "<C-w>")
 
 -- Search mappings: These will make it so that going to the next one in a
@@ -58,16 +58,11 @@ map("n", "<S-b>", "dvb")
 map("n", "<S-w>", "diw")
 map("n", "<Leader>o", "o<Esc>^Da")
 
--- navigation
-
-map("n", "<C-Down>", "<C-w>j")
-map("n", "<C-Up>", "<C-w>k")
-map("n", "<C-Left>", "<C-w>h")
-map("n", "<C-Right>", "<C-w>l")
+map("n", "<C-Right>", "<C-w>w")
 
 -- page up/down with centering
-map("n", "<C-k>", "<C-d>zz")
-map("n", "<C-u>", "<C-u>zz")
+map("n", "<C-Down>", "<C-d>zz")
+map("n", "<C-Up>", "<C-u>zz")
 
 -- refresh
 map("n", "<Leader>r", ":luafile %<CR>")

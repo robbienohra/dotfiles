@@ -5,7 +5,8 @@ keybinds {
    unbind "Ctrl g"
    unbind "Ctrl b"
    unbind "Ctrl p"
-	 bind "Ctrl n" { SwitchToMode "Pane"; }
+   unbind "Ctrl n"
+	 bind "F1" { SwitchToMode "Pane"; }
  }
  pane {
 	bind "v" { NewPane "Right"; SwitchToMode "Normal"; }
