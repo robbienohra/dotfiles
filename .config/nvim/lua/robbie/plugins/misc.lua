@@ -50,12 +50,6 @@ return {
 		},
 	},
 	{
-		'iamcco/markdown-preview.nvim',
-		run = function()
-			vim.fn['mkdp#util#install']()
-		end,
-	},
-	{
 		'preservim/vim-pencil',
 		config = function()
 			vim.g.pencil = {
