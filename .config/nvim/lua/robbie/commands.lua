@@ -81,6 +81,7 @@ vim.api.nvim_exec(
 -- markdown
 
 autocmd({ "BufNewFile", "BufFilePre", "BufRead" }, { pattern = { "*.md" }, command = "set syntax=markdown" })
+autocmd({ "BufNewFile", "BufFilePre", "BufRead" }, { pattern = { "*.nu" }, command = "set filetype=nu" })
 
 -- pencil
 autocmd("FileType", { pattern = { "markdown" }, command = "call pencil#init()" })
