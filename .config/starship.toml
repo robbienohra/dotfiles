@@ -1,40 +1,27 @@
 format = """
 $directory\
-[](fg:pink bg:orange)\
 $git_branch\
 $git_status\
 $time\
-[ ](blue)\
+$character
 """
 
-palette = 'robbie'
-
-[palettes.robbie]
-
-pink = '#DA627D'
-orange = '#FCA17D'
-white = '#F5F5DC'
-blue = '#33658A'
 
 # Disable the blank line at the start of the prompt
 # add_newline = false
 
 [directory]
-style = "bg:pink fg:white"
 format = "[ $path ]($style)"
 truncation_length = 3
 truncation_symbol = "…/"
 
 [git_branch]
-style = "bg:orange fg:white"
-format = '[ $symbol $branch ]($style)'
+format = '[$symbol$branch]($style) '
 
 [git_status]
-style = "bg:orange fg:white"
-format = '[$all_status$ahead_behind ]($style)'
+format = '([$all_status$ahead_behind]($style)) '
 
 [time]
 disabled = false
 time_format = "%R" # Hour:Minute Format
-style = "bg:blue fg:white"
-format = '[ $time ]($style)'
+format = '[$time]($style) '
