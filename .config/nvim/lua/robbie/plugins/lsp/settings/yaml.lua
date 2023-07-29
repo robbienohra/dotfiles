@@ -1,5 +1,0 @@
-return {
-  yaml = {
-    keyOrdering = false,
-  },
-}
