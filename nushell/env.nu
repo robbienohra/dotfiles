@@ -8,7 +8,8 @@ let-env PATH = ($env.PATH
 	| append $'($env.HOME)/.cargo/bin' 
 	| append $'($env.HOME)/Downloads/google-cloud-sdk/bin'
 	| append $'/usr/local/bin'
-	| append $'/usr/local/go/bin')
+	| append $'/usr/local/go/bin'
+	| append $'/usr/local/texlive/2023/bin/universal-darwin/') 
 
 let-env PATH = ($env.PATH | append $'(go env GOPATH)/bin')
 
