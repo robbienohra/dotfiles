@@ -10,7 +10,7 @@ tools:
     format-command: 'yamlfmt  -'
     format-stdin: true
   markdown-pandoc: &markdown-pandoc
-    format-command: 'pandoc -f markdown -t commonmark -s --tab-stop=2'
+    format-command: 'pandoc -f markdown -t markdown -s --tab-stop=2'
     format-stdin: true
   prettierd: &prettierd
     format-command: >
@@ -31,6 +31,9 @@ tools:
     format-command: 'pg_format'
   html-prettier: &html-prettier
     format-command: 'prettierd ${INPUT} ${--tab-width:tabWidth} ${--single-quote:singleQuote} --parser html'
+  cpp-clang-format: &cpp-clang-format
+    format-command: 'clang-format -'
+    format-stdin: true
 languages:
   lua:
     - <<: *lua-stylua
@@ -46,3 +49,5 @@ languages:
     - <<: *pg-format
   html:
     - <<: *html-prettier
+  cpp:
+    - <<: *cpp-clang-format
