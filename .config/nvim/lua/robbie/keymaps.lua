@@ -61,8 +61,8 @@ map("n", "<Leader>o", "o<Esc>^Da")
 map("n", "<C-Right>", "<C-w>w")
 
 -- page up/down with centering
-map("n", "<PageUp>", "<C-d>zz")
-map("n", "<PageDown>", "<C-u>zz")
+map("n", "<PageDown>", "<C-d>zz")
+map("n", "<PageUp>", "<C-u>zz")
 
 -- refresh
 map("n", "<Leader>r", ":luafile %<CR>")
