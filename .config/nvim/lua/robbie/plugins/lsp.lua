@@ -37,7 +37,6 @@ return {
 			ensure_installed = {
 				'bashls',
 				'clangd',
-				'denols',
 				'efm',
 				'dockerls',
 				'eslint',

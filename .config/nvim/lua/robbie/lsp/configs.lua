@@ -1,7 +1,6 @@
 local configs = {
 	bashls = {},
 	clangd = {},
-	denols = {},
 	efm = {
 		init_options = {
 			documentFormatting = true,
