@@ -2,7 +2,7 @@
 #
 # version = 0.82.0
 
-let-env PATH = ($env.PATH 
+$env.PATH = ($env.PATH 
 	| split row (char esep) 
 	| prepend '/opt/homebrew/bin' 
 	| append $'($env.HOME)/.cargo/bin' 
@@ -11,34 +11,34 @@ let-env PATH = ($env.PATH
 	| append $'/usr/local/go/bin'
 	| append $'/usr/local/texlive/2023/bin/universal-darwin/') 
 
-let-env PATH = ($env.PATH | append $'(go env GOPATH)/bin')
+$env.PATH = ($env.PATH | append $'(go env GOPATH)/bin')
 
-let-env STARSHIP_SHELL = "nu"
+$env.STARSHIP_SHELL = "nu"
 
 def create_left_prompt [] {
     starship prompt --cmd-duration $env.CMD_DURATION_MS $'--status=($env.LAST_EXIT_CODE)'
 }
 
 # Use nushell functions to define your right and left prompt
-let-env PROMPT_COMMAND = { || create_left_prompt }
-let-env PROMPT_COMMAND_RIGHT = ""
+$env.PROMPT_COMMAND = { || create_left_prompt }
+$env.PROMPT_COMMAND_RIGHT = ""
 
 # The prompt indicators are environmental variables that represent
 # the state of the prompt
-let-env PROMPT_INDICATOR = ""
-let-env PROMPT_INDICATOR_VI_INSERT = ": "
-let-env PROMPT_INDICATOR_VI_NORMAL = "〉"
-let-env PROMPT_MULTILINE_INDICATOR = "::: "
+$env.PROMPT_INDICATOR = ""
+$env.PROMPT_INDICATOR_VI_INSERT = ": "
+$env.PROMPT_INDICATOR_VI_NORMAL = "〉"
+$env.PROMPT_MULTILINE_INDICATOR = "::: "
 
 # Use nushell functions to define your right and left prompt
-let-env PROMPT_COMMAND = {|| create_left_prompt }
-# let-env PROMPT_COMMAND_RIGHT = {|| create_right_prompt }
+$env.PROMPT_COMMAND = {|| create_left_prompt }
+# $env.PROMPT_COMMAND_RIGHT = {|| create_right_prompt }
 
 # Specifies how environment variables are:
 # - converted from a string to a value on Nushell startup (from_string)
 # - converted from a value back to a string when running external commands (to_string)
 # Note: The conversions happen *after* config.nu is loaded
-let-env ENV_CONVERSIONS = {
+$env.ENV_CONVERSIONS = {
   "PATH": {
     from_string: { |s| $s | split row (char esep) | path expand --no-symlink }
     to_string: { |v| $v | path expand --no-symlink | str join (char esep) }
@@ -52,14 +52,14 @@ let-env ENV_CONVERSIONS = {
 # Directories to search for scripts when calling source or use
 #
 # By default, <nushell-config-dir>/scripts is added
-let-env NU_LIB_DIRS = [
+$env.NU_LIB_DIRS = [
     ($nu.default-config-dir | path join 'scripts')
 ]
 
 # Directories to search for plugin binaries when calling register
 #
 # By default, <nushell-config-dir>/plugins is added
-let-env NU_PLUGIN_DIRS = [
+$env.NU_PLUGIN_DIRS = [
     ($nu.default-config-dir | path join 'plugins')
 ]
 
@@ -67,7 +67,7 @@ zoxide init nushell | save -f ~/.zoxide.nu
 
 if not (which fnm | is-empty) {
   ^fnm env --json | from json | load-env
-  let-env PATH = ($env.PATH | prepend [
+  $env.PATH = ($env.PATH | prepend [
 	$"($env.FNM_MULTISHELL_PATH)/bin"
   ])
 }
@@ -96,7 +96,7 @@ let BLUE_GRAY = "#458588"
 let DARK_GRAY = "#83A598"
 let LIGHT_BLUE = "#7FA2AC"
 
-let-env FZF_DEFAULT_OPTS = $"--history=($env.HOME)/.fzf_history 
+$env.FZF_DEFAULT_OPTS = $"--history=($env.HOME)/.fzf_history 
 --bind ctrl-d:page-down,ctrl-u:page-up 
 --bind ctrl-p:previous-history 
 --bind ctrl-f:next-history 
@@ -121,19 +121,19 @@ let-env FZF_DEFAULT_OPTS = $"--history=($env.HOME)/.fzf_history
 --color=preview-fg:($FOREGROUND)
 --color=preview-bg:($BACKGROUND)"
 
-let-env FZF_DEFAULT_COMMAND = "fd --type f --follow --hidden --exclude .git"
+$env.FZF_DEFAULT_COMMAND = "fd --type f --follow --hidden --exclude .git"
 
 # for glow
-let-env EDITOR = "nvim"
+$env.EDITOR = "nvim"
 
-let-env RIPGREP_CONFIG_PATH = $"($env.HOME)/.ripgreprc"
+$env.RIPGREP_CONFIG_PATH = $"($env.HOME)/.ripgreprc"
 
 
 # todo
-# let-env PYENV_ROOT = $"($env.HOME)/.pyenv"
+# $env.PYENV_ROOT = $"($env.HOME)/.pyenv"
 # I cannot recall where exactly these are needed
-# let-env LDFLAGS = "-L/opt/homebrew/opt/llvm/lib"
-# let-env CPPFLAGS = "-I/opt/homebrew/opt/llvm/include"
-# let-env PATH = "/opt/homebrew/opt/llvm/bin"
+# $env.LDFLAGS = "-L/opt/homebrew/opt/llvm/lib"
+# $env.CPPFLAGS = "-I/opt/homebrew/opt/llvm/include"
+# $env.PATH = "/opt/homebrew/opt/llvm/bin"
 # "/opt/homebrew/opt/openjdk@11/bin"
 # "/opt/homebrew/opt/gnu-sed/libexec/gnubin"

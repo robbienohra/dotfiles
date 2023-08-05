@@ -86,7 +86,7 @@ let dark_theme = {
 }
 
 # The default config record. This is where much of your global configuration is setup.
-let-env config = {
+$env.config = {
   show_banner: false
   ls: {
     use_ls_colors: true # use the LS_COLORS environment variable to colorize output
@@ -939,7 +939,7 @@ export extern "git help" [
 # https://github.com/Schniz/fnm/issues/463#issuecomment-1602216687
 if not (which fnm | is-empty) {
   ^fnm env --json | from json | load-env
-  let-env PATH = ($env.PATH | prepend [
+  $env.PATH = ($env.PATH | prepend [
 	$"($env.FNM_MULTISHELL_PATH)/bin"
   ])
 }
