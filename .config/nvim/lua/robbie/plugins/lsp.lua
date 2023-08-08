@@ -14,7 +14,6 @@ return {
 
 			ensure_installed = {
 				'clang-format',
-				-- "deno_fmt",
 				'golangci-lint',
 				'go-debug-adapter',
 				'prettier',
