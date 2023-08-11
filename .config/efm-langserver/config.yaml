@@ -34,6 +34,9 @@ tools:
   cpp-clang-format: &cpp-clang-format
     format-command: 'clang-format -'
     format-stdin: true
+  latex-latexindent: &latex-latexindent
+    format-command: 'latexindent -'
+    format-stdin: true
 languages:
   lua:
     - <<: *lua-stylua
@@ -51,3 +54,5 @@ languages:
     - <<: *html-prettier
   cpp:
     - <<: *cpp-clang-format
+  tex:
+    - <<: *latex-latexindent

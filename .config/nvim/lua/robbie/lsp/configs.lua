@@ -21,12 +21,12 @@ local configs = {
 		settings = {
 			Lua = {
 				diagnostics = {
-					globals = { "vim" },
+					globals = { 'vim' },
 				},
 				workspace = {
 					library = {
-						[vim.fn.expand "$VIMRUNTIME/lua"] = true,
-						[vim.fn.stdpath "config" .. "/lua"] = true,
+						[vim.fn.expand '$VIMRUNTIME/lua'] = true,
+						[vim.fn.stdpath 'config' .. '/lua'] = true,
 					},
 				},
 			},
@@ -38,6 +38,7 @@ local configs = {
 	sqlls = {},
 	svelte = {},
 	terraformls = {},
+	texlab = {},
 	tsserver = {},
 	volar = {},
 	yamlls = {

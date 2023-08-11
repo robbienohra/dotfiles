@@ -50,6 +50,7 @@ return {
 				'sqlls',
 				'svelte',
 				'terraformls',
+				'texlab',
 				'tsserver',
 				'volar',
 				'yamlls',
