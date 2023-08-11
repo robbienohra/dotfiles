@@ -44,6 +44,7 @@ return {
 				'jdtls',
 				'jsonls',
 				'lua_ls',
+				"marksman",
 				'prismals',
 				'pyright',
 				'rust_analyzer',

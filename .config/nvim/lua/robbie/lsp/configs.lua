@@ -1,6 +1,7 @@
 local configs = {
 	bashls = {},
 	clangd = {},
+	marksman = {},
 	efm = {
 		init_options = {
 			documentFormatting = true,
