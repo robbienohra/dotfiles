@@ -61,4 +61,8 @@ return {
 		end,
 	},
 	'nvim-lua/plenary.nvim',
+	{
+		'iamcco/markdown-preview.nvim',
+		ft = 'markdown',
+	},
 }

@@ -8,7 +8,7 @@ Install homebrew:
 
 - https://brew.sh/
 
-```sh
+``` sh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
@@ -16,7 +16,7 @@ Install homebrew:
 
 Install cargo:
 
-```sh
+``` sh
 curl https://sh.rustup.rs -sSf | sh
 ```
 
@@ -35,9 +35,9 @@ Install packages:
 
 - https://github.com/ellie/atuin#nushell
 - https://atuin.sh/docs/key-binding#disable-up-arrow
-- ensure that `nobind` is run _before_ generating the `init.nu` file
+- ensure that `nobind` is run *before* generating the `init.nu` file
 
-```
+``` nu
 let-env ATUIN_NOBIND = "true"
 atuin init nu | save -f ~/.local/share/atuin/init.nu
 ```
@@ -53,7 +53,7 @@ atuin init nu | save -f ~/.local/share/atuin/init.nu
 
 ### configs
 
-```sh
+``` sh
 ln -s /Users/robbienohra/dotfiles/nushell /Users/robbienohra/Library/Application\ Support/nushell
 ```
 
@@ -66,3 +66,7 @@ ln -s /Users/robbienohra/dotfiles/nushell /Users/robbienohra/Library/Application
 
 - https://ke-complex-modifications.pqrs.org/#caps_lock_tapped_escape_held_left_control
 - https://ke-complex-modifications.pqrs.org/#colemak_dh_ansi_layout
+
+## Lazy.nvim
+
+- plugins located at `~/.local/share/nvim/lazy`
