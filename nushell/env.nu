@@ -128,6 +128,8 @@ $env.EDITOR = "nvim"
 
 $env.RIPGREP_CONFIG_PATH = $"($env.HOME)/.ripgreprc"
 
+$env.HYPOTHESIS_KEY = "6879-xnFYrxzSwu1jC8evbSlVOBTeNr8pGjmvjJ1-fYnQv3s"
+$env.HYPOTHESIS_NAME = "robbienohra"
 
 # todo
 # $env.PYENV_ROOT = $"($env.HOME)/.pyenv"
