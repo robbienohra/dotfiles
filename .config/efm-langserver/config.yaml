@@ -37,6 +37,9 @@ tools:
   latex-latexindent: &latex-latexindent
     format-command: 'latexindent -'
     format-stdin: true
+  python-yapf: &python-yapf
+    format-command: 'yapf --quiet'
+    format-stdin: true
 languages:
   lua:
     - <<: *lua-stylua
@@ -56,3 +59,5 @@ languages:
     - <<: *cpp-clang-format
   tex:
     - <<: *latex-latexindent
+  python:
+    - <<: *python-yapf
