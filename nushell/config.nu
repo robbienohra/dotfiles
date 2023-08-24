@@ -517,7 +517,7 @@ alias n = nvim .
 # https://github.com/nushell/nu_scripts/blob/a61256da0ee77a29b478877b47eea88f522a6c11/custom-completions/auto-generate/completions/git.nu
 
 def "nu-complete git available upstream" [] {
-  ^git branch -a | lines | each { |line| $line | str replace '\* ' "" | str trim }
+  ^git branch -a | lines | each { |line| $line | str replace --regex '\* ' "" | str trim }
 }
 
 def "nu-complete git remotes" [] {
@@ -541,7 +541,7 @@ def "nu-complete git commits current branch" [] {
 
 # Yield local branches like `main`, `feature/typo_fix`
 def "nu-complete git local branches" [] {
-  ^git branch | lines | each { |line| $line | str replace '\* ' "" | str trim }
+  ^git branch | lines | each { |line| $line | str replace --regex '\* ' "" | str trim }
 }
 
 # Yield remote branches like `origin/main`, `upstream/feature-a`
