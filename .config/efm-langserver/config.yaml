@@ -3,6 +3,8 @@ root-markers:
   - .git/
 lint-debounce: 1s
 tools:
+  go-gofmt: &go-gofmt
+    format-command: 'gofmt -'
   lua-stylua: &lua-stylua
     format-command: 'stylua --config-path ~/.config/stylua.toml -'
     format-stdin: true
@@ -41,6 +43,8 @@ tools:
     format-command: 'yapf --quiet'
     format-stdin: true
 languages:
+  go:
+    - <<: *go-gofmt
   lua:
     - <<: *lua-stylua
   yaml:
