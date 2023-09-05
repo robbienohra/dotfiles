@@ -4,12 +4,14 @@ root-markers:
 lint-debounce: 1s
 tools:
   go-gofmt: &go-gofmt
-    format-command: 'gofmt -'
+    # executed against stdin by default
+    format-command: 'gofmt'
+    format-stdin: true
   lua-stylua: &lua-stylua
     format-command: 'stylua --config-path ~/.config/stylua.toml -'
     format-stdin: true
   yaml-yamlfmt: &yaml-yamlfmt
-    format-command: 'yamlfmt  -'
+    format-command: 'yamlfmt -'
     format-stdin: true
   markdown-pandoc: &markdown-pandoc
     format-command: 'pandoc --columns=80 -f markdown -t markdown -s --tab-stop=2'
