@@ -994,7 +994,7 @@ def compile_and_run [file] {
 def rconf [] {
 	let a = $"(git diff --name-only --diff-filter=U | sed -n 1p)"
 	if a != "" {
-		nvim -c 'Gvdiffsplit!' "$a"
+		nvim -c 'Gvdiffsplit!' $a
 	}
 }
 
