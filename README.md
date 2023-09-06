@@ -2,9 +2,7 @@
 
 - my collection of dotfiles
 
-## Setup
-
-Install homebrew:
+## Install homebrew:
 
 - https://brew.sh/
 
@@ -14,19 +12,35 @@ Install homebrew:
 
 - https://doc.rust-lang.org/cargo/getting-started/installation.html
 
-Install cargo[^1]:
+## Install cargo[^1]:
 
 ``` sh
 curl https://sh.rustup.rs -sSf | bash -s -- -y --no-modify-path
 ```
 
+## Install cargo packages
+
 ``` sh
-source "$HOME/.cargo/env"
 bash install_cargo_packages.sh
-install_brew_packages.sh
 ```
 
-## Nushell
+## Nushell configs
+
+``` sh
+ln -s /Users/robbienohra/dotfiles/nushell /Users/robbienohra/Library/Application\ Support/nushell
+```
+
+## Install brew packages
+
+- `install_brew_packages.sh`
+
+## Install `go`:
+
+- https://go.dev/doc/install
+
+## zoxide
+
+- https://github.com/ajeetdsouza/zoxide
 
 ### Treesitter
 
@@ -51,12 +65,6 @@ atuin init nu | save -f ~/.local/share/atuin/init.nu
 ### fnm
 
 - https://github.com/Schniz/fnm/issues/463
-
-### configs
-
-``` sh
-ln -s /Users/robbienohra/dotfiles/nushell /Users/robbienohra/Library/Application\ Support/nushell
-```
 
 ### Zellij
 
