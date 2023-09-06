@@ -63,8 +63,6 @@ $env.NU_PLUGIN_DIRS = [
     ($nu.default-config-dir | path join 'plugins')
 ]
 
-zoxide init nushell | save -f ~/.zoxide.nu
-
 if not (which fnm | is-empty) {
   ^fnm env --json | from json | load-env
   $env.PATH = ($env.PATH | prepend [
