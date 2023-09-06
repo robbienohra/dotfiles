@@ -1,4 +1,4 @@
-brew install $(<packages)
+brew install $(<brew_packages)
 
 
 # https://github.com/junegunn/fzf#using-homebrew

@@ -14,16 +14,17 @@ Install homebrew:
 
 - https://doc.rust-lang.org/cargo/getting-started/installation.html
 
-Install cargo:
+Install cargo[^1]:
 
 ``` sh
-curl https://sh.rustup.rs -sSf | sh
+curl https://sh.rustup.rs -sSf | bash -s -- -y --no-modify-path
 ```
 
-Install packages:
-
-- `install_brew_packages.sh`
-- `install_cargo_packages.sh`
+``` sh
+source "$HOME/.cargo/env"
+bash install_cargo_packages.sh
+install_brew_packages.sh
+```
 
 ## Nushell
 
@@ -70,3 +71,8 @@ ln -s /Users/robbienohra/dotfiles/nushell /Users/robbienohra/Library/Application
 ## Lazy.nvim
 
 - plugins located at `~/.local/share/nvim/lazy`
+
+# References
+
+[^1]: [installing cargo without
+  zsh](https://github.com/rust-lang/rustup/issues/2040#issuecomment-538721697)
