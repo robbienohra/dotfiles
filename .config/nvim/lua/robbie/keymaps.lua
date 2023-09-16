@@ -6,6 +6,20 @@ local function map(mode, lhs, rhs, opts)
 	vim.api.nvim_set_keymap(mode, lhs, rhs, options)
 end
 
+vim.api.nvim_exec(
+	[[
+function! GetRelativePath()
+  let l:git_root = systemlist('git rev-parse --show-toplevel')[0]
+  let l:file_path = expand('%:p')
+  let l:relative_path = substitute(l:file_path, l:git_root.'/', '', '')
+  return l:relative_path
+endfunction
+]],
+	true
+)
+
+map('n', '<leader>c', ':let @+=GetRelativePath()<CR>')
+
 -- lsp
 map('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>')
 map('n', '<space>f', '<cmd>lua vim.lsp.buf.format { async = true } <CR>')
@@ -73,7 +87,6 @@ map('n', '<Leader>r', ':luafile %<CR>')
 
 -- yank filename
 -- map("n", "<leader>c", ":let @+=expand('%')<CR>")
-map('n', '<leader>c', ':let @+=expand(\'%:p\')<CR>')
 
 -- fzf
 map('n', '<leader>b', '<cmd>FzfLua blines<cr>')
