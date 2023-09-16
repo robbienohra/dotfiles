@@ -998,6 +998,13 @@ def rconf [] {
 	}
 }
 
+def sq [] {
+  git add .;
+	git commit --fixup $"(git rev-parse head)" -n;
+	git rebase -i head~2 --autosquash;
+}
+
+
 # # echo next file with conflict
 # def conf [] {
 # 	let a = $"(git diff --name-only --diff-filter=U | sed -n 1p)"

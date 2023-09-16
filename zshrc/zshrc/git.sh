@@ -24,12 +24,6 @@ function is-ancestor() {
 	echo $?
 }
 
-function sq() {
-	git add .
-	git commit --fixup $(git rev-parse head) -n
-	git rebase -i head~2 --autosquash
-}
-
 function s() {
 	gh pr view -w $(gh pr list --search "$@" --state merged --json number | jq '.[].number')
 }
