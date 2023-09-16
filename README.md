@@ -53,7 +53,7 @@ ln -s /Users/robbienohra/dotfiles/nushell /Users/robbienohra/Library/Application
 - ensure that `nobind` is run *before* generating the `init.nu` file
 
 ``` nu
-let-env ATUIN_NOBIND = "true"
+$env.ATUIN_NOBIND = "true"
 atuin init nu | save -f ~/.local/share/atuin/init.nu
 ```
 
