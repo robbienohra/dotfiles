@@ -6,6 +6,7 @@ $env.PATH = ($env.PATH
 	| split row (char esep) 
 	| prepend '/opt/homebrew/bin' 
 	| append $'($env.HOME)/.cargo/bin' 
+	| append $'($env.HOME)/Library/Python/3.9/bin' 
 	| append $'($env.HOME)/Downloads/google-cloud-sdk/bin'
 	| append $'/usr/local/bin'
 	| append $'/usr/local/go/bin'
