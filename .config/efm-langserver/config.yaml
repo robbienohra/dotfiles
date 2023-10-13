@@ -44,6 +44,9 @@ tools:
   python-yapf: &python-yapf
     format-command: 'yapf --quiet'
     format-stdin: true
+  hcl-terraform: &hcl-terraform
+    format-command: 'terraform fmt -'
+    format-stdin: true
 languages:
   go:
     - <<: *go-gofmt
@@ -67,3 +70,5 @@ languages:
     - <<: *latex-latexindent
   python:
     - <<: *python-yapf
+  hcl:
+    - <<: *hcl-terraform
