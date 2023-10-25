@@ -122,10 +122,9 @@ $env.FZF_DEFAULT_OPTS = $"--history=($env.HOME)/.fzf_history
 
 $env.FZF_DEFAULT_COMMAND = "fd --type f --follow --hidden --exclude .git"
 
-# for glow
-$env.EDITOR = "nvim"
-
 $env.RIPGREP_CONFIG_PATH = $"($env.HOME)/.ripgreprc"
+
+$env.JAVA_HOME = "/opt/homebrew/opt/openjdk@11"
 
 # todo
 # $env.PYENV_ROOT = $"($env.HOME)/.pyenv"
@@ -133,5 +132,4 @@ $env.RIPGREP_CONFIG_PATH = $"($env.HOME)/.ripgreprc"
 # $env.LDFLAGS = "-L/opt/homebrew/opt/llvm/lib"
 # $env.CPPFLAGS = "-I/opt/homebrew/opt/llvm/include"
 # $env.PATH = "/opt/homebrew/opt/llvm/bin"
-# "/opt/homebrew/opt/openjdk@11/bin"
 # "/opt/homebrew/opt/gnu-sed/libexec/gnubin"
