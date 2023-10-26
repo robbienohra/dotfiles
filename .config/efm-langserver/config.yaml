@@ -47,6 +47,9 @@ tools:
   hcl-terraform: &hcl-terraform
     format-command: 'terraform fmt -'
     format-stdin: true
+  shell-shfmt: &shell-shfmt
+    format-command: 'shfmt -'
+    format-stdin: true
 languages:
   go:
     - <<: *go-gofmt
@@ -72,3 +75,5 @@ languages:
     - <<: *python-yapf
   hcl:
     - <<: *hcl-terraform
+  sh:
+    - <<: *shell-shfmt
