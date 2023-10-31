@@ -38,9 +38,6 @@ tools:
   cpp-clang-format: &cpp-clang-format
     format-command: 'clang-format -'
     format-stdin: true
-  latex-latexindent: &latex-latexindent
-    format-command: 'latexindent -'
-    format-stdin: true
   python-yapf: &python-yapf
     format-command: 'yapf --quiet'
     format-stdin: true
@@ -49,6 +46,9 @@ tools:
     format-stdin: true
   shell-shfmt: &shell-shfmt
     format-command: 'shfmt -'
+    format-stdin: true
+  tex-latexindent: &tex-latexindent
+    format-command: 'latexindent -'
     format-stdin: true
 languages:
   go:
@@ -70,7 +70,7 @@ languages:
   cpp:
     - <<: *cpp-clang-format
   tex:
-    - <<: *latex-latexindent
+    - <<: *tex-latexindent
   python:
     - <<: *python-yapf
   hcl:
