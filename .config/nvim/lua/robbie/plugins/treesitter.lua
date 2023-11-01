@@ -21,6 +21,7 @@ return {
 				'html',
 				'javascript',
 				'json',
+				'kdl',
 				'lua',
 				'markdown',
 				'markdown_inline',
