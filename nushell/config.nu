@@ -507,6 +507,7 @@ source ~/.zoxide.nu
 alias l = ls
 alias la = ls -la
 alias k = kubectl
+alias tf = terraform
 alias g = git
 alias ynw = yarn workspace
 alias n = nvim .

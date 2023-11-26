@@ -41,7 +41,7 @@ tools:
   python-yapf: &python-yapf
     format-command: 'yapf --quiet'
     format-stdin: true
-  hcl-terraform: &hcl-terraform
+  terraform: &terraform
     format-command: 'terraform fmt -'
     format-stdin: true
   shell-shfmt: &shell-shfmt
@@ -73,7 +73,7 @@ languages:
     - <<: *tex-latexindent
   python:
     - <<: *python-yapf
-  hcl:
-    - <<: *hcl-terraform
+  tf:
+    - <<: *terraform
   sh:
     - <<: *shell-shfmt
