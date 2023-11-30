@@ -6,4 +6,5 @@ $(brew --prefix)/opt/fzf/install
 
 # https://github.com/ryanoasis/nerd-fonts
 brew tap homebrew/cask-fonts &&
-brew install --cask font-jetbrains-mono-nerd-font
+brew install --cask font-jetbrains-mono-nerd-font &&
+brew install --cask font-jetbrains-mono
