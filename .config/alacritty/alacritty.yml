@@ -66,5 +66,9 @@ working_directory: /Users/robbienohra/dotfiles/
 shell:
   program: /Users/robbienohra/.cargo/bin/nu
   args:
+    - --config
+    - /Users/robbienohra/dotfiles/nushell/config.nu
+    - --env-config
+    - /Users/robbienohra/dotfiles/nushell/env.nu
     - -e
     - 'try { zellij attach --index 0 } catch { zellij }'

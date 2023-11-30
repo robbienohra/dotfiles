@@ -18,16 +18,14 @@
 curl https://sh.rustup.rs -sSf | bash -s -- -y --no-modify-path
 ```
 
+```sh
+source "$HOME/.cargo/env"
+```
+
 ## Install cargo packages
 
 ``` sh
 bash install_cargo_packages.sh
-```
-
-## Nushell configs
-
-``` sh
-ln -s /Users/robbienohra/dotfiles/nushell /Users/robbienohra/Library/Application\ Support/nushell
 ```
 
 ## Install brew packages
