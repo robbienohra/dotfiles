@@ -78,6 +78,10 @@ atuin init nu | save -f ~/.local/share/atuin/init.nu
 
 - plugins located at `~/.local/share/nvim/lazy`
 
+## Node
+
+- https://nodejs.org/en/download
+
 # References
 
 [^1]: [installing cargo without
