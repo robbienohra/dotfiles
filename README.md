@@ -11,6 +11,7 @@
 ```
 
 - https://doc.rust-lang.org/cargo/getting-started/installation.html
+- https://github.com/rsteube/carapace-bin
 
 ## Install cargo[^1]:
 
