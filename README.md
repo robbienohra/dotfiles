@@ -69,6 +69,10 @@ atuin init nu | save -f ~/.local/share/atuin/init.nu
 - default config
 - https://github.com/zellij-org/zellij/blob/main/example/config.kdl
 
+### Carapace
+
+- https://rsteube.github.io/carapace-bin/installation.html
+
 ## Karabiner
 
 - https://ke-complex-modifications.pqrs.org/#caps_lock_tapped_escape_held_left_control
