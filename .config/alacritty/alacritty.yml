@@ -62,7 +62,6 @@ font:
     # https://github.com/alacritty/alacritty/issues/474#issuecomment-338803299
     # https://github.com/alacritty/alacritty/issues/2716
     # https://github.com/alacritty/alacritty/issues/62#issuecomment-347552058
-working_directory: /Users/robbienohra/dotfiles/
 shell:
   program: /Users/robbienohra/.cargo/bin/nu
   args:
