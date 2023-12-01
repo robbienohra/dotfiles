@@ -1,18 +1,15 @@
-# Nushell Environment Config File
-#
-# version = 0.82.0
+use std
 
 $env.PATH = ($env.PATH 
 	| split row (char esep) 
 	| prepend '/opt/homebrew/bin' 
+	| prepend $'($env.HOME)/Library/Application Support/carapace/bin'
 	| append $'($env.HOME)/.cargo/bin' 
 	| append $'($env.HOME)/Library/Python/3.9/bin' 
 	| append $'($env.HOME)/Downloads/google-cloud-sdk/bin'
 	| append $'/usr/local/bin'
 	| append $'/usr/local/go/bin'
 	| append $'/usr/local/texlive/2023/bin/universal-darwin/') 
-
-$env.PATH = ($env.PATH | append $'(go env GOPATH)/bin')
 
 $env.STARSHIP_SHELL = "nu"
 
