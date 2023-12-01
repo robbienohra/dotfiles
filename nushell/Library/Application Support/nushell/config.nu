@@ -1,4 +1,5 @@
 use git.nu *
+use aliases.nu *
 
 let dark_theme = {
     separator: "#d5c4a1"
@@ -141,13 +142,6 @@ source ~/.local/share/atuin/init.nu
 
 # aliases
 
-alias l = ls
-alias la = ls -la
-alias k = kubectl
-alias tf = terraform
-alias g = git
-alias ynw = yarn workspace
-alias n = nvim .
 
 
 # fnm
