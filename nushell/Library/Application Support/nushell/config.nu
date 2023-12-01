@@ -87,6 +87,32 @@ let dark_theme = {
 $env.config = {
 	show_banner: false
 	keybindings: [
+	    {
+      name: fuzzy_history
+      modifier: control
+      keycode: char_r
+      mode: emacs
+      event: {
+        send: executehostcommand
+        cmd: "commandline (history | each { |it| $it.command } | uniq | reverse | str join (char nl) | fzf --layout=reverse --height=40% -q (commandline) | decode utf-8 | str trim)"
+      }
+    }
+	{
+    name: fuzzy_dir
+    modifier: alt
+    keycode: char_s
+    mode: [emacs, vi_normal, vi_insert]
+    event: {
+        send: executehostcommand
+        cmd: "commandline -a (
+            ls **/*
+            | where type == dir
+            | get name
+            | input list --fuzzy
+                $'Please choose a (ansi magenta)directory(ansi reset) to (ansi cyan_underline)insert(ansi reset):'
+        )"
+    }
+}
 	 {
 	 	  name: cd_with_zi
 	 	  modifier: control
