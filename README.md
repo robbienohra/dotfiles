@@ -41,11 +41,11 @@ bash install_cargo_packages.sh
 
 - https://github.com/ajeetdsouza/zoxide
 
-### Treesitter
+## Treesitter
 
 - https://github.com/nushell/tree-sitter-nu/blob/main/installation/neovim.md
 
-### Atuin
+## Atuin
 
 - https://github.com/ellie/atuin#nushell
 - https://atuin.sh/docs/key-binding#disable-up-arrow
@@ -56,21 +56,21 @@ $env.ATUIN_NOBIND = "true"
 atuin init nu | save -f ~/.local/share/atuin/init.nu
 ```
 
-### Starship
+## Starship
 
 - https://www.nushell.sh/book/3rdpartyprompts.html#starship
 - https://starship.rs/#nushell
 
-### fnm
+## fnm
 
 - https://github.com/Schniz/fnm/issues/463
 
-### Zellij
+## Zellij
 
 - default config
 - https://github.com/zellij-org/zellij/blob/main/example/config.kdl
 
-### Carapace
+## Carapace
 
 - https://rsteube.github.io/carapace-bin/installation.html
 
@@ -91,6 +91,11 @@ atuin init nu | save -f ~/.local/share/atuin/init.nu
 ## Node
 
 - https://nodejs.org/en/download
+
+## Nushell
+
+- https://github.com/nushell/nu_scripts/tree/main
+- https://github.com/nushell/nu_scripts/blob/main/themes/nu-themes/gruvbox-dark.nu
 
 # References
 
