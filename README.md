@@ -95,7 +95,7 @@ atuin init nu | save -f ~/.local/share/atuin/init.nu
 ## Nushell
 
 - https://github.com/nushell/nu_scripts/tree/main
-- https://github.com/nushell/nu_scripts/blob/main/themes/nu-themes/gruvbox-dark.nu
+- https://github.com/nushell/nu_scripts/tree/main/themes
 
 # References
 
