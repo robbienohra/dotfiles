@@ -74,6 +74,11 @@ atuin init nu | save -f ~/.local/share/atuin/init.nu
 - https://ke-complex-modifications.pqrs.org/#caps_lock_tapped_escape_held_left_control
 - https://ke-complex-modifications.pqrs.org/#colemak_dh_ansi_layout
 
+## Keyboard shortcuts
+
+- disable mission control shortcuts
+- Ctrl-Left and Ctr-Right for changing spaces
+
 ## Lazy.nvim
 
 - plugins located at `~/.local/share/nvim/lazy`
