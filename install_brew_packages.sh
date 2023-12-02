@@ -1,5 +1,10 @@
-brew install $(<brew_packages)
-
+while read -r package; do
+    if brew list --formula | grep -q "^${package}\$"; then
+        echo "Package ${package} is already installed."
+    else
+        brew install "${package}"
+    fi
+done < brew_packages
 
 # https://github.com/junegunn/fzf#using-homebrew
 $(brew --prefix)/opt/fzf/install
