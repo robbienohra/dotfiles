@@ -38,7 +38,7 @@ $env.config = {
 		  mode: emacs
 		  event: {
 			send: executehostcommand,
-			cmd: "fzf --bind 'enter:become(nvim {})'"
+			cmd: "fzf --bind 'enter:become(nvim {})' --height 25%"
 		  }
 	}
 	{
