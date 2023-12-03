@@ -11,6 +11,8 @@ $env.PATH = ($env.PATH
 	| append $'/usr/local/go/bin'
 	| append $'/usr/local/texlive/2023/bin/universal-darwin/') 
 
+$env.NUPM_HOME = $'($env.HOME)/nupm'
+
 use '/Users/robbienohra/nupm/modules/nu-themes/gruvbox-dark-hard.nu'
 
 $env.config.color_config = (gruvbox-dark-hard)
