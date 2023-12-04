@@ -34,21 +34,21 @@ $env.config = {
 	 {
 		  name: open_file_with_fzf
 		  modifier: control
+		  keycode: char_r
+		  mode: emacs
+		  event: {
+			send: executehostcommand,
+			cmd: "nvim --headless -c 'source $HOME/dotfiles/process_oldfiles.vim' -c 'qa!' | open ~/oldfiles_output.txt | lines | uniq | reverse | str join (char nl) | fzf --bind 'enter:execute(nvim {})+abort' --height 25%"
+		  }
+	}
+	 {
+		  name: open_file_with_fzf
+		  modifier: control
 		  keycode: char_o
 		  mode: emacs
 		  event: {
 			send: executehostcommand,
 			cmd: "fzf --bind 'enter:become(nvim {})' --height 25%"
-		  }
-	}
-	{
-		  name: open_recent_file_with_fzf
-		  modifier: control
-		  keycode: char_k
-		  mode: emacs
-		  event: {
-			send: executehostcommand,
-			cmd: "nvim -c 'FzfLua oldfiles'"
 		  }
 	}
 	{
