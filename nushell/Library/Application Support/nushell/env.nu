@@ -9,6 +9,7 @@ $env.PATH = ($env.PATH
 	| append $'($env.HOME)/Downloads/google-cloud-sdk/bin'
 	| append $'/usr/local/bin'
 	| append $'/usr/local/go/bin'
+	| append $'($env.HOME)/go/bin'
 	| append $'/usr/local/texlive/2023/bin/universal-darwin/') 
 
 $env.NUPM_HOME = $'($env.HOME)/nupm'
