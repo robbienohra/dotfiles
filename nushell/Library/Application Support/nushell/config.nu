@@ -38,7 +38,7 @@ $env.config = {
 		  mode: emacs
 		  event: {
 			send: executehostcommand,
-			cmd: "nvim --headless -c 'source $HOME/dotfiles/process_oldfiles.vim' -c 'qa!' | open ~/oldfiles_output.txt | lines | uniq | reverse | str join (char nl) | fzf --bind 'enter:execute(nvim {})+abort' --height 25%"
+			cmd: "open ~/oldfiles_output.txt | lines | uniq | reverse | str join (char nl) | fzf --bind 'enter:execute(nvim {})+abort' --height 50%"
 		  }
 	}
 	 {
@@ -48,7 +48,7 @@ $env.config = {
 		  mode: emacs
 		  event: {
 			send: executehostcommand,
-			cmd: "fzf --bind 'enter:become(nvim {})' --height 25%"
+			cmd: "fzf --bind 'enter:become(nvim {})' --height 50%"
 		  }
 	}
 	{
