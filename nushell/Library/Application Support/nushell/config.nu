@@ -12,7 +12,7 @@ $env.config = {
     mode: [emacs, vi_normal, vi_insert]
     event: {
         send: executehostcommand
-        cmd: "commandline -a (
+        cmd: "commandline -i (
 						fd --hidden --exclude .git 
 						| lines
             | input list --fuzzy
