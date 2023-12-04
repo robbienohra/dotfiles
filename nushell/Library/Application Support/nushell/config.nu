@@ -8,14 +8,13 @@ $env.config = {
 	{
     name: fuzzy_dir
     modifier: alt
-    keycode: char_s
+    keycode: char_c
     mode: [emacs, vi_normal, vi_insert]
     event: {
         send: executehostcommand
         cmd: "commandline -a (
-            ls **/*
-            | where type == dir
-            | get name
+						fd --hidden --exclude .git 
+						| lines
             | input list --fuzzy
                 $'Please choose a (ansi magenta)directory(ansi reset) to (ansi cyan_underline)insert(ansi reset):'
         )"
@@ -51,19 +50,6 @@ $env.config = {
 			cmd: "fzf --bind 'enter:become(nvim {})' --height 50%"
 		  }
 	}
-	{
-			 name: change_dir_with_fzf
-			 modifier: alt
-			 keycode: Char_c
-			 mode: emacs
-			 event:[
-					 { edit: Clear }
-					 { edit: InsertString,
-						 value: "cd (fd --hidden --exclude .git | str join (char nl) | fzf | decode utf-8 | str trim)"
-					 }
-					 { send: Enter }
-				 ]
-		 }
 	]
 }
 
