@@ -31,13 +31,13 @@ $env.config = {
 	 	  }
 	 }
 	 {
-		  name: open_file_with_fzf
+		  name: open_recent_file_with_fzf
 		  modifier: control
 		  keycode: char_r
 		  mode: emacs
 		  event: {
 			send: executehostcommand,
-			cmd: "open ~/oldfiles_output.txt | lines | uniq | reverse | str join (char nl) | fzf --bind 'enter:execute(nvim {})+abort' --height 50%"
+			cmd: "open ~/oldfiles_output.txt | lines | uniq | reverse | str join (char nl) | fzf --bind 'enter:execute(nvim {})+abort' --height 50% --border"
 		  }
 	}
 	 {
@@ -47,7 +47,7 @@ $env.config = {
 		  mode: emacs
 		  event: {
 			send: executehostcommand,
-			cmd: "fzf --bind 'enter:become(nvim {})' --height 50%"
+			cmd: "fzf --bind 'enter:become(nvim {})' --height 50% --border"
 		  }
 	}
 	]

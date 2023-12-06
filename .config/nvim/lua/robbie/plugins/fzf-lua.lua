@@ -5,14 +5,17 @@ return {
 	config = function()
 		require('fzf-lua').setup {
 			winopts = {
+				height = '0.5',
 				preview = {
 					layout = 'vertical',
+					hidden = 'hidden',
 				},
 			},
 			keymap = {
 				fzf = {
 					['ctrl-k'] = 'previous-history',
 					['ctrl-j'] = 'next-history',
+					['f4'] = 'toggle-preview',
 				},
 			},
 

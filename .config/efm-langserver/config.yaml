@@ -61,6 +61,8 @@ languages:
     - <<: *markdown-pandoc
   javascript:
     - <<: *prettierd
+  json:
+    - <<: *prettierd
   typescript:
     - <<: *prettierd
   sql:
