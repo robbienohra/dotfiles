@@ -10,6 +10,9 @@ keybinds {
    unbind "Ctrl s"
 	 bind "F1" { SwitchToMode "Pane"; }
  }
+ normal {
+	bind "Ctrl s" { EditScrollback; }
+ }
  pane {
 	bind "v" { NewPane "Right"; SwitchToMode "Normal"; }
 	bind "s" { NewPane "Down"; SwitchToMode "Normal"; }
