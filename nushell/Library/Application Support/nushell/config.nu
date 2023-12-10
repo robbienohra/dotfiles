@@ -21,6 +21,16 @@ $env.config = {
     }
 }
 	 {
+	 	  name: open_nvim
+	 	  modifier: control
+	 	  keycode: char_n
+	 	  mode: emacs
+	 	  event: {
+	 		send: executehostcommand,
+	 		cmd: "nvim -c Oil"
+	 	  }
+	 }
+	 {
 	 	  name: cd_with_zi
 	 	  modifier: control
 	 	  keycode: char_z
