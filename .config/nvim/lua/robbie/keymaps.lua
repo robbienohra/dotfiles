@@ -104,3 +104,6 @@ map('n', '<esc>h', ':lua require(\'harpoon.ui\').toggle_quick_menu()<CR>')
 -- pencil
 map('n', '<F7>', ':<C-u>PFormatToggle<cr>')
 map('i', '<F7>', '<C-o>:PFormatToggle<cr>')
+
+-- oil.nvim
+map("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })

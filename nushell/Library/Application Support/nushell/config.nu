@@ -13,7 +13,7 @@ $env.config = {
     event: {
         send: executehostcommand
         cmd: "commandline -i (
-						fd --hidden --exclude .git 
+						fd --hidden --exclude .git --type d
 						| lines
             | input list --fuzzy
                 $'Please choose a (ansi magenta)directory(ansi reset) to (ansi cyan_underline)insert(ansi reset):'
