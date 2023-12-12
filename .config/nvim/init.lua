@@ -56,7 +56,7 @@ _G.fzf_dirs = function(opts)
 			vim.cmd('Oil ' .. selected[1])
 		end,
 	}
-	fzf_lua.fzf_exec('fd --type d', opts)
+	fzf_lua.fzf_exec('fd --type d --hidden --exclude .git', opts)
 end
 
 -- vim.keymap.set('n', '<C-k>', _G.fzf_dirs)

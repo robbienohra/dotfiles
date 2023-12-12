@@ -6,7 +6,6 @@ keybinds {
    unbind "Ctrl b"
    unbind "Ctrl p"
    unbind "Ctrl n"
-   unbind "Ctrl h"
    unbind "Ctrl s"
 	 bind "F1" { SwitchToMode "Pane"; }
  }
