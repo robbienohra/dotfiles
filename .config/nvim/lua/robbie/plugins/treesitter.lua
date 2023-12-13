@@ -4,6 +4,7 @@ return {
 	cmd = 'TSUpdate',
 	dependencies = {
 		'windwp/nvim-ts-autotag',
+		'LhKipp/nvim-nu',
 	},
 	config = function()
 		require('nvim-treesitter.configs').setup {
