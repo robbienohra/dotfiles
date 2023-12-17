@@ -130,6 +130,8 @@ $env.RIPGREP_CONFIG_PATH = $"($env.HOME)/.ripgreprc"
 
 $env.JAVA_HOME = "/opt/homebrew/opt/openjdk@11"
 
+$env.EDITOR = "nvim"
+
 # todo
 # $env.PYENV_ROOT = $"($env.HOME)/.pyenv"
 # I cannot recall where exactly these are needed
