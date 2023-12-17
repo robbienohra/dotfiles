@@ -2,7 +2,6 @@ format = """
 $directory\
 $git_branch\
 $git_status\
-$time\
 $character
 """
 
