@@ -50,6 +50,9 @@ tools:
   tex-latexindent: &tex-latexindent
     format-command: 'latexindent -'
     format-stdin: true
+  hjson: &hjson
+    format-command: 'hjson -'
+    format-stdin: true
 languages:
   go:
     - <<: *go-gofmt
@@ -63,6 +66,8 @@ languages:
     - <<: *prettierd
   json:
     - <<: *prettierd
+  hjson:
+    - <<: *hjson
   typescript:
     - <<: *prettierd
   sql:

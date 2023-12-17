@@ -19,6 +19,7 @@ return {
 				'dockerfile',
 				'go',
 				'hcl',
+				'hjson',
 				'html',
 				'javascript',
 				'json',

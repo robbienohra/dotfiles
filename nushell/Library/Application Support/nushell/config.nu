@@ -51,13 +51,13 @@ $env.config = {
 		  }
 	}
 	 {
-		  name: open_file_with_fzf
+		  name: open_br
 		  modifier: control
 		  keycode: char_o
 		  mode: emacs
 		  event: {
 			send: executehostcommand,
-			cmd: "fzf --bind 'enter:become(nvim {})' --height 50% --border"
+			cmd: "br"
 		  }
 	}
 	]
