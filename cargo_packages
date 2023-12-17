@@ -3,6 +3,7 @@ bat
 cargo-update
 du-dust
 dust
+exa
 fd-find
 fnm
 git-delta
