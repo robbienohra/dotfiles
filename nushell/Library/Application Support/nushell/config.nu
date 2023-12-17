@@ -96,3 +96,5 @@ $env.config = (
 		}
 	)
 )
+
+source /Users/robbienohra/.config/broot/launcher/nushell/br
