@@ -1,0 +1,14 @@
+{
+  show_selection_mark: true
+  special_paths: {/media: "no-enter"}
+  quit_on_last_cancel: true
+  content_search_max_file_size: 10MB
+  imports:
+  [
+    verbs.hjson
+    {
+      luma: ["dark", "unknown"]
+      file: skins/dark-gruvbox.hjson
+    }
+  ]
+}
