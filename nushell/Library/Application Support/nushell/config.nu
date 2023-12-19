@@ -12,8 +12,8 @@ $env.config = {
 	 	  mode: emacs
 	 	  event: {
 	 		send: executehostcommand,
-	 		cmd: "nvim -c 'lua require("harpoon.ui").toggle_quick_menu()'"
-	 	  }
+	 		cmd: $'nvim -c "luafile ($env.HOME)/dotfiles/harpoon.lua"'
+	 }
 	 }
 	 {
 	 	  name: cd_with_zi

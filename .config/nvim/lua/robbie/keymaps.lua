@@ -93,10 +93,6 @@ map('n', '<C-Down>', 'z.')
 map('v', 'J', ':m \'>+1<CR>gv=gv')
 map('v', 'K', ':m \'<-2<CR>gv=gv')
 
--- harpoon
-map('n', '<leader>h', ':lua require(\'harpoon.mark\').add_file()<CR>')
-map('n', '<esc>h', ':lua require(\'harpoon.ui\').toggle_quick_menu()<CR>')
-
 -- pencil
 map('n', '<F7>', ':<C-u>PFormatToggle<cr>')
 map('i', '<F7>', '<C-o>:PFormatToggle<cr>')
