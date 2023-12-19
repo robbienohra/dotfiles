@@ -75,30 +75,6 @@ if not (which fnm | is-empty) {
   ])
 }
 
-let DARK0 = ""#0D0E0F"
-let DARK = "#0D0E0F"
-let BACKGROUND_DARK = "#171A1A"
-let BACKGROUND = "#1D2021"
-let BACKGROUND_LIGHT = "#32302F"
-let FOREGROUND = "#EBDBB2"
-let GRAY = "#DEDEDE"
-let MEDIUM_GRAY = "#504945"
-let COMMENT = "#665C54"
-let MILK = "#E7D7AD"
-let ERROR_RED = "#CC241D"
-let RED = "#FB4934"
-let ORANGE = "#D65D0E"
-let BRIGHT_YELLOW = "#FABD2F"
-let SOFT_YELLOW = "#EEBD35"
-let PINK = "#D4879C"
-let MAGENTA = "#B16286"
-let SOFT_GREEN = "#98971A"
-let FOREST_GREEN = "#689D6A"
-let CLEAN_GREEN = "#8EC07C"
-let BLUE_GRAY = "#458588"
-let DARK_GRAY = "#83A598"
-let LIGHT_BLUE = "#7FA2AC"
-
 $env.RIPGREP_CONFIG_PATH = $"($env.HOME)/.ripgreprc"
 
 $env.JAVA_HOME = "/opt/homebrew/opt/openjdk@11"

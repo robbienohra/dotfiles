@@ -55,6 +55,9 @@ map('n', '<leader><space>', ':noh<cr>')
 -- Window mode
 map('n', '<Leader>w', '<C-w>')
 
+-- Hard quit
+map('n', '<Leader>q', ':qa!<CR>')
+
 -- Search mappings: These will make it so that going to the next one in a
 -- search will center on the line it's found in.
 map('n', 'n', 'nzzzv')

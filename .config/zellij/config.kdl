@@ -1,11 +1,12 @@
 keybinds {
  shared {
 	 bind "F10" { CloseFocus; }
-   unbind "Ctrl o"
-   unbind "Ctrl g"
    unbind "Ctrl b"
-   unbind "Ctrl p"
+   unbind "Ctrl g"
+   unbind "Ctrl h"
    unbind "Ctrl n"
+   unbind "Ctrl o"
+   unbind "Ctrl p"
    unbind "Ctrl s"
    unbind "Ctrl t"
    unbind "Alt h"

@@ -6,6 +6,16 @@ $env.config = {
 	show_banner: false
 	keybindings: [
 	 {
+	 	  name: harpoon
+	 	  modifier: control
+	 	  keycode: char_h
+	 	  mode: emacs
+	 	  event: {
+	 		send: executehostcommand,
+	 		cmd: "nvim -c 'lua require("harpoon.ui").toggle_quick_menu()'"
+	 	  }
+	 }
+	 {
 	 	  name: cd_with_zi
 	 	  modifier: control
 	 	  keycode: char_z
