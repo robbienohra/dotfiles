@@ -99,33 +99,6 @@ let BLUE_GRAY = "#458588"
 let DARK_GRAY = "#83A598"
 let LIGHT_BLUE = "#7FA2AC"
 
-$env.FZF_DEFAULT_OPTS = $"--history=($env.HOME)/.fzf_history 
---bind ctrl-d:page-down,ctrl-u:page-up 
---bind ctrl-p:previous-history 
---bind ctrl-f:next-history 
---bind F2:toggle-preview 
---info=hidden 
---color=fg:($FOREGROUND) 
---color=bg:($BACKGROUND) 
---color=hl:($BRIGHT_YELLOW) 
---color=fg+:bold:($FOREGROUND) 
---color=bg+:($COMMENT) 
---color=hl+:($BRIGHT_YELLOW) 
---color=gutter:($BACKGROUND) 
---color=info:($ORANGE) 
---color=separator:($BACKGROUND) 
---color=border:($MILK) 
---color=label:($SOFT_YELLOW) 
---color=prompt:($LIGHT_BLUE) 
---color=spinner:($BRIGHT_YELLOW) 
---color=pointer:bold:($BRIGHT_YELLOW) 
---color=marker:($ERROR_RED) 
---color=header:($ORANGE) 
---color=preview-fg:($FOREGROUND)
---color=preview-bg:($BACKGROUND)"
-
-$env.FZF_DEFAULT_COMMAND = "fd --type f --follow --hidden --exclude .git"
-
 $env.RIPGREP_CONFIG_PATH = $"($env.HOME)/.ripgreprc"
 
 $env.JAVA_HOME = "/opt/homebrew/opt/openjdk@11"

@@ -2,7 +2,6 @@ clang-format
 cmake
 commitizen
 docker
-fzf
 gh
 git
 gnu-sed
