@@ -22,3 +22,4 @@ aliases:
     rv: release view -w
     rl: release list
     wv: workflow view -w
+version: "1"

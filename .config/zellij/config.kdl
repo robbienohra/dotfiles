@@ -7,11 +7,14 @@ keybinds {
    unbind "Ctrl p"
    unbind "Ctrl n"
    unbind "Ctrl s"
+   unbind "Ctrl t"
    unbind "Alt h"
 	 bind "F1" { SwitchToMode "Pane"; }
  }
  normal {
 	bind "Ctrl s" { EditScrollback; }
+  bind "Alt t" { NewTab; }
+	bind "Alt w" { CloseFocus; }
  }
  pane {
 	bind "v" { NewPane "Right"; SwitchToMode "Normal"; }
