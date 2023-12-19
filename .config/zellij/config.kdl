@@ -6,6 +6,8 @@ keybinds clear-defaults=true {
   bind "Alt s" { NewPane "Right"; }
   bind "Alt t" { NewTab; }
 	bind "Alt w" { CloseFocus; }
+	bind "Alt Left" { MoveFocusOrTab "Left"; }
+	bind "Alt Right" { MoveFocusOrTab "Right"; }
  }
 }
 
