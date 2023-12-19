@@ -48,14 +48,6 @@ return {
 			end,
 		},
 	},
-	{
-		'preservim/vim-pencil',
-		config = function()
-			vim.g.pencil = {
-				textWidth = 80,
-			}
-		end,
-	},
 	'nvim-lua/plenary.nvim',
 	{
 		'iamcco/markdown-preview.nvim',
