@@ -15,6 +15,7 @@ keybinds {
 	bind "Ctrl s" { EditScrollback; }
   bind "Alt t" { NewTab; }
 	bind "Alt w" { CloseFocus; }
+	bind "Ctrl k" { Clear; }
  }
  pane {
 	bind "v" { NewPane "Right"; SwitchToMode "Normal"; }

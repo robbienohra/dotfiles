@@ -40,24 +40,3 @@ require('lazy').setup {
 
 require 'robbie.commands'
 require 'robbie.keymaps'
-
--- TODO: switch directories
--- https://github.com/ibhagwan/fzf-lua/wiki/Advanced#example-directory-switcher
-
-_G.fzf_dirs = function(opts)
-	local fzf_lua = require 'fzf-lua'
-	opts = opts or {}
-	opts.prompt = 'Directories> '
-	opts.fn_transform = function(x)
-		return fzf_lua.utils.ansi_codes.magenta(x)
-	end
-	opts.actions = {
-		['default'] = function(selected)
-			vim.cmd('Oil ' .. selected[1])
-		end,
-	}
-	fzf_lua.fzf_exec('fd --type d --hidden --exclude .git', opts)
-end
-
--- vim.keymap.set('n', '<C-k>', _G.fzf_dirs)
-vim.keymap.set('n', '<C-k>', '<cmd>lua _G.fzf_dirs()<CR>')
