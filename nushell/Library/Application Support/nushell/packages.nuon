@@ -1,0 +1,7 @@
+{
+	packages: [
+		{source: 'https://github.com/jan9103/packer.nu'}
+		{source: 'https://codeberg.org/packer.nu/bookmarks.git'}
+	]
+}
+# vim: ft=nu

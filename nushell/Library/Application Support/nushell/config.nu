@@ -63,3 +63,11 @@ $env.config = (
 )
 
 source /Users/robbienohra/.config/broot/launcher/nushell/br
+
+### packer.nu ###
+# load packer api
+overlay use /Users/robbienohra/.local/share/nushell/packer/start/packer.nu/api_layer/packer_api.nu
+# load packages
+overlay use /Users/robbienohra/.local/share/nushell/packer/packer_packages.nu
+# load conditional packages
+#overlay use /Users/robbienohra/.local/share/nushell/packer/conditional_packages.nu

@@ -12,7 +12,7 @@ keybinds {
 	 bind "F1" { SwitchToMode "Pane"; }
  }
  normal {
-	bind "Ctrl s" { EditScrollback; }
+	bind "Ctrl f" { EditScrollback; }
   bind "Alt t" { NewTab; }
 	bind "Alt w" { CloseFocus; }
 	bind "Ctrl k" { Clear; }
