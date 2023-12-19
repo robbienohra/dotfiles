@@ -5,31 +5,6 @@ use utils.nu *
 $env.config = {
 	show_banner: false
 	keybindings: [
-	{
-    name: fuzzy_dir
-    modifier: alt
-    keycode: char_c
-    mode: [emacs, vi_normal, vi_insert]
-    event: {
-        send: executehostcommand
-        cmd: "commandline -i (
-						fd --hidden --exclude .git --type d
-						| lines
-            | input list --fuzzy
-                $'Please choose a (ansi magenta)directory(ansi reset) to (ansi cyan_underline)insert(ansi reset):'
-        )"
-    }
-}
-	 {
-	 	  name: open_nvim
-	 	  modifier: control
-	 	  keycode: char_n
-	 	  mode: emacs
-	 	  event: {
-	 		send: executehostcommand,
-	 		cmd: "nvim -c Oil"
-	 	  }
-	 }
 	 {
 	 	  name: cd_with_zi
 	 	  modifier: control
@@ -40,16 +15,6 @@ $env.config = {
 	 		cmd: "zi"
 	 	  }
 	 }
-	 {
-		  name: open_recent_file_with_fzf
-		  modifier: control
-		  keycode: char_r
-		  mode: emacs
-		  event: {
-			send: executehostcommand,
-			cmd: "open ~/oldfiles_output.txt | lines | uniq | reverse | str join (char nl) | fzf --bind 'enter:execute(nvim {})+abort' --height 50% --border"
-		  }
-	}
 	 {
 		  name: open_br
 		  modifier: control
