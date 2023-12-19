@@ -1,28 +1,11 @@
-keybinds {
- shared {
-	 bind "F10" { CloseFocus; }
-   unbind "Ctrl b"
-   unbind "Ctrl g"
-   unbind "Ctrl h"
-   unbind "Ctrl n"
-   unbind "Ctrl o"
-   unbind "Ctrl p"
-   unbind "Ctrl s"
-   unbind "Ctrl t"
-   unbind "Alt h"
-   unbind "Alt n"
-	 bind "F1" { SwitchToMode "Pane"; }
- }
+keybinds clear-defaults=true {
  normal {
 	bind "Ctrl f" { EditScrollback; }
-  bind "Alt t" { NewTab; }
-  bind "Alt p" { NewPane; }
-	bind "Alt w" { CloseFocus; }
 	bind "Ctrl k" { Clear; }
- }
- pane {
-	bind "v" { NewPane "Right"; SwitchToMode "Normal"; }
-	bind "s" { NewPane "Down"; SwitchToMode "Normal"; }
+  bind "Alt p" { NewPane; }
+  bind "Alt s" { NewPane "Right"; }
+  bind "Alt t" { NewTab; }
+	bind "Alt w" { CloseFocus; }
  }
 }
 
