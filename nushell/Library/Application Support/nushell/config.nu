@@ -6,16 +6,6 @@ $env.config = {
 	show_banner: false
 	keybindings: [
 	 {
-	 	  name: rg_search
-	 	  modifier: alt
-	 	  keycode: char_r
-	 	  mode: emacs
-	 	  event: {
-	 		send: executehostcommand,
-	 		cmd: $'bash "($env.HOME)/dotfiles/scripts/rg.sh"'
-		}
-	 }
-	 {
 	 	  name: harpoon
 	 	  modifier: control
 	 	  keycode: char_h
