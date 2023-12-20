@@ -6,9 +6,37 @@ keybinds clear-defaults=true {
   bind "Alt s" { NewPane "Right"; }
   bind "Alt t" { NewTab; }
 	bind "Alt w" { CloseFocus; }
-	bind "Alt Left" { MoveFocusOrTab "Left"; }
-	bind "Alt Right" { MoveFocusOrTab "Right"; }
+	bind "Alt 1" { GoToTab 1; }
+	bind "Alt 2" { GoToTab 2; }
+	bind "Alt 3" { GoToTab 3; }
+	bind "Alt 4" { GoToTab 4; }
+	bind "Alt 5" { GoToTab 5; }
+	bind "Alt 6" { GoToTab 6; }
+	bind "Alt 7" { GoToTab 7; }
+	bind "Alt 8" { GoToTab 8; }
+	bind "Alt 9" { GoToTab 9; }
  }
+ tab {
+   bind "Ctrl t" { SwitchToMode "Normal"; }
+	 bind "r" { SwitchToMode "RenameTab"; TabNameInput 0; }
+	 bind "Left" "Up" { GoToPreviousTab; }
+   bind "Right" "Down" { GoToNextTab; }
+ }
+ shared_except "locked" {
+   bind "Alt Left" { MoveFocusOrTab "Left"; }
+   bind "Alt Right" { MoveFocusOrTab "Right"; }
+   bind "Alt Down" { MoveFocus "Down"; }
+   bind "Alt Up" { MoveFocus "Up"; }
+   bind "Alt -" { Resize "Decrease"; }
+   bind "Alt [" { PreviousSwapLayout; }
+   bind "Alt ]" { NextSwapLayout; }
+ }
+ shared_except "normal" "locked" {
+   bind "Enter" "Esc" { SwitchToMode "Normal"; }
+ }
+ shared_except "tab" "locked" {
+   bind "Ctrl t" { SwitchToMode "Tab"; }
+}
 }
 
 themes {

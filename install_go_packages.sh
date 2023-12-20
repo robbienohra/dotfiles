@@ -6,3 +6,4 @@ go install github.com/gohugoio/hugo@latest
 go install github.com/derailed/k9s@latest
 go install github.com/stern/stern@latest
 go install mvdan.cc/sh/v3/cmd/gosh@latest
+go install github.com/tomwright/dasel/v2/cmd/dasel@master

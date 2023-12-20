@@ -57,7 +57,6 @@ map('n', '<Leader>w', '<C-w>')
 
 -- Hard quit
 map('n', '<Leader>q', ':qa!<CR>')
-map('n', '-', ':q!<CR>')
 
 -- Search mappings: These will make it so that going to the next one in a
 -- search will center on the line it's found in.

@@ -42,5 +42,9 @@
       set_working_dir: true
       leave_broot: false
     }
+    {key: "alt-b", internal: ":input_go_word_left"}
+    {key: "alt-f", internal: ":input_go_word_right"}
+    {key: "alt-l", internal: ":input_del_word_left"}
+    {key: "alt-r", internal: ":input_del_word_right"}
   ]
 }

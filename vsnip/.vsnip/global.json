@@ -1,4 +1,10 @@
 {
+  "Console group": {
+    "scope": "javascript,typescript,javascriptreact",
+    "prefix": "lg",
+    "body": ["console.group()\nconsole.log($1)\nconsole.groupEnd();"],
+    "description": "Log output to console"
+  },
   "Print to console": {
     "scope": "javascript,typescript,javascriptreact",
     "prefix": "log",
