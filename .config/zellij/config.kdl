@@ -16,6 +16,9 @@ keybinds clear-defaults=true {
 	bind "Alt 8" { GoToTab 8; }
 	bind "Alt 9" { GoToTab 9; }
  }
+ pane {
+  bind "r" { SwitchToMode "RenamePane"; PaneNameInput 0;}
+ }
  tab {
    bind "Ctrl t" { SwitchToMode "Normal"; }
 	 bind "r" { SwitchToMode "RenameTab"; TabNameInput 0; }
@@ -37,6 +40,25 @@ keybinds clear-defaults=true {
  shared_except "tab" "locked" {
    bind "Ctrl t" { SwitchToMode "Tab"; }
 }
+ shared_except "pane" "locked" {
+        bind "Ctrl p" { SwitchToMode "Pane"; }
+ }
+ shared_except "locked" {
+    bind "Alt r" {
+        LaunchOrFocusPlugin "file:~/.config/zellij/plugins/room.wasm" {
+            floating true
+            ignore_case true
+        }
+    }
+	}
+shared_except "locked" {
+    bind "Ctrl h" {
+        LaunchOrFocusPlugin "file:~/.config/zellij/plugins/harpoon.wasm" {
+            floating true
+						move_to_focused_tab true
+        }
+    }
+  }
 }
 
 themes {
