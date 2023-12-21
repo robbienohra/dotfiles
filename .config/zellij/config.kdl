@@ -5,7 +5,7 @@ keybinds clear-defaults=true {
   bind "Alt p" { NewPane; }
   bind "Alt s" { NewPane "Right"; }
   bind "Ctrl n" { NewTab; }
-	bind "Ctrl e" { CloseFocus; }
+	bind "Alt w" { CloseFocus; }
 	bind "Alt 1" { GoToTab 1; }
 	bind "Alt 2" { GoToTab 2; }
 	bind "Alt 3" { GoToTab 3; }
