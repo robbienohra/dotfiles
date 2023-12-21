@@ -4,7 +4,7 @@ keybinds clear-defaults=true {
 	bind "Ctrl k" { Clear; }
   bind "Alt p" { NewPane; }
   bind "Alt s" { NewPane "Right"; }
-  bind "Alt t" { NewTab; }
+  bind "Ctrl n" { NewTab; }
 	bind "Alt w" { CloseFocus; }
 	bind "Alt 1" { GoToTab 1; }
 	bind "Alt 2" { GoToTab 2; }
@@ -38,7 +38,7 @@ keybinds clear-defaults=true {
    bind "Enter" "Esc" { SwitchToMode "Normal"; }
  }
  shared_except "tab" "locked" {
-   bind "Ctrl n" { SwitchToMode "Tab"; }
+   bind "Ctrl t" { SwitchToMode "Tab"; }
 }
  shared_except "pane" "locked" {
         bind "Ctrl p" { SwitchToMode "Pane"; }
