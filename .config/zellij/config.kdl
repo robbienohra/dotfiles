@@ -38,7 +38,7 @@ keybinds clear-defaults=true {
    bind "Enter" "Esc" { SwitchToMode "Normal"; }
  }
  shared_except "tab" "locked" {
-   bind "Ctrl t" { SwitchToMode "Tab"; }
+   bind "Ctrl n" { SwitchToMode "Tab"; }
 }
  shared_except "pane" "locked" {
         bind "Ctrl p" { SwitchToMode "Pane"; }
