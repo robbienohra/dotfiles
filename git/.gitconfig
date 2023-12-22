@@ -13,16 +13,6 @@
   diun = diff @{upstream} @ --name-only
   pr ="!f() { git diff origin/$1...head ':(exclude)package-lock.json'; }; f"
   prs ="!f() { git diff --shortstat origin/$1...head; }; f"
-  # misc
-  re = reset --hard @{u}
-  cl = clean -f . 
-  no ="!f() { git rev-list --count HEAD ^$1; };f"
-  # https://stackoverflow.com/questions/1030169/pull-latest-changes-for-all-git-submodules
-  sub = submodule update --recursive --remote
-  deltag = !sh -c 'git tag -d $1 && git push origin :refs/tags/$1' -
-  # https://stackoverflow.com/questions/6900328/git-command-to-show-all-lightweight-tags-creation-dates
-  # https://stackoverflow.com/questions/6269927/how-can-i-list-all-tags-in-my-git-repository-by-the-date-they-were-created
-  ts = log --tags --simplify-by-decoration --pretty='format:%ai %d'
 [core]
   editor = nvim
   excludesFile = /Users/robbienohra/.gitignore

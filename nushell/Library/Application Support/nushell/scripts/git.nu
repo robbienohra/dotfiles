@@ -11,6 +11,10 @@ export def sq [] {
 	git rebase -i head~2 --autosquash;
 }
 
+export def no [branch] {
+  git rev-list --count HEAD $"^($branch)"
+}
+
 # echo next file with conflict
 export def conf [] {
 	let a = $"(git diff --name-only --diff-filter=U | sed -n 1p)"
