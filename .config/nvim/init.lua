@@ -1,5 +1,5 @@
-require 'robbie.options'
-require 'robbie.nvim'
+require 'options'
+require 'nvim'
 
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
 
@@ -19,7 +19,7 @@ require('lazy').setup {
 	defaults = { lazy = false },
 	spec = {
 		{
-			{ import = 'robbie.plugins' },
+			{ import = 'plugins' },
 		},
 	},
 	performance = {
@@ -38,5 +38,5 @@ require('lazy').setup {
 	},
 }
 
-require 'robbie.commands'
-require 'robbie.keymaps'
+require 'commands'
+require 'keymaps'

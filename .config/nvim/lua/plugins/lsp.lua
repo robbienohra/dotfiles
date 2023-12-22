@@ -78,7 +78,7 @@ return {
 
 		mason_lspconfig.setup_handlers {
 			function(ls)
-				lspconfig[ls].setup(require('robbie.lsp.configs')[ls])
+				lspconfig[ls].setup(require('lsp.configs')[ls])
 			end,
 		}
 	end,
