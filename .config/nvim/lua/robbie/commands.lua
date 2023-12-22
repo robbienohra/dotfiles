@@ -7,7 +7,8 @@ cmd ':command! FixWhitespace :%s/s+$//e'
 cmd ':command! WipeReg for i in range(34,122) | silent! call setreg(nr2char(i), []) | endfor'
 
 -- https://codingshower.com/vim-set-tab-to-n-spaces/
-autocmd('FileType', { pattern = { '*' }, command = 'set noexpandtab shiftwidth=2 tabstop=2 softtabstop=2' })
+-- https://stackoverflow.com/a/63405750
+autocmd('FileType', { pattern = { '*' }, command = 'set expandtab shiftwidth=2 tabstop=2 softtabstop=2' })
 
 autocmd({ 'BufNewFile', 'BufRead' }, { pattern = { '*.yaml', '*.yml' }, command = 'set expandtab' })
 

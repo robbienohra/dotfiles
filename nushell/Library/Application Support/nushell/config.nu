@@ -22,7 +22,7 @@ $env.config = {
 		  mode: emacs
 		  event: {
 			send: executehostcommand,
-			cmd: "br"
+			cmd: "br -hI"
 		  }
 	}
 	]

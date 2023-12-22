@@ -8,75 +8,21 @@
 [format]
   pretty = format:%C(yellow)%h %Cred%ad %Cblue%an%Cgreen%d %Creset%s
 [alias]
-  # logs
-  lg = log --stat
-  lgp = log --stat -p 
-  last = log -1 HEAD
-  adog = log --all --decorate --oneline --graph
-  rl = reflog --format='%C(auto)%h %<|(20)%gd %C(blue)%cr%C(reset) %gs (%s)'
-  # switch
-  sw = switch
-  swt = switch -t
-  swc = switch -c
-  # branch
-  bd = branch -D
-  nuke = !sh -c 'git branch -D $1 && git push origin :$1' -
-  # rebase
-  r = rebase
-  ri = rebase -i
-  ra = rebase --abort
-  rr = rebase --continue
-  # commit
-  c = commit -v
-  ca = commit --amend
-  ce = commit --amend --no-edit
-  # pull
-  l = pull
-  # push
-  p = push
-  pf = push --force-with-lease origin head
-  # diffs
-  d = diff
-  ds = diff --staged
   dn = diff --name-only 
   dup = diff @{upstream} @
   diun = diff @{upstream} @ --name-only
-  oldest-ancestor = !zsh -c 'diff --old-line-format= --new-line-format= <(git rev-list --first-parent \"${1:-$1}\") <(git rev-list --first-parent \"${2:-HEAD}\") | head -1' -
   pr ="!f() { git diff origin/$1...head ':(exclude)package-lock.json'; }; f"
   prs ="!f() { git diff --shortstat origin/$1...head; }; f"
-  po ="!f() { git diff $(git oldest-ancestor $1)...head; }; f"
-  # cherry picks
-  cp = cherry-pick
-  cpa = cherry-pick --abort
-  cpc = cherry-pick --continue
-  # bisect
-  bss = bisect start
-  bsb = bisect bad
-  bsg = bisect good
-  bsr = bisect reset
   # misc
-  aa = add .
-  st = status -sb
-  stl = stash list
-  stu = stash -u
-  std = stash drop
-  stp = stash pop
-  ru = remote update
-  f = fetch
-  fa = fetch --all --prune
-  fo = fetch origin
-  ma = merge --abort
   re = reset --hard @{u}
-  res = restore
   cl = clean -f . 
-  rh = reset --hard 
   no ="!f() { git rev-list --count HEAD ^$1; };f"
+  # https://stackoverflow.com/questions/1030169/pull-latest-changes-for-all-git-submodules
+  sub = submodule update --recursive --remote
   deltag = !sh -c 'git tag -d $1 && git push origin :refs/tags/$1' -
   # https://stackoverflow.com/questions/6900328/git-command-to-show-all-lightweight-tags-creation-dates
   # https://stackoverflow.com/questions/6269927/how-can-i-list-all-tags-in-my-git-repository-by-the-date-they-were-created
   ts = log --tags --simplify-by-decoration --pretty='format:%ai %d'
-  # https://stackoverflow.com/questions/1030169/pull-latest-changes-for-all-git-submodules
-  sub = submodule update --recursive --remote
 [core]
   editor = nvim
   excludesFile = /Users/robbienohra/.gitignore
@@ -106,7 +52,7 @@
   tool = fugitive
   conflictstyle = merge
 [mergetool "fugitive"]
-  cmd = vim -f -c "Gvdiffsplit!"
+  cmd = nvim -f -c "Gvdiffsplit!"
 [diff]
   colorMoved = default
 [mergetool]

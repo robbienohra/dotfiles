@@ -5,35 +5,19 @@ export def rconf [] {
 	}
 }
 
-
-
 export def sq [] {
   git add .;
 	git commit --fixup $"(git rev-parse head)" -n;
 	git rebase -i head~2 --autosquash;
 }
 
-
-# # echo next file with conflict
-# def conf [] {
-# 	let a = $"(git diff --name-only --diff-filter=U | sed -n 1p)"
-# 	if a != "" {
-# 		echo $a
-# 	}
-# }
-#
-# def ours [] {
-# 	let FILE = $"(conf)"
-# 	echo $FILE | git checkout --ours $in
-# 	git add $FILE
-# }
-#
-# # take local change
-# function theirs() {
-# 	FILE=$(conf)
-# 	echo $FILE | xargs git checkout --theirs
-# 	git add $FILE
-# }
+# echo next file with conflict
+export def conf [] {
+	let a = $"(git diff --name-only --diff-filter=U | sed -n 1p)"
+	if a != "" {
+		echo $a
+	}
+}
 
 def git_current_branch [] {
     (gstat).branch
@@ -47,6 +31,7 @@ def git_main_branch [] {
         | first
         | str replace 'HEAD .*?[：: ](.+)' '$1'
 }
+
 
 #
 # Aliases
@@ -103,6 +88,9 @@ export def gpristine [] {
 export alias gcm = git checkout (git_main_branch)
 export alias gcmsg = git commit --message
 export alias gco = git checkout
+# resolving rebase conflicts
+export alias gcoo = git checkout --ours
+export alias gcot = git checkout --theirs
 export alias gcor = git checkout --recurse-submodules
 export alias gcount = git shortlog --summary --numbered
 export alias gcp = git cherry-pick

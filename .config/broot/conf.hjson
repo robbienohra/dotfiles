@@ -1,6 +1,9 @@
 {
   show_selection_mark: true
-  special_paths: {/media: "no-enter"}
+  special_paths: {
+		"/media": "no-enter"
+		"*.git" : "hide" 
+	}
   quit_on_last_cancel: true
   content_search_max_file_size: 10MB
   imports:
