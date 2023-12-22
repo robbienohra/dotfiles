@@ -69,6 +69,8 @@ atuin init nu | save -f ~/.local/share/atuin/init.nu
 
 - default config
 - https://github.com/zellij-org/zellij/blob/main/example/config.kdl
+- https://github.com/Nacho114/harpoon
+- https://github.com/rvcas/room
 
 ## Carapace
 
