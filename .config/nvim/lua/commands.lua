@@ -12,22 +12,6 @@ autocmd('FileType', { pattern = { '*' }, command = 'set expandtab shiftwidth=2 t
 
 autocmd({ 'BufNewFile', 'BufRead' }, { pattern = { '*.yaml', '*.yml' }, command = 'set expandtab' })
 
-function AppendToFile()
-	local filepath = vim.fn.expand '<afile>:p'
-	local output_file = vim.fn.expand '$HOME' .. '/oldfiles_output.txt'
-	-- Check if the filepath is not nil or empty
-	if filepath and filepath ~= '' then
-		local file, err = io.open(output_file, 'a')
-		if file then
-			file:write(filepath .. '\n')
-			file:close()
-		else
-			-- Error handling if the file couldn't be opened
-			print('Error opening file: ' .. err)
-		end
-	end
-end
-
 -- https://vim.fandom.com/wiki/Invoke_a_function_with_a_count_prefix
 vim.api.nvim_exec(
 	[[
@@ -100,10 +84,6 @@ autocmd({ 'BufNewFile', 'BufFilePre', 'BufRead' }, { pattern = { '*.nu' }, comma
 autocmd('FileType', { pattern = { 'markdown' }, command = 'inoremap <buffer> <C-e> ``<Left>' })
 autocmd('FileType', { pattern = { 'markdown' }, command = 'inoremap <buffer> <C-b> ```<CR><CR>```<Up>' })
 
--- pencil
-autocmd('FileType', { pattern = { 'markdown' }, command = 'call pencil#init()' })
 -- https://github.com/neovim/neovim/issues/6005#issuecomment-835825265
 -- https://github.com/alacritty/alacritty/issues/5450#issuecomment-929797364
 autocmd({ 'ExitPre' }, { pattern = { '*' }, command = 'set guicursor=a:ver90' })
-
-autocmd({ 'BufRead' }, { pattern = { '*' }, callback = AppendToFile })

@@ -91,7 +91,3 @@ map('n', '<C-Down>', 'z.')
 -- move snippets
 map('v', 'J', ':m \'>+1<CR>gv=gv')
 map('v', 'K', ':m \'<-2<CR>gv=gv')
-
--- pencil
-map('n', '<F7>', ':<C-u>PFormatToggle<cr>')
-map('i', '<F7>', '<C-o>:PFormatToggle<cr>')
