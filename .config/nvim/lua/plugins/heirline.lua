@@ -22,18 +22,25 @@ return {
 			diag_error = utils.get_highlight('DiagnosticError').fg,
 			diag_hint = utils.get_highlight('DiagnosticHint').fg,
 			diag_info = utils.get_highlight('DiagnosticInfo').fg,
-			git_del = utils.get_highlight('diffDeleted').fg,
-			git_add = utils.get_highlight('diffAdded').fg,
+			-- git_del = utils.get_highlight('diffDeleted').fg,
+			-- git_add = utils.get_highlight('diffAdded').fg,
+			git_del = utils.get_highlight('DiagnosticError').fg,
+			git_add = utils.get_highlight('String').fg,
 			git_change = utils.get_highlight('diffChanged').fg,
 		}
 
+		local Align = { provider = '%=' }
+		local Space = { provider = ' ' }
+
+		local LeftCap = {
+			provider = '▌',
+		}
+
 		local FileNameBlock = {
-			-- let's first set up some attributes needed by this component and it's children
 			init = function(self)
 				self.filename = vim.api.nvim_buf_get_name(0)
 			end,
 		}
-		-- We can now define some children separately and add them later
 
 		local FileIcon = {
 			init = function(self)
@@ -52,16 +59,11 @@ return {
 
 		local FileName = {
 			provider = function(self)
-				-- first, trim the pattern relative to the current directory. For other
-				-- options, see :h filename-modifers
 				local filename = vim.fn.fnamemodify(self.filename, ':.')
 				if filename == '' then
 					return '[No Name]'
 				end
-				-- now, if the filename would occupy more than 1/4th of the available
-				-- space, we trim the file path to its initials
-				-- See Flexible Components section below for dynamic truncation
-				if not conditions.width_percent_below(#filename, 0.25) then
+				if not conditions.width_percent_below(#filename, 0.5) then
 					filename = vim.fn.pathshorten(filename)
 				end
 				return filename
@@ -86,11 +88,6 @@ return {
 			},
 		}
 
-		-- Now, let's say that we want the filename color to change if the buffer is
-		-- modified. Of course, we could do that directly using the FileName.hl field,
-		-- but we'll see how easy it is to alter existing components using a "modifier"
-		-- component
-
 		local FileNameModifer = {
 			hl = function()
 				if vim.bo.modified then
@@ -100,7 +97,6 @@ return {
 			end,
 		}
 
-		-- let's add the children to our FileNameBlock component
 		FileNameBlock = utils.insert(
 			FileNameBlock,
 			FileIcon,
@@ -180,7 +176,7 @@ return {
 			-- control the padding and make sure our string is always at least 2
 			-- characters long. Plus a nice Icon.
 			provider = function(self)
-				return ' %2(' .. self.mode_names[self.mode] .. '%)'
+				return ' %2(' .. self.mode_names[self.mode] .. '%)'
 			end,
 			-- Same goes for the highlight. Now the foreground will change according to the current mode.
 			hl = function(self)
@@ -198,12 +194,78 @@ return {
 			},
 		}
 
+		local Git = {
+			condition = conditions.is_git_repo,
+
+			init = function(self)
+				self.status_dict = vim.b.gitsigns_status_dict
+				self.has_changes = self.status_dict.added ~= 0 or self.status_dict.removed ~= 0 or self.status_dict.changed ~= 0
+			end,
+
+			hl = { fg = 'orange' },
+
+			{ -- git branch name
+				provider = function(self)
+					return ' ' .. self.status_dict.head
+				end,
+				hl = { bold = true },
+			},
+			{
+				condition = function(self)
+					return self.has_changes
+				end,
+				provider = '(',
+			},
+			{
+				provider = function(self)
+					local count = self.status_dict.added or 0
+					return count > 0 and ('+' .. count)
+				end,
+				hl = { fg = 'git_add' },
+			},
+			{
+				provider = function(self)
+					local count = self.status_dict.removed or 0
+					return count > 0 and ('-' .. count)
+				end,
+				hl = { fg = 'git_del' },
+			},
+			{
+				provider = function(self)
+					local count = self.status_dict.changed or 0
+					return count > 0 and ('~' .. count)
+				end,
+				hl = { fg = 'git_change' },
+			},
+			{
+				condition = function(self)
+					return self.has_changes
+				end,
+				provider = ')',
+			},
+		}
+		local WorkDir = {
+			provider = function()
+				local icon = (vim.fn.haslocaldir(0) == 1 and 'l' or 'g') .. ' ' .. ' '
+				local cwd = vim.fn.getcwd(0)
+				cwd = vim.fn.fnamemodify(cwd, ':~')
+				if not conditions.width_percent_below(#cwd, 0.25) then
+					cwd = vim.fn.pathshorten(cwd)
+				end
+				local trail = cwd:sub(-1) == '/' and '' or '/'
+				return icon .. cwd .. trail
+			end,
+			hl = { fg = 'blue', bold = true },
+		}
+
+		ViMode = utils.surround({ '', '' }, 'bright_bg', { ViMode })
+
 		require('heirline').setup {
 			opts = {
 				colors = colors,
 			},
-			winbar = { FileNameBlock },
-			statusline = { ViMode },
+			winbar = { LeftCap, Space, Space, FileNameBlock, Align, WorkDir },
+			statusline = { ViMode, Align, Git },
 		}
 	end,
 }

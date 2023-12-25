@@ -11,7 +11,7 @@
     verbs.hjson
     {
       luma: ["dark", "unknown"]
-      file: skins/dark-gruvbox.hjson
+      file: skins/catppuccin-mocha.hjson
     }
   ]
 }

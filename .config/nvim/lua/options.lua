@@ -26,7 +26,6 @@ o.completeopt = { 'menuone', 'noinsert', 'noselect' }
 -- o.formatoptions:append { "l", "t" }
 -- can also remove options
 -- o.formatoptions:remove "t"
--- o.laststatus = 0
 o.regexpengine = 0
 o.synmaxcol = 3000
 o.shiftwidth = 2

@@ -14,9 +14,9 @@ $env.PATH = ($env.PATH
 
 $env.NUPM_HOME = $'($env.HOME)/nupm'
 
-use '/Users/robbienohra/nupm/modules/nu-themes/gruvbox-dark-hard.nu'
+use '/Users/robbienohra/nupm/modules/nu-themes/catppuccin-mocha.nu'
 
-$env.config.color_config = (gruvbox-dark-hard)
+$env.config.color_config = (catppuccin-mocha)
 
 $env.STARSHIP_SHELL = "nu"
 
