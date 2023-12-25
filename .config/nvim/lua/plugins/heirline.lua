@@ -2,11 +2,14 @@ return {
 	'rebelot/heirline.nvim',
 	dependencies = {
 		'nvim-tree/nvim-web-devicons',
+		'catppuccin/nvim',
 	},
 
 	config = function()
 		local utils = require 'heirline.utils'
 		local conditions = require 'heirline.conditions'
+		local clrs = require('catppuccin.palettes').get_palette()
+
 		local colors = {
 			bright_bg = utils.get_highlight('Folded').bg,
 			bright_fg = utils.get_highlight('Folded').fg,
@@ -22,19 +25,13 @@ return {
 			diag_error = utils.get_highlight('DiagnosticError').fg,
 			diag_hint = utils.get_highlight('DiagnosticHint').fg,
 			diag_info = utils.get_highlight('DiagnosticInfo').fg,
-			-- git_del = utils.get_highlight('diffDeleted').fg,
-			-- git_add = utils.get_highlight('diffAdded').fg,
-			git_del = utils.get_highlight('DiagnosticError').fg,
-			git_add = utils.get_highlight('String').fg,
-			git_change = utils.get_highlight('diffChanged').fg,
+			git_del = clrs.red,
+			git_add = clrs.green,
+			git_change = clrs.yellow,
 		}
 
 		local Align = { provider = '%=' }
 		local Space = { provider = ' ' }
-
-		local LeftCap = {
-			provider = '▌',
-		}
 
 		local FileNameBlock = {
 			init = function(self)
@@ -264,7 +261,7 @@ return {
 			opts = {
 				colors = colors,
 			},
-			winbar = { LeftCap, Space, Space, FileNameBlock, Align, WorkDir },
+			winbar = { Space, Space, FileNameBlock, Align, WorkDir },
 			statusline = { ViMode, Align, Git },
 		}
 	end,
