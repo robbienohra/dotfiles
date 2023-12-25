@@ -1,0 +1,74 @@
+live_config_reload = true
+
+[window]
+decorations = "none"
+dynamic_padding = true
+option_as_alt = "Both"
+startup_mode = "Maximized"
+
+  [window.padding]
+  x = 5
+
+[cursor.style]
+shape = "Beam"
+blinking = "On"
+
+[mouse]
+hide_when_typing = true
+
+[scrolling]
+history = 10_000
+
+[colors.selection]
+text = "#FFFFFF"
+background = "#4c566a"
+
+[colors.primary]
+background = "0x282828"
+foreground = "0xebdbb2"
+
+[colors.normal]
+black = "0x282828"
+red = "0xcc241d"
+green = "0x98971a"
+yellow = "0xd79921"
+blue = "0x458588"
+magenta = "0xb16286"
+cyan = "0x689d6a"
+white = "0xa89984"
+
+[colors.bright]
+black = "0x928374"
+red = "0xfb4934"
+green = "0xb8bb26"
+yellow = "0xfabd2f"
+blue = "0x83a598"
+magenta = "0xd3869b"
+cyan = "0x8ec07c"
+white = "0xebdbb2"
+
+[selection]
+semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"
+save_to_clipboard = true
+
+[font]
+size = 13
+
+  [font.normal]
+  family = "JetBrainsMono Nerd Font Mono"
+  style = "Regular"
+
+  [font.italic]
+  family = "JetBrains Mono"
+  style = "Italic"
+
+  [font.bold]
+  family = "JetBrains Mono"
+  style = "Bold"
+
+  [font.offset]
+  y = 1
+
+[shell]
+program = "/Users/robbienohra/.cargo/bin/nu"
+args = [ "-e", "try { zellij attach --index 0 } catch { zellij }" ]
