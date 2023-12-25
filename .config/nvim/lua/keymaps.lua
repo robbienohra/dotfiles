@@ -21,7 +21,6 @@ endfunction
 map('n', '<leader>c', ':let @+=GetRelativePath()<CR>')
 
 -- lsp
-map('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>')
 map('n', '<space>f', '<cmd>lua vim.lsp.buf.format { async = true } <CR>')
 map('n', '<space>a', '<cmd>lua vim.lsp.buf.code_action()<CR>')
 map('n', '<space>h', '<cmd>lua vim.lsp.buf.hover()<CR>')
