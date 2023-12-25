@@ -68,22 +68,16 @@ autocmd({ 'BufEnter' }, { pattern = { '*' }, command = 'let &titlestring = \' \'
 -- https://neovim.io/doc/user/change.html#fo-table
 -- autocmd("FileType *", { command = "setlocal formatoptions-=c formatoptions-=r formatoptions-=o" })
 -- https://www.reddit.com/r/neovim/comments/3v06lo/making_the_background_transparent/
-vim.api.nvim_exec(
-	[[
-  highlight Normal guibg=none
-  highlight NonText guibg=none
-  highlight SignColumn ctermbg=NONE cterm=NONE guibg=NONE gui=NONE
-  ]],
-	true
-)
 
 -- markdown
 
 autocmd({ 'BufNewFile', 'BufFilePre', 'BufRead' }, { pattern = { '*.md' }, command = 'set syntax=markdown' })
 autocmd({ 'BufNewFile', 'BufFilePre', 'BufRead' }, { pattern = { '*.nu' }, command = 'set filetype=nu' })
-autocmd('FileType', { pattern = { 'markdown' }, command = 'inoremap <buffer> <C-e> ``<Left>' })
-autocmd('FileType', { pattern = { 'markdown' }, command = 'inoremap <buffer> <C-b> ```<CR><CR>```<Up>' })
 
 -- https://github.com/neovim/neovim/issues/6005#issuecomment-835825265
 -- https://github.com/alacritty/alacritty/issues/5450#issuecomment-929797364
-autocmd({ 'ExitPre' }, { pattern = { '*' }, command = 'set guicursor=a:ver90' })
+vim.api.nvim_create_autocmd('ExitPre', {
+	group = vim.api.nvim_create_augroup('Exit', { clear = true }),
+	command = 'set guicursor=a:ver90',
+	desc = 'Set cursor back to beam when leaving Neovim.',
+})

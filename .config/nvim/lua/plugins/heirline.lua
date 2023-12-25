@@ -3,6 +3,7 @@ return {
 	dependencies = {
 		'nvim-tree/nvim-web-devicons',
 		'catppuccin/nvim',
+		'lewis6991/gitsigns.nvim',
 	},
 
 	config = function()
@@ -31,7 +32,7 @@ return {
 		}
 
 		local Align = { provider = '%=', hl = { fg = utils.get_highlight('Directory').fg } }
-		local Space = { provider = ' ' }
+		local Space = { provider = ' ', hl = { fg = utils.get_highlight('Directory').fg } }
 
 		local FileNameBlock = {
 			init = function(self)
@@ -98,7 +99,7 @@ return {
 			FileNameBlock,
 			FileIcon,
 			utils.insert(FileNameModifer, FileName), -- a new table where FileName is a child of FileNameModifier
-      Space,
+			Space,
 			FileFlags,
 			{ provider = '%<' } -- this means that the statusline is cut here when there's not enough space
 		)
@@ -256,7 +257,7 @@ return {
 			},
 			-- winbar = { Space, Space, FileNameBlock, Align, WorkDir },
 			winbar = { WinBars },
-			statusline = { ViMode, Align, Git },
+			statusline = { ViMode, Align, Git, Space },
 		}
 	end,
 }

@@ -1,20 +1,19 @@
 return {
 	{
 		{
-			'Yggdroot/indentLine',
+			'lukas-reineke/indent-blankline.nvim',
+			main = 'ibl',
+			opts = {},
 			config = function()
-				vim.g.indentLine_enabled = 1
-				vim.g.indentLine_concealcursor = ''
-				vim.g.indentLine_char = '┆'
-				vim.g.indentLine_faster = 1
+				require('ibl').setup {
+					indent = { char = '┆' },
+				}
 			end,
 		},
 		{
 			'lewis6991/gitsigns.nvim',
 			config = function()
-				require('gitsigns').setup {
-					update_debounce = 500,
-				}
+				require('gitsigns').setup {}
 			end,
 		},
 		{
