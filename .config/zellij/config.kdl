@@ -2,9 +2,8 @@ keybinds clear-defaults=true {
  normal {
 	bind "Ctrl f" { EditScrollback; }
 	bind "Ctrl k" { Clear; }
-  bind "Alt p" { NewPane; }
   bind "Alt s" { NewPane "Right"; }
-  bind "Ctrl n" { NewTab; }
+  bind "Ctrl n" { NewPane; }
 	bind "Alt w" { CloseFocus; }
 	bind "Alt 1" { GoToTab 1; }
 	bind "Alt 2" { GoToTab 2; }
@@ -21,7 +20,9 @@ keybinds clear-defaults=true {
  }
  tab {
    bind "Ctrl t" { SwitchToMode "Normal"; }
+	 bind "n" { NewTab; }
 	 bind "r" { SwitchToMode "RenameTab"; TabNameInput 0; }
+	 bind "x" { CloseTab; }
 	 bind "Left" "Up" { GoToPreviousTab; }
    bind "Right" "Down" { GoToNextTab; }
  }
