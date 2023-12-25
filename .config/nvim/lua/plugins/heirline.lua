@@ -30,7 +30,7 @@ return {
 			git_change = clrs.yellow,
 		}
 
-		local Align = { provider = '%=' }
+		local Align = { provider = '%=', hl = { fg = utils.get_highlight('Directory').fg } }
 		local Space = { provider = ' ' }
 
 		local FileNameBlock = {
@@ -98,20 +98,15 @@ return {
 			FileNameBlock,
 			FileIcon,
 			utils.insert(FileNameModifer, FileName), -- a new table where FileName is a child of FileNameModifier
+      Space,
 			FileFlags,
 			{ provider = '%<' } -- this means that the statusline is cut here when there's not enough space
 		)
 
 		local ViMode = {
-			-- get vim current mode, this information will be required by the provider
-			-- and the highlight functions, so we compute it only once per component
-			-- evaluation and store it as a component attribute
 			init = function(self)
 				self.mode = vim.fn.mode(1) -- :h mode()
 			end,
-			-- Now we define some dictionaries to map the output of mode() to the
-			-- corresponding string and color. We can put these into `static` to compute
-			-- them at initialisation time.
 			static = {
 				mode_names = { -- change the strings if you like it vvvvverbose!
 					n = 'N',
@@ -165,13 +160,6 @@ return {
 					t = 'red',
 				},
 			},
-			-- We can now access the value of mode() that, by now, would have been
-			-- computed by `init()` and use it to index our strings dictionary.
-			-- note how `static` fields become just regular attributes once the
-			-- component is instantiated.
-			-- To be extra meticulous, we can also add some vim statusline syntax to
-			-- control the padding and make sure our string is always at least 2
-			-- characters long. Plus a nice Icon.
 			provider = function(self)
 				return ' %2(' .. self.mode_names[self.mode] .. '%)'
 			end,
@@ -256,12 +244,18 @@ return {
 		}
 
 		ViMode = utils.surround({ '', '' }, 'bright_bg', { ViMode })
+		local WinBars = {
+			utils.surround({ '', '' }, 'bright_bg', FileNameBlock),
+			Align,
+			WorkDir,
+		}
 
 		require('heirline').setup {
 			opts = {
 				colors = colors,
 			},
-			winbar = { Space, Space, FileNameBlock, Align, WorkDir },
+			-- winbar = { Space, Space, FileNameBlock, Align, WorkDir },
+			winbar = { WinBars },
 			statusline = { ViMode, Align, Git },
 		}
 	end,
