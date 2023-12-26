@@ -4,14 +4,14 @@
 
 ## Install homebrew:
 
-- https://brew.sh/
+- <https://brew.sh/>
 
 ``` sh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-- https://doc.rust-lang.org/cargo/getting-started/installation.html
-- https://github.com/rsteube/carapace-bin
+- <https://doc.rust-lang.org/cargo/getting-started/installation.html>
+- <https://github.com/rsteube/carapace-bin>
 
 ## Install cargo[^1]: {#install-cargo1}
 
@@ -35,20 +35,20 @@ bash install_cargo_packages.sh
 
 ## Install `go`:
 
-- https://go.dev/doc/install
+- <https://go.dev/doc/install>
 
 ## zoxide
 
-- https://github.com/ajeetdsouza/zoxide
+- <https://github.com/ajeetdsouza/zoxide>
 
 ## Treesitter
 
-- https://github.com/nushell/tree-sitter-nu/blob/main/installation/neovim.md
+- <https://github.com/nushell/tree-sitter-nu/blob/main/installation/neovim.md>
 
 ## Atuin
 
-- https://github.com/ellie/atuin#nushell
-- https://atuin.sh/docs/key-binding#disable-up-arrow
+- <https://github.com/ellie/atuin#nushell>
+- <https://atuin.sh/docs/key-binding#disable-up-arrow>
 - ensure that `nobind` is run *before* generating the `init.nu` file
 
 ``` nu
@@ -58,28 +58,28 @@ atuin init nu | save -f ~/.local/share/atuin/init.nu
 
 ## Starship
 
-- https://www.nushell.sh/book/3rdpartyprompts.html#starship
-- https://starship.rs/#nushell
+- <https://www.nushell.sh/book/3rdpartyprompts.html#starship>
+- <https://starship.rs/#nushell>
 
 ## fnm
 
-- https://github.com/Schniz/fnm/issues/463
+- <https://github.com/Schniz/fnm/issues/463>
 
 ## Zellij
 
 - default config
-- https://github.com/zellij-org/zellij/blob/main/example/config.kdl
-- https://github.com/Nacho114/harpoon
-- https://github.com/rvcas/room
+- <https://github.com/zellij-org/zellij/blob/main/example/config.kdl>
+- <https://github.com/Nacho114/harpoon>
+- <https://github.com/rvcas/room>
 
 ## Carapace
 
-- https://rsteube.github.io/carapace-bin/installation.html
+- <https://rsteube.github.io/carapace-bin/installation.html>
 
 ## Karabiner
 
-- https://ke-complex-modifications.pqrs.org/#caps_lock_tapped_escape_held_left_control
-- https://ke-complex-modifications.pqrs.org/#colemak_dh_ansi_layout
+- <https://ke-complex-modifications.pqrs.org/#caps_lock_tapped_escape_held_left_control>
+- <https://ke-complex-modifications.pqrs.org/#colemak_dh_ansi_layout>
 
 ## Keyboard shortcuts
 
@@ -92,14 +92,13 @@ atuin init nu | save -f ~/.local/share/atuin/init.nu
 
 ## Node
 
-- https://nodejs.org/en/download
+- <https://nodejs.org/en/download>
 
 ## Nushell
 
-- https://github.com/nushell/nu_scripts/tree/main
-- https://github.com/nushell/nu_scripts/tree/main/themes
+- <https://github.com/nushell/nu_scripts/tree/main>
+- <https://github.com/nushell/nu_scripts/tree/main/themes>
 
 # References
 
-[^1]: [installing cargo without
-  zsh](https://github.com/rust-lang/rustup/issues/2040#issuecomment-538721697)
+[^1]: [installing cargo without zsh](https://github.com/rust-lang/rustup/issues/2040#issuecomment-538721697)
