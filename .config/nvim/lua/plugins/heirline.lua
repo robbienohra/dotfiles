@@ -22,6 +22,7 @@ return {
 			orange = utils.get_highlight('Constant').fg,
 			purple = utils.get_highlight('Statement').fg,
 			cyan = utils.get_highlight('Special').fg,
+			black = utils.get_highlight('Directory').fg,
 			diag_warn = utils.get_highlight('DiagnosticWarn').fg,
 			diag_error = utils.get_highlight('DiagnosticError').fg,
 			diag_hint = utils.get_highlight('DiagnosticHint').fg,
@@ -31,8 +32,8 @@ return {
 			git_change = utils.get_highlight('diffChanged').fg,
 		}
 
-		local Align = { provider = '%=', hl = { fg = utils.get_highlight('Directory').fg } }
-		local Space = { provider = ' ', hl = { fg = utils.get_highlight('Directory').fg } }
+		local Align = { provider = '%=', hl = { fg = 'black' } }
+		local Space = { provider = ' ', hl = { fg = 'black' } }
 
 		local FileNameBlock = {
 			init = function(self)
@@ -251,12 +252,21 @@ return {
 			WorkDir,
 		}
 
+		local Ruler = {
+			-- %l = current line number
+			-- %L = number of lines in the buffer
+			-- %c = column number
+			-- %P = percentage through file of displayed window
+			provider = '%7(%l/%3L%):%2c',
+			hl = { fg = 'black' },
+		}
+
 		require('heirline').setup {
 			opts = {
 				colors = colors,
 			},
 			winbar = { WinBars },
-			statusline = { ViMode, Align, Git, Space },
+			statusline = { ViMode, Align, Ruler, Space, Git, Space },
 		}
 	end,
 }
