@@ -6,20 +6,6 @@ local function map(mode, lhs, rhs, opts)
 	vim.api.nvim_set_keymap(mode, lhs, rhs, options)
 end
 
-vim.api.nvim_exec(
-	[[
-function! GetRelativePath()
-  let l:git_root = systemlist('git rev-parse --show-toplevel')[0]
-  let l:file_path = expand('%:p')
-  let l:relative_path = substitute(l:file_path, l:git_root.'/', '', '')
-  return l:relative_path
-endfunction
-]],
-	true
-)
-
-map('n', '<leader>c', ':let @+=GetRelativePath()<CR>')
-
 -- lsp
 map('n', '<space>f', '<cmd>lua vim.lsp.buf.format { async = true } <CR>')
 map('n', '<space>a', '<cmd>lua vim.lsp.buf.code_action()<CR>')
@@ -34,10 +20,6 @@ map('n', '<space>d', '<cmd>lua vim.diagnostic.disable()<CR>')
 
 -- git
 map('n', '<Leader>ga', ':Gwrite<CR>')
-map('n', '<Leader>gc', ':G commit --verbose<CR>')
-map('n', '<Leader>gp', ':G push<CR>')
-map('n', '<Leader>gl', ':G pull<CR>')
-map('n', '<Leader>gs', ':G<CR>')
 map('n', '<Leader>gb', ':Gitsigns blame_line<CR>')
 map('n', '<Leader>gd', ':Gvdiffsplit! main...head <CR>')
 map('n', '<Leader>gr', ':GDelete<CR>')
@@ -76,18 +58,24 @@ map('n', '<S-w>', 'diw')
 map('n', '<Leader>o', 'o<Esc>^Da')
 
 map('n', '<C-Right>', '<C-w>w')
+-- https://stackoverflow.com/questions/916875/yank-file-name-path-of-current-buffer-in-vim
+map('n', '<leader>c', ':let @+=expand(\'%\')<CR>')
 
 -- page up/down with centering
 map('n', '<PageDown>', '<C-d>zz')
 map('n', '<PageUp>', '<C-u>zz')
 map('n', '<C-Down>', 'z.')
 
--- reattach
--- map("n", "<Leader>r", ":e <CR>")
-
--- yank filename
--- map("n", "<leader>c", ":let @+=expand('%')<CR>")
-
 -- move snippets
 map('v', 'J', ':m \'>+1<CR>gv=gv')
 map('v', 'K', ':m \'<-2<CR>gv=gv')
+
+-- d is for delete
+-- https://github.com/pazams/d-is-for-delete
+
+map('n', 'x', '"_x')
+map('n', 'X', '"_X')
+map('n', 'd', '"_d')
+map('n', 'D', '"_D')
+map('v', 'd', '"_d')
+map('v', 'D', '"_D')
