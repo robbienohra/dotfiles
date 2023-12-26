@@ -9,7 +9,7 @@ return {
 	config = function()
 		local utils = require 'heirline.utils'
 		local conditions = require 'heirline.conditions'
-		local clrs = require('catppuccin.palettes').get_palette()
+		-- local clrs = require('catppuccin.palettes').get_palette()
 
 		local colors = {
 			bright_bg = utils.get_highlight('Folded').bg,
@@ -26,9 +26,9 @@ return {
 			diag_error = utils.get_highlight('DiagnosticError').fg,
 			diag_hint = utils.get_highlight('DiagnosticHint').fg,
 			diag_info = utils.get_highlight('DiagnosticInfo').fg,
-			git_del = clrs.red,
-			git_add = clrs.green,
-			git_change = clrs.yellow,
+			git_del = utils.get_highlight('diffRemoved').fg,
+			git_add = utils.get_highlight('diffAdded').fg,
+			git_change = utils.get_highlight('diffChanged').fg,
 		}
 
 		local Align = { provider = '%=', hl = { fg = utils.get_highlight('Directory').fg } }
@@ -181,12 +181,12 @@ return {
 		}
 
 		local Git = {
-			condition = conditions.is_git_repo,
 
 			init = function(self)
 				self.status_dict = vim.b.gitsigns_status_dict
 				self.has_changes = self.status_dict.added ~= 0 or self.status_dict.removed ~= 0 or self.status_dict.changed ~= 0
 			end,
+			condition = conditions.is_git_repo,
 
 			hl = { fg = 'orange' },
 
@@ -255,7 +255,6 @@ return {
 			opts = {
 				colors = colors,
 			},
-			-- winbar = { Space, Space, FileNameBlock, Align, WorkDir },
 			winbar = { WinBars },
 			statusline = { ViMode, Align, Git, Space },
 		}

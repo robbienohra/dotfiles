@@ -3,17 +3,21 @@ return {
 		{
 			'lukas-reineke/indent-blankline.nvim',
 			main = 'ibl',
-			opts = {},
 			config = function()
 				require('ibl').setup {
 					indent = { char = '┆' },
+					scope = {
+						enabled = false,
+					},
 				}
 			end,
 		},
 		{
 			'lewis6991/gitsigns.nvim',
 			config = function()
-				require('gitsigns').setup {}
+				require('gitsigns').setup {
+					update_debounce = 100,
+				}
 			end,
 		},
 		{
@@ -48,8 +52,4 @@ return {
 		},
 	},
 	'nvim-lua/plenary.nvim',
-	{
-		'iamcco/markdown-preview.nvim',
-		ft = 'markdown',
-	},
 }
