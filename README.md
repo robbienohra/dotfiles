@@ -13,13 +13,13 @@
 - https://doc.rust-lang.org/cargo/getting-started/installation.html
 - https://github.com/rsteube/carapace-bin
 
-## Install cargo[^1]:
+## Install cargo[^1]: {#install-cargo1}
 
 ``` sh
 curl https://sh.rustup.rs -sSf | bash -s -- -y --no-modify-path
 ```
 
-```sh
+``` sh
 source "$HOME/.cargo/env"
 ```
 
@@ -98,6 +98,11 @@ atuin init nu | save -f ~/.local/share/atuin/init.nu
 
 - https://github.com/nushell/nu_scripts/tree/main
 - https://github.com/nushell/nu_scripts/tree/main/themes
+
+## Nushell packages
+
+- https://codeberg.org/packer.nu/packer.nu
+- https://codeberg.org/packer.nu/bookmarks
 
 # References
 
