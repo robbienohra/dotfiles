@@ -88,21 +88,3 @@ $env.EDITOR = "nvim"
 # $env.CPPFLAGS = "-I/opt/homebrew/opt/llvm/include"
 # $env.PATH = "/opt/homebrew/opt/llvm/bin"
 # "/opt/homebrew/opt/gnu-sed/libexec/gnubin"
-
-### packer.nu ###
-load-env {NU_PACKER_HOME: '/Users/robbienohra/.local/share/nushell/packer'}
-# recovery command
-def 'packer compile' [] { nu -c $'use ($env.NU_PACKER_HOME)/start/packer.nu/api_layer/packer.nu; packer compile' }
-# bootstrap packer.nu
-if not ($'($env.NU_PACKER_HOME)/start/packer.nu/api_layer/packer_api.nu' | path exists) {
-  print $'(ansi ub)Bootstrapping packer.nu...(ansi reset)'
-  nu -c (http get https://raw.githubusercontent.com/jan9103/packer.nu/main/install.nu)
-  print $'(ansi ub)Bootstrapped packer.nu.'
-  print $'(ansi ub)Installing packages...(ansi reset)'
-  nu -c $'use ($env.NU_PACKER_HOME)/start/packer.nu/api_layer/packer.nu; packer install'
-  print $'(ansi ub)Installed packages.(ansi reset)'
-}
-# compile conditional package loader
-# conditional packages have to be generated in the env, since you can't generate and import in the same file.
-#nu -c 'use /Users/robbienohra/.local/share/nushell/packer/start/packer.nu/api_layer/packer.nu; packer compile_cond_init /Users/robbienohra/.local/share/nushell/packer/conditional_packages.nu'
-if not ($'($env.NU_PACKER_HOME)/packer_packages.nu' | path exists) { 'export-env {}' | save $'($env.NU_PACKER_HOME)/packer_packages.nu' }

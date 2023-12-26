@@ -99,11 +99,6 @@ atuin init nu | save -f ~/.local/share/atuin/init.nu
 - https://github.com/nushell/nu_scripts/tree/main
 - https://github.com/nushell/nu_scripts/tree/main/themes
 
-## Nushell packages
-
-- https://codeberg.org/packer.nu/packer.nu
-- https://codeberg.org/packer.nu/bookmarks
-
 # References
 
 [^1]: [installing cargo without
