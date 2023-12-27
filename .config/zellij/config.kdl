@@ -27,8 +27,8 @@ keybinds clear-defaults=true {
    bind "Right" "Down" { GoToNextTab; }
  }
  shared_except "locked" {
-   bind "Alt Left" { MoveFocusOrTab "Left"; }
-   bind "Alt Right" { MoveFocusOrTab "Right"; }
+   bind "Alt Left" { GoToPreviousTab; }
+   bind "Alt Right" { GoToNextTab; }
    bind "Alt Down" { MoveFocus "Down"; }
    bind "Alt Up" { MoveFocus "Up"; }
    bind "Alt -" { Resize "Decrease"; }
