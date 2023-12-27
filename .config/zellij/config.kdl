@@ -20,7 +20,7 @@ keybinds clear-defaults=true {
  }
  tab {
    bind "Ctrl t" { SwitchToMode "Normal"; }
-	 bind "n" { NewTab; }
+	 bind "n" { NewTab; SwitchToMode "RenameTab"; TabNameInput 0; }
 	 bind "r" { SwitchToMode "RenameTab"; TabNameInput 0; }
 	 bind "x" { CloseTab; }
 	 bind "Left" "Up" { GoToPreviousTab; }
