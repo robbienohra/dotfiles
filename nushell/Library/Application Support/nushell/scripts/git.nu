@@ -36,10 +36,9 @@ def git_main_branch [] {
         | str replace --regex 'HEAD .*?[：: ]\s*(.+)' '$1'
 }
 
-
 #
 # Aliases
-# (sorted alphabetically)
+# https://github.com/nushell/nu_scripts/blob/main/aliases/git/git-aliases.nu
 #
 
 export alias ga = git add
@@ -92,9 +91,6 @@ export def gpristine [] {
 export alias gcm = git checkout (git_main_branch)
 export alias gcmsg = git commit --message
 export alias gco = git checkout
-# resolving rebase conflicts
-export alias gcoo = git checkout --ours
-export alias gcot = git checkout --theirs
 export alias gcor = git checkout --recurse-submodules
 export alias gcount = git shortlog --summary --numbered
 export alias gcp = git cherry-pick
@@ -110,7 +106,6 @@ export alias gdcw = git diff --cached --word-diff
 export alias gdct = git describe --tags (git rev-list --tags --max-count=1)
 export alias gds = git diff --staged
 export alias gdt = git diff-tree --no-commit-id --name-only -r
-export alias gdup = git diff @{upstream}
 export alias gdw = git diff --word-diff
 
 export alias gf = git fetch
@@ -241,3 +236,9 @@ export alias gamc = git am --continue
 export alias gams = git am --skip
 export alias gama = git am --abort
 export alias gamscp = git am --show-current-patch
+
+# https://kapeli.com/cheat_sheets/Oh-My-Zsh_Git.docset/Contents/Resources/Documents/index
+export alias gcoo = git checkout --ours
+export alias gcot = git checkout --theirs
+export alias gdup = git diff @{upstream}
+export alias gswm = git switch $(git_main_branch)
