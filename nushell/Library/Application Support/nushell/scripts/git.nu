@@ -238,7 +238,5 @@ export alias gama = git am --abort
 export alias gamscp = git am --show-current-patch
 
 # https://kapeli.com/cheat_sheets/Oh-My-Zsh_Git.docset/Contents/Resources/Documents/index
-export alias gcoo = git checkout --ours
-export alias gcot = git checkout --theirs
 export alias gdup = git diff @{upstream}
 export alias gswm = git switch (git_main_branch)
