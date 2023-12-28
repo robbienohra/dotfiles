@@ -241,4 +241,4 @@ export alias gamscp = git am --show-current-patch
 export alias gcoo = git checkout --ours
 export alias gcot = git checkout --theirs
 export alias gdup = git diff @{upstream}
-export alias gswm = git switch $(git_main_branch)
+export alias gswm = git switch (git_main_branch)
