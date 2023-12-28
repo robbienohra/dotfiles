@@ -261,6 +261,8 @@ return {
 			hl = { fg = 'black' },
 		}
 
+		Ruler = utils.surround({ '', '' }, 'bright_bg', Ruler)
+
 		require('heirline').setup {
 			opts = {
 				colors = colors,

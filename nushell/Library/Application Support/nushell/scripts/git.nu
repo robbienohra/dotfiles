@@ -7,8 +7,8 @@ export def rconf [] {
 
 export def sq [] {
   git add .;
-	git commit --fixup $"(git rev-parse head)" -n;
-	git rebase -i head~2 --autosquash;
+	git commit --fixup $"(git rev-parse HEAD)" -n;
+	git rebase -i HEAD~2 --autosquash;
 }
 
 export def no [branch] {

@@ -17,6 +17,7 @@ keybinds clear-defaults=true {
  }
  pane {
   bind "r" { SwitchToMode "RenamePane"; PaneNameInput 0;}
+  bind "s" { NewPane "Right"; SwitchToMode "Normal"; }
  }
  tab {
    bind "Ctrl t" { SwitchToMode "Normal"; }
