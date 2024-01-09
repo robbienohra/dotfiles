@@ -6,6 +6,7 @@ gh
 git
 gnu-sed
 htop
+just
 jq
 kubectx
 llvm
