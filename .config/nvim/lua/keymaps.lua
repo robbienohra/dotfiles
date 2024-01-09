@@ -82,3 +82,5 @@ map('v', 'D', '"_D')
 
 map('n', '-', '<CMD>Oil<CR>', { desc = 'Open parent directory' })
 map('n', 'tn', ':tabnew<CR>')
+map('n', 't<Left>', ':tabprevious<CR>')
+map('n', 't<Right>', ':tabnext<CR>')
