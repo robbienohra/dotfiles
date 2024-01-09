@@ -99,6 +99,11 @@ atuin init nu | save -f ~/.local/share/atuin/init.nu
 - <https://github.com/nushell/nu_scripts/tree/main>
 - <https://github.com/nushell/nu_scripts/tree/main/themes>
 
+## Neovim providers
+
+- https://neovim.io/doc/user/provider.html#provider-python
+- https://neovim.io/doc/user/provider.html#provider-nodejs
+
 # References
 
 [^1]: [installing cargo without zsh](https://github.com/rust-lang/rustup/issues/2040#issuecomment-538721697)

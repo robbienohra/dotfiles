@@ -81,6 +81,8 @@ $env.JAVA_HOME = "/opt/homebrew/opt/openjdk@11"
 
 $env.EDITOR = "nvim"
 
+$env.LANG = "en_US.UTF-8"
+
 # todo
 # $env.PYENV_ROOT = $"($env.HOME)/.pyenv"
 # I cannot recall where exactly these are needed
