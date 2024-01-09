@@ -379,14 +379,6 @@ return {
 			end
 		end, { TablineFileNameBlock, TablineCloseButton })
 
-		-- and here we go
-		local BufferLine = utils.make_buflist(
-			TablineBufferBlock,
-			{ provider = '', hl = { fg = 'gray' } }, -- left truncation, optional (defaults to "<")
-			{ provider = '', hl = { fg = 'gray' } } -- right trunctation, also optional (defaults to ...... yep, ">")
-			-- by the way, open a lot of buffers and try clicking them ;)
-		)
-
 		-- this is the default function used to retrieve buffers
 		local get_bufs = function()
 			return vim.tbl_filter(function(bufnr)
@@ -430,30 +422,6 @@ return {
 			-- no cache, as we're handling everything ourselves
 			false
 		)
-		local TablinePicker = {
-			condition = function(self)
-				return self._show_picker
-			end,
-			init = function(self)
-				local bufname = vim.api.nvim_buf_get_name(self.bufnr)
-				bufname = vim.fn.fnamemodify(bufname, ':t')
-				local label = bufname:sub(1, 1)
-				local i = 2
-				while self._picker_labels[label] do
-					if i > #bufname then
-						break
-					end
-					label = bufname:sub(i, i)
-					i = i + 1
-				end
-				self._picker_labels[label] = self.bufnr
-				self.label = label
-			end,
-			provider = function(self)
-				return self.label
-			end,
-			hl = { fg = 'red', bold = true },
-		}
 
 		vim.keymap.set('n', 'gbp', function()
 			local tabline = require('heirline').tabline
@@ -483,7 +451,7 @@ return {
 		}
 
 		local TabpageClose = {
-			provider = '%999X  %X',
+			provider = '%999X ✗ %X',
 			hl = 'TabLine',
 		}
 
