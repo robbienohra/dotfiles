@@ -79,3 +79,5 @@ map('n', 'd', '"_d')
 map('n', 'D', '"_D')
 map('v', 'd', '"_d')
 map('v', 'D', '"_D')
+
+map('n', '-', '<CMD>Oil<CR>', { desc = 'Open parent directory' })
