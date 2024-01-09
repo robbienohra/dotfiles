@@ -3,6 +3,5 @@ return {
 	'tpope/vim-repeat',
 	'tpope/vim-rhubarb', -- required by fugitive to :Gbrowse
 	'tpope/vim-scriptease',
-	'tpope/vim-surround',
 	'tpope/vim-unimpaired',
 }
