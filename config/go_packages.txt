@@ -1,0 +1,9 @@
+github.com/google/yamlfmt/cmd/yamlfmt@latest
+github.com/mattn/efm-langserver@latest
+github.com/mikefarah/yq/v4@latest
+github.com/xo/usql@latest
+github.com/gohugoio/hugo@latest
+github.com/derailed/k9s@latest
+github.com/stern/stern@latest
+mvdan.cc/sh/v3/cmd/gosh@latest
+github.com/tomwright/dasel/v2/cmd/dasel@master
