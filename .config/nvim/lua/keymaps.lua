@@ -84,3 +84,11 @@ map('n', '-', '<CMD>Oil<CR>', { desc = 'Open parent directory' })
 map('n', 'tn', ':tabnew<CR>')
 map('n', 't<Left>', ':tabprevious<CR>')
 map('n', 't<Right>', ':tabnext<CR>')
+
+
+-- fzf-lua
+map('n', '<leader>b', '<cmd>FzfLua blines<cr>')
+map('n', '<leader>t', '<cmd>FzfLua files<cr>')
+map('n', '<leader>f', '<cmd>FzfLua grep_project<cr>')
+map('n', '<leader>p', '<cmd>FzfLua oldfiles<cr>')
+map('n', '<leader>y', '<cmd>FzfLua command_history<cr>')
