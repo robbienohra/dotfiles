@@ -1,5 +1,4 @@
 font-jetbrains-mono-nerd-font
-font-jetbrains-mono
 clang-format
 cmake
 commitizen
