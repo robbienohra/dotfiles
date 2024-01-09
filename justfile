@@ -8,7 +8,7 @@ update-nvim:
 update-cargo:
     cargo install-update -a
 
-# Install Cargo packages from a list
+# Install Cargo packages
 install-cargo:
     for package in $(cat config/cargo_packages.txt); do cargo install "$package"; done
 
@@ -17,11 +17,11 @@ update-brew:
     brew update
     brew upgrade
 
-# Install Brew packages from a list
+# Install Brew packages
 install-brew:
     for package in $(cat config/brew_packages.txt); do brew install "$package"; done
 
-# Install Go packages from a list
+# Install Go packages
 install-go:
     for package in $(cat config/go_packages.txt); do go install "$package"; done
 
