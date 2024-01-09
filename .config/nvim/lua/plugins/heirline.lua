@@ -248,8 +248,6 @@ return {
 		ViMode = utils.surround({ '', '' }, 'bright_bg', { ViMode })
 		local WinBars = {
 			utils.surround({ '', '' }, 'bright_bg', FileNameBlock),
-			Align,
-			WorkDir,
 		}
 
 		local Ruler = {
@@ -533,7 +531,7 @@ return {
 				colors = colors,
 			},
 			winbar = { WinBars },
-			statusline = { ViMode, Align, Ruler, Space, Git, Space },
+			statusline = { ViMode, Space, WorkDir, Space, Git, Align, Ruler },
 			tabline = { TabLine },
 		}
 

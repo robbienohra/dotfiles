@@ -5,7 +5,7 @@ return {
 	config = function()
 		require('fzf-lua').setup {
 			winopts = {
-				height = '0.5',
+				split = 'belowright new',
 				preview = {
 					layout = 'vertical',
 					hidden = 'hidden',
@@ -19,9 +19,7 @@ return {
 				},
 			},
 
-			fzf_opts = {
-				['--layout'] = 'default',
-			},
+			fzf_opts = {},
 		}
 	end,
 }
