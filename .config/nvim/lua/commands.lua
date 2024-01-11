@@ -20,7 +20,7 @@ function! Cline(count)
   execute "normal zz"
 endfunction
 command! -nargs=1 ClineCmd call Cline(<args>)
-map ,a :<C-U>ClineCmd(v:count)<CR>
+" map ,a :<C-U>ClineCmd(v:count)<CR>
 ]],
 	true
 )
