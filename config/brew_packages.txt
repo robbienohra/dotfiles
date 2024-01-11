@@ -22,3 +22,4 @@ sops
 stow
 tig
 wget
+rsteube/tap/carapace

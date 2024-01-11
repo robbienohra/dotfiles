@@ -20,6 +20,7 @@ update-brew:
 # Install Brew packages
 install-brew:
     brew tap homebrew/cask-fonts
+    brew tap rsteube/homebrew-tap
     while read -r package; do brew list --formula | grep -q "^${package}$" && echo "Package ${package} is already installed." || brew install "${package}"; done < config/brew_packages.txt
     
 # Install Go packages
