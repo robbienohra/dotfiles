@@ -81,10 +81,10 @@ map('v', 'd', '"_d')
 map('v', 'D', '"_D')
 
 map('n', '-', '<CMD>Oil<CR>', { desc = 'Open parent directory' })
-map('n', 'tn', ':tabnew<CR>')
+map('n', 'tn', ':enew<CR>')
 map('n', 'td', ':bdelete<CR>')
-map('n', 't<Left>', ':tabprevious<CR>')
-map('n', 't<Right>', ':tabnext<CR>')
+map('n', 't<Left>', ':bprevious<CR>')
+map('n', 't<Right>', ':bnext<CR>')
 
 
 -- fzf-lua
