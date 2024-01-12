@@ -247,7 +247,7 @@ return {
 
 		ViMode = utils.surround({ '', '' }, 'bright_bg', { ViMode })
 		local WinBars = {
-			utils.surround({ '', '' }, 'bright_bg', FileNameBlock),
+			Align, utils.surround({ '', '' }, 'bright_bg', FileNameBlock),
 		}
 
 		local Ruler = {
