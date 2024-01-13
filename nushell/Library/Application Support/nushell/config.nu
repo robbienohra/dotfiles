@@ -30,7 +30,7 @@ $env.config = {
 
 # sourcing
 
-# source ~/.zoxide.nu
+source ~/.zoxide.nu
 source ~/.cache/starship/init.nu
 source ~/.cache/carapace/init.nu
 source ~/.local/share/atuin/init.nu
