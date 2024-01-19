@@ -2,7 +2,7 @@ set shell := ["sh", "-c"]
 
 # Update Neovim plugins
 update-nvim:
-    nvim --headless -c "Lazy update" -c "qall"
+    nvim --headless "+Lazy! sync" +qa
 
 # Update Cargo packages
 update-cargo:
