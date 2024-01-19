@@ -2,7 +2,9 @@
 
 - my collection of dotfiles
 
-## Install homebrew:
+## Manual steps
+
+### Homebrew
 
 - <https://brew.sh/>
 
@@ -13,7 +15,7 @@
 - <https://doc.rust-lang.org/cargo/getting-started/installation.html>
 - <https://github.com/rsteube/carapace-bin>
 
-## Install cargo[^1]: {#install-cargo1}
+### Cargo
 
 ``` sh
 curl https://sh.rustup.rs -sSf | bash -s -- -y --no-modify-path
@@ -23,29 +25,33 @@ curl https://sh.rustup.rs -sSf | bash -s -- -y --no-modify-path
 source "$HOME/.cargo/env"
 ```
 
-## Install cargo packages
-
-``` sh
-bash install_cargo_packages.sh
-```
-
-## Install brew packages
-
-- `install_brew_packages.sh`
-
-## Install `go`:
+### Golang
 
 - <https://go.dev/doc/install>
 
-## zoxide
+### `just`
+
+``` sh
+cargo install just
+```
+
+## Initialize dependencies
+
+``` sh
+just install-all
+```
+
+## Nushell setup
+
+### zoxide
 
 - <https://github.com/ajeetdsouza/zoxide>
 
-## Treesitter
+### Treesitter
 
 - <https://github.com/nushell/tree-sitter-nu/blob/main/installation/neovim.md>
 
-## Atuin
+### Atuin
 
 - <https://github.com/ellie/atuin#nushell>
 - <https://atuin.sh/docs/key-binding#disable-up-arrow>
@@ -56,54 +62,43 @@ $env.ATUIN_NOBIND = "true"
 atuin init nu | save -f ~/.local/share/atuin/init.nu
 ```
 
-## Starship
+### Starship
 
 - <https://www.nushell.sh/book/3rdpartyprompts.html#starship>
 - <https://starship.rs/#nushell>
 
-## fnm
+### fnm
 
 - <https://github.com/Schniz/fnm/issues/463>
 
-## Zellij
+### Zellij
 
 - default config
 - <https://github.com/zellij-org/zellij/blob/main/example/config.kdl>
 - <https://github.com/Nacho114/harpoon>
 - <https://github.com/rvcas/room>
 
-## Carapace
+### Carapace
 
 - <https://rsteube.github.io/carapace-bin/installation.html>
 
-## Karabiner
+## Misc
+
+### Karabiner
 
 - <https://ke-complex-modifications.pqrs.org/#caps_lock_tapped_escape_held_left_control>
 - <https://ke-complex-modifications.pqrs.org/#colemak_dh_ansi_layout>
 
-## Keyboard shortcuts
-
-- disable mission control shortcuts
-- Ctrl-Left and Ctr-Right for changing spaces
-
-## Lazy.nvim
-
-- plugins located at `~/.local/share/nvim/lazy`
-
-## Node
-
-- <https://nodejs.org/en/download>
-
-## Nushell
+### Nu scripts and neovim references
 
 - <https://github.com/nushell/nu_scripts/tree/main>
+
 - <https://github.com/nushell/nu_scripts/tree/main/themes>
 
-## Neovim providers
+- <https://neovim.io/doc/user/provider.html#provider-python>
 
-- https://neovim.io/doc/user/provider.html#provider-python
-- https://neovim.io/doc/user/provider.html#provider-nodejs
+- <https://neovim.io/doc/user/provider.html#provider-nodejs>
 
-# References
+- <https://neovim.io/doc/user/provider.html#provider-python>
 
-[^1]: [installing cargo without zsh](https://github.com/rust-lang/rustup/issues/2040#issuecomment-538721697)
+- <https://neovim.io/doc/user/provider.html#provider-nodejs>

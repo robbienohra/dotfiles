@@ -20,7 +20,7 @@ update-brew:
 # Install Brew packages
 install-brew:
     brew tap homebrew/cask-fonts
-    brew tap rsteube/homebrew-tap
+
     while read -r package; do brew list --formula | grep -q "^${package}$" && echo "Package ${package} is already installed." || brew install "${package}"; done < config/brew_packages.txt
     
 # Install Go packages
@@ -30,6 +30,12 @@ install-go:
 init-stow:
     stow_dirs=("psql" "rg" "stow" "usql" "vsnip" "git" "rectangle" "nushell")
     for d in "${stow_dirs[@]}"; do stow "$d"; done; stow -t ~/.config .config
+
+# Update all packages
+install-all:
+    just install-cargo
+    just install-brew
+    just install-go
 
 # Update all packages
 update-all:
