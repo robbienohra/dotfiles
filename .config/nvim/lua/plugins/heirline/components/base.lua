@@ -1,5 +1,23 @@
 local conditions = require 'heirline.conditions'
 local utils = require 'heirline.utils'
+
+function GetBufferRelativePath()
+	local path = vim.fn.expand '%:p:h'
+	local handle = io.popen 'git rev-parse --show-toplevel 2> /dev/null'
+	if not handle then
+		return path
+	end
+
+	local git_root = handle:read('*a'):gsub('%s+$', '')
+	handle:close()
+
+	local parent_of_git_root = git_root:gsub('/[^/]+$', '')
+
+	local relative_path = path:gsub('^' .. parent_of_git_root .. '/', '')
+
+	return relative_path
+end
+
 local M = {
 	vi_mode = {
 		init = function(self)
@@ -75,10 +93,7 @@ local M = {
 	},
 	cwd = {
 		provider = function()
-			local cwd = vim.fn.expand '%'
-			cwd = vim.fn.fnamemodify(cwd, ':~:h')
-			cwd = cwd:gsub('^~/', '')
-			return cwd
+			return GetBufferRelativePath()
 		end,
 		hl = { fg = 'blue', bold = true },
 	},
