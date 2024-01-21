@@ -58,8 +58,8 @@ map('n', '<S-w>', 'diw')
 map('n', '<Leader>o', 'o<Esc>^Da')
 
 map('n', '<C-Right>', '<C-w>w')
--- https://stackoverflow.com/questions/916875/yank-file-name-path-of-current-buffer-in-vim
-map('n', '<leader>c', ':let @+=expand(\'%\')<CR>')
+map('n', '<leader>cf', ':let @*=expand("%:t")<CR>')
+map('n', '<leader>cp', ':let @*=expand("%:p")<CR>')
 
 -- page up/down with centering
 map('n', '<PageDown>', '<C-d>zz')
@@ -85,7 +85,6 @@ map('n', 'tn', ':enew<CR>')
 map('n', 'tk', ':bdelete<CR>')
 map('n', 't<Left>', ':bprevious<CR>')
 map('n', 't<Right>', ':bnext<CR>')
-
 
 -- fzf-lua
 -- map('n', '<leader>b', '<cmd>FzfLua blines<cr>')
