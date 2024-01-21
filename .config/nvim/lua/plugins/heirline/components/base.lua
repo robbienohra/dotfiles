@@ -11,9 +11,9 @@ function GetBufferRelativePath()
 	local git_root = handle:read('*a'):gsub('%s+$', '')
 	handle:close()
 
-	local parent_of_git_root = git_root:gsub('/[^/]+$', '')
-
-	local relative_path = path:gsub('^' .. parent_of_git_root .. '/', '')
+	-- local parent_of_git_root = git_root:gsub('/[^/]+$', '')
+	-- local relative_path = path:gsub('^' .. parent_of_git_root .. '/', '')
+	local relative_path = path:gsub('^' .. git_root .. '/', '')
 
 	return relative_path
 end
