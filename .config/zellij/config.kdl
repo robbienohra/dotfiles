@@ -84,7 +84,6 @@ themes {
   }
 }
 
-
 default_shell "nu"
 pane_frames false
 scrollback_editor "/opt/homebrew/bin/nvim"
