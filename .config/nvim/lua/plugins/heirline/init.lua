@@ -8,6 +8,7 @@ return {
 
 	config = function()
 		local utils = require 'heirline.utils'
+		local conditions = require 'heirline.conditions'
 		local colors = require 'plugins.heirline.components.colors'
 		local tabline = require 'plugins.heirline.components.tabline'
 		local c = require 'plugins.heirline.components.base'
@@ -43,12 +44,38 @@ return {
 
 		Ruler = utils.surround({ '', '' }, 'bright_bg', Ruler)
 
+		local StatusLine = {
+			ViMode,
+			u.space,
+			c.cwd,
+			u.align,
+			Ruler,
+		}
+
+		local SpecialStatusline = {
+			condition = function()
+				return conditions.buffer_matches {
+					buftype = { 'nofile', 'prompt', 'help', 'quickfix', 'term' },
+					filetype = { '^git.*', 'fugitive', 'oil' },
+				}
+			end,
+			u.align,
+		}
+
+		local StatusLines = {
+
+			fallthrough = false,
+
+			SpecialStatusline,
+			StatusLine,
+		}
+
 		require('heirline').setup {
 			opts = {
 				colors = colors,
 			},
 			winbar = { WinBars },
-			statusline = { ViMode, u.space, c.cwd, u.align, Ruler },
+			statusline = StatusLines,
 			tabline = { tabline },
 		}
 
