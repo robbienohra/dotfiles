@@ -3,10 +3,10 @@ local utils = require 'heirline.utils'
 local M = {
 	vi_mode = {
 		init = function(self)
-			self.mode = vim.fn.mode(1) -- :h mode()
+			self.mode = vim.fn.mode(1)
 		end,
 		static = {
-			mode_names = { -- change the strings if you like it vvvvverbose!
+			mode_names = {
 				n = 'N',
 				no = 'N?',
 				nov = 'N?',
@@ -61,13 +61,10 @@ local M = {
 		provider = function(self)
 			return ' %2(' .. self.mode_names[self.mode] .. '%)'
 		end,
-		-- Same goes for the highlight. Now the foreground will change according to the current mode.
 		hl = function(self)
 			local mode = self.mode:sub(1, 1) -- get only the first mode character
 			return { fg = self.mode_colors[mode], bold = true }
 		end,
-		-- Re-evaluate the component only on ModeChanged event!
-		-- Also allows the statusline to be re-evaluated when entering operator-pending mode
 		update = {
 			'ModeChanged',
 			pattern = '*:*',
@@ -78,13 +75,10 @@ local M = {
 	},
 	cwd = {
 		provider = function()
-			local cwd = vim.fn.getcwd(0)
-			cwd = vim.fn.fnamemodify(cwd, ':~')
-			if not conditions.width_percent_below(#cwd, 0.50) then
-				cwd = vim.fn.pathshorten(cwd)
-			end
-			local trail = cwd:sub(-1) == '/' and '' or '/'
-			return cwd .. trail
+			local cwd = vim.fn.expand '%'
+			cwd = vim.fn.fnamemodify(cwd, ':~:h')
+			cwd = cwd:gsub('^~/', '')
+			return cwd
 		end,
 		hl = { fg = 'blue', bold = true },
 	},
@@ -97,7 +91,7 @@ local M = {
 
 		hl = { fg = 'orange' },
 
-		{ -- git branch name
+		{
 			provider = function(self)
 				return ' ' .. self.status_dict.head
 			end,
