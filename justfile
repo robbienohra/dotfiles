@@ -10,7 +10,7 @@ update-cargo:
 
 # Install Cargo packages
 install-cargo:
-    for package in $(cat config/cargo_packages.txt); do cargo install "$package"; done
+    for package in $(cat config/cargo_packages); do cargo install "$package"; done
 
 # Update Brew packages
 update-brew:
@@ -21,11 +21,11 @@ update-brew:
 install-brew:
     brew tap homebrew/cask-fonts
 
-    while read -r package; do brew list --formula | grep -q "^${package}$" && echo "Package ${package} is already installed." || brew install "${package}"; done < config/brew_packages.txt
+    while read -r package; do brew list --formula | grep -q "^${package}$" && echo "Package ${package} is already installed." || brew install "${package}"; done < config/brew_packages
     
 # Install Go packages
 install-go:
-    for package in $(cat config/go_packages.txt); do go install "$package"; done
+    for package in $(cat config/go_packages); do go install "$package"; done
 
 init-stow:
     stow_dirs=("psql" "rg" "stow" "usql" "vsnip" "git" "rectangle" "nushell")
