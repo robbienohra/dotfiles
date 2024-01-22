@@ -17,6 +17,9 @@ return {
 			config = function()
 				require('gitsigns').setup {
 					update_debounce = 100,
+					on_attach = function()
+						vim.cmd 'redrawstatus'
+					end,
 				}
 			end,
 		},
