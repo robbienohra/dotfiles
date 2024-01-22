@@ -43,3 +43,8 @@ update-all:
     just update-cargo
     just update-brew
     just install-go
+
+format-lua:
+    @echo "Formatting all Lua scripts..."
+    find . -name '*.lua' -exec stylua --config-path ~/.config/stylua.toml {} +
+    @echo "Formatting complete."

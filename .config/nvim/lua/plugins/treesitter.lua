@@ -5,7 +5,7 @@ return {
 	dependencies = {
 		'windwp/nvim-ts-autotag',
 		'LhKipp/nvim-nu',
-    'IndianBoy42/tree-sitter-just'
+		'IndianBoy42/tree-sitter-just',
 	},
 	config = function()
 		require('nvim-treesitter.configs').setup {
@@ -38,7 +38,7 @@ return {
 				'toml',
 				'typescript',
 				'vim',
-        'vimdoc',
+				'vimdoc',
 				'vue',
 				'yaml',
 			},
