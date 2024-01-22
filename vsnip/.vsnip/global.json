@@ -10,11 +10,5 @@
     "prefix": "log",
     "body": ["console.log($1);", "$2"],
     "description": "Log output to console"
-  },
-  "HTML refresh": {
-    "scope": "html",
-    "prefix": "ref",
-    "body": ["<meta http-equiv=\"refresh\" content=\"2\" />"],
-    "description": "Auto-refresh HTML"
   }
 }

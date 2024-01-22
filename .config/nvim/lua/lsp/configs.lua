@@ -52,21 +52,3 @@ local configs = {
 }
 
 return configs
-
--- if not lspconfig.helm_ls then
--- 	lspconfig.helm_ls = {
--- 		default_config = {
--- 			cmd = { "helm_ls", "serve" },
--- 			filetypes = { "helm" },
--- 			root_dir = function(fname)
--- 				return util.root_pattern "Chart.yaml"(fname)
--- 			end,
--- 		},
--- 	}
--- end
---
--- lspconfig.helm_ls.setup {
--- 	filetypes = { "helm" },
--- 	cmd = { "helm_ls", "serve" },
--- }
---

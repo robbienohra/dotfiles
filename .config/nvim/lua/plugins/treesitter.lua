@@ -24,6 +24,7 @@ return {
 				'html',
 				'javascript',
 				'json',
+				'just',
 				'kdl',
 				'lua',
 				'markdown',
@@ -62,6 +63,7 @@ return {
 				additional_vim_regex_highlighting = false,
 			},
 		}
+		require('tree-sitter-just').setup {}
 
 		local parser_config = require('nvim-treesitter.parsers').get_parser_configs()
 
