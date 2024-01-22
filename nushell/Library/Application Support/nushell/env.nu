@@ -68,6 +68,7 @@ $env.NU_PLUGIN_DIRS = [
     ($nu.default-config-dir | path join 'plugins')
 ]
 
+# https://github.com/Schniz/fnm/issues/463#issuecomment-1784926846
 if not (which fnm | is-empty) {
   ^fnm env --json | from json | load-env
   $env.PATH = ($env.PATH | prepend [

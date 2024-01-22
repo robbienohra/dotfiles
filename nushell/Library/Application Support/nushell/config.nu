@@ -6,16 +6,6 @@ $env.config = {
 	show_banner: false
 	keybindings: [
 	 {
-	 	  name: cd_with_zi
-	 	  modifier: control
-	 	  keycode: char_z
-	 	  mode: emacs
-	 	  event: {
-	 		send: executehostcommand,
-	 		cmd: "zi"
-	 	  }
-	 }
-	 {
 		  name: open_br
 		  modifier: control
 		  keycode: char_o
@@ -26,6 +16,16 @@ $env.config = {
 		  }
 	}
 	]
+  hooks: {
+    env_change: {
+      PWD: [{ |before, after|
+        let is_node_dir = [.nvmrc .node-version] | path exists | any { |it| $it }
+        if ('FNM_DIR' in $env) and $is_node_dir {
+          fnm use # Personally I prefer to use fnm --log-level=quiet use 
+        }
+      }]
+    }
+  }
 }
 
 # sourcing
@@ -34,19 +34,6 @@ source ~/.zoxide.nu
 source ~/.cache/starship/init.nu
 source ~/.cache/carapace/init.nu
 source ~/.local/share/atuin/init.nu
-
-# aliases
-
-
-
-# fnm
-# https://github.com/Schniz/fnm/issues/463#issuecomment-1602216687
-if not (which fnm | is-empty) {
-  ^fnm env --json | from json | load-env
-  $env.PATH = ($env.PATH | prepend [
-	$"($env.FNM_MULTISHELL_PATH)/bin"
-  ])
-}
 
 # atuin
 $env.config = (
