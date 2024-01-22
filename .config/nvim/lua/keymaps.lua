@@ -77,8 +77,25 @@ map('v', 'd', '"_d')
 map('v', 'D', '"_D')
 
 map('n', '-', '<CMD>Oil<CR>', { desc = 'Open parent directory' })
+
+-- tabline
+
+function CloseBufferOrQuit()
+	local buf_count = vim.fn.len(vim.fn.getbufinfo { buflisted = true })
+	if buf_count > 1 then
+		vim.cmd 'bdelete'
+	else
+		-- If it's the last buffer, you can choose what to do:
+		-- Option 1: Quit Neovim
+		-- vim.cmd 'quit'
+
+		-- Option 2: Open a default buffer (e.g., a start page or dashboard)
+		vim.cmd('Oil')
+	end
+end
+
 map('n', 'tn', ':enew<CR>')
-map('n', 'tk', ':bdelete<CR>')
+map('n', 'tk', ':lua CloseBufferOrQuit()<CR>')
 map('n', 't<Left>', ':bprevious<CR>')
 map('n', 't<Right>', ':bnext<CR>')
 
