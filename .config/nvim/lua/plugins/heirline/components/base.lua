@@ -3,7 +3,7 @@ local utils = require 'heirline.utils'
 
 function GetBufferRelativePath(includeGitRootParent)
 	local path = vim.fn.expand '%:p:h'
-	local handle = io.popen 'git rev-parse --show-toplevel'
+	local handle = io.popen 'git rev-parse --show-toplevel 2> /dev/null'
 	if not handle then
 		return path
 	end
