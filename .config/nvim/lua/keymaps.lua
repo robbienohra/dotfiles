@@ -80,6 +80,8 @@ map('n', '-', '<CMD>Oil<CR>', { desc = 'Open parent directory' })
 
 -- tabline
 
+map('n', '<A-b>', ':silent %bdelete|edit #|bdelete#<CR>')
+
 function CloseBufferOrQuit()
 	local buf_count = vim.fn.len(vim.fn.getbufinfo { buflisted = true })
 	if buf_count > 1 then
