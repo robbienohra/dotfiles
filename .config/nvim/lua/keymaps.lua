@@ -89,10 +89,10 @@ function CloseBufferOrQuit()
 	else
 		-- If it's the last buffer, you can choose what to do:
 		-- Option 1: Quit Neovim
-		-- vim.cmd 'quit'
+		vim.cmd 'quit'
 
 		-- Option 2: Open a default buffer (e.g., a start page or dashboard)
-		vim.cmd 'Oil'
+		-- vim.cmd 'Oil'
 	end
 end
 
