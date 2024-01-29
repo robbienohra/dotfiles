@@ -41,6 +41,9 @@ tools:
   python-yapf: &python-yapf
     format-command: 'yapf --quiet'
     format-stdin: true
+  python-black: &python-black
+    format-command: 'black -'
+    format-stdin: true
   terraform: &terraform
     format-command: 'terraform fmt -'
     format-stdin: true
@@ -79,7 +82,7 @@ languages:
   tex:
     - <<: *tex-latexindent
   python:
-    - <<: *python-yapf
+    - <<: *python-black
   tf:
     - <<: *terraform
   sh:
