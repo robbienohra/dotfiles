@@ -100,11 +100,11 @@ semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"
 save_to_clipboard = true
 
 [font]
-size = 14
+size = 15
 
   [font.normal]
   family = "JetBrainsMono Nerd Font Mono"
-  style = "Regular"
+  style = "ExtraLight"
 
   [font.italic]
   # family = "JetBrains Mono"
