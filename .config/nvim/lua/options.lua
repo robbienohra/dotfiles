@@ -39,7 +39,6 @@ o.foldmethod = 'expr'
 o.foldexpr = 'nvim_treesitter#foldexpr()'
 o.incsearch = true
 -- tabs
-vim.o.expandtab = true
 o.shiftwidth = 2
 o.tabstop = 2
 o.softtabstop = 2
