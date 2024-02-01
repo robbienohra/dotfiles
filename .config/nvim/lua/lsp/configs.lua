@@ -18,6 +18,7 @@ local configs = {
 	html = {},
 	jdtls = {},
 	jsonls = {},
+	just = {},
 	lua_ls = {
 		settings = {
 			Lua = {

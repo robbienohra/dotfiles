@@ -1,12 +1,5 @@
 local autocmd = vim.api.nvim_create_autocmd
 
--- compile and run c++ script
-autocmd('FileType', { pattern = { 'cpp' }, command = 'nnoremap <C-c> :!clang++ -o  %:r.out % -std=c++17<Enter>' })
-autocmd('FileType', { pattern = { 'cpp' }, command = 'nnoremap <C-x> :!%:r.out<Enter>' })
-
--- compile and run TS script
-autocmd('FileType', { pattern = { 'typescript' }, command = 'nnoremap <C-x> :!ts-node %<Enter>' })
-
 -- override default python indentation
 autocmd(
 	{ 'BufNewFile', 'BufRead' },
@@ -17,13 +10,15 @@ autocmd(
 autocmd({ 'BufLeave' }, { pattern = { '*' }, command = 'if &buftype == \'quickfix\'|q|endif' })
 autocmd({ 'BufEnter' }, { pattern = { '*' }, command = 'let &titlestring = \' \' . expand(\'%:t\') | set title' })
 
-autocmd({ 'BufNewFile', 'BufFilePre', 'BufRead' }, { pattern = { '*.md' }, command = 'set syntax=markdown' })
-autocmd({ 'BufNewFile', 'BufFilePre', 'BufRead' }, { pattern = { '*.nu' }, command = 'set filetype=nu' })
-
 -- https://github.com/neovim/neovim/issues/6005#issuecomment-835825265
 -- https://github.com/alacritty/alacritty/issues/5450#issuecomment-929797364
 vim.api.nvim_create_autocmd('ExitPre', {
 	group = vim.api.nvim_create_augroup('Exit', { clear = true }),
 	command = 'set guicursor=a:ver90',
 	desc = 'Set cursor back to beam when leaving Neovim.',
+})
+
+vim.api.nvim_create_autocmd({ 'BufNewFile', 'BufRead' }, {
+	pattern = 'justfile',
+	command = 'setf make',
 })

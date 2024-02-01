@@ -2,40 +2,40 @@ set shell := ["sh", "-c"]
 
 # Update Neovim plugins
 update-nvim:
-    nvim --headless "+Lazy! sync" +qa
+	nvim --headless "+Lazy! sync" +qa
 
 # Update Cargo packages
 update-cargo:
-    cargo install-update -a
+	cargo install-update -a
 
 # Install Cargo packages
 install-cargo:
-    for package in $(cat config/cargo_packages); do cargo install "$package"; done
+	for package in $(cat config/cargo_packages); do cargo install "$package"; done
 
 # Update Brew packages
 update-brew:
-    brew update
-    brew upgrade
+	brew update
+	brew upgrade
 
 # Install Brew packages
 install-brew:
-    brew tap homebrew/cask-fonts
+	brew tap homebrew/cask-fonts
 
-    while read -r package; do brew list --formula | grep -q "^${package}$" && echo "Package ${package} is already installed." || brew install "${package}"; done < config/brew_packages
+	while read -r package; do brew list --formula | grep -q "^${package}$" && echo "Package ${package} is already installed." || brew install "${package}"; done < config/brew_packages
     
 # Install Go packages
 install-go:
-    for package in $(cat config/go_packages); do go install "$package"; done
+	for package in $(cat config/go_packages); do go install "$package"; done
 
 init-stow:
-    stow_dirs=("psql" "rg" "stow" "usql" "vsnip" "git" "rectangle" "nushell")
-    for d in "${stow_dirs[@]}"; do stow "$d"; done; stow -t ~/.config .config
+	stow_dirs=("psql" "rg" "stow" "usql" "vsnip" "git" "rectangle" "nushell")
+	for d in "${stow_dirs[@]}"; do stow "$d"; done; stow -t ~/.config .config
 
 # Update all packages
 install-all:
-    just install-cargo
-    just install-brew
-    just install-go
+	just install-cargo
+	just install-brew
+	just install-go
 
 # Update all packages
 update-all:
