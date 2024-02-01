@@ -53,41 +53,9 @@ map('n', '<leader>s', ':update<CR>')
 map('i', '<C-s>', '<Esc>:update<CR>')
 map('n', 'U', '<C-r>')
 
-function GetBufferRelativePath(includeGitRootParent)
-	local path = vim.fn.expand '%:p:h'
-	local filename = vim.fn.expand '%:t'
-	local handle = io.popen 'git rev-parse --show-toplevel 2> /dev/null'
-	if not handle then
-		return path
-	end
-
-	local git_root = handle:read('*a'):gsub('%s+$', '')
-	handle:close()
-
-	-- Check if git_root is a prefix of path and remove it
-	local relative_path
-	if path:sub(1, #git_root) == git_root then
-		-- Plus 2 to remove the git_root and the following slash
-		relative_path = path:sub(#git_root + 2)
-	else
-		relative_path = path
-	end
-	relative_path = relative_path .. '/' .. filename
-	if includeGitRootParent then
-		local parent_dir = git_root:match '^.+[/\\](.+)$'
-		if parent_dir then
-			relative_path = parent_dir .. '/' .. relative_path
-		end
-	end
-
-	vim.fn.setreg('+', relative_path)
-
-	return relative_path
-end
-
 map('n', '<C-Right>', '<C-w>w')
 map('n', '<leader>cf', ':let @*=expand("%:t")<CR>')
-map('n', '<leader>cp', ':lua GetBufferRelativePath()<CR>')
+map('n', '<leader>cp', ':let @*=expand("%:p")<CR>')
 
 -- page up/down with centering
 map('n', '<PageDown>', '<C-d>zz')

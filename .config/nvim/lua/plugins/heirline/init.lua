@@ -37,6 +37,13 @@ return {
 			c.git,
 		}
 
+		local FileType = {
+			provider = function()
+				return vim.bo.filetype
+			end,
+			hl = { fg = utils.get_highlight('Type').fg, bold = true },
+		}
+
 		local Ruler = {
 			provider = '%7(%l/%3L%):%2c %P',
 			hl = { fg = 'black' },
@@ -50,6 +57,8 @@ return {
 			c.cwd,
 			u.align,
 			Ruler,
+			u.space,
+			FileType,
 		}
 
 		local SpecialStatusline = {

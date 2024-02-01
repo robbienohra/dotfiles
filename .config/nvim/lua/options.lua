@@ -21,11 +21,6 @@ o.cmdheight = 0
 o.conceallevel = 2
 o.completeopt = { 'menuone', 'noinsert', 'noselect' }
 -- https://neovim.io/doc/user/change.html#fo-table
--- o.formatoptions:append "l"
--- can also append multiple values using a table
--- o.formatoptions:append { "l", "t" }
--- can also remove options
--- o.formatoptions:remove "t"
 o.regexpengine = 0
 o.synmaxcol = 3000
 o.shiftwidth = 2
@@ -43,3 +38,8 @@ o.foldlevel = 20
 o.foldmethod = 'expr'
 o.foldexpr = 'nvim_treesitter#foldexpr()'
 o.incsearch = true
+-- tabs
+vim.o.expandtab = true
+o.shiftwidth = 2
+o.tabstop = 2
+o.softtabstop = 2

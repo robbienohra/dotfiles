@@ -194,13 +194,7 @@ local TabPages = {
 local TabLineOffset = {
 	condition = function(self)
 		local win = vim.api.nvim_tabpage_list_wins(0)[1]
-		local bufnr = vim.api.nvim_win_get_buf(win)
 		self.winid = win
-
-		if vim.bo[bufnr].filetype == 'NvimTree' then
-			self.title = 'NvimTree'
-			return true
-		end
 	end,
 
 	provider = function(self)
