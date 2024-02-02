@@ -5,11 +5,19 @@ keybinds clear-defaults=true {
   bind "Alt s" { NewPane "Right"; }
   bind "Ctrl n" { NewPane; }
 	bind "Alt w" { CloseFocus; }
+	bind "PageDown" { HalfPageScrollDown; }
+	bind "PageUp" { HalfPageScrollUp; }
+
  }
  pane {
   bind "r" { SwitchToMode "RenamePane"; PaneNameInput 0;}
   bind "s" { NewPane "Right"; SwitchToMode "Normal"; }
  }
+
+ locked {
+        bind "Ctrl g" { SwitchToMode "Normal"; }
+	}
+
  tab {
    bind "Ctrl t" { SwitchToMode "Normal"; }
 	 bind "n" { NewTab; SwitchToMode "RenameTab"; TabNameInput 0; }
@@ -45,6 +53,7 @@ keybinds clear-defaults=true {
     }
 	}
 shared_except "locked" {
+		bind "Ctrl g" { SwitchToMode "Locked"; }
     bind "Ctrl h" {
         LaunchOrFocusPlugin "file:~/.config/zellij/plugins/harpoon.wasm" {
             floating true
