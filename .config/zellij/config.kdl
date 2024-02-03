@@ -5,8 +5,6 @@ keybinds clear-defaults=true {
   bind "Alt s" { NewPane "Right"; }
   bind "Ctrl n" { NewPane; }
 	bind "Alt w" { CloseFocus; }
-	bind "PageDown" { HalfPageScrollDown; }
-	bind "PageUp" { HalfPageScrollUp; }
 
  }
  pane {
@@ -15,7 +13,7 @@ keybinds clear-defaults=true {
  }
 
  locked {
-        bind "Ctrl g" { SwitchToMode "Normal"; }
+  bind "Ctrl g" { SwitchToMode "Normal"; }
 	}
 
  tab {
