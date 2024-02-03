@@ -1,16 +1,16 @@
 use std
 
-$env.PATH = ($env.PATH 
-	| split row (char esep) 
-	| prepend '/opt/homebrew/bin' 
-	| prepend $'($env.HOME)/Library/Application Support/carapace/bin'
-	| append $'($env.HOME)/.cargo/bin' 
-	| append $'($env.HOME)/Library/Python/3.9/bin' 
-	| append $'($env.HOME)/Downloads/google-cloud-sdk/bin'
-	| append $'/usr/local/bin'
-	| append $'/usr/local/go/bin'
-	| append $'($env.HOME)/go/bin'
-	| append $'/usr/local/texlive/2023/bin/universal-darwin/') 
+$env.PATH = ($env.PATH
+  | split row (char esep)
+  | prepend '/opt/homebrew/bin'
+  | prepend $'($env.HOME)/Library/Application Support/carapace/bin'
+  | append $'($env.HOME)/.cargo/bin'
+  | append $'($env.HOME)/Library/Python/3.9/bin'
+  | append $'($env.HOME)/Downloads/google-cloud-sdk/bin'
+  | append $'/usr/local/bin'
+  | append $'/usr/local/go/bin'
+  | append $'($env.HOME)/go/bin'
+  | append $'/usr/local/texlive/2023/bin/universal-darwin/')
 
 $env.NUPM_HOME = $'($env.HOME)/nupm'
 
@@ -72,7 +72,7 @@ $env.NU_PLUGIN_DIRS = [
 if not (which fnm | is-empty) {
   ^fnm env --json | from json | load-env
   $env.PATH = ($env.PATH | prepend [
-	$"($env.FNM_MULTISHELL_PATH)/bin"
+  $"($env.FNM_MULTISHELL_PATH)/bin"
   ])
 }
 
@@ -87,11 +87,11 @@ $env.LANG = "en_US.UTF-8"
 # fzf theming
 # https://github.com/catppuccin/fzf
 
-$env.FZF_DEFAULT_OPTS = $"--history=($env.HOME)/.fzf_history 
---bind ctrl-d:page-down,ctrl-u:page-up 
---bind ctrl-p:previous-history 
---bind ctrl-f:next-history 
---bind F2:toggle-preview 
+$env.FZF_DEFAULT_OPTS = $"--history=($env.HOME)/.fzf_history
+--bind ctrl-d:page-down,ctrl-u:page-up
+--bind ctrl-p:previous-history
+--bind ctrl-f:next-history
+--bind F2:toggle-preview
 --info=hidden
 --color=bg+:#1e1e2e,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8
 --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc

@@ -22,7 +22,7 @@ install-brew:
 	brew tap homebrew/cask-fonts
 
 	while read -r package; do brew list --formula | grep -q "^${package}$" && echo "Package ${package} is already installed." || brew install "${package}"; done < config/brew_packages
-    
+
 # Install Go packages
 install-go:
 	for package in $(cat config/go_packages); do go install "$package"; done
@@ -39,12 +39,12 @@ install-all:
 
 # Update all packages
 update-all:
-    just update-nvim
-    just update-cargo
-    just update-brew
-    just install-go
+	just update-nvim
+	just update-cargo
+	just update-brew
+	just install-go
 
 format-lua:
-    @echo "Formatting all Lua scripts..."
-    find . -name '*.lua' -exec stylua --config-path ~/.config/stylua.toml {} +
-    @echo "Formatting complete."
+	@echo "Formatting all Lua scripts..."
+	find . -name '*.lua' -exec stylua --config-path ~/.config/stylua.toml {} +
+	@echo "Formatting complete."

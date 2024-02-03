@@ -1,62 +1,61 @@
 keybinds clear-defaults=true {
- normal {
-	bind "Ctrl f" { EditScrollback; }
-	bind "Ctrl k" { Clear; }
-  bind "Alt s" { NewPane "Right"; }
-  bind "Ctrl n" { NewPane; }
-	bind "Alt w" { CloseFocus; }
+  normal {
+    bind "Ctrl f" { EditScrollback; }
+    bind "Ctrl k" { Clear; }
+    bind "Alt s" { NewPane "Right"; }
+    bind "Ctrl n" { NewPane; }
+    bind "Alt w" { CloseFocus; }
+  }
+  pane {
+    bind "r" { SwitchToMode "RenamePane"; PaneNameInput 0;}
+    bind "s" { NewPane "Right"; SwitchToMode "Normal"; }
+  }
 
- }
- pane {
-  bind "r" { SwitchToMode "RenamePane"; PaneNameInput 0;}
-  bind "s" { NewPane "Right"; SwitchToMode "Normal"; }
- }
+  locked {
+    bind "Ctrl g" { SwitchToMode "Normal"; }
+  }
 
- locked {
-  bind "Ctrl g" { SwitchToMode "Normal"; }
-	}
-
- tab {
-   bind "Ctrl t" { SwitchToMode "Normal"; }
-	 bind "n" { NewTab; SwitchToMode "RenameTab"; TabNameInput 0; }
-	 bind "r" { SwitchToMode "RenameTab"; TabNameInput 0; }
-	 bind "x" { CloseTab; }
-	 bind "Left" "Up" { GoToPreviousTab; }
-   bind "Right" "Down" { GoToNextTab; }
- }
- shared_except "locked" {
-   bind "Alt Left" { GoToPreviousTab; }
-   bind "Alt Right" { GoToNextTab; }
-   bind "Alt Down" { MoveFocus "Down"; }
-   bind "Alt Up" { MoveFocus "Up"; }
-   bind "Alt -" { Resize "Decrease"; }
-   bind "Alt [" { PreviousSwapLayout; }
-   bind "Alt ]" { NextSwapLayout; }
- }
- shared_except "normal" "locked" {
-   bind "Enter" "Esc" { SwitchToMode "Normal"; }
- }
- shared_except "tab" "locked" {
-   bind "Ctrl t" { SwitchToMode "Tab"; }
-}
- shared_except "pane" "locked" {
-        bind "Ctrl p" { SwitchToMode "Pane"; }
- }
- shared_except "locked" {
+  tab {
+    bind "Ctrl t" { SwitchToMode "Normal"; }
+    bind "n" { NewTab; SwitchToMode "RenameTab"; TabNameInput 0; }
+    bind "r" { SwitchToMode "RenameTab"; TabNameInput 0; }
+    bind "x" { CloseTab; }
+    bind "Left" "Up" { GoToPreviousTab; }
+    bind "Right" "Down" { GoToNextTab; }
+  }
+  shared_except "locked" {
+    bind "Alt Left" { GoToPreviousTab; }
+    bind "Alt Right" { GoToNextTab; }
+    bind "Alt Down" { MoveFocus "Down"; }
+    bind "Alt Up" { MoveFocus "Up"; }
+    bind "Alt -" { Resize "Decrease"; }
+    bind "Alt [" { PreviousSwapLayout; }
+    bind "Alt ]" { NextSwapLayout; }
+  }
+  shared_except "normal" "locked" {
+    bind "Enter" "Esc" { SwitchToMode "Normal"; }
+  }
+  shared_except "tab" "locked" {
+    bind "Ctrl t" { SwitchToMode "Tab"; }
+  }
+  shared_except "pane" "locked" {
+    bind "Ctrl p" { SwitchToMode "Pane"; }
+  }
+  shared_except "locked" {
     bind "Alt r" {
-        LaunchOrFocusPlugin "file:~/.config/zellij/plugins/room.wasm" {
-            floating true
-            ignore_case true
-        }
+      LaunchOrFocusPlugin "file:~/.config/zellij/plugins/room.wasm" {
+      floating true
+      ignore_case true
     }
-	}
-shared_except "locked" {
-		bind "Ctrl g" { SwitchToMode "Locked"; }
-    bind "Ctrl h" {
+  }
+}
+  shared_except "locked" {
+      bind "Ctrl g" { SwitchToMode "Locked"; }
+      bind "Ctrl h" {
         LaunchOrFocusPlugin "file:~/.config/zellij/plugins/harpoon.wasm" {
-            floating true
-						move_to_focused_tab true
-        }
+        floating true
+        move_to_focused_tab true
+      }
     }
   }
 }
@@ -88,10 +87,10 @@ scrollback_editor "/opt/homebrew/bin/nvim"
 
 ui {
   pane_frames {
-	  hide_session_name true
+    hide_session_name true
   }
 }
 
 plugins {
-	compact-bar { path "compact-bar"; }
+  compact-bar { path "compact-bar"; }
 }

@@ -8,7 +8,7 @@
 [format]
   pretty = format:%C(yellow)%h %Cred%ad %Cblue%an%Cgreen%d %Creset%s
 [alias]
-  dn = diff --name-only 
+  dn = diff --name-only
   dup = diff @{upstream} @
   diun = diff @{upstream} @ --name-only
   pr ="!f() { git diff origin/$1...head ':(exclude)package-lock.json'; }; f"
@@ -24,7 +24,7 @@
 [user]
   name = Robbie Nohra
   signingkey = robbie@robbienohra.com
-	email = robbie@robbienohra.com
+  email = robbie@robbienohra.com
 [init]
   defaultBranch = main
 [pager]

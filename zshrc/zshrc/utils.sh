@@ -17,9 +17,9 @@ function u-cols() {
   TABLE=$2
   read -r -d '' VAR <<EOM
   SELECT column_name
-  FROM information_schema.columns 
-  WHERE table_schema = 'public' 
-  AND table_name = '${TABLE}' 
+  FROM information_schema.columns
+  WHERE table_schema = 'public'
+  AND table_name = '${TABLE}'
   ORDER BY column_name ASC;
 EOM
   usql "postgres://${USER}@localhost:5432/${DB}?sslmode=disable" -c "$VAR"

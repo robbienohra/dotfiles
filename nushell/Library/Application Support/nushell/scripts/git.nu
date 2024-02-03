@@ -1,14 +1,14 @@
 export def rconf [] {
-	let a = $"(git diff --name-only --diff-filter=U | sed -n 1p)"
-	if a != "" {
-		nvim -c 'Gvdiffsplit!' $a
-	}
+  let a = $"(git diff --name-only --diff-filter=U | sed -n 1p)"
+  if a != "" {
+    nvim -c 'Gvdiffsplit!' $a
+  }
 }
 
 export def sq [] {
   git add .;
-	git commit --fixup $"(git rev-parse HEAD)" -n;
-	git rebase -i HEAD~2 --autosquash;
+  git commit --fixup $"(git rev-parse HEAD)" -n;
+  git rebase -i HEAD~2 --autosquash;
 }
 
 export def no [branch] {
@@ -17,10 +17,10 @@ export def no [branch] {
 
 # echo next file with conflict
 export def conf [] {
-	let a = $"(git diff --name-only --diff-filter=U | sed -n 1p)"
-	if a != "" {
-		echo $a
-	}
+  let a = $"(git diff --name-only --diff-filter=U | sed -n 1p)"
+  if a != "" {
+    echo $a
+  }
 }
 
 def git_current_branch [] {

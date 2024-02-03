@@ -36,8 +36,8 @@ return {
 			ensure_installed = {
 				'bashls',
 				'clangd',
-				'efm',
 				'dockerls',
+				'efm',
 				'eslint',
 				'gopls',
 				'html',
@@ -55,6 +55,7 @@ return {
 				'tsserver',
 				'volar',
 				'yamlls',
+				'editorconfig-checker',
 			},
 		}
 		local function get_forced_lsp_capabilities()
