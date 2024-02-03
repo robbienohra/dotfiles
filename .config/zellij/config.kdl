@@ -5,6 +5,8 @@ keybinds clear-defaults=true {
     bind "Alt s" { NewPane "Right"; }
     bind "Ctrl n" { NewPane; }
     bind "Alt w" { CloseFocus; }
+    bind "PageDown" { HalfPageScrollDown; }
+    bind "PageUp" { HalfPageScrollUp; }
   }
   pane {
     bind "r" { SwitchToMode "RenamePane"; PaneNameInput 0;}

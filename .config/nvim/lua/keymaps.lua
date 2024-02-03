@@ -61,9 +61,9 @@ map('n', '<leader>cf', ':let @*=expand("%:t")<CR>')
 map('n', '<leader>cp', ':let @*=expand("%:p")<CR>')
 
 -- page up/down with centering
-map('n', '<PageDown>', '<C-d>zz')
-map('n', '<PageUp>', '<C-u>zz')
-map('n', '<C-Down>', 'z.')
+map('n', '<C-Down>', '<C-d>zz')
+map('n', '<C-Up>', '<C-u>zz')
+-- map('n', '<C-Down>', 'z.')
 
 -- move snippets
 map('v', 'J', ':m \'>+1<CR>gv=gv')
