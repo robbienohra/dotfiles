@@ -20,8 +20,7 @@ update-brew:
 # Install Brew packages
 install-brew:
 	brew tap homebrew/cask-fonts
-
-	while read -r package; do brew list --formula | grep -q "^${package}$" && echo "Package ${package} is already installed." || brew install "${package}"; done < config/brew_packages
+	bash config/install_brew.sh
 
 # Install Go packages
 install-go:
