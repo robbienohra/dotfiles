@@ -4,7 +4,7 @@ keybinds clear-defaults=true {
     bind "Ctrl k" { Clear; }
     bind "Alt s" { NewPane "Right"; }
     bind "Ctrl n" { NewPane; }
-    bind "Alt w" { CloseFocus; }
+    bind "Alt k" { CloseFocus; }
     bind "PageDown" { HalfPageScrollDown; }
     bind "PageUp" { HalfPageScrollUp; }
   }
