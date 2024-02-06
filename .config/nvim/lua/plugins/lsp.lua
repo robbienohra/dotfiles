@@ -14,6 +14,7 @@ return {
 
 			ensure_installed = {
 				'clang-format',
+				'editorconfig-checker',
 				'golangci-lint',
 				'go-debug-adapter',
 				'prettier',
@@ -55,7 +56,6 @@ return {
 				'tsserver',
 				'volar',
 				'yamlls',
-				'editorconfig-checker',
 			},
 		}
 		local function get_forced_lsp_capabilities()
