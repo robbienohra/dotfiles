@@ -1,30 +1,5 @@
-export def rconf [] {
-  let a = $"(git diff --name-only --diff-filter=U | sed -n 1p)"
-  if a != "" {
-    nvim -c 'Gvdiffsplit!' $a
-  }
-}
-
-export def sq [] {
-  git add .;
-  git commit --fixup $"(git rev-parse HEAD)" -n;
-  git rebase -i HEAD~2 --autosquash;
-}
-
-export def no [branch] {
-  git rev-list --count HEAD $"^($branch)"
-}
-
-# echo next file with conflict
-export def conf [] {
-  let a = $"(git diff --name-only --diff-filter=U | sed -n 1p)"
-  if a != "" {
-    echo $a
-  }
-}
-
-def git_current_branch [] {
-    (gstat).branch
+export def git_current_branch [] {
+    git branch --show-current
 }
 
 def git_main_branch [] {
@@ -242,3 +217,28 @@ export alias gdup = git diff @{upstream}
 export alias gswm = git switch (git_main_branch)
 
 export alias grl = git reflog --date=iso
+
+export def rconf [] {
+  let a = $"(git diff --name-only --diff-filter=U | sed -n 1p)"
+  if a != "" {
+    nvim -c 'Gvdiffsplit!' $a
+  }
+}
+
+export def sq [] {
+  git add .;
+  git commit --fixup $"(git rev-parse HEAD)" -n;
+  git rebase -i HEAD~2 --autosquash;
+}
+
+export def no [branch] {
+  git rev-list --count HEAD $"^($branch)"
+}
+
+# echo next file with conflict
+export def conf [] {
+  let a = $"(git diff --name-only --diff-filter=U | sed -n 1p)"
+  if a != "" {
+    echo $a
+  }
+}
