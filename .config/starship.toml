@@ -1,12 +1,10 @@
 format = """
 $directory\
+$git_branch\
 $git_status\
+$fill
 $character
 """
-
-
-# Disable the blank line at the start of the prompt
-# add_newline = false
 
 [directory]
 format = "[ $path ]($style)"
@@ -15,6 +13,10 @@ truncation_symbol = "…/"
 
 [git_branch]
 format = '[$symbol$branch]($style) '
+truncation_length = 20
 
 [git_status]
 format = '([\[$all_status$ahead_behind\]]($style)) '
+
+[fill]
+symbol = ' '
