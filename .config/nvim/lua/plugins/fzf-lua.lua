@@ -4,6 +4,11 @@ return {
 	dependencies = { 'nvim-tree/nvim-web-devicons' },
 	config = function()
 		require('fzf-lua').setup {
+			files = {
+				actions = {
+					['default'] = require('fzf-lua.actions').file_edit,
+				},
+			},
 			winopts = {
 				split = 'belowright new',
 				preview = {
