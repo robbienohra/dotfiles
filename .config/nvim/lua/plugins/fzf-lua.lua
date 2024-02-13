@@ -13,8 +13,6 @@ return {
 			},
 			keymap = {
 				fzf = {
-					['ctrl-k'] = 'previous-history',
-					['ctrl-j'] = 'next-history',
 					['f4'] = 'toggle-preview',
 				},
 			},
