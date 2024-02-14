@@ -77,9 +77,8 @@ map('v', 'D', '"_D')
 
 map('n', '-', '<CMD>Oil<CR>', { desc = 'Open parent directory' })
 
--- tabline
-local function GetBufferRelativePath()
-	local path = vim.fn.expand '%:p:h' -- Get the directory path of the current buffer
+function GetFileRelativePath()
+	local path = vim.fn.expand '%:p:h'  -- Get the directory path of the current buffer
 	local filename = vim.fn.expand '%:t' -- Get the filename of the current buffer
 	local handle = io.popen 'git rev-parse --show-toplevel 2> /dev/null'
 	if not handle then
@@ -91,8 +90,11 @@ local function GetBufferRelativePath()
 
 	-- Check if git_root is a prefix of path and remove it
 	local relative_path
-	if path:sub(1, #git_root) == git_root then
-		-- Plus 2 to remove the git_root and the following slash, then append the filename
+	if path == git_root then
+		-- If the file is at the root, return just the filename
+		relative_path = filename
+	elseif path:sub(1, #git_root) == git_root then
+		-- If the file is not at the root, remove the git_root and the following slash, then append the filename
 		relative_path = path:sub(#git_root + 2) .. '/' .. filename
 	else
 		relative_path = path .. '/' .. filename
@@ -101,9 +103,9 @@ local function GetBufferRelativePath()
 	vim.fn.setreg('+', relative_path)
 end
 
-map('n', '<leader>cf', ':lua GetBufferRelativePath()<CR>')
-map('n', '<leader>cp', ':let @*=expand("%:p")<CR>')
+map('n', '<M-c>', ':lua GetFileRelativePath()<CR>')
 
+-- tabline
 map('n', '<A-b>', ':silent %bdelete|edit #|bdelete#<CR>')
 
 function CloseBufferOrQuit()
