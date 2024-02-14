@@ -49,9 +49,8 @@ return {
 
 						-- Actions
 						map('n', '<leader>hs', gs.stage_buffer)
-						map('n', '<leader>hp', gs.preview_hunk)
 						map('n', '<leader>hr', gs.reset_buffer)
-						map('n', '<leader>hu', gs.undo_stage_hunk)
+						map('n', '<leader>hp', gs.preview_hunk)
 						map('n', '<leader>hd', gs.diffthis)
 						map('n', '<leader>hb', function()
 							gs.blame_line { full = true }
