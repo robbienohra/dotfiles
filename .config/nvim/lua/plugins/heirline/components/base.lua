@@ -2,10 +2,11 @@ local conditions = require 'heirline.conditions'
 local utils = require 'heirline.utils'
 
 function GetBufferRelativePath(includeGitRootParent)
-	local path = vim.fn.expand '%:p:h'
+	local path = vim.fn.expand '%:p:h' -- Get the directory path of the current buffer
+	local filename = vim.fn.expand '%:t' -- Get the filename of the current buffer
 	local handle = io.popen 'git rev-parse --show-toplevel 2> /dev/null'
 	if not handle then
-		return path
+		return path .. '/' .. filename -- Return the path with the filename if the handle is nil
 	end
 
 	local git_root = handle:read('*a'):gsub('%s+$', '')
@@ -13,19 +14,18 @@ function GetBufferRelativePath(includeGitRootParent)
 
 	-- Check if git_root is a prefix of path and remove it
 	local relative_path
-	if path:sub(1, #git_root) == git_root then
-		-- Plus 2 to remove the git_root and the following slash
-		relative_path = path:sub(#git_root + 2)
+	if path == git_root then
+		-- If the file is at the root, return just the filename
+		relative_path = filename
+	elseif path:sub(1, #git_root) == git_root then
+		-- If the file is not at the root, remove the git_root and the following slash, then append the filename
+		relative_path = path:sub(#git_root + 2) .. '/' .. filename
 	else
-		relative_path = path
+		relative_path = path .. '/' .. filename
 	end
 
-	if includeGitRootParent then
-		local parent_dir = git_root:match '^.+[/\\](.+)$'
-		if parent_dir then
-			relative_path = parent_dir .. '/' .. relative_path
-		end
-	end
+	-- relative_path = relative_path:gsub('/', ' ⟩ ')
+	relative_path = relative_path:gsub('/', ' / ')
 
 	return relative_path
 end
@@ -204,4 +204,5 @@ local M = {
 		},
 	},
 }
+
 return M

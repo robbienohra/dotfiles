@@ -78,7 +78,7 @@ map('v', 'D', '"_D')
 map('n', '-', '<CMD>Oil<CR>', { desc = 'Open parent directory' })
 
 function GetFileRelativePath()
-	local path = vim.fn.expand '%:p:h'  -- Get the directory path of the current buffer
+	local path = vim.fn.expand '%:p:h' -- Get the directory path of the current buffer
 	local filename = vim.fn.expand '%:t' -- Get the filename of the current buffer
 	local handle = io.popen 'git rev-parse --show-toplevel 2> /dev/null'
 	if not handle then
