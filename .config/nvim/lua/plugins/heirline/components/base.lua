@@ -1,7 +1,7 @@
 local conditions = require 'heirline.conditions'
 local utils = require 'heirline.utils'
 
-function GetBufferRelativePath(includeGitRootParent)
+function GetBufferRelativePath()
 	local path = vim.fn.expand '%:p:h' -- Get the directory path of the current buffer
 	local filename = vim.fn.expand '%:t' -- Get the filename of the current buffer
 	local handle = io.popen 'git rev-parse --show-toplevel 2> /dev/null'
