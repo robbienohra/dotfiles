@@ -18,17 +18,10 @@ map('n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<CR>')
 map('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<CR>')
 map('n', '<space>d', '<cmd>lua vim.diagnostic.disable()<CR>')
 
--- git
+-- fugitive
 map('n', '<Leader>ga', ':Gwrite<CR>')
-map('n', '<Leader>gt', ':Gwrite!<CR>')
-map('n', '<Leader>gd', ':Gvdiffsplit! main...head <CR>')
-map('n', '<Leader>gr', ':GDelete<CR>')
-map('n', '<Leader>gl', ':.GBrowse<CR>')
-map('n', '<Leader>gm', ':.GBrowse main:%<CR>')
 map('n', '<Leader>gf', ':GBrowse<CR>')
-
--- gitsigns
-map('n', '<Leader>gb', ':Gitsigns blame_line<CR>')
+map('n', '<Leader>gl', ':.GBrowse<CR>')
 
 -- Set working directory
 map('n', '<leader>.', ':lcd %:p:h<CR>')
