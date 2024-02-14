@@ -24,6 +24,10 @@ function GetBufferRelativePath(includeGitRootParent)
 		relative_path = path .. '/' .. filename
 	end
 
+	if not conditions.width_percent_below(#relative_path, 0.75) then
+		relative_path = vim.fn.pathshorten(relative_path)
+	end
+
 	-- relative_path = relative_path:gsub('/', ' ⟩ ')
 	relative_path = relative_path:gsub('/', ' / ')
 
