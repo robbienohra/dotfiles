@@ -28,9 +28,6 @@ function GetBufferRelativePath()
 		relative_path = vim.fn.pathshorten(relative_path)
 	end
 
-	-- relative_path = relative_path:gsub('/', ' ⟩ ')
-	relative_path = relative_path:gsub('/', ' / ')
-
 	return relative_path
 end
 
