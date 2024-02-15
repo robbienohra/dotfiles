@@ -96,7 +96,7 @@ function GetFileRelativePath()
 	vim.fn.setreg('+', relative_path)
 end
 
-map('n', '<M-c>', ':lua GetFileRelativePath()<CR>')
+map('n', '<leader>c', ':lua GetFileRelativePath()<CR>')
 
 -- tabline
 map('n', '<A-b>', ':silent %bdelete|edit #|bdelete#<CR>')
