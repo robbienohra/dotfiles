@@ -128,3 +128,6 @@ map('n', '<leader>f', '<cmd>FzfLua grep_project<cr>')
 map('n', '<leader>p', '<cmd>FzfLua oldfiles<cr>')
 map('n', '<leader>y', '<cmd>FzfLua command_history<cr>')
 map('n', '<leader>r', ':FzfLua resume<Space>', { silent = false })
+
+-- terminal mappings
+map('t', '<Esc>', '<C-\\><C-n>')
