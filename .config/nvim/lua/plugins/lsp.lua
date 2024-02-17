@@ -54,7 +54,6 @@ return {
 				'terraformls',
 				'texlab',
 				'tsserver',
-				'volar',
 				'yamlls',
 			},
 		}

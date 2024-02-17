@@ -42,7 +42,6 @@ local configs = {
 	terraformls = {},
 	texlab = {},
 	tsserver = {},
-	volar = {},
 	yamlls = {
 		settings = {
 			yaml = {
