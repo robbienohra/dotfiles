@@ -1,40 +1,34 @@
 keybinds clear-defaults=true {
   normal {
-    bind "Ctrl f" { EditScrollback; }
-    bind "Ctrl k" { Clear; }
-    bind "Alt s" { NewPane "Right"; }
     bind "Ctrl n" { NewPane; }
-    bind "Alt k" { CloseFocus; }
-    bind "PageDown" { HalfPageScrollDown; }
-    bind "PageUp" { HalfPageScrollUp; }
+    bind "Ctrl k" { CloseFocus; }
   }
   pane {
     bind "r" { SwitchToMode "RenamePane"; PaneNameInput 0;}
-    bind "s" { NewPane "Right"; SwitchToMode "Normal"; }
+    bind "u" { MoveFocus "Up"; }
+    bind "e" { MoveFocus "Down"; }
+    bind "l" { Clear; }
+    bind "f" { EditScrollback; }
   }
-
   locked {
     bind "Ctrl g" { SwitchToMode "Normal"; }
+    bind "u" { HalfPageScrollUp; }
+    bind "e" { HalfPageScrollDown; }
   }
-
   tab {
     bind "Ctrl t" { SwitchToMode "Normal"; }
-    bind "n" { NewTab; SwitchToMode "RenameTab"; TabNameInput 0; }
+    bind "u" { NewTab; SwitchToMode "RenameTab"; TabNameInput 0; }
     bind "r" { SwitchToMode "RenameTab"; TabNameInput 0; }
-    bind "x" { CloseTab; }
-    bind "Left" "Up" { GoToPreviousTab; }
-    bind "Right" "Down" { GoToNextTab; }
+    bind "n"  { GoToPreviousTab; }
+    bind "i"  { GoToNextTab; }
+    bind "k" { CloseTab; }
   }
   shared_except "locked" {
-    bind "Alt Left" { GoToPreviousTab; }
-    bind "Alt Right" { GoToNextTab; }
-    bind "Alt Down" { MoveFocus "Down"; }
-    bind "Alt Up" { MoveFocus "Up"; }
-    bind "Alt -" { Resize "Decrease"; }
+    bind "Ctrl g" { SwitchToMode "Locked"; }
     bind "Alt [" { PreviousSwapLayout; }
     bind "Alt ]" { NextSwapLayout; }
   }
-  shared_except "normal" "locked" {
+  shared_except "normal" {
     bind "Enter" "Esc" { SwitchToMode "Normal"; }
   }
   shared_except "tab" "locked" {
@@ -42,23 +36,6 @@ keybinds clear-defaults=true {
   }
   shared_except "pane" "locked" {
     bind "Ctrl p" { SwitchToMode "Pane"; }
-  }
-  shared_except "locked" {
-    bind "Alt r" {
-      LaunchOrFocusPlugin "file:~/.config/zellij/plugins/room.wasm" {
-      floating true
-      ignore_case true
-    }
-  }
-}
-  shared_except "locked" {
-      bind "Ctrl g" { SwitchToMode "Locked"; }
-      bind "Ctrl h" {
-        LaunchOrFocusPlugin "file:~/.config/zellij/plugins/harpoon.wasm" {
-        floating true
-        move_to_focused_tab true
-      }
-    }
   }
 }
 

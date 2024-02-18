@@ -1,46 +1,70 @@
 local map = require('utils').map
 
+-- colemak
+-- https://github.com/theniceboy/nvim/blob/master/init.vim
+map('n', 'l', 'u')
+map({ 'n', 'v' }, 'k', 'i')
+map({ 'n', 'v' }, 'K', 'I')
+map('n', 'U', '5k')
+map('n', 'E', '5j')
+
+--     ^
+--     u
+-- < n   i >
+--     e
+--     v
+map({ 'n', 'v' }, 'u', 'k')
+map({ 'n', 'v' }, 'n', 'h')
+map({ 'n', 'v' }, 'e', 'j')
+map({ 'n', 'v' }, 'i', 'l')
+
+-- page up/down with centering
+map('n', '<space>w', '<C-w>w')
+map('n', '<space>u', '<C-w>k')
+map('n', '<space>e', '<C-w>j')
+map('n', '<space>n', '<C-w>h')
+map('n', '<space>i', '<C-w>l')
+
+map('n', '<C-u>', '<C-u>zz')
+map('n', '<C-e>', '<C-d>zz')
+map('n', '<leader>w', '<C-w>w')
+
+-- terminal
+map('n', '<C-\\>', ':vsplit term://nu<CR>')
+
 -- lsp
-map('n', '<space>f', '<cmd>lua vim.lsp.buf.format { async = true } <CR>')
-map('n', '<space>a', '<cmd>lua vim.lsp.buf.code_action()<CR>')
-map('n', '<space>h', '<cmd>lua vim.lsp.buf.hover()<CR>')
-map('n', '<space>m', '<cmd>lua vim.lsp.buf.rename()<CR>')
-map('n', '<space>r', '<cmd>lua vim.lsp.buf.references()<CR>')
-map('n', '<space>s', '<cmd>lua vim.lsp.buf.document_symbol()<CR>')
-map('n', '<space>e', '<cmd>lua vim.diagnostic.open_float()<CR>')
+map('n', ',f', '<cmd>lua vim.lsp.buf.format { async = true } <CR>')
+map('n', ',a', '<cmd>lua vim.lsp.buf.code_action()<cr>')
+map('n', ',h', '<cmd>lua vim.lsp.buf.hover()<cr>')
+map('n', ',m', '<cmd>lua vim.lsp.buf.rename()<cr>')
+map('n', ',r', '<cmd>lua vim.lsp.buf.references()<cr>')
+map('n', ',s', '<cmd>lua vim.lsp.buf.document_symbol()<cr>')
+map('n', ',e', '<cmd>lua vim.diagnostic.open_float()<cr>')
 
 -- fugitive
-map('n', '<Leader>gf', ':GBrowse<CR>')
-map('n', '<Leader>gl', ':.GBrowse<CR>')
+map('n', '<leader>gf', ':GBrowse<CR>')
+map('n', '<leader>gl', ':.GBrowse<CR>')
 
 -- Clean search (highlight)
-map('n', '<leader><space>', ':noh<cr>')
-
--- Window mode
-map('n', '<Leader>w', '<C-w>')
+map('n', '<leader><cr>', ':nohlsearch<CR>')
 
 -- Hard quit
-map('n', '<Leader>q', ':qa!<CR>')
+map('n', '<leader>q', ':qa!<CR>')
 
 -- Search mappings: These will make it so that going to the next one in a search will center on the line it's found in.
-map('n', 'n', 'nzzzv')
-map('n', 'N', 'Nzzzv')
+-- map('n', 'f', 'nzzzv')
+-- map('n', 'F', 'Nzzzv')
 
 map('n', '<leader>p', '"+gP<CR>')
 
 -- editing
 map('n', 'Q', 'ZQ')
 map('n', '<leader>s', ':update<CR>')
-map('i', '<C-s>', '<Esc>:update<CR>')
-map('n', 'U', '<C-r>')
-
--- page up/down with centering
-map('n', '<C-Down>', '<C-d>zz')
-map('n', '<C-Up>', '<C-u>zz')
+-- map('i', '<C-s>', '<Esc>:update<CR>')
 
 -- move snippets
-map('v', 'J', ':m \'>+1<CR>gv=gv')
-map('v', 'K', ':m \'<-2<CR>gv=gv')
+-- map('v', 'J', ':m \'>+1<CR>gv=gv')
+-- map('v', 'K', ':m \'<-2<CR>gv=gv')
 
 -- d is for delete
 -- https://github.com/pazams/d-is-for-delete
@@ -58,18 +82,19 @@ map('n', '<leader>c', ':lua require(\'utils\').GetFileRelativePath()<CR>')
 -- tabline
 map('n', '<space>b', ':silent %bdelete|edit #|bdelete#<CR>')
 
-map('n', 'tn', ':enew<CR>')
+map('n', 'tu', ':enew<CR>')
+map('n', 'tn', ':bprevious<CR>')
+map('n', 'ti', ':bnext<CR>')
 map('n', 'tk', ':lua require(\'utils\').CloseBufferOrQuit()<CR>')
-map('n', 't<Left>', ':bprevious<CR>')
-map('n', 't<Right>', ':bnext<CR>')
 
 -- fzf-lua
-map('n', '<leader>b', '<cmd>FzfLua buffers<cr>')
 map('n', '<leader>t', '<cmd>FzfLua files<cr>')
 map('n', '<leader>f', '<cmd>FzfLua grep_project<cr>')
 map('n', '<leader>p', '<cmd>FzfLua oldfiles<cr>')
+
 map('n', '<leader>y', '<cmd>FzfLua command_history<cr>')
 map('n', '<leader>r', ':FzfLua resume<Space>', { silent = false })
+map('n', '<leader>b', '<cmd>FzfLua buffers<cr>')
 
 -- terminal mappings
 map('t', '<Esc>', '<C-\\><C-n>')
