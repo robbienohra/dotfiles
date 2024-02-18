@@ -1,6 +1,6 @@
 local map = require('utils').map
 
--- colemak
+-- Cursor movement
 -- https://github.com/theniceboy/nvim/blob/master/init.vim
 map('n', 'l', 'u')
 map({ 'n', 'v' }, 'k', 'i')
@@ -79,7 +79,7 @@ map('n', '-', '<CMD>Oil<CR>', { desc = 'Open parent directory' })
 
 map('n', '<leader>c', ':lua require(\'utils\').GetFileRelativePath()<CR>')
 
--- tabline
+-- Tab management
 map('n', '<space>b', ':silent %bdelete|edit #|bdelete#<CR>')
 
 map('n', 'tu', ':enew<CR>')
