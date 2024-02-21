@@ -22,11 +22,11 @@ map({ 'n', 'v' }, 'e', 'j')
 map({ 'n', 'v' }, 'i', 'l')
 
 -- page up/down with centering
-map('n', '<space>w', '<C-w>w')
-map('n', '<space>u', '<C-w>k')
-map('n', '<space>e', '<C-w>j')
-map('n', '<space>n', '<C-w>h')
-map('n', '<space>i', '<C-w>l')
+map('n', '<leader>w', '<C-w>w')
+map('n', '<leader>u', '<C-w>k')
+map('n', '<leader>e', '<C-w>j')
+map('n', '<leader>n', '<C-w>h')
+map('n', '<leader>i', '<C-w>l')
 
 map('n', '<C-u>', '<C-u>zz')
 map('n', '<C-e>', '<C-d>zz')
