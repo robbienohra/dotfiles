@@ -90,6 +90,7 @@ map('n', '<space>b', ':silent %bdelete|edit #|bdelete#<CR>')
 map('n', 'tu', ':enew<CR>')
 map('n', 'tn', ':bprevious<CR>')
 map('n', 'ti', ':bnext<CR>')
+map('n', 'T', ':bdelete!<CR>')
 map('n', 'tk', ':lua require(\'utils\').CloseBufferOrQuit()<CR>')
 
 -- fzf-lua
