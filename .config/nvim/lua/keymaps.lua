@@ -1,12 +1,16 @@
 local map = require('utils').map
 
+-- search
+map('n', 's', 'n')
+map('n', 'S', 'N')
+
 -- Cursor movement
 -- https://github.com/theniceboy/nvim/blob/master/init.vim
 map('n', 'l', 'u')
 map({ 'n', 'v' }, 'k', 'i')
 map({ 'n', 'v' }, 'K', 'I')
-map('n', 'U', '5k')
-map('n', 'E', '5j')
+map({ 'n', 'v' }, 'U', '5k')
+map({ 'n', 'v' }, 'E', '5j')
 map('n', 'N', '0')
 map('n', 'W', '5w')
 map('n', 'B', '5b')
@@ -101,6 +105,25 @@ map('n', '<leader>p', '<cmd>FzfLua oldfiles<cr>')
 map('n', '<leader>y', '<cmd>FzfLua command_history<cr>')
 map('n', '<leader>r', ':FzfLua resume<Space>', { silent = false })
 map('n', '<leader>b', '<cmd>FzfLua buffers<cr>')
+
+-- https://github.com/ibhagwan/fzf-lua/wiki/Advanced#fzf-exec-dir-switch
+
+_G.fzf_dirs = function(opts)
+	local fzf_lua = require 'fzf-lua'
+	opts = opts or {}
+	opts.prompt = 'Directories> '
+	opts.fn_transform = function(x)
+		return fzf_lua.utils.ansi_codes.magenta(x)
+	end
+	opts.actions = {
+		['default'] = function(selected)
+			vim.cmd('Oil ' .. selected[1])
+		end,
+	}
+	fzf_lua.fzf_exec('fd -H --type d', opts)
+end
+
+vim.keymap.set('n', '<leader>k', _G.fzf_dirs)
 
 -- terminal mappings
 map('t', '<Esc>', '<C-\\><C-n>')

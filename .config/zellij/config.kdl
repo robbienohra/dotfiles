@@ -1,6 +1,5 @@
 keybinds clear-defaults=true {
   normal {
-    bind "Ctrl n" { NewPane; }
     bind "Ctrl k" { CloseFocus; }
     bind "PageUp" { MoveFocus "Up"; }
     bind "PageDown" { MoveFocus "Down"; }
@@ -9,6 +8,7 @@ keybinds clear-defaults=true {
     bind "r" { SwitchToMode "RenamePane"; PaneNameInput 0;}
     bind "l" { Clear; }
     bind "f" { EditScrollback; }
+    bind "n" { NewPane; }
   }
   locked {
     bind "Ctrl g" { SwitchToMode "Normal"; }
