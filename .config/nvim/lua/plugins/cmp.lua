@@ -21,7 +21,7 @@ return {
 			},
 			mapping = {
 				['<Left>'] = cmp.mapping(cmp.mapping.select_prev_item(), { 'i', 'c' }),
-				['<Right>'] =cmp.mapping(cmp.mapping.select_next_item(), { 'i', 'c' }),
+				['<Right>'] = cmp.mapping(cmp.mapping.select_next_item(), { 'i', 'c' }),
 				['<CR>'] = cmp.mapping.confirm { select = true }, -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
 				['<C-e>'] = cmp.mapping {
 					i = cmp.mapping.abort(),
