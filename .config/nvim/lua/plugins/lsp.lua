@@ -9,7 +9,9 @@ return {
 	config = function()
 		local util = require 'lspconfig.util'
 		local lspconfig = require 'lspconfig'
-		require('mason').setup {}
+		require('mason').setup {
+			PATH = 'append',
+		}
 		require('mason-tool-installer').setup {
 
 			ensure_installed = {
