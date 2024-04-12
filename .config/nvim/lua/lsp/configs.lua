@@ -1,6 +1,11 @@
 local configs = {
 	bashls = {},
-	clangd = {},
+	clangd = {
+		cmd = {
+			'clangd',
+			'--offset-encoding=utf-16',
+		},
+	},
 	marksman = {},
 	efm = {
 		init_options = {
