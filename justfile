@@ -27,7 +27,7 @@ install-go:
 	for package in $(cat config/go_packages); do go install "$package"; done
 
 init-stow:
-	stow_dirs=("psql" "rg" "stow" "usql" "vsnip" "git" "rectangle" "nushell" "clangd")
+	stow_dirs=("psql" "rg" "stow" "usql" "vsnip" "git" "rectangle" "nushell" "clangd" "clang-format")
 	for d in "${stow_dirs[@]}"; do stow "$d"; done; stow -t ~/.config .config
 
 # Update all packages

@@ -36,7 +36,7 @@ tools:
   html-prettier: &html-prettier
     format-command: 'prettierd ${INPUT} ${--tab-width:tabWidth} ${--single-quote:singleQuote} --parser html'
   cpp-clang-format: &cpp-clang-format
-    format-command: 'clang-format -'
+    format-command: 'clang-format -style=file:/Users/robbienohra/.clang-format -'
     format-stdin: true
   python-yapf: &python-yapf
     format-command: 'yapf --quiet'
