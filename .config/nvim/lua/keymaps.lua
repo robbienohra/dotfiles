@@ -108,22 +108,5 @@ map('n', '<leader>r', ':FzfLua resume<Space>', { silent = false })
 
 -- https://github.com/ibhagwan/fzf-lua/wiki/Advanced#fzf-exec-dir-switch
 
-_G.fzf_dirs = function(opts)
-	local fzf_lua = require 'fzf-lua'
-	opts = opts or {}
-	opts.prompt = 'Directories> '
-	opts.fn_transform = function(x)
-		return fzf_lua.utils.ansi_codes.magenta(x)
-	end
-	opts.actions = {
-		['default'] = function(selected)
-			vim.cmd('Oil ' .. selected[1])
-		end,
-	}
-	fzf_lua.fzf_exec('fd -H --type d', opts)
-end
-
-vim.keymap.set('n', '<leader>k', _G.fzf_dirs)
-
 -- terminal mappings
 map('t', '<Esc>', '<C-\\><C-n>')
