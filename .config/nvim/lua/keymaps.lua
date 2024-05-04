@@ -104,7 +104,7 @@ map('n', '<leader>p', '<cmd>FzfLua oldfiles<cr>')
 
 map('n', '<leader>y', '<cmd>FzfLua command_history<cr>')
 map('n', '<leader>r', ':FzfLua resume<Space>', { silent = false })
-map('n', '<leader>b', '<cmd>FzfLua buffers<cr>')
+-- map('n', '<leader>b', '<cmd>FzfLua buffers<cr>')
 
 -- https://github.com/ibhagwan/fzf-lua/wiki/Advanced#fzf-exec-dir-switch
 

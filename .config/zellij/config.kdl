@@ -42,20 +42,20 @@ keybinds clear-defaults=true {
 // Catppuccin Theme:
 // https://github.com/catppuccin/catppuccin
 
-theme "catppuccin-mocha-mod"
+theme "default"
 
 themes {
-  catppuccin-mocha-mod {
-    bg "#585b70" // Surface2
+  default {
+    bg "#181825"
     fg "#cdd6f4"
     red "#f38ba8"
     green "#a6e3a1"
     blue "#89b4fa"
     yellow "#f9e2af"
-    magenta "#f5c2e7" // Pink
-    orange "#fab387" // Peach
-    cyan "#89dceb" // Sky
-    black "#1E1E2D" // Mantle
+    magenta "#f5c2e7"
+    orange "#fab387"
+    cyan "#89dceb"
+    black "#181825" // applies to the bar
     white "#cdd6f4"
   }
 }

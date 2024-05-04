@@ -20,7 +20,7 @@ hide_when_typing = true
 history = 10_000
 
 [colors.primary]
-background = '#1E1E2E' # base
+background = '#181825' # mantle
 foreground = '#CDD6F4' # text
 # Bright and dim foreground colors
 dim_foreground = '#CDD6F4' # text

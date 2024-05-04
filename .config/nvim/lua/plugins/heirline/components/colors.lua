@@ -1,4 +1,5 @@
--- local clrs = require('catppuccin.palettes').get_palette()
+-- local mocha = require('catppuccin.palettes').get_palette 'mocha'
+
 local utils = require 'heirline.utils'
 
 return {
