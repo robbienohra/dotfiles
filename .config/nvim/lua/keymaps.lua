@@ -89,7 +89,7 @@ map('n', '-', '<CMD>Oil<CR>', { desc = 'Open parent directory' })
 map('n', '<leader>c', ':lua require(\'utils\').GetFileRelativePath()<CR>')
 
 -- Tab management
-map('n', '<space>b', ':silent %bdelete|edit #|bdelete#<CR>')
+-- map('n', '<space>b', ':silent %bdelete|edit #|bdelete#<CR>')
 
 map('n', 'tu', ':enew<CR>')
 map('n', 'tn', ':bprevious<CR>')

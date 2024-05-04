@@ -242,3 +242,5 @@ export def conf [] {
     echo $a
   }
 }
+
+export alias gdiff = nvim -c "DiffviewOpen main..."
