@@ -204,6 +204,55 @@ local M = {
 			hl = { fg = 'orange' },
 		},
 	},
+	diagnostics = {
+		{
+			condition = conditions.has_diagnostics,
+			init = function(self)
+				local buffer_diagnostics = vim.diagnostic.get(0, { severity = { min = vim.diagnostic.severity.INFO } })
+				local diagnostic_counts = { 0, 0, 0, 0 }
+				for _, d in ipairs(buffer_diagnostics) do
+					diagnostic_counts[d.severity] = diagnostic_counts[d.severity] + 1
+				end
+				local children = {}
+				for d, count in pairs(diagnostic_counts) do
+					if count > 0 then
+						table.insert(children, {
+							provider = self.icons[d] .. ' ' .. count,
+							hl = self.highlights[d],
+						})
+					end
+				end
+				for i = 1, #children - 1, 1 do
+					table.insert(children[i], { provider = ' ' })
+				end
+				self.child = self:new(children, 1)
+			end,
+			static = {
+				icons = {
+					'', -- close
+					'󰈅', -- exclamation
+					'i', -- info
+					'󰌵', -- lightbulb
+				},
+				highlights = {
+					'DiagnosticError',
+					'DiagnosticWarn',
+					'DiagnosticInfo',
+					'DiagnosticHint',
+				},
+			},
+			on_click = {
+				callback = function()
+					require('trouble').toggle { mode = 'document_diagnostics' }
+				end,
+				name = 'heirline_diagnostics',
+			},
+			provider = function(self)
+				return self.child:eval()
+			end,
+		},
+		update = { 'DiagnosticChanged', 'BufEnter' },
+	},
 }
 
 return M

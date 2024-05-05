@@ -46,7 +46,7 @@ map('n', ',h', '<cmd>lua vim.lsp.buf.hover()<cr>')
 map('n', ',m', '<cmd>lua vim.lsp.buf.rename()<cr>')
 map('n', ',r', '<cmd>lua vim.lsp.buf.references()<cr>')
 map('n', ',s', '<cmd>lua vim.lsp.buf.document_symbol()<cr>')
-map('n', ',e', '<cmd>lua vim.diagnostic.open_float()<cr>')
+map('n', ',d', '<cmd>lua vim.diagnostic.open_float()<cr>')
 
 -- fugitive
 map('n', '<leader>gf', ':GBrowse<CR>')
@@ -110,3 +110,7 @@ map('n', '<leader>r', ':FzfLua resume<Space>', { silent = false })
 
 -- terminal mappings
 map('t', '<Esc>', '<C-\\><C-n>')
+
+-- telescope
+
+map('n', '<leader><space>', '<Cmd>Trouble<CR>', { silent = false })

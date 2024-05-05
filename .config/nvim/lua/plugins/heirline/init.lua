@@ -2,8 +2,8 @@ return {
 	'rebelot/heirline.nvim',
 	dependencies = {
 		'nvim-tree/nvim-web-devicons',
-		'catppuccin/nvim',
 		'lewis6991/gitsigns.nvim',
+		'folke/trouble.nvim',
 	},
 
 	config = function()
@@ -56,6 +56,8 @@ return {
 			u.space,
 			c.cwd,
 			u.align,
+			c.diagnostics,
+			u.space,
 			Ruler,
 			u.space,
 			FileType,

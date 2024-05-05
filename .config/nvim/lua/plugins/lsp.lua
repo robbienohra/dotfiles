@@ -4,7 +4,6 @@ return {
 		'williamboman/mason.nvim',
 		'williamboman/mason-lspconfig.nvim',
 		'WhoIsSethDaniel/mason-tool-installer.nvim',
-		'towolf/vim-helm',
 	},
 	config = function()
 		local util = require 'lspconfig.util'
