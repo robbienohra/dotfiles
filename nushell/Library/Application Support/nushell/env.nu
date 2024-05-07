@@ -84,6 +84,10 @@ $env.EDITOR = "nvim"
 
 $env.LANG = "en_US.UTF-8"
 
+# https://github.com/pnpm/pnpm/issues/5000
+$env.PNPM_HOME = $"($env.HOME)/.local/share/pnpm"
+$env.PATH = ($env.PATH | split row (char esep) | prepend $env.PNPM_HOME )
+
 # fzf theming
 # https://github.com/catppuccin/fzf
 
