@@ -24,6 +24,8 @@ keybinds clear-defaults=true {
     bind "n"  { GoToPreviousTab; }
     bind "i"  { GoToNextTab; }
     bind "k" { CloseTab; }
+    bind "PageUp" { MoveTab "Left"; }
+    bind "PageDown" { MoveTab "Right"; }
   }
   shared_except "locked" {
     bind "Ctrl g" { SwitchToMode "Locked"; }
