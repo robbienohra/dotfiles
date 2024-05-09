@@ -9,6 +9,8 @@ keybinds clear-defaults=true {
     bind "l" { Clear; }
     bind "f" { EditScrollback; }
     bind "p" { NewPane; }
+    bind "PageUp" { MovePane "Up"; }
+    bind "PageDown" { MovePane "Down"; }
   }
   locked {
     bind "Ctrl g" { SwitchToMode "Normal"; }
