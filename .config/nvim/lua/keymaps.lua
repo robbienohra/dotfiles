@@ -1,8 +1,8 @@
 local map = require('utils').map
 
 -- search
-map('n', 's', 'n')
-map('n', 'S', 'N')
+-- map('n', 's', 'n')
+-- map('n', 'S', 'N')
 
 -- Cursor movement
 -- https://github.com/theniceboy/nvim/blob/master/init.vim
@@ -25,16 +25,16 @@ map({ 'n', 'v' }, 'n', 'h')
 map({ 'n', 'v' }, 'e', 'j')
 map({ 'n', 'v' }, 'i', 'l')
 
--- page up/down with centering
+-- buffers
 map('n', '<leader>w', '<C-w>w')
 map('n', '<leader>u', '<C-w>k')
 map('n', '<leader>e', '<C-w>j')
 map('n', '<leader>n', '<C-w>h')
 map('n', '<leader>i', '<C-w>l')
 
-map('n', '<C-u>', '<C-u>zz')
-map('n', '<C-e>', '<C-d>zz')
-map('n', '<leader>w', '<C-w>w')
+-- page up/down with centering
+map('n', '<C-y>', '<C-u>zz')
+map('n', '<C-i>', '<C-d>zz')
 
 -- terminal
 map('n', '<C-\\>', ':vsplit term://nu<CR>')
@@ -59,8 +59,8 @@ map('n', '<leader><cr>', ':nohlsearch<CR>')
 map('n', '<leader>q', ':qa!<CR>')
 
 -- Search mappings: These will make it so that going to the next one in a search will center on the line it's found in.
--- map('n', 'f', 'nzzzv')
--- map('n', 'F', 'Nzzzv')
+map('n', 's', 'nzzzv')
+map('n', 'S', 'Nzzzv')
 
 map('n', '<leader>p', '"+gP<CR>')
 

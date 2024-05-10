@@ -1,16 +1,21 @@
 keybinds clear-defaults=true {
   normal {
     bind "Ctrl k" { CloseFocus; }
-    bind "PageUp" { MoveFocus "Up"; }
-    bind "PageDown" { MoveFocus "Down"; }
+    bind "Ctrl u" { MoveFocus "Up"; }
+    bind "Ctrl e" { MoveFocus "Down"; }
+    bind "Ctrl n" { MoveFocus "Left"; }
+    bind "Ctrl Space" { MoveFocus "Right"; }
   }
   pane {
+    bind "Ctrl p" { SwitchToMode "Normal"; }
+    bind "o" { NewPane; }
     bind "r" { SwitchToMode "RenamePane"; PaneNameInput 0;}
     bind "l" { Clear; }
     bind "f" { EditScrollback; }
-    bind "p" { NewPane; }
-    bind "PageUp" { MovePane "Up"; }
-    bind "PageDown" { MovePane "Down"; }
+    bind "u" { MovePane "Up"; }
+    bind "e" { MovePane "Down"; }
+    bind "i" { MovePane "Right"; }
+    bind "n" { MovePane "Right"; }
   }
   locked {
     bind "Ctrl g" { SwitchToMode "Normal"; }
@@ -19,7 +24,7 @@ keybinds clear-defaults=true {
   }
   tab {
     bind "Ctrl t" { SwitchToMode "Normal"; }
-    bind "t" { NewTab; SwitchToMode "RenameTab"; TabNameInput 0; }
+    bind "o" { NewTab; }
     bind "r" { SwitchToMode "RenameTab"; TabNameInput 0; }
     bind "n"  { GoToPreviousTab; }
     bind "i"  { GoToNextTab; }
