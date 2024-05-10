@@ -8,7 +8,7 @@ keybinds clear-defaults=true {
   }
   pane {
     bind "Ctrl p" { SwitchToMode "Normal"; }
-    bind "o" { NewPane; }
+    bind "o" { NewPane; SwitchToMode "Normal"; }
     bind "r" { SwitchToMode "RenamePane"; PaneNameInput 0;}
     bind "l" { Clear; }
     bind "f" { EditScrollback; }
@@ -24,7 +24,7 @@ keybinds clear-defaults=true {
   }
   tab {
     bind "Ctrl t" { SwitchToMode "Normal"; }
-    bind "o" { NewTab; }
+    bind "o" { NewTab; SwitchToMode "Normal"; }
     bind "r" { SwitchToMode "RenameTab"; TabNameInput 0; }
     bind "n"  { GoToPreviousTab; }
     bind "i"  { GoToNextTab; }
