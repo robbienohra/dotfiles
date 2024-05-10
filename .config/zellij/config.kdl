@@ -1,10 +1,10 @@
 keybinds clear-defaults=true {
   normal {
     bind "Ctrl k" { CloseFocus; }
-    bind "Ctrl u" { MoveFocus "Up"; }
-    bind "Ctrl e" { MoveFocus "Down"; }
-    bind "Ctrl n" { MoveFocus "Left"; }
-    bind "Ctrl Space" { MoveFocus "Right"; }
+    bind "Alt u" { MoveFocus "Up"; }
+    bind "Alt e" { MoveFocus "Down"; }
+    bind "Alt n" { MoveFocus "Left"; }
+    bind "Alt i" { MoveFocus "Right"; }
   }
   pane {
     bind "Ctrl p" { SwitchToMode "Normal"; }

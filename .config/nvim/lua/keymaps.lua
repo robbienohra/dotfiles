@@ -33,8 +33,8 @@ map('n', '<leader>n', '<C-w>h')
 map('n', '<leader>i', '<C-w>l')
 
 -- page up/down with centering
-map('n', '<C-y>', '<C-u>zz')
-map('n', '<C-i>', '<C-d>zz')
+map('n', '<C-u>', '<C-u>zz')
+map('n', '<C-e>', '<C-d>zz')
 
 -- terminal
 map('n', '<C-\\>', ':vsplit term://nu<CR>')
