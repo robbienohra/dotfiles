@@ -15,7 +15,7 @@ keybinds clear-defaults=true {
     bind "u" { MovePane "Up"; }
     bind "e" { MovePane "Down"; }
     bind "i" { MovePane "Right"; }
-    bind "n" { MovePane "Right"; }
+    bind "n" { MovePane "Left"; }
   }
   locked {
     bind "Ctrl g" { SwitchToMode "Normal"; }
