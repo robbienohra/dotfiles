@@ -243,4 +243,4 @@ export def conf [] {
   }
 }
 
-export alias gdiff = nvim -c "DiffviewOpen main..."
+export alias gdiff = nvim -c 'call feedkeys(":DiffviewOpen ", "t")'

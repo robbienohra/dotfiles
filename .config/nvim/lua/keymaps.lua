@@ -114,3 +114,7 @@ map('t', '<Esc>', '<C-\\><C-n>')
 -- telescope
 
 map('n', '<leader><space>', '<Cmd>Trouble<CR>', { silent = false })
+
+-- diffview
+map('n', '<leader>d', ':DiffviewOpen<space>', { silent = false })
+map('n', '<leader>x', ':DiffviewClose<cr>', { silent = false })

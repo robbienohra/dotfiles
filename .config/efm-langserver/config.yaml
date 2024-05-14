@@ -38,12 +38,11 @@ tools:
   cpp-clang-format: &cpp-clang-format
     format-command: 'clang-format -style=file:/Users/robbienohra/.clang-format -'
     format-stdin: true
-  python-yapf: &python-yapf
-    format-command: 'yapf --quiet'
-    format-stdin: true
   python-black: &python-black
     format-command: 'black -'
     format-stdin: true
+    root-markers:
+      - pyproject.toml
   terraform: &terraform
     format-command: 'terraform fmt -'
     format-stdin: true
