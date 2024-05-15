@@ -1,11 +1,5 @@
 local autocmd = vim.api.nvim_create_autocmd
 
--- override default python indentation
-autocmd(
-	{ 'BufNewFile', 'BufRead' },
-	{ pattern = { '*.py' }, command = 'set tabstop=4 softtabstop=4 shiftwidth=4 expandtab smarttab autoindent' }
-)
-
 -- https://stackoverflow.com/questions/7476126/how-to-automatically-close-the-quick-fix-window-when-leaving-a-file
 autocmd({ 'BufLeave' }, { pattern = { '*' }, command = 'if &buftype == \'quickfix\'|q|endif' })
 autocmd({ 'BufEnter' }, { pattern = { '*' }, command = 'let &titlestring = \' \' . expand(\'%:t\') | set title' })
