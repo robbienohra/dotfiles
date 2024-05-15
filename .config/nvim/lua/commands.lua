@@ -6,7 +6,7 @@ autocmd({ 'BufEnter' }, { pattern = { '*' }, command = 'let &titlestring = \' \'
 
 -- https://www.reddit.com/r/neovim/comments/1bis4h3/comment/kvmfjka
 autocmd('FileType', {
-	pattern = 'markdown',
+	pattern = { 'markdown', 'gitcommit' },
 	callback = function()
 		vim.opt_local.formatoptions:append 'r' -- `<CR>` in insert mode
 		vim.opt_local.formatoptions:append 'o' -- `o` in normal mode
