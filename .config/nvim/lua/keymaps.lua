@@ -49,8 +49,12 @@ map('n', ',s', '<cmd>lua vim.lsp.buf.document_symbol()<cr>')
 map('n', ',d', '<cmd>lua vim.diagnostic.open_float()<cr>')
 
 -- fugitive
+map('n', '<leader>gm', ':.GBrowse main:%<CR>')
 map('n', '<leader>gf', ':GBrowse<CR>')
 map('n', '<leader>gl', ':.GBrowse<CR>')
+map('n', '<leader>ga', ':Gwrite<CR>')
+map('n', '<leader>gA', ':Gwrite!<CR>')
+map('n', '<leader>gd', ':Gdelete<CR>')
 
 -- Clean search (highlight)
 map('n', '<leader><cr>', ':nohlsearch<CR>')
