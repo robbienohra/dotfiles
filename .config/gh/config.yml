@@ -10,16 +10,7 @@ pager:
 aliases:
     pc: pr create
     pv: pr view --web
+    co: pr checkout
     pa: pr review -a
     bs: browse
-    co: pr checkout
-    st: pr status
-    ch: pr checks
-    rob: pr list -A robbienohra
-    bb: browse -b
-    rd: release delete
-    rc: release create
-    rv: release view -w
-    rl: release list
-    wv: workflow view -w
 version: "1"
