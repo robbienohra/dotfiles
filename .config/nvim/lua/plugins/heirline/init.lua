@@ -67,7 +67,7 @@ return {
 			condition = function()
 				return conditions.buffer_matches {
 					buftype = { 'nofile', 'prompt', 'help', 'quickfix', 'term' },
-					filetype = { '^git.*', 'fugitive', 'oil' },
+					filetype = { '^git.*', 'fugitive' },
 				}
 			end,
 			u.align,
