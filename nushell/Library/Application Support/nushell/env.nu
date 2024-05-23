@@ -5,7 +5,6 @@ $env.PATH = ($env.PATH
   | prepend '/opt/homebrew/bin'
   | prepend $'($env.HOME)/Library/Application Support/carapace/bin'
   | append $'($env.HOME)/.cargo/bin'
-  | append $'($env.HOME)/Library/Python/3.9/bin'
   | append $'($env.HOME)/Downloads/google-cloud-sdk/bin'
   | append $'/usr/local/bin'
   | append $'/usr/local/go/bin'
@@ -13,6 +12,8 @@ $env.PATH = ($env.PATH
   | append $'/usr/local/texlive/2023/bin/universal-darwin/')
 
 $env.NUPM_HOME = $'($env.HOME)/nupm'
+
+$env.PATH = ($env.PATH | split row (char esep) | prepend $"(pyenv root)/shims")
 
 use '/Users/robbienohra/nupm/modules/nu-themes/catppuccin-mocha.nu'
 

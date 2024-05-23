@@ -16,6 +16,7 @@ ninja
 nvim
 openjdk
 pandoc
+pyenv
 sops
 stow
 tig
