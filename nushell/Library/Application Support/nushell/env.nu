@@ -9,7 +9,7 @@ $env.PATH = ($env.PATH
   | append $'/usr/local/bin'
   | append $'/usr/local/go/bin'
   | append $'($env.HOME)/go/bin'
-  | append $'/usr/local/texlive/2023/bin/universal-darwin/')
+  | append $'/usr/local/texlive/2024basic/bin/universal-darwin/')
 
 $env.NUPM_HOME = $'($env.HOME)/nupm'
 
