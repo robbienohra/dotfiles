@@ -7,12 +7,6 @@
   date = relative
 [format]
   pretty = format:%C(yellow)%h %Cred%ad %Cblue%an%Cgreen%d %Creset%s
-[alias]
-  dn = diff --name-only
-  dup = diff @{upstream} @
-  diun = diff @{upstream} @ --name-only
-  pr ="!f() { git diff origin/$1...head ':(exclude)package-lock.json'; }; f"
-  prs ="!f() { git diff --shortstat origin/$1...head; }; f"
 [core]
   editor = nvim
   excludesFile = /Users/robbienohra/.gitignore
