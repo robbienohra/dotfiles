@@ -27,6 +27,8 @@ install-go:
 	for package in $(cat config/go_packages); do go install "$package"; done
 
 init-stow:
+	mkdir `~/Library/Application Support/nushell`
+	stow -t `~/Library/Application Support/nushell/` nushell/
 	stow_dirs=("psql" "rg" "stow" "usql" "vsnip" "git" "rectangle" "nushell" "clangd" "clang-format")
 	for d in "${stow_dirs[@]}"; do stow "$d"; done; stow -t ~/.config .config
 
