@@ -27,6 +27,7 @@ install-go:
 	for package in $(cat config/go_packages); do go install "$package"; done
 
 init-stow:
+	# run this with --no-config-file and --no-history options for nushell in alacritty
 	mkdir `~/Library/Application Support/nushell`
 	stow -t `~/Library/Application Support/nushell/` nushell/
 	stow_dirs=("psql" "rg" "stow" "usql" "vsnip" "git" "rectangle" "nushell" "clangd" "clang-format")

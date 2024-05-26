@@ -3,7 +3,6 @@ use std
 $env.PATH = ($env.PATH
   | split row (char esep)
   | prepend '/opt/homebrew/bin'
-  | prepend $'($env.HOME)/Library/Application Support/carapace/bin'
   | append $'($env.HOME)/.cargo/bin'
   | append $'($env.HOME)/Downloads/google-cloud-sdk/bin'
   | append $'/usr/local/bin'

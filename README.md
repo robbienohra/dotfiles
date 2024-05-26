@@ -13,7 +13,7 @@
 ```
 
 - <https://doc.rust-lang.org/cargo/getting-started/installation.html>
-- <https://github.com/rsteube/carapace-bin>
+- https://github.com/carapace-sh/carapace-bin
 
 ### Cargo
 
@@ -80,7 +80,7 @@ atuin init nu | save -f ~/.local/share/atuin/init.nu
 
 ### Carapace
 
-- <https://rsteube.github.io/carapace-bin/installation.html>
+- https://carapace-sh.github.io/carapace-bin/installation.html
 
 ## Misc
 

@@ -28,7 +28,7 @@ vim.api.nvim_create_autocmd('ExitPre', {
 	desc = 'Set cursor back to beam when leaving Neovim.',
 })
 
-vim.api.nvim_create_autocmd({ 'BufNewFile', 'BufRead' }, {
+vim.api.nvim_create_autocmd({ 'BufNewFile', 'BufEnter' }, {
 	pattern = 'justfile',
 	command = 'setf make',
 })
