@@ -82,3 +82,5 @@ ui {
 plugins {
   compact-bar { path "compact-bar"; }
 }
+
+pane_viewport_serialization true

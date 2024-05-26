@@ -55,6 +55,9 @@ tools:
   hjson: &hjson
     format-command: 'hjson -'
     format-stdin: true
+  tamlo: &tamlo
+    format-command: 'taplo fmt -'
+    format-stdin: true
 languages:
   go:
     - <<: *go-gofmt
@@ -86,3 +89,5 @@ languages:
     - <<: *terraform
   sh:
     - <<: *shell-shfmt
+  toml:
+    - <<: *tamlo

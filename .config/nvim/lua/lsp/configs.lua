@@ -44,6 +44,7 @@ local configs = {
 	rust_analyzer = {},
 	sqlls = {},
 	svelte = {},
+	taplo = {},
 	terraformls = {},
 	texlab = {},
 	tsserver = {},

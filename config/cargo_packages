@@ -13,6 +13,7 @@ procs
 ripgrep
 starship
 stylua
+taplo-cli
 texlab
 tokei
 xh
