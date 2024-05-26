@@ -107,12 +107,10 @@ family = "JetBrainsMono Nerd Font Mono"
 style = "ExtraLight"
 
 [font.italic]
-# family = "JetBrains Mono"
 family = "JetBrainsMono Nerd Font Mono"
 style = "Italic"
 
 [font.bold]
-# family = "JetBrains Mono"
 family = "JetBrainsMono Nerd Font Mono"
 style = "Bold"
 
@@ -122,4 +120,3 @@ y = 1
 [shell]
 program = "/Users/robbienohra/.cargo/bin/nu"
 args = ["-e", "try { zellij attach --index 0 } catch { zellij }"]
-
