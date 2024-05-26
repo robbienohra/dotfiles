@@ -90,7 +90,7 @@ map('n', '<leader>gd', ':Gdelete<CR>')
 map('n', 'tu', ':enew<CR>')
 map('n', 'tn', ':bprevious<CR>')
 map('n', 'ti', ':bnext<CR>')
-map('n', 'T', ':bdelete!<CR>')
+map('n', 'T', ':bdelete!<CR>') -- needed for terminal buffers
 map('n', 'tk', ':lua require(\'utils\').CloseBufferOrQuit()<CR>')
 -- map('n', '<space>b', ':silent %bdelete|edit #|bdelete#<CR>')
 
@@ -101,7 +101,7 @@ map('n', '<leader>p', '<cmd>FzfLua oldfiles<cr>')
 
 map('n', '<leader>y', '<cmd>FzfLua command_history<cr>')
 map('n', '<leader>r', ':FzfLua resume<Space>', { silent = false })
-map('n', '<leader>l', '<cmd>FzfLua buffers<cr>')
+map('n', '<leader>l', '<cmd>FzfLua lines<cr>')
 
 -- https://github.com/ibhagwan/fzf-lua/wiki/Advanced#fzf-exec-dir-switch
 
@@ -109,7 +109,7 @@ map('n', '<leader>l', '<cmd>FzfLua buffers<cr>')
 map('t', '<Esc>', '<C-\\><C-n>')
 
 -- telescope
-map('n', '<leader><space>', '<Cmd>Trouble<CR>', { silent = false })
+map('n', '<space><space>', '<Cmd>Trouble<CR>', { silent = false })
 
 -- diffview
 map('n', '<leader>d', ':DiffviewOpen<space>', { silent = false })
