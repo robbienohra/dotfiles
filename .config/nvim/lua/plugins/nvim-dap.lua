@@ -5,32 +5,35 @@ return {
 		'mfussenegger/nvim-dap',
 		enabled = true,
 		config = function()
+			-- https://github.com/tjdevries/config.nvim/blob/master/lua/custom/plugins/dap.lua
 			local dap = require 'dap'
-			map('n', '<F5>', dap.continue)
-			map('n', '<leader>db', dap.toggle_breakpoint)
-			map('n', '<leader>dB', dap.set_breakpoint)
-			map('n', '<leader>dc', dap.disconnect)
-			map('n', '<leader>dk', dap.up)
-			map('n', '<leader>dj', dap.down)
-			map('n', '<leader>di', dap.step_into)
-			map('n', '<leader>do', dap.step_out)
-			map('n', '<leader>du', dap.step_over)
-			map('n', '<leader>ds', dap.stop)
-			map('n', '<leader>dn', dap.run_to_cursor)
-			map('n', '<leader>de', dap.set_exception_breakpoints)
-			require('dap-python').setup '~/.virtualenvs/debugpy/bin/python'
-		end,
-		dependencies = { 'mfussenegger/nvim-dap-python' },
-	},
-	{
-		'rcarriga/nvim-dap-ui',
-		dependencies = { 'mfussenegger/nvim-dap', 'nvim-neotest/nvim-nio' },
-		config = function()
 			local ui = require 'dapui'
-			map('n', '<S-F5>', ui.open)
-			map('n', '<S-F6>', ui.close)
-			map('n', '<S-F7>', ui.float_element)
-			ui.setup()
+			require('dapui').setup()
+			require('dap-python').setup '~/.virtualenvs/debugpy/bin/python'
+			map('n', '<F5>', dap.continue)
+			map('n', '<F10>', dap.step_over)
+			map('n', '<F11>', dap.step_into)
+			map('n', '<F12>', dap.step_out)
+			map('n', '<leader>b', dap.toggle_breakpoint)
+			map('n', '<leader>B', dap.set_breakpoint)
+			map('n', '<leader>lp', function()
+				dap.set_breakpoint(nil, nil, vim.fn.input 'Log point message: ')
+			end)
+			map('n', '<leader>dr', dap.repl.open)
+			map('n', '<leader>dl', dap.run_last)
+			dap.listeners.before.attach.dapui_config = function()
+				ui.open()
+			end
+			dap.listeners.before.launch.dapui_config = function()
+				ui.open()
+			end
+			dap.listeners.before.event_terminated.dapui_config = function()
+				ui.close()
+			end
+			dap.listeners.before.event_exited.dapui_config = function()
+				ui.close()
+			end
 		end,
+		dependencies = { 'rcarriga/nvim-dap-ui', 'nvim-neotest/nvim-nio', 'mfussenegger/nvim-dap-python' },
 	},
 }
