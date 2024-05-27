@@ -112,8 +112,8 @@ map('t', '<Esc>', '<C-\\><C-n>')
 map('n', '<space><space>', '<Cmd>Trouble<CR>', { silent = false })
 
 -- diffview
-map('n', '<leader>d', ':DiffviewOpen<space>', { silent = false })
-map('n', '<leader>x', ':DiffviewClose<CR>', { silent = false })
+-- map('n', '<leader>d', ':DiffviewOpen<space>', { silent = false })
+-- map('n', '<leader>x', ':DiffviewClose<CR>', { silent = false })
 
 -- move snippets
 -- map('v', 'J', ':m \'>+1<CR>gv=gv')
