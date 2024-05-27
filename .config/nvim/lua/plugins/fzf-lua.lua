@@ -1,3 +1,4 @@
+local map = require('utils').map
 return {
 	'ibhagwan/fzf-lua',
 	-- optional for icon support
@@ -24,5 +25,13 @@ return {
 
 			fzf_opts = {},
 		}
+		-- https://github.com/ibhagwan/fzf-lua/wiki/Advanced#fzf-exec-dir-switch
+		local fzf = require 'fzf-lua'
+		map('n', '<leader>t', fzf.files)
+		map('n', '<leader>f', fzf.grep_project)
+		map('n', '<leader>p', fzf.oldfiles)
+		map('n', '<leader>y', fzf.command_history)
+		map('n', '<leader>l', fzf.lines)
+		map('n', '<leader>r', ':FzfLua resume<Space>', { silent = false })
 	end,
 }

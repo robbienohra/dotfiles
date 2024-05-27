@@ -77,15 +77,6 @@ map('n', ',r', vim.lsp.buf.references)
 map('n', ',s', vim.lsp.buf.document_symbol)
 map('n', ',d', vim.diagnostic.open_float)
 
--- fugitive
-map('n', '<leader>gm', ':.GBrowse main:%<CR>')
-map('n', '<leader>gf', ':GBrowse<CR>')
-map('n', '<leader>gl', ':.GBrowse<CR>')
-map('n', '<leader>ga', ':Gwrite<CR>')
-map('n', '<leader>gA', ':Gwrite!<CR>')
-map('n', '<leader>gd', ':Gdelete<CR>')
-
-
 -- Tab management
 map('n', 'tu', ':enew<CR>')
 map('n', 'tn', ':bprevious<CR>')
@@ -94,26 +85,19 @@ map('n', 'T', ':bdelete!<CR>') -- needed for terminal buffers
 map('n', 'tk', ':lua require(\'utils\').CloseBufferOrQuit()<CR>')
 -- map('n', '<space>b', ':silent %bdelete|edit #|bdelete#<CR>')
 
--- fzf-lua
-map('n', '<leader>t', '<cmd>FzfLua files<cr>')
-map('n', '<leader>f', '<cmd>FzfLua grep_project<cr>')
-map('n', '<leader>p', '<cmd>FzfLua oldfiles<cr>')
-
-map('n', '<leader>y', '<cmd>FzfLua command_history<cr>')
-map('n', '<leader>r', ':FzfLua resume<Space>', { silent = false })
-map('n', '<leader>l', '<cmd>FzfLua lines<cr>')
-
--- https://github.com/ibhagwan/fzf-lua/wiki/Advanced#fzf-exec-dir-switch
-
 -- terminal mappings
 map('t', '<Esc>', '<C-\\><C-n>')
 
 -- telescope
 map('n', '<space><space>', '<Cmd>Trouble<CR>', { silent = false })
 
--- diffview
--- map('n', '<leader>d', ':DiffviewOpen<space>', { silent = false })
--- map('n', '<leader>x', ':DiffviewClose<CR>', { silent = false })
+-- fugitive
+map('n', '<leader>gm', ':.GBrowse main:%<CR>')
+map('n', '<leader>gf', ':GBrowse<CR>')
+map('n', '<leader>gl', ':.GBrowse<CR>')
+map('n', '<leader>ga', ':Gwrite<CR>')
+map('n', '<leader>gA', ':Gwrite!<CR>')
+map('n', '<leader>gd', ':Gdelete<CR>')
 
 -- move snippets
 -- map('v', 'J', ':m \'>+1<CR>gv=gv')
