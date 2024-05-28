@@ -26,6 +26,8 @@ install-brew:
 install-go:
 	for package in $(cat config/go_packages); do go install "$package"; done
 
+update-go: install-go
+
 init-stow:
 	# run this with --no-config-file and --no-history options for nushell in alacritty
 	mkdir `~/Library/Application Support/nushell`
