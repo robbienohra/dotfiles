@@ -120,3 +120,4 @@ y = 1
 [shell]
 program = "/Users/robbienohra/.cargo/bin/nu"
 args = ["-e", "try { zellij attach --index 0 } catch { zellij }"]
+# args = ["--no-config-file", "--no-history"]
