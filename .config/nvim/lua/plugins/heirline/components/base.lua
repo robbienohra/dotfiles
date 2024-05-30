@@ -124,7 +124,7 @@ local M = {
 
 		{
 			provider = function(self)
-				return ' ' .. self.status_dict.head
+				return ' '
 			end,
 			hl = { bold = true },
 		},

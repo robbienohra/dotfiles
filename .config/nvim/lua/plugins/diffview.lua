@@ -5,8 +5,7 @@ return {
 	'sindrets/diffview.nvim',
 	config = function()
 		-- local diffview = require 'diffview'
-		--
-		-- map('n', '<leader>d', diffview., { silent = false })
+		-- map('n', '<leader>d', ':DiffviewOpen<CR>', { silent = false })
 		-- map('n', '<leader>x', ':DiffviewClose<CR>', { silent = false })
 	end,
 }
