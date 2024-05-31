@@ -85,6 +85,7 @@ map('n', '<Leader>ga', ':Gwrite<CR>')
 map('n', '<Leader>gA', ':Gwrite!<CR>')
 map('n', '<Leader>gd', ':Gdelete<CR>')
 
+map('n', '<Leader>v', ':DiffviewOpen', { silent = false })
 -- move snippets
 -- map('v', 'J', ':m \'>+1<CR>gv=gv')
 -- map('v', 'K', ':m \'<-2<CR>gv=gv')
