@@ -27,11 +27,11 @@ map('n', '<C-u>', '<C-u>zz')
 map('n', '<C-e>', '<C-d>zz')
 
 -- buffers
-map('n', '<leader>w', '<C-w>w')
-map('n', '<leader>u', '<C-w>k')
-map('n', '<leader>e', '<C-w>j')
-map('n', '<leader>n', '<C-w>h')
-map('n', '<leader>i', '<C-w>l')
+map('n', '<Leader>w', '<C-w>w')
+map('n', '<Leader>u', '<C-w>k')
+map('n', '<Leader>e', '<C-w>j')
+map('n', '<Leader>n', '<C-w>h')
+map('n', '<Leader>i', '<C-w>l')
 
 -- d is for delete
 -- https://github.com/pazams/d-is-for-delete
@@ -44,21 +44,15 @@ map('n', 'C', '"_C')
 map('v', 'd', '"_d')
 map('v', 'D', '"_D')
 
--- Clean search (highlight)
-map('n', '<leader><cr>', ':nohlsearch<CR>')
-
--- Hard quit
-map('n', '<leader>q', ':qa!<CR>')
-
--- editing
-map('n', 'Q', 'ZQ')
-map('n', '<leader>s', ':update<CR>')
+map('n', '<Leader><cr>', ':nohlsearch<CR>')
+map('n', '<Leader>s', ':update<CR>')
+map('n', '<Leader>x', ':bdelete<CR>') -- needed for terminal buffers
 
 -- Search mappings: These will make it so that going to the next one in a search will center on the line it's found in.
 map('n', 's', 'nzzzv')
 map('n', 'S', 'Nzzzv')
 
-map('n', '<leader>c', ':lua require(\'utils\').GetFileRelativePath()<CR>')
+map('n', '<Leader>c', ':lua require(\'utils\').GetFileRelativePath()<CR>')
 
 -- oil
 map('n', '-', '<CMD>Oil<CR>', { desc = 'Open parent directory' })
@@ -77,14 +71,6 @@ map('n', ',r', vim.lsp.buf.references)
 map('n', ',s', vim.lsp.buf.document_symbol)
 map('n', ',d', vim.diagnostic.open_float)
 
--- Tab management
-map('n', 'tu', ':enew<CR>')
-map('n', 'tn', ':bprevious<CR>')
-map('n', 'ti', ':bnext<CR>')
-map('n', 'T', ':bdelete!<CR>') -- needed for terminal buffers
-map('n', 'tk', ':lua require(\'utils\').CloseBufferOrQuit()<CR>')
--- map('n', '<space>b', ':silent %bdelete|edit #|bdelete#<CR>')
-
 -- terminal mappings
 map('t', '<Esc>', '<C-\\><C-n>')
 
@@ -92,12 +78,12 @@ map('t', '<Esc>', '<C-\\><C-n>')
 map('n', '<space><space>', '<Cmd>Trouble<CR>', { silent = false })
 
 -- fugitive
-map('n', '<leader>gm', ':.GBrowse main:%<CR>')
-map('n', '<leader>gf', ':GBrowse<CR>')
-map('n', '<leader>gl', ':.GBrowse<CR>')
-map('n', '<leader>ga', ':Gwrite<CR>')
-map('n', '<leader>gA', ':Gwrite!<CR>')
-map('n', '<leader>gd', ':Gdelete<CR>')
+map('n', '<Leader>gm', ':.GBrowse main:%<CR>')
+map('n', '<Leader>gf', ':GBrowse<CR>')
+map('n', '<Leader>gl', ':.GBrowse<CR>')
+map('n', '<Leader>ga', ':Gwrite<CR>')
+map('n', '<Leader>gA', ':Gwrite!<CR>')
+map('n', '<Leader>gd', ':Gdelete<CR>')
 
 -- move snippets
 -- map('v', 'J', ':m \'>+1<CR>gv=gv')
