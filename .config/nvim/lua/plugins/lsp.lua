@@ -39,7 +39,6 @@ return {
 				'bashls',
 				'clangd',
 				'dockerls',
-				'efm',
 				'eslint',
 				'gopls',
 				'html',

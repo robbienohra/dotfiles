@@ -20,7 +20,6 @@ autocmd('FileType', {
 	end,
 })
 
-
 -- https://github.com/neovim/neovim/issues/6005#issuecomment-835825265
 -- https://github.com/alacritty/alacritty/issues/5450#issuecomment-929797364
 autocmd('ExitPre', {
@@ -32,4 +31,11 @@ autocmd('ExitPre', {
 autocmd({ 'BufNewFile', 'BufEnter' }, {
 	pattern = 'justfile',
 	command = 'setf make',
+})
+
+vim.api.nvim_create_autocmd('BufWritePre', {
+	pattern = '*',
+	callback = function(args)
+		require('conform').format { bufnr = args.buf }
+	end,
 })

@@ -61,9 +61,6 @@ map('n', '-', '<CMD>Oil<CR>', { desc = 'Open parent directory' })
 map('n', '<C-\\>', ':vsplit term://nu<CR>')
 
 -- lsp
-map('n', ',f', function()
-	vim.lsp.buf.format { async = true }
-end)
 map('n', ',a', vim.lsp.buf.code_action)
 map('n', ',h', vim.lsp.buf.hover)
 map('n', ',m', vim.lsp.buf.rename)
