@@ -8,6 +8,9 @@ return {
 				file_panel = {
 					{ 'n', '<Leader>x', diffview.close },
 				},
+				view = {
+					{ 'n', '<Leader>x', diffview.close },
+				},
 			},
 		}
 	end,
