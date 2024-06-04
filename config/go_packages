@@ -2,7 +2,6 @@ github.com/derailed/k9s@latest
 github.com/editorconfig-checker/editorconfig-checker/v2/cmd/editorconfig-checker@latest
 github.com/gohugoio/hugo@latest
 github.com/google/yamlfmt/cmd/yamlfmt@latest
-github.com/mattn/efm-langserver@latest
 github.com/mikefarah/yq/v4@latest
 github.com/stern/stern@latest
 github.com/tomwright/dasel/v2/cmd/dasel@master
