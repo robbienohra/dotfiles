@@ -1,3 +1,4 @@
 formatter:
   type: basic
   drop_merge_tag: true
+  retain_line_breaks: true
