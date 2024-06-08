@@ -1,6 +1,8 @@
 local map = require('utils').map
 
--- Cursor movement
+-- navigation
+
+-- cursor movement
 -- https://github.com/theniceboy/nvim/blob/master/init.vim
 map('n', 'l', 'u')
 map({ 'n', 'v' }, 'k', 'i')
@@ -26,12 +28,23 @@ map({ 'n', 'v' }, 'i', 'l')
 map('n', '<C-u>', '<C-u>zz')
 map('n', '<C-e>', '<C-d>zz')
 
+-- Search mappings: These will make it so that going to the next one in a search will center on the line it's found in.
+map('n', 's', 'nzzzv')
+map('n', 'S', 'Nzzzv')
+
 -- buffers
 map('n', '<Leader>w', '<C-w>w')
 map('n', '<Leader>u', '<C-w>k')
 map('n', '<Leader>e', '<C-w>j')
 map('n', '<Leader>n', '<C-w>h')
 map('n', '<Leader>i', '<C-w>l')
+map('n', '<Leader><cr>', vim.cmd.nohlsearch)
+map('n', '<Leader>s', vim.cmd.update)
+map('n', '<Leader>x', vim.cmd.bdelete) -- needed for terminal buffers
+map('n', '<Tab>', vim.cmd.bnext)
+map('n', '<S-Tab>', vim.cmd.bprevious)
+
+-- editing
 
 -- d is for delete
 -- https://github.com/pazams/d-is-for-delete
@@ -44,18 +57,7 @@ map('n', 'C', '"_C')
 map('v', 'd', '"_d')
 map('v', 'D', '"_D')
 
-map('n', '<Leader><cr>', ':nohlsearch<CR>')
-map('n', '<Leader>s', ':update<CR>')
-map('n', '<Leader>x', ':bdelete<CR>') -- needed for terminal buffers
-
--- Search mappings: These will make it so that going to the next one in a search will center on the line it's found in.
-map('n', 's', 'nzzzv')
-map('n', 'S', 'Nzzzv')
-
 map('n', '<Leader>c', ':lua require(\'utils\').GetFileRelativePath()<CR>')
-
--- oil
-map('n', '-', '<CMD>Oil<CR>', { desc = 'Open parent directory' })
 
 -- terminal
 map('n', '<C-\\>', ':vsplit term://nu<CR>')
@@ -75,14 +77,5 @@ map('t', '<Esc>', '<C-\\><C-n>')
 map('n', '<space><space>', '<Cmd>Trouble<CR>', { silent = false })
 
 -- fugitive
-map('n', '<Leader>gm', ':.GBrowse main:%<CR>')
-map('n', '<Leader>gf', ':GBrowse<CR>')
-map('n', '<Leader>gl', ':.GBrowse<CR>')
-map('n', '<Leader>ga', ':Gwrite<CR>')
-map('n', '<Leader>gA', ':Gwrite!<CR>')
-map('n', '<Leader>gd', ':Gdelete<CR>')
 
 map('n', '<Leader>v', ':DiffviewOpen', { silent = false })
--- move snippets
--- map('v', 'J', ':m \'>+1<CR>gv=gv')
--- map('v', 'K', ':m \'<-2<CR>gv=gv')

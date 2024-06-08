@@ -1,13 +1,13 @@
 keybinds clear-defaults=true {
   normal {
-    bind "Ctrl k" { CloseFocus; }
+    bind "Alt k" { CloseFocus; }
     bind "Alt u" { MoveFocus "Up"; }
     bind "Alt e" { MoveFocus "Down"; }
     bind "Alt n" { MoveFocus "Left"; }
     bind "Alt i" { MoveFocus "Right"; }
   }
   pane {
-    bind "Ctrl p" { SwitchToMode "Normal"; }
+    bind "Alt p" { SwitchToMode "Normal"; }
     bind "o" { NewPane; SwitchToMode "Normal"; }
     bind "r" { SwitchToMode "RenamePane"; PaneNameInput 0;}
     bind "l" { Clear; }
@@ -18,12 +18,12 @@ keybinds clear-defaults=true {
     bind "n" { MovePane "Left"; }
   }
   locked {
-    bind "Ctrl g" { SwitchToMode "Normal"; }
+    bind "Alt g" { SwitchToMode "Normal"; }
     bind "u" { HalfPageScrollUp; }
     bind "e" { HalfPageScrollDown; }
   }
   tab {
-    bind "Ctrl t" { SwitchToMode "Normal"; }
+    bind "Alt t" { SwitchToMode "Normal"; }
     bind "o" { NewTab; SwitchToMode "Normal"; }
     bind "r" { SwitchToMode "RenameTab"; TabNameInput 0; }
     bind "n"  { GoToPreviousTab; SwitchToMode "Normal"; }
@@ -33,7 +33,7 @@ keybinds clear-defaults=true {
     bind "PageDown" { MoveTab "Right"; }
   }
   shared_except "locked" {
-    bind "Ctrl g" { SwitchToMode "Locked"; }
+    bind "Alt g" { SwitchToMode "Locked"; }
     bind "Alt [" { PreviousSwapLayout; }
     bind "Alt ]" { NextSwapLayout; }
   }
@@ -41,10 +41,10 @@ keybinds clear-defaults=true {
     bind "Enter" "Esc" { SwitchToMode "Normal"; }
   }
   shared_except "tab" "locked" {
-    bind "Ctrl t" { SwitchToMode "Tab"; }
+    bind "Alt t" { SwitchToMode "Tab"; }
   }
   shared_except "pane" "locked" {
-    bind "Ctrl p" { SwitchToMode "Pane"; }
+    bind "Alt p" { SwitchToMode "Pane"; }
   }
 }
 
