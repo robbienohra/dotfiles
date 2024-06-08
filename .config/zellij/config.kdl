@@ -1,6 +1,6 @@
 keybinds clear-defaults=true {
   normal {
-    bind "Alt k" { CloseFocus; }
+    bind "Ctrl k" { CloseFocus; }
     bind "Alt u" { MoveFocus "Up"; }
     bind "Alt e" { MoveFocus "Down"; }
     bind "Alt n" { MoveFocus "Left"; }
@@ -23,7 +23,7 @@ keybinds clear-defaults=true {
     bind "e" { HalfPageScrollDown; }
   }
   tab {
-    bind "Alt t" { SwitchToMode "Normal"; }
+    bind "Ctrl t" { SwitchToMode "Normal"; }
     bind "o" { NewTab; SwitchToMode "Normal"; }
     bind "r" { SwitchToMode "RenameTab"; TabNameInput 0; }
     bind "n"  { GoToPreviousTab; SwitchToMode "Normal"; }
@@ -41,7 +41,7 @@ keybinds clear-defaults=true {
     bind "Enter" "Esc" { SwitchToMode "Normal"; }
   }
   shared_except "tab" "locked" {
-    bind "Alt t" { SwitchToMode "Tab"; }
+    bind "Ctrl t" { SwitchToMode "Tab"; }
   }
   shared_except "pane" "locked" {
     bind "Alt p" { SwitchToMode "Pane"; }
