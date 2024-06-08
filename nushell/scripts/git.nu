@@ -242,5 +242,3 @@ export def conf [] {
     echo $a
   }
 }
-
-export alias gdiff = nvim -c 'call feedkeys(":DiffviewOpen origin/HEAD...HEAD --imply-local", "t")'
