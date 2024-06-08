@@ -7,7 +7,7 @@ keybinds clear-defaults=true {
     bind "Alt i" { MoveFocus "Right"; }
   }
   pane {
-    bind "Alt p" { SwitchToMode "Normal"; }
+    bind "Ctrl p" { SwitchToMode "Normal"; }
     bind "o" { NewPane; SwitchToMode "Normal"; }
     bind "r" { SwitchToMode "RenamePane"; PaneNameInput 0;}
     bind "l" { Clear; }
@@ -18,7 +18,7 @@ keybinds clear-defaults=true {
     bind "n" { MovePane "Left"; }
   }
   locked {
-    bind "Alt g" { SwitchToMode "Normal"; }
+    bind "Ctrl g" { SwitchToMode "Normal"; }
     bind "u" { HalfPageScrollUp; }
     bind "e" { HalfPageScrollDown; }
   }
@@ -33,7 +33,7 @@ keybinds clear-defaults=true {
     bind "PageDown" { MoveTab "Right"; }
   }
   shared_except "locked" {
-    bind "Alt g" { SwitchToMode "Locked"; }
+    bind "Ctrl g" { SwitchToMode "Locked"; }
     bind "Alt [" { PreviousSwapLayout; }
     bind "Alt ]" { NextSwapLayout; }
   }
@@ -44,7 +44,7 @@ keybinds clear-defaults=true {
     bind "Ctrl t" { SwitchToMode "Tab"; }
   }
   shared_except "pane" "locked" {
-    bind "Alt p" { SwitchToMode "Pane"; }
+    bind "Ctrl p" { SwitchToMode "Pane"; }
   }
 }
 

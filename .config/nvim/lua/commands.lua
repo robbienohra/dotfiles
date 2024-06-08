@@ -1,6 +1,7 @@
 local autocmd = vim.api.nvim_create_autocmd
 
 -- https://stackoverflow.com/questions/7476126/how-to-automatically-close-the-quick-fix-window-when-leaving-a-file
+-- https://www.reddit.com/r/neovim/comments/1datzv6/here_is_the_command_to_close_the_quickfix_menu/
 autocmd({ 'BufLeave' }, { pattern = { '*' }, command = 'if &buftype == \'quickfix\'|q|endif' })
 autocmd({ 'BufEnter' }, { pattern = { '*' }, command = 'let &titlestring = \' \' . expand(\'%:t\') | set title' })
 
