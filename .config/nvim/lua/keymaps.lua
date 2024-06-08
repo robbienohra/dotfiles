@@ -72,10 +72,3 @@ map('n', ',d', vim.diagnostic.open_float)
 
 -- terminal mappings
 map('t', '<Esc>', '<C-\\><C-n>')
-
--- telescope
-map('n', '<space><space>', '<Cmd>Trouble<CR>', { silent = false })
-
--- fugitive
-
-map('n', '<Leader>v', ':DiffviewOpen', { silent = false })

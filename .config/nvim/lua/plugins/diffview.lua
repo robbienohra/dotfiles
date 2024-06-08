@@ -14,4 +14,11 @@ return {
 			},
 		}
 	end,
+	keys = {
+		{
+			'<Leader>v',
+			':DiffviewOpen',
+			{ silent = false },
+		},
+	},
 }
