@@ -20,6 +20,7 @@ o.undofile = true
 o.cmdheight = 0
 o.conceallevel = 2
 o.completeopt = { 'menuone', 'noinsert', 'noselect' }
+
 -- https://neovim.io/doc/user/change.html#fo-table
 o.regexpengine = 0
 o.synmaxcol = 3000
@@ -29,16 +30,27 @@ o.ttimeoutlen = 0
 o.undodir = udir
 o.updatetime = 100
 o.clipboard = { 'unnamed', 'unnamedplus' }
+
 -- Searching
 o.ignorecase = true
 o.smartcase = true
+
 -- Folding
 -- https://neovim.io/doc/user/fold.html#[z
-o.foldlevel = 5
 o.foldmethod = 'expr'
-o.foldexpr = 'nvim_treesitter#foldexpr()'
+o.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
+o.foldcolumn = '0'
+o.foldtext = ''
+o.foldlevel = 99
+o.foldlevelstart = 1
+o.foldnestmax = 4
 o.incsearch = true
+
 -- tabs
 o.shiftwidth = 2
 o.tabstop = 2
 o.softtabstop = 2
+
+-- indentation
+o.smartindent = false
+o.autoindent = false
