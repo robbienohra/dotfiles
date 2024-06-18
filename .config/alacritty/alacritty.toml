@@ -121,3 +121,9 @@ y = 1
 program = "/Users/robbienohra/.cargo/bin/nu"
 args = ["--env-config", "~/.config/nushell/env.nu", "--config", "~/.config/nushell/config.nu"]
 # args = ["--no-config-file", "--no-history"]
+
+ # https://github.com/alacritty/alacritty/issues/7622
+[keyboard]
+bindings = [
+  { key = "k", mods = "Control", chars = "\u0003" },
+]
