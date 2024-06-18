@@ -74,5 +74,7 @@ map('n', ',r', vim.lsp.buf.references)
 map('n', ',s', vim.lsp.buf.document_symbol)
 map('n', ',d', vim.diagnostic.open_float)
 
+map('n', '<leader>v', 'DiffviewOpen')
+
 -- terminal mappings
 map('t', '<Esc>', '<C-\\><C-n>')
