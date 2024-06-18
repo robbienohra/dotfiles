@@ -216,7 +216,7 @@ export alias gamscp = git am --show-current-patch
 export alias gdup = git diff @{upstream}
 export alias gswm = git switch (git_main_branch)
 
-export alias grl = git reflog --date=iso
+export alias grl = git reflog --date=relative
 
 export def rconf [] {
   let a = $"(git diff --name-only --diff-filter=U | sed -n 1p)"
