@@ -19,8 +19,7 @@ update-brew:
 
 # Install Brew packages
 install-brew:
-	brew tap homebrew/cask-fonts
-	bash config/install_brew.sh
+	bash packages/install_brew.sh
 
 # Install Go packages
 install-go:
