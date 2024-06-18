@@ -29,8 +29,8 @@ install-go:
 update-go: install-go
 
 init-stow:
-	stow_dirs=("psql" "rg" "stow" "usql" "vsnip" "git" "rectangle" "clangd" "clang-format")
-	for d in "${stow_dirs[@]}"; do stow "$d"; done; stow -t ~/.config .config
+	stow root
+	stow -t ~/.config .config
 
 # Update all packages
 install-all:
