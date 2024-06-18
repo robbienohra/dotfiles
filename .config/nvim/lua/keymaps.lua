@@ -40,7 +40,11 @@ map('n', '<Leader>n', '<C-w>h')
 map('n', '<Leader>i', '<C-w>l')
 map('n', '<Leader><cr>', vim.cmd.nohlsearch)
 map('n', '<Leader>s', vim.cmd.update)
-map('n', '<Leader>x', vim.cmd.bdelete) -- needed for terminal buffers
+map('n', '<Leader>q', vim.cmd.bdelete)
+map('n', '<Leader>Q', function()
+	local bufnr = vim.api.nvim_get_current_buf()
+	vim.api.nvim_buf_delete(bufnr, { force = true })
+end)
 map('n', '<Tab>', vim.cmd.bnext)
 map('n', '<S-Tab>', vim.cmd.bprevious)
 
