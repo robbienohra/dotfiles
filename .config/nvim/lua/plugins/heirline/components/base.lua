@@ -124,7 +124,7 @@ local M = {
 
 		{
 			provider = function(self)
-				return ' ' .. string.sub(self.status_dict.head, 1, 10)
+				return ' ' .. string.sub(self.status_dict.head, 1, 10) .. '...'
 			end,
 			hl = { bold = true },
 		},
