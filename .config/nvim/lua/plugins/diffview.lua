@@ -14,14 +14,4 @@ return {
 			},
 		}
 	end,
-	keys = {
-		{
-			'<leader>v',
-			':DiffviewOpen<cr>',
-		},
-		{
-			'<leader>vv',
-			':DiffviewOpen origin/HEAD...HEAD --imply-local<cr>',
-		},
-	},
 }

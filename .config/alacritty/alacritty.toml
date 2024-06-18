@@ -100,7 +100,7 @@ semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"
 save_to_clipboard = true
 
 [font]
-size = 14
+size = 13
 
 [font.normal]
 family = "JetBrainsMono Nerd Font Mono"
@@ -119,3 +119,5 @@ y = 1
 
 [shell]
 program = "/Users/robbienohra/.cargo/bin/nu"
+args = ["--env-config", "~/.config/nushell/env.nu", "--config", "~/.config/nushell/config.nu"]
+# args = ["--no-config-file", "--no-history"]

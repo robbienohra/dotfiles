@@ -1,6 +1,6 @@
-use git.nu *
-use aliases.nu *
-use utils.nu *
+use scripts/git.nu *
+use scripts/aliases.nu *
+use scripts/utils.nu *
 
 $env.config = {
 show_banner: false
