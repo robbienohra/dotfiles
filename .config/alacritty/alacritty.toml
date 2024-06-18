@@ -125,5 +125,5 @@ args = ["--env-config", "~/.config/nushell/env.nu", "--config", "~/.config/nushe
  # https://github.com/alacritty/alacritty/issues/7622
 [keyboard]
 bindings = [
-  { key = "k", mods = "Control", chars = "\u0003" },
+  { key = "k", mods = "Control", chars = "\u0003" }, # sigint
 ]
