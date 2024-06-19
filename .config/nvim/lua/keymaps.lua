@@ -33,13 +33,19 @@ map('n', 's', 'nzzzv')
 map('n', 'S', 'Nzzzv')
 
 -- buffers
-map('n', '<Leader>w', '<C-w>w')
 map('n', '<Leader>u', '<C-w>k')
 map('n', '<Leader>e', '<C-w>j')
 map('n', '<Leader>n', '<C-w>h')
 map('n', '<Leader>i', '<C-w>l')
+
+map('n', '<leader>sh', vim.cmd.split)
+map('n', '<leader>sv', vim.cmd.vsplit)
+
 map('n', '<Leader><cr>', vim.cmd.nohlsearch)
 map('n', '<Leader>s', vim.cmd.update)
+
+-- quit
+map('n', '<leader>qa', ':qa<cr>')
 map('n', '<Leader>q', vim.cmd.bdelete)
 map('n', '<Leader>Q', function()
 	local bufnr = vim.api.nvim_get_current_buf()
@@ -74,7 +80,7 @@ map('n', ',r', vim.lsp.buf.references)
 map('n', ',s', vim.lsp.buf.document_symbol)
 map('n', ',d', vim.diagnostic.open_float)
 
-map('n', '<leader>v', 'DiffviewOpen')
+map('n', '<leader>v', ':DiffviewOpen ', { silent = false })
 
 -- terminal mappings
 map('t', '<Esc>', '<C-\\><C-n>')
