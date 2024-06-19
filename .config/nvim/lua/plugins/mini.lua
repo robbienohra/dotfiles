@@ -18,6 +18,20 @@ return {
 			symbol = '┆',
 			delay = 0,
 		}
+		require('mini.starter').setup {
+			autoopen = true,
+		}
+		-- https://github.com/echasnovski/mini.nvim/issues/427
+		local session = require 'mini.sessions'
+		session.setup { autowrite = false }
+		local autowrite = function()
+			local session_name
+			if vim.v.this_session == '' then
+				session_name = 'default'
+			end
+			session.write(session_name, { force = true })
+		end
+		vim.api.nvim_create_autocmd('VimLeavePre', { callback = autowrite, desc = 'Autowrite session' })
 	end,
 	dependencies = { 'JoosepAlviste/nvim-ts-context-commentstring' },
 }
