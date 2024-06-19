@@ -2,8 +2,8 @@ local utils = require 'utils'
 local map = utils.map
 
 map('n', 'l', 'u') -- remap undo
+map('v', ']', 'e') -- remap end of word
 
-map('v', 't', 'e') -- remap end of word
 -- navigation
 -- cursor movement
 -- https://github.com/theniceboy/nvim/blob/master/init.vim

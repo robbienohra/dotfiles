@@ -17,6 +17,10 @@ return {
 			draw = { animation = require('mini.indentscope').gen_animation.none() },
 			symbol = '┆',
 			delay = 0,
+			mappings = {
+				object_scope = '',
+				object_scope_with_border = '',
+			},
 		}
 		require('mini.starter').setup {
 			autoopen = true,
