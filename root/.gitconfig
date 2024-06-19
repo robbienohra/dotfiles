@@ -47,7 +47,7 @@
   rebase = true
 [delta]
   navigate = true  # use n and N to move between diff sections
-  side-by-side = true
+  side-by-side = false
 [branch]
   autosetupmerge = true
 [push]

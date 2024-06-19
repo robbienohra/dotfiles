@@ -124,8 +124,14 @@ local M = {
 
 		{
 			provider = function(self)
-				return ' ' .. string.sub(self.status_dict.head, 1, 10) .. '...'
+				local head = self.status_dict.head
+				if #head > 10 then
+					return ' ' .. string.sub(head, 1, 10) .. '...'
+				else
+					return ' ' .. head
+				end
 			end,
+
 			hl = { bold = true },
 		},
 		{

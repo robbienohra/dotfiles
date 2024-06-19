@@ -36,6 +36,7 @@ return {
 					'svelte',
 					'terraform',
 					'toml',
+					'tsx',
 					'typescript',
 					'vim',
 					'vimdoc',
