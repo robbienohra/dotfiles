@@ -1,6 +1,10 @@
 return {
 	{
 		'tpope/vim-fugitive',
+		dependencies = {
+			'tpope/vim-rhubarb', -- required by fugitive to :Gbrowse
+		},
+		event = { 'BufEnter' },
 		keys = {
 			{ '<leader>gm', ':.GBrowse main:%<CR>' },
 			{ '<leader>gf', ':GBrowse<CR>' },
@@ -10,7 +14,4 @@ return {
 			{ '<leader>gd', ':Gdelete<CR>' },
 		},
 	},
-	'tpope/vim-repeat',
-	'tpope/vim-rhubarb', -- required by fugitive to :Gbrowse
-	'tpope/vim-unimpaired',
 }
