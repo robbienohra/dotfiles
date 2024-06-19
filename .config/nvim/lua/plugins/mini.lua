@@ -22,16 +22,14 @@ return {
 				object_scope_with_border = '',
 			},
 		}
-		require('mini.starter').setup {
-			autoopen = true,
-		}
+		require('mini.starter').setup {}
 		-- https://github.com/echasnovski/mini.nvim/issues/427
 		local session = require 'mini.sessions'
 		session.setup { autowrite = false }
 		local autowrite = function()
 			local session_name
 			if vim.v.this_session == '' then
-				session_name = 'default'
+				session_name = 'Session.vim'
 			end
 			session.write(session_name, { force = true })
 		end
