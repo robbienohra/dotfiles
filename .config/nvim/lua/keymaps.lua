@@ -1,4 +1,5 @@
-local map = require('utils').map
+local utils = require 'utils'
+local map = utils.map
 
 -- navigation
 
@@ -70,7 +71,7 @@ map('n', 'C', '"_C')
 map('v', 'd', '"_d')
 map('v', 'D', '"_D')
 
-map('n', '<Leader>c', ':lua require(\'utils\').GetFileRelativePath()<CR>')
+map('n', '<Leader>c', utils.GetFileRelativePath)
 
 -- terminal
 map('n', '<C-\\>', ':vsplit term://nu<CR>')
