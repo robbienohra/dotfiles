@@ -8,6 +8,9 @@ return {
 			preview = {
 				width = 0.9,
 			},
+			view_options = {
+				show_hidden = true,
+			},
 		}
 	end,
 	keys = {
