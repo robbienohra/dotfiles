@@ -45,8 +45,11 @@ map('n', '<Leader><cr>', vim.cmd.nohlsearch)
 map('n', '<Leader>s', vim.cmd.update)
 
 -- quit
-map('n', '<leader>qa', ':qa<cr>')
-map('n', '<Leader>q', vim.cmd.bdelete)
+map('n', '<Leader>q', vim.cmd.quit)
+map('n', '<leader>qa', function()
+	vim.cmd 'qa'
+end)
+map('n', '<Leader>bd', vim.cmd.bdelete)
 map('n', '<Leader>Q', function()
 	local bufnr = vim.api.nvim_get_current_buf()
 	vim.api.nvim_buf_delete(bufnr, { force = true })
@@ -80,7 +83,17 @@ map('n', ',r', vim.lsp.buf.references)
 map('n', ',s', vim.lsp.buf.document_symbol)
 map('n', ',d', vim.diagnostic.open_float)
 
-map('n', '<leader>v', ':DiffviewOpen ', { silent = false })
+map('n', '<leader>v', function()
+	vim.cmd 'DiffviewOpen'
+end, { silent = false })
+
+map('n', '<leader>vm', function()
+	vim.cmd 'DiffviewOpen origin/main..head --imply-local=true'
+end, { silent = false })
+
+map('n', '<leader>vw', function()
+	vim.cmd 'DiffviewOpen origin/HEAD...HEAD --imply-local'
+end, { silent = false })
 
 -- terminal mappings
 map('t', '<Esc>', '<C-\\><C-n>')
