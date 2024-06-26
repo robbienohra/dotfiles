@@ -3,7 +3,6 @@ bat
 broot
 cargo-update
 du-dust
-exa
 fd-find
 fnm
 git-delta
@@ -19,5 +18,4 @@ tokei
 xh
 yazi-fm
 yazi-cli
-zellij
 zoxide
