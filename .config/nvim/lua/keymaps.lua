@@ -88,7 +88,7 @@ map('n', ',d', vim.diagnostic.open_float)
 -- git remote set-head -a origin
 map('n', '<leader>v', function()
 	vim.cmd 'DiffviewOpen origin/HEAD...HEAD --imply-local'
-end, { silent = false })
+end)
 
 -- terminal mappings
 map('t', '<Esc>', '<C-\\><C-n>')
