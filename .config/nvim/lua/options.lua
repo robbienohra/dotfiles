@@ -20,6 +20,7 @@ o.undofile = true
 o.cmdheight = 0
 o.conceallevel = 2
 o.completeopt = { 'menuone', 'noinsert', 'noselect' }
+o.hidden = false
 
 -- https://neovim.io/doc/user/change.html#fo-table
 o.regexpengine = 0
