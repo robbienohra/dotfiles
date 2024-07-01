@@ -23,17 +23,16 @@ return {
 			},
 		}
 		require('mini.starter').setup {}
+		require('mini.sessions').setup {}
 		-- https://github.com/echasnovski/mini.nvim/issues/427
-		local session = require 'mini.sessions'
-		session.setup { autowrite = false }
-		local autowrite = function()
-			local session_name
-			if vim.v.this_session == '' then
-				session_name = 'Session.vim'
-			end
-			session.write(session_name, { force = true })
-		end
-		vim.api.nvim_create_autocmd('VimLeavePre', { callback = autowrite, desc = 'Autowrite session' })
+		-- local autowrite = function()
+		-- 	local session_name
+		-- 	if vim.v.this_session == '' then
+		-- 		session_name = 'Session.vim'
+		-- 	end
+		-- 	session.write(session_name, { force = true })
+		-- end
+		-- vim.api.nvim_create_autocmd('VimLeavePre', { callback = autowrite, desc = 'Autowrite session' })
 	end,
 	dependencies = { 'JoosepAlviste/nvim-ts-context-commentstring' },
 }
