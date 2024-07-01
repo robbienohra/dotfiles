@@ -85,15 +85,8 @@ map('n', ',r', vim.lsp.buf.references)
 map('n', ',s', vim.lsp.buf.document_symbol)
 map('n', ',d', vim.diagnostic.open_float)
 
+-- git remote set-head -a origin
 map('n', '<leader>v', function()
-	vim.cmd 'DiffviewOpen'
-end, { silent = false })
-
-map('n', '<leader>vm', function()
-	vim.cmd 'DiffviewOpen origin/main..head --imply-local=true'
-end, { silent = false })
-
-map('n', '<leader>vw', function()
 	vim.cmd 'DiffviewOpen origin/HEAD...HEAD --imply-local'
 end, { silent = false })
 
