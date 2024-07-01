@@ -10,7 +10,7 @@ update-cargo:
 
 # Install Cargo packages
 install-cargo:
-	for package in $(cat config/cargo_packages); do cargo install "$package"; done
+	for package in $(cat packages/cargo_packages); do cargo install "$package"; done
 
 # Update Brew packages
 update-brew:
@@ -23,7 +23,7 @@ install-brew:
 
 # Install Go packages
 install-go:
-	for package in $(cat config/go_packages); do go install "$package"; done
+	for package in $(cat packages/go_packages); do go install "$package"; done
 
 update-go: install-go
 
