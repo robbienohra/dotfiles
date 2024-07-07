@@ -38,6 +38,7 @@ o.smartcase = true
 
 -- Folding
 -- https://neovim.io/doc/user/fold.html#[z
+-- https://www.jackfranklin.co.uk/blog/code-folding-in-vim-neovim/
 o.foldmethod = 'expr'
 o.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
 o.foldcolumn = '0'

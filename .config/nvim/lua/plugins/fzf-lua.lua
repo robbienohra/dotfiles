@@ -13,7 +13,7 @@ return {
 			winopts = {
 				split = 'belowright new',
 				preview = {
-					layout = 'vertical',
+					layout = 'horizontal',
 					hidden = 'hidden',
 				},
 			},
