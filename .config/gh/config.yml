@@ -14,5 +14,6 @@ aliases:
   po: pr checkout
   pa: pr review -a
   gv: gist view -w
-  ge: gist edit
+  ga: gist add
+  gc: gist create
 version: "1"
