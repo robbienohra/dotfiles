@@ -45,6 +45,7 @@ map('n', '<leader>sv', vim.cmd.vsplit)
 
 map('n', '<Leader><cr>', vim.cmd.nohlsearch)
 map('n', '<Leader>s', vim.cmd.update)
+map('n', '<Leader>x', '<cmd>%bd<cr>')
 
 -- quit
 map('n', '<Leader>q', vim.cmd.quit)

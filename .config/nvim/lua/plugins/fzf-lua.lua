@@ -3,6 +3,14 @@ return {
 	'ibhagwan/fzf-lua',
 	-- optional for icon support
 	dependencies = { 'nvim-tree/nvim-web-devicons' },
+	opts = {
+		keymap = {
+			fzf = {
+				['<c-e>'] = 'up',
+				['<c-u>'] = 'down',
+			},
+		},
+	},
 	config = function()
 		require('fzf-lua').setup {
 			files = {
@@ -32,6 +40,7 @@ return {
 		map('n', '<leader>p', fzf.oldfiles)
 		map('n', '<leader>y', fzf.command_history)
 		map('n', '<leader>l', fzf.lines)
+		map('n', '<leader>b', fzf.buffers)
 		map('n', '<leader>r', ':FzfLua resume<Space>', { silent = false })
 	end,
 }

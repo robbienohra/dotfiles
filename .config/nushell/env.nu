@@ -14,10 +14,6 @@ $env.NUPM_HOME = $'($env.HOME)/nupm'
 
 $env.PATH = ($env.PATH | split row (char esep) | prepend $"(pyenv root)/shims")
 
-use '/Users/robbienohra/nupm/modules/nu-themes/catppuccin-mocha.nu'
-
-$env.config.color_config = (catppuccin-mocha)
-
 $env.STARSHIP_SHELL = "nu"
 
 def create_left_prompt [] {
@@ -97,9 +93,22 @@ $env.FZF_DEFAULT_OPTS = $"--history=($env.HOME)/.fzf_history
 --bind ctrl-f:next-history
 --bind F2:toggle-preview
 --info=hidden
---color=bg+:#181825,bg:#181825,spinner:#f5e0dc,hl:#f38ba8
---color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc
---color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8"
+--color=bg+:#2d3f76
+--color=bg:#1e2030
+--color=border:#589ed7
+--color=fg:#c8d3f5
+--color=gutter:#1e2030
+--color=header:#ff966c
+--color=hl+:#65bcff
+--color=hl:#65bcff
+--color=info:#545c7e
+--color=marker:#ff007c
+--color=pointer:#ff007c
+--color=prompt:#65bcff
+--color=query:#c8d3f5:regular
+--color=scrollbar:#589ed7
+--color=separator:#ff966c
+--color=spinner:#ff007c"
 
 def --env yy [...args] {
 	let tmp = (mktemp -t "yazi-cwd.XXXXXX")

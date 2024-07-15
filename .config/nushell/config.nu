@@ -57,5 +57,3 @@ $env.config | upsert keybindings (
 )
 
 $env.OPENAI_API_KEY = (open $"($env.HOME)/openapikey")
-
-source /Users/robbienohra/.config/broot/launcher/nushell/br
