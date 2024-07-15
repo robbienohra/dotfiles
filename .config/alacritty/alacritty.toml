@@ -58,40 +58,41 @@ bindings = [
 # TokyoNight Alacritty Colors
 # Default colors
 [colors.primary]
-background = '#1a1b26'
-foreground = '#c0caf5'
+background = '#222436'
+foreground = '#c8d3f5'
 
 #[colors.cursor]
-#cursor = '#c0caf5'
-#text = '#1a1b26'
+#cursor = '#c8d3f5'
+#text = '#222436'
 
 # Normal colors
 [colors.normal]
-black = '#15161e'
-red = '#f7768e'
-green = '#9ece6a'
-yellow = '#e0af68'
-blue = '#7aa2f7'
-magenta = '#bb9af7'
-cyan = '#7dcfff'
-white = '#a9b1d6'
+black = '#1b1d2b'
+red = '#ff757f'
+green = '#c3e88d'
+yellow = '#ffc777'
+blue = '#82aaff'
+magenta = '#c099ff'
+cyan = '#86e1fc'
+white = '#828bb8'
 
 # Bright colors
 [colors.bright]
-black = '#414868'
-red = '#f7768e'
-green = '#9ece6a'
-yellow = '#e0af68'
-blue = '#7aa2f7'
-magenta = '#bb9af7'
-cyan = '#7dcfff'
-white = '#c0caf5'
+black = '#444a73'
+red = '#ff757f'
+green = '#c3e88d'
+yellow = '#ffc777'
+blue = '#82aaff'
+magenta = '#c099ff'
+cyan = '#86e1fc'
+white = '#c8d3f5'
 
 # Indexed Colors
 [[colors.indexed_colors]]
 index = 16
-color = '#ff9e64'
+color = '#ff966c'
 
 [[colors.indexed_colors]]
 index = 17
-color = '#db4b4b'
+color = '#c53b53'
+
