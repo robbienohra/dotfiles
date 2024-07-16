@@ -94,7 +94,7 @@ $env.FZF_DEFAULT_OPTS = $"--history=($env.HOME)/.fzf_history
 --bind F2:toggle-preview
 --info=hidden
 --color=bg+:#2d3f76
---color=bg:#1e2030
+--color=bg:#222436
 --color=border:#589ed7
 --color=fg:#c8d3f5
 --color=gutter:#1e2030
