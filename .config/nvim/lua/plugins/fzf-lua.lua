@@ -40,7 +40,7 @@ return {
 		map('n', '<leader>p', fzf.oldfiles)
 		map('n', '<leader>y', fzf.command_history)
 		map('n', '<leader>l', fzf.lines)
-		map('n', '<leader>b', fzf.buffers)
+		map('n', '\\', fzf.buffers)
 		map('n', '<leader>r', ':FzfLua resume<Space>', { silent = false })
 	end,
 }
