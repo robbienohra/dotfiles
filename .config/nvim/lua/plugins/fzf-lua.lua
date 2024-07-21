@@ -19,6 +19,7 @@ return {
 				},
 			},
 			winopts = {
+				backdrop = 100,
 				split = 'belowright new',
 				preview = {
 					layout = 'horizontal',

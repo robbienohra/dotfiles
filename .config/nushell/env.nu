@@ -97,7 +97,7 @@ $env.FZF_DEFAULT_OPTS = $"--history=($env.HOME)/.fzf_history
 --color=bg:#222436
 --color=border:#589ed7
 --color=fg:#c8d3f5
---color=gutter:#1e2030
+--color=gutter:#222436
 --color=header:#ff966c
 --color=hl+:#65bcff
 --color=hl:#65bcff
