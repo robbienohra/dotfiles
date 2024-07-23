@@ -2,6 +2,7 @@ return {
 	'echasnovski/mini.nvim',
 	version = '*',
 	config = function()
+		require('mini.icons').setup {}
 		require('mini.sessions').setup { autoread = true }
 		require('mini.surround').setup {}
 		require('mini.comment').setup {
@@ -25,5 +26,5 @@ return {
 		}
 		require('mini.starter').setup {}
 	end,
-	dependencies = { 'JoosepAlviste/nvim-ts-context-commentstring' },
+	dependencies = { 'JoosepAlviste/nvim-ts-context-commentstring', 'echasnovski/mini.icons' },
 }
