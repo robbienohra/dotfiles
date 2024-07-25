@@ -35,6 +35,7 @@ map('n', '<cr>', 'nzzzv')
 map('n', 'S', 'Nzzzv')
 
 -- buffers
+map('n', '<Leader>w', '<C-w>')
 map('n', '<Leader>u', '<C-w>k')
 map('n', '<Leader>e', '<C-w>j')
 map('n', '<Leader>n', '<C-w>h')
