@@ -44,7 +44,6 @@ y = 1
 
 [shell]
 program = "/Users/robbienohra/.cargo/bin/nu"
-args = ["--env-config", "~/.config/nushell/env.nu", "--config", "~/.config/nushell/config.nu"]
 # args = ["--no-config-file", "--no-history"]
 
  # https://github.com/alacritty/alacritty/issues/7622
