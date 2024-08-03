@@ -1,6 +1,7 @@
 export alias k = kubectl
 export alias j = npm run jest --
 export alias n = nvim
+export alias cz = chezmoi
 
 export alias v = nvim -c 'call feedkeys(":DiffviewOpen", "t")'
 export alias vm = nvim -c 'call feedkeys(":DiffviewOpen origin/main...head --imply-local", "t")'
