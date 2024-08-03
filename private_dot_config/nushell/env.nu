@@ -33,7 +33,6 @@ $env.PROMPT_MULTILINE_INDICATOR = "::: "
 
 # Use nushell functions to define your right and left prompt
 $env.PROMPT_COMMAND = {|| create_left_prompt }
-# $env.PROMPT_COMMAND_RIGHT = {|| create_right_prompt }
 
 # Specifies how environment variables are:
 # - converted from a string to a value on Nushell startup (from_string)
