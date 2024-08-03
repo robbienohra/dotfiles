@@ -10,6 +10,8 @@ $env.PATH = ($env.PATH
   | append $'($env.HOME)/go/bin'
   | append $'/usr/local/texlive/2024basic/bin/universal-darwin/')
 
+$env.SHELL = "nu"
+
 $env.NUPM_HOME = $'($env.HOME)/nupm'
 
 $env.PATH = ($env.PATH | split row (char esep) | prepend $"(pyenv root)/shims")
