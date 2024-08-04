@@ -29,10 +29,6 @@ install-go:
 
 update-go: install-go
 
-init-stow:
-	stow root
-	stow -t ~/.config .config
-
 # Update all packages
 install-all:
 	just install-cargo
