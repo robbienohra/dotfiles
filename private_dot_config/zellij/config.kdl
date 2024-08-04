@@ -48,27 +48,25 @@ keybinds clear-defaults=true {
   }
 }
 
-// Catppuccin Theme:
-// https://github.com/catppuccin/catppuccin
-
-theme "default"
-
 themes {
-  default {
-    bg "#585b70"
-    fg "#cdd6f4"
-    red "#f38ba8"
-    green "#a6e3a1"
-    blue "#89b4fa"
-    yellow "#f9e2af"
-    magenta "#f5c2e7" // Pink
-    orange "#fab387" // Peach
-    cyan "#89dceb" // Sky
-    black "#181825" // Mantle
-    white "#cdd6f4"
-  }
+    tokyonight_moon {
+        fg "#c8d3f5"
+        bg "#2f334d"
+        // Black should match the terminal background color
+        // This ensures the top and bottom bars are transparent
+        black "#222436"
+        red "#ff757f"
+        green "#c3e88d"
+        yellow "#ffc777"
+        blue "#82aaff"
+        magenta "#c099ff"
+        cyan "#86e1fc"
+        white "#828bb8"
+        orange "#ff966c"
+    }
 }
 
+theme "tokyonight_moon"
 default_shell "nu"
 pane_frames true
 scrollback_editor "/opt/homebrew/bin/nvim"
