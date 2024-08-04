@@ -69,7 +69,7 @@ themes {
 
 theme "tokyonight_moon"
 default_shell "nu"
-pane_frames false
+pane_frames true
 scrollback_editor "/opt/homebrew/bin/nvim"
 
 ui {
