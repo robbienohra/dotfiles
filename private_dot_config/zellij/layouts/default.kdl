@@ -8,7 +8,7 @@ layout {
 
 swap_tiled_layout name="stack" {
   tab {
-    pane stacked=true {
+    pane stacked=false {
       pane
     }
   }
