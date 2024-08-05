@@ -6,16 +6,16 @@ layout {
   }
 }
 
-swap_tiled_layout name="stack" {
-  tab {
-    pane stacked=true {
+swap_tiled_layout name="tile" {
+    tab {
       pane
     }
   }
 }
 
-swap_tiled_layout name="tile" {
-    tab {
+swap_tiled_layout name="stack" {
+  tab {
+    pane stacked=true {
       pane
     }
   }
