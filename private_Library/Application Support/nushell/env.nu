@@ -11,6 +11,7 @@ $env.PATH = ($env.PATH
   | append $'/usr/local/texlive/2024basic/bin/universal-darwin/')
 
 $env.SHELL = "nu"
+$env.EDITOR = "nvim"
 
 $env.NUPM_HOME = $'($env.HOME)/nupm'
 
