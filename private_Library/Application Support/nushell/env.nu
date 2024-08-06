@@ -12,6 +12,7 @@ $env.PATH = ($env.PATH
 
 $env.SHELL = "nu"
 $env.EDITOR = "nvim"
+$env.VISUAL = "nvim"
 
 $env.NUPM_HOME = $'($env.HOME)/nupm'
 
