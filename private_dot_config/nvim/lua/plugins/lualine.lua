@@ -22,7 +22,7 @@ return {
 	config = function()
 		require('lualine').setup {
 			winbar = {
-				lualine_a = { 'buffers' },
+				lualine_a = { 'filename' },
 			},
 			sections = {
 				lualine_a = {
