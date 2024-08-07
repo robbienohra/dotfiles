@@ -6,7 +6,17 @@ $env.config = {
 show_banner: false
 keybindings: [
 {
-  name: open_br
+  name: open_nvim
+  modifier: control
+  keycode: char_n
+  mode: emacs
+  event: {
+    send: executehostcommand,
+    cmd: "nvim ."
+  }
+},
+{
+  name: open_yazi
   modifier: control
   keycode: char_o
   mode: emacs
