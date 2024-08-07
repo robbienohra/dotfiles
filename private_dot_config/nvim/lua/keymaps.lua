@@ -63,8 +63,8 @@ map('n', '<leader>qa', function()
 	vim.cmd 'qa'
 end)
 map('n', 'q', vim.cmd.bdelete)
-map('n', '<C-s>', vim.cmd.mksession)
-map('n', '<C-l>', function()
+map('n', '<C-m>', vim.cmd.mksession)
+map('n', '<C-s>', function()
 	vim.cmd [[source Session.vim]]
 end)
 map('n', '<Leader>Q', function()
