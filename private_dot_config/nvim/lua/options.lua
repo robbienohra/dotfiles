@@ -3,6 +3,7 @@ vim.g.loaded_ruby_provider = 0
 vim.g.loaded_perl_provider = 0
 vim.g.loaded_python_provider = 0
 vim.g.netrw_banner = 0
+vim.g.mkdp_auto_start = 1
 local udir = os.getenv 'HOME' .. '/undodir'
 local o = vim.opt
 o.lazyredraw = true
