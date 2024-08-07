@@ -63,6 +63,7 @@ map('n', '<leader>qa', function()
 	vim.cmd 'qa'
 end)
 map('n', 'q', vim.cmd.bdelete)
+map('n', '<C-s>', vim.cmd.mksession)
 map('n', '<Leader>Q', function()
 	local bufnr = vim.api.nvim_get_current_buf()
 	vim.api.nvim_buf_delete(bufnr, { force = true })
