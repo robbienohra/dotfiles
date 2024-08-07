@@ -14,6 +14,6 @@ return {
 				show_hidden = true,
 			},
 		}
-		map('-', '<cmd>Oil<cr>')
+		map('n', '-', '<cmd>Oil<cr>')
 	end,
 }
