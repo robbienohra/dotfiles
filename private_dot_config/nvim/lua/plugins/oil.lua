@@ -1,3 +1,5 @@
+local map = require('utils').map
+
 return {
 	'stevearc/oil.nvim',
 	opts = {},
@@ -12,8 +14,6 @@ return {
 				show_hidden = true,
 			},
 		}
+		map('-', '<cmd>Oil<cr>')
 	end,
-	keys = {
-		{ '-', '<cmd>Oil<cr>' },
-	},
 }

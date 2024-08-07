@@ -24,7 +24,6 @@ return {
 				object_scope_with_border = '',
 			},
 		}
-		require('mini.starter').setup {}
 	end,
 	dependencies = { 'JoosepAlviste/nvim-ts-context-commentstring', 'echasnovski/mini.icons' },
 }
