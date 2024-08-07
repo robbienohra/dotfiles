@@ -18,7 +18,7 @@ keybindings: [
 {
   name: open_session
   modifier: control
-  keycode: char_n
+  keycode: char_o
   mode: emacs
   event: {
     send: executehostcommand,
