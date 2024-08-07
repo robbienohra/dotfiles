@@ -16,14 +16,15 @@ keybindings: [
   }
 },
 {
-  name: open_yazi
+  name: open_session
   modifier: control
-  keycode: char_o
+  keycode: char_n
   mode: emacs
   event: {
     send: executehostcommand,
-    cmd: "yy"
+    cmd: "nvim"
   }
+},
 }
 ]
   hooks: {
