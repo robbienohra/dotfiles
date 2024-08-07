@@ -24,7 +24,6 @@ keybindings: [
     send: executehostcommand,
     cmd: "nvim"
   }
-},
 }
 ]
   hooks: {
