@@ -3,8 +3,6 @@ set shell := ["sh", "-c"]
 # Update Neovim plugins
 update-nvim:
 	nvim --headless "+Lazy! sync" +qa
-	git commit -am "update: nvim plugins"
-	git push
 
 # Update Cargo packages
 update-cargo:
