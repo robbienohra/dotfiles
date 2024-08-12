@@ -234,22 +234,3 @@ export def sq [] {
 export def no [branch] {
   git rev-list --count HEAD $"^($branch)"
 }
-
-export def sqa [] {
-  # Start an interactive rebase of all commits
-  git rebase -i --root
-
-  # Replace "pick" with "squash" for all but the first commit
-  sed -i '2,$s/^pick/squash/' $(git rev-parse --show-toplevel)/.git/rebase-merge/git-rebase-todo
-
-  # Continue the rebase automatically
-  git rebase --continue
-}
-
-# echo next file with conflict
-export def conf [] {
-  let a = $"(git diff --name-only --diff-filter=U | sed -n 1p)"
-  if a != "" {
-    echo $a
-  }
-}
