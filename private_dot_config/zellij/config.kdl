@@ -17,6 +17,8 @@ keybinds clear-defaults=true {
     bind "i" { MovePane "Right"; }
     bind "n" { MovePane "Left"; }
     bind "k" { CloseFocus; }
+    bind "PageUp" { HalfPageScrollUp; }
+    bind "PageDown" { HalfPageScrollDown; }
   }
   locked {
     bind "Ctrl g" { SwitchToMode "Normal"; }
