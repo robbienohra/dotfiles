@@ -22,7 +22,7 @@ return {
 				'prettierd',
 				'shfmt',
 				'stylua',
-				'yamlfmt',
+				'yamllint',
 			},
 
 			auto_update = false,
