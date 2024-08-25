@@ -4,7 +4,6 @@ return {
 	config = function()
 		require('mini.icons').setup {}
 		require('mini.sessions').setup { autoread = true }
-		-- require('mini.surround').setup {}
 		require('mini.comment').setup {
 			options = {
 				custom_commentstring = function()
