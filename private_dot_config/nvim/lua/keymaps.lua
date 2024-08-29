@@ -2,7 +2,7 @@ local utils = require 'utils'
 local map = utils.map
 
 map('n', 'l', 'u') -- remap undo
-map('v', ']', 'e') -- remap end of word
+map('v', 'w', 'e') -- remap end of word
 
 -- navigation
 -- cursor movement
