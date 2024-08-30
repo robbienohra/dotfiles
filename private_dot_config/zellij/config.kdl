@@ -1,6 +1,6 @@
 keybinds clear-defaults=true {
   normal {
-    bind "Ctrl k" { CloseFocus; }
+    bind "Ctrl k" { CloseFocus; SwitchToMode "Normal"; }
     bind "Alt u" { MoveFocus "Up"; }
     bind "Alt e" { MoveFocus "Down"; }
     bind "Alt n" { MoveFocus "Left"; }
@@ -16,7 +16,7 @@ keybinds clear-defaults=true {
     bind "e" { MovePane "Down"; }
     bind "i" { MovePane "Right"; }
     bind "n" { MovePane "Left"; }
-    bind "k" { CloseFocus; }
+    bind "k" { CloseFocus; SwitchToMode "Normal"; }
     bind "PageUp" { HalfPageScrollUp; }
     bind "PageDown" { HalfPageScrollDown; }
   }
@@ -31,7 +31,7 @@ keybinds clear-defaults=true {
     bind "r" { SwitchToMode "RenameTab"; TabNameInput 0; }
     bind "n"  { GoToPreviousTab; SwitchToMode "Normal"; }
     bind "i"  { GoToNextTab; SwitchToMode "Normal"; }
-    bind "k" { CloseTab; }
+    bind "k" { CloseTab; SwitchToMode "Normal"; }
     bind "PageUp" { MoveTab "Left"; }
     bind "PageDown" { MoveTab "Right"; }
   }
