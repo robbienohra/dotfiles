@@ -35,6 +35,7 @@ local configs = {
 	sqlls = {},
 	svelte = {},
 	taplo = {},
+	['tailwindcss-language-server'] = {},
 	terraformls = {},
 	texlab = {},
 	tsserver = {},
