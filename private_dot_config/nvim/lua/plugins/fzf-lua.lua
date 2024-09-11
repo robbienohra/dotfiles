@@ -41,6 +41,6 @@ return {
 		map('n', '<leader>y', fzf.command_history)
 		map('n', '<leader>l', fzf.lines)
 		map('n', '\\', fzf.buffers)
-		map('n', '<leader>r', ':FzfLua resume<Space>', { silent = false })
+		-- map('n', '<leader>r', ':FzfLua resume<Space>', { silent = false })
 	end,
 }
