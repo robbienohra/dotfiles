@@ -53,7 +53,7 @@ return {
 				'svelte',
 				'terraformls',
 				'texlab',
-				'tsserver',
+				'ts_ls',
 				'yamlls',
 			},
 		}
