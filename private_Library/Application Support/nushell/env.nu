@@ -16,8 +16,6 @@ $env.VISUAL = "nvim"
 
 $env.NUPM_HOME = $'($env.HOME)/nupm'
 
-$env.PATH = ($env.PATH | split row (char esep) | prepend $"(pyenv root)/shims")
-
 $env.STARSHIP_SHELL = "nu"
 
 def create_left_prompt [] {
