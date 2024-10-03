@@ -3,3 +3,4 @@ history.txt
 node_modules
 Session.vim
 .DS_Store
+.idea
