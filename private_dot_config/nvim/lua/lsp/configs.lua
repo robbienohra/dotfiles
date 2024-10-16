@@ -6,7 +6,6 @@ local configs = {
 			'--offset-encoding=utf-16',
 		},
 	},
-	denols = {},
 	dockerls = {},
 	eslint = {},
 	gopls = {},
