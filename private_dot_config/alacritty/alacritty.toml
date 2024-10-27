@@ -43,7 +43,7 @@ style = "Bold"
 [font.offset]
 y = 1
 
-[shell]
+[terminal.shell]
 program = "/Users/robbienohra/.cargo/bin/nu"
 args = [ "-e", "zellij attach -c" ]
 # args = ["--no-config-file", "--no-history"]
