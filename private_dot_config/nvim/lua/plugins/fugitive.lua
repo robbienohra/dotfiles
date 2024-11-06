@@ -11,7 +11,7 @@ return {
 			{ '<leader>gl', ':.GBrowse<CR>' },
 			{ '<leader>ga', ':Gwrite<CR>' },
 			{ '<leader>gA', ':Gwrite!<CR>' },
-			{ '<leader>gd', ':Gdelete<CR>' },
+			{ '<leader>gd', ':GDelete<CR>' },
 		},
 	},
 }
