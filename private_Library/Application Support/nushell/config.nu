@@ -22,7 +22,7 @@ keybindings: [
   mode: emacs
   event: {
     send: executehostcommand,
-    cmd: "br -hI"
+    cmd: "broot -hI"
   }
 }
 ]
