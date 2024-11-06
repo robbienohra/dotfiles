@@ -84,7 +84,7 @@ map('n', 'C', '"_C')
 map('v', 'd', '"_d')
 map('v', 'D', '"_D')
 
-map('n', '<Leader>c', utils.GetFileRelativePath)
+-- map('n', '<Leader>c', utils.GetFileRelativePath)
 
 -- terminal
 map('n', '<C-\\>', ':vsplit term://nu<CR>')
