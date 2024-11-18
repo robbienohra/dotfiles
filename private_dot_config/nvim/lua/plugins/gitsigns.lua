@@ -37,6 +37,9 @@ return {
 				map('n', '<leader>hs', gs.stage_buffer)
 				map('n', '<leader>hr', gs.reset_buffer)
 				map('n', '<leader>hp', gs.preview_hunk)
+				map('v', '<leader>hr', function()
+					gs.reset_hunk { vim.fn.line '.', vim.fn.line 'v' }
+				end)
 				map('n', '<leader>hd', gs.diffthis)
 				map('n', '<leader>hb', function()
 					gs.blame_line { full = true }
