@@ -25,22 +25,6 @@ curl https://sh.rustup.rs -sSf | bash -s -- -y --no-modify-path
 source "$HOME/.cargo/env"
 ```
 
-### Golang
-
-- <https://go.dev/doc/install>
-
-### `just`
-
-``` sh
-cargo install just
-```
-
-## Initialize dependencies
-
-``` sh
-just install-all
-```
-
 ## Nushell setup
 
 ### zoxide
