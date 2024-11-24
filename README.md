@@ -46,11 +46,6 @@ $env.ATUIN_NOBIND = "true"
 atuin init nu | save -f ~/.local/share/atuin/init.nu
 ```
 
-### Starship
-
-- <https://www.nushell.sh/book/3rdpartyprompts.html#starship>
-- <https://starship.rs/#nushell>
-
 ### fnm
 
 - <https://github.com/Schniz/fnm/issues/463>
