@@ -85,23 +85,11 @@ $env.LANG = "en_US.UTF-8"
 $env.PNPM_HOME = $"($env.HOME)/.local/share/pnpm"
 $env.PATH = ($env.PATH | split row (char esep) | prepend $env.PNPM_HOME )
 
-# fzf theming
-# https://github.com/catppuccin/fzf
-
 $env.FZF_DEFAULT_OPTS = $"--history=($env.HOME)/.fzf_history
 --bind ctrl-d:page-down,ctrl-u:page-up
 --bind ctrl-p:previous-history
 --bind ctrl-f:next-history
 --bind F2:toggle-preview
 --info=hidden
---color=bg+:-1"
-
-def --env yy [...args] {
-	let tmp = (mktemp -t "yazi-cwd.XXXXXX")
-	yazi ...$args --cwd-file $tmp
-	let cwd = (open $tmp)
-	if $cwd != "" and $cwd != $env.PWD {
-		cd $cwd
-	}
-	rm -fp $tmp
-}
+--color=bg:#1a1b26
+--color=bg+:#1a1b26"
