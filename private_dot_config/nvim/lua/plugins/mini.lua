@@ -2,7 +2,7 @@ return {
 	'echasnovski/mini.nvim',
 	version = '*',
 	config = function()
-		require('mini.icons').setup {}
+		require('mini.icons').setup { use_cterm = true }
 		require('mini.sessions').setup { autoread = true }
 		require('mini.comment').setup {
 			options = {
