@@ -56,24 +56,22 @@ keybinds clear-defaults=true {
 }
 
 themes {
-    tokyonight_moon {
-        fg "#c8d3f5"
-        bg "#2f334d"
-        // Black should match the terminal background color
-        // This ensures the top and bottom bars are transparent
-        black "#222436"
-        red "#ff757f"
-        green "#c3e88d"
-        yellow "#ffc777"
-        blue "#82aaff"
-        magenta "#c099ff"
-        cyan "#86e1fc"
-        white "#828bb8"
-        orange "#ff966c"
-    }
+  kanagawa {
+    bg "#DCD7BA"
+    fg "#1F1F28"
+    white "#090618"
+    black "#dcd6ba"
+    red "#e82424"
+    green "#98bb6c"
+    yellow "#e6c384"
+    blue "#7fb4ca"
+    magenta "#938aa9"
+    cyan "#7aa89f"
+    orange "#FFA066"
+  }
 }
 
-theme "tokyonight_moon"
+theme "kanagawa"
 default_shell "nu"
 pane_frames true
 scrollback_editor "/opt/homebrew/bin/nvim"
