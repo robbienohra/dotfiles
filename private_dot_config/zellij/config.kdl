@@ -39,10 +39,6 @@ keybinds clear-defaults=true {
     bind "Ctrl g" { SwitchToMode "Locked"; }
     bind "Alt [" { PreviousSwapLayout; }
     bind "Alt ]" { NextSwapLayout; }
-    bind "Alt f" {
-        LaunchPlugin "filepicker" {
-        };
-    }
   }
   shared_except "normal" {
     bind "Enter" "Esc" { SwitchToMode "Normal"; }
