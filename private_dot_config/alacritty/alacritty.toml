@@ -56,39 +56,61 @@ bindings = [
 
 # color theme
 
-# Kanagawa Alacritty Colors
+# TOML interpretation of the https://github.com/nordtheme/alacritty
+# See also: https://github.com/nordtheme/alacritty/issues/40
+# (if the above is resolved, you may not need this Gist)
+
 [colors.primary]
-background = "0x1f1f28"
-foreground = "0xdcd7ba"
+background = "#2e3440"
+foreground = "#d8dee9"
+dim_foreground = "#a5abb6"
 
-[colors.normal]
-black = "0x090618"
-red = "0xc34043"
-green = "0x76946a"
-yellow = "0xc0a36e"
-blue = "0x7e9cd8"
-magenta = "0x957fb8"
-cyan = "0x6a9589"
-white = "0xc8c093"
+[colors.cursor]
+text = "#2e3440"
+cursor = "#d8dee9"
 
-[colors.bright]
-black = "0x727169"
-red = "0xe82424"
-green = "0x98bb6c"
-yellow = "0xe6c384"
-blue = "0x7fb4ca"
-magenta = "0x938aa9"
-cyan = "0x7aa89f"
-white = "0xdcd7ba"
+[colors.vi_mode_cursor]
+text = "#2e3440"
+cursor = "#d8dee9"
 
 [colors.selection]
-background = "0x2d4f67"
-foreground = "0xc8c093"
+text = "CellForeground"
+background = "#4c566a"
 
-[[colors.indexed_colors]]
-index = 16
-color = "0xffa066"
+[colors.search.matches]
+foreground = "CellBackground"
+background = "#88c0d0"
 
-[[colors.indexed_colors]]
-index = 17
-color = "0xff5d62"
+[colors.footer_bar]
+background = "#434c5e"
+foreground = "#d8dee9"
+
+[colors.normal]
+black = "#3b4252"
+red = "#bf616a"
+green = "#a3be8c"
+yellow = "#ebcb8b"
+blue = "#81a1c1"
+magenta = "#b48ead"
+cyan = "#88c0d0"
+white = "#e5e9f0"
+
+[colors.bright]
+black = "#4c566a"
+red = "#bf616a"
+green = "#a3be8c"
+yellow = "#ebcb8b"
+blue = "#81a1c1"
+magenta = "#b48ead"
+cyan = "#8fbcbb"
+white = "#eceff4"
+
+[colors.dim]
+black = "#373e4d"
+red = "#94545d"
+green = "#809575"
+yellow = "#b29e75"
+blue = "#68809a"
+magenta = "#8c738c"
+cyan = "#6d96a5"
+white = "#aeb3bb"

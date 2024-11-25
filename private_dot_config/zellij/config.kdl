@@ -56,22 +56,22 @@ keybinds clear-defaults=true {
 }
 
 themes {
-  kanagawa {
-    bg "#DCD7BA"
-    fg "#1F1F28"
-    white "#090618"
-    black "#dcd6ba"
-    red "#e82424"
-    green "#98bb6c"
-    yellow "#e6c384"
-    blue "#7fb4ca"
-    magenta "#938aa9"
-    cyan "#7aa89f"
-    orange "#FFA066"
-  }
+    nord {
+        fg "#D8DEE9"
+        bg "#2E3440"
+        black "#3B4252"
+        red "#BF616A"
+        green "#A3BE8C"
+        yellow "#EBCB8B"
+        blue "#81A1C1"
+        magenta "#B48EAD"
+        cyan "#88C0D0"
+        white "#E5E9F0"
+        orange "#D08770"
+    }
 }
 
-theme "kanagawa"
+theme "nord"
 default_shell "nu"
 pane_frames true
 scrollback_editor "/opt/homebrew/bin/nvim"
