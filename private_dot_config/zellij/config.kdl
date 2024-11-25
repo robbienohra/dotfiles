@@ -12,11 +12,11 @@ keybinds clear-defaults=true {
     bind "r" { SwitchToMode "RenamePane"; PaneNameInput 0;}
     bind "l" { Clear; }
     bind "f" { EditScrollback; }
-    bind "u" { MovePane "Up"; }
-    bind "e" { MovePane "Down"; }
-    bind "i" { MovePane "Right"; }
-    bind "n" { MovePane "Left"; }
-    bind "k" { CloseFocus; SwitchToMode "Normal"; }
+    bind "u" { NewPane "Up"; SwitchToMode "Normal";}
+    bind "e" { NewPane "Down"; SwitchToMode "Normal";}
+    bind "i" { NewPane "Right"; SwitchToMode "Normal";}
+    bind "n" { NewPane "Left"; SwitchToMode "Normal";}
+    bind "k" { CloseFocus; }
     bind "PageUp" { HalfPageScrollUp; }
     bind "PageDown" { HalfPageScrollDown; }
   }
