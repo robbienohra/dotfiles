@@ -3,7 +3,6 @@ $directory\
 $git_branch\
 $git_status\
 $git_metrics\
-$git_state\
 $fill
 $character
 """
