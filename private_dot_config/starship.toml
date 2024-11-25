@@ -2,6 +2,8 @@ format = """
 $directory\
 $git_branch\
 $git_status\
+$git_metrics\
+$git_state\
 $fill
 $character
 """
@@ -12,11 +14,16 @@ truncation_length = 3
 truncation_symbol = "…/"
 
 [git_branch]
-format = '[$symbol$branch]($style) '
 truncation_length = 20
 
+[git_metrics]
+disabled=false
+
+[git_state]
+disabled=false
+
 [git_status]
-format = '([\[$all_status$ahead_behind\]]($style)) '
+disabled = false
 
 [fill]
 symbol = ' '
