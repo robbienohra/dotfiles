@@ -94,22 +94,7 @@ $env.FZF_DEFAULT_OPTS = $"--history=($env.HOME)/.fzf_history
 --bind ctrl-f:next-history
 --bind F2:toggle-preview
 --info=hidden
---color=bg+:#2d3f76
---color=bg:#222436
---color=border:#589ed7
---color=fg:#c8d3f5
---color=gutter:#222436
---color=header:#ff966c
---color=hl+:#65bcff
---color=hl:#65bcff
---color=info:#545c7e
---color=marker:#ff007c
---color=pointer:#ff007c
---color=prompt:#65bcff
---color=query:#c8d3f5:regular
---color=scrollbar:#589ed7
---color=separator:#ff966c
---color=spinner:#ff007c"
+--color=bg+:-1"
 
 def --env yy [...args] {
 	let tmp = (mktemp -t "yazi-cwd.XXXXXX")
