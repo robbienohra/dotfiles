@@ -59,5 +59,5 @@ o.smartindent = false
 o.autoindent = false
 
 -- vsnip
-
-vim.g.vsnip_filetypes = { javascript = { 'typescript', 'javascript', 'react', 'react-ts' } }
+local js = 'javascript'
+vim.g.vsnip_filetypes = { typescript = { js }, typescriptreact = { js } }
