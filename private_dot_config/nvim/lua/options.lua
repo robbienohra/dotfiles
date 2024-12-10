@@ -57,3 +57,7 @@ o.softtabstop = 2
 -- indentation
 o.smartindent = false
 o.autoindent = false
+
+-- vsnip
+
+vim.g.vsnip_filetypes = { javascript = { 'typescript' } }
