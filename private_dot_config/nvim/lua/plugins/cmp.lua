@@ -3,11 +3,7 @@ return {
 	event = { 'VeryLazy' },
 	config = function()
 		local cmp = require 'cmp'
-
-		local has_words_before = function()
-			local line, col = unpack(vim.api.nvim_win_get_cursor(0))
-			return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match '%s' == nil
-		end
+		local luasnip = require 'luasnip'
 
 		cmp.setup {
 			snippet = {
@@ -18,22 +14,48 @@ return {
 			mapping = {
 				['<Left>'] = cmp.mapping(cmp.mapping.select_prev_item(), { 'i', 'c' }),
 				['<Right>'] = cmp.mapping(cmp.mapping.select_next_item(), { 'i', 'c' }),
-				['<CR>'] = cmp.mapping.confirm { select = true }, -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+				['<CR>'] = cmp.mapping(function(fallback)
+					if cmp.visible() then
+						if luasnip.expandable() then
+							luasnip.expand()
+						else
+							cmp.confirm {
+								select = true,
+							}
+						end
+					else
+						fallback()
+					end
+				end),
+				['<Tab>'] = cmp.mapping(function(fallback)
+					if cmp.visible() then
+						cmp.select_next_item()
+					elseif luasnip.locally_jumpable(1) then
+						luasnip.jump(1)
+					else
+						fallback()
+					end
+				end, { 'i', 's' }),
+
+				['<S-Tab>'] = cmp.mapping(function(fallback)
+					if cmp.visible() then
+						cmp.select_prev_item()
+					elseif luasnip.locally_jumpable(-1) then
+						luasnip.jump(-1)
+					else
+						fallback()
+					end
+				end, { 'i', 's' }),
+
 				['<C-e>'] = cmp.mapping {
 					i = cmp.mapping.abort(),
 					c = cmp.mapping.close(),
 				},
 				['<C-Space>'] = cmp.mapping(cmp.mapping.complete(), { 'i', 'c' }),
-				['<Tab>'] = cmp.mapping(function(fallback)
-					if has_words_before() then
-						cmp.complete()
-					else
-						fallback() -- The fallback function sends a already mapped key. In this case, it's probably `<Tab>`.
-					end
-				end, { 'i', 's' }),
 			},
 			sources = cmp.config.sources({
 				{ name = 'nvim_lsp' },
+				{ name = 'luasnip' },
 			}, {
 				{ name = 'buffer' },
 			}),
