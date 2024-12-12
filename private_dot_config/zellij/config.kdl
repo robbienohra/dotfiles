@@ -29,8 +29,8 @@ keybinds clear-defaults=true {
     bind "Ctrl t" { SwitchToMode "Normal"; }
     bind "o" { NewTab; SwitchToMode "Normal"; }
     bind "r" { SwitchToMode "RenameTab"; TabNameInput 0; }
-    bind "n"  { GoToPreviousTab; SwitchToMode "Normal"; }
-    bind "i"  { GoToNextTab; SwitchToMode "Normal"; }
+    bind "n"  { GoToPreviousTab; }
+    bind "i"  { GoToNextTab; }
     bind "k" { CloseTab; }
     bind "PageUp" { MoveTab "Left"; }
     bind "PageDown" { MoveTab "Right"; }
