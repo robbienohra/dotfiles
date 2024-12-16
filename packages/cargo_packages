@@ -7,12 +7,10 @@ fnm
 git-delta
 just
 nu
-procs
 ripgrep
 starship
 stylua
 taplo-cli
-texlab
 tokei
 xh
 zoxide
