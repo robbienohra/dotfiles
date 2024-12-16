@@ -6,7 +6,7 @@ update-nvim:
 
 # Update Cargo packages
 update-cargo:
-	cargo install-update -a
+	cargo install-update -a --locked
 
 # Install Cargo packages
 install-cargo:
