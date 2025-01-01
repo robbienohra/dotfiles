@@ -27,7 +27,6 @@ return {
 					'lua',
 					'markdown',
 					'markdown_inline',
-					'nu',
 					'prisma',
 					'python',
 					'rust',

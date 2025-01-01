@@ -11,11 +11,9 @@ jq
 kubectx
 lua
 minikube
-nb
 ninja
 nvim
 openjdk
-pandoc
 pyenv
 sops
 tig
