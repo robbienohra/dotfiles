@@ -1,16 +1,13 @@
-font-jetbrains-mono-nerd-font
 clang-format
 cmake
 commitizen
-docker
+font-jetbrains-mono-nerd-font
 gh
 git
 gnu-sed
-htop
 jq
 kubectx
 lua
-minikube
 ninja
 nvim
 openjdk
@@ -18,4 +15,3 @@ pyenv
 sops
 tig
 wget
-rsteube/tap/carapace
