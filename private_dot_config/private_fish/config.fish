@@ -3,10 +3,10 @@ if status is-interactive
 end
 
 fzf --fish | source
+zoxide init fish | source
 
 abbr -a ch 'chezmoi'
 abbr -a n 'nvim'
-abbr -a z 'zoxide'
 
 set -x FZF_DEFAULT_OPTS \
     "--history=$HOME/.fzf_history" \
