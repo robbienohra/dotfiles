@@ -7,11 +7,7 @@ git
 gnu-sed
 jq
 kubectx
-lua
-ninja
 nvim
 openjdk
-pyenv
 sops
-tig
 wget
