@@ -1,0 +1,3 @@
+theme = tokyonight_night
+command = /opt/homebrew/bin/fish
+shell-integration = fish
