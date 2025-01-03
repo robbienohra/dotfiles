@@ -1,4 +1,3 @@
-atuin
 bat
 cargo-update
 fd-find
@@ -8,5 +7,4 @@ ripgrep
 starship
 stylua
 taplo-cli
-xh
 zoxide
