@@ -4,7 +4,6 @@ fd-find
 git-delta
 just
 ripgrep
-starship
 stylua
 taplo-cli
 zoxide
